@@ -1,0 +1,178 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP10 :Gaz parfait, gaz réels}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item base de thermodynamique (L1)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item construction des modèles
+\item domaine de validité du GP, limites du modèle
+\item insister sur les ODG
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item la notion de pression cinétique doit être faite avec soin
+\item faire la distinction entre température cinétique et thermodynamique
+\item Traiter de la compétition entre forces de pression et forces de gravité
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Tec \& Doc, PCSI, Grecias (livre de base pour la leçon)
+\item[[\,2\!\!]] BFR, thermodynamique, Dunod (précis et clair)
+\item[[\,3\!\!]] Thermodynamique, Diu, Hermann (pour des compléments)
+\item[[\,4\!\!]] Physique statistique, Diu, Hermann (pression cinétique)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : La thermodynamique permet de caractériser un système compliqué à partir d'un nombre restreint de variables. Définir ensuite les objectifs de cette leçon : 
+\begin{itemize}
+\item comprendre l'intérêt du GP, les hypothèses sous-jacentes et analyser les principaux résultats
+\item étudier l'écart à l'idéalité des gaz réels, tant sur le plan théorique qu'expérimental
+\end{itemize}
+
+\section{Le gaz parfait}
+\subsection{Approche historique : loi phénoménologique de Boyle-Mariotte [2]}
+\begin{itemize}
+\item p47 montrer des isothermes d'Amagat. 
+\item définir la notion de température absolue (insister sur la définition : $(PV)/(PV)'=T/T'$ qui sera utile dans la "démo" de la loi d'état du gaz parfait)
+\item leur faible variabilité encourage à supposer le produit $PV$ constant à température fixée
+\item on pose alors (p57) le modèle du gaz parfait (supposé valable à faible pression) qui respecte la loi de Boyle-Mariotte $PV=rT$ (je ne comprends pas bien à revoir!)
+\end{itemize}
+
+\subsection{modèle du gaz parfait : loi d'état et grandeurs thermodynamiques dérivées [2]}
+\begin{itemize}
+\item p61 l'extensivité de $PV$ impose la dépendance en $n$. Il suffit alors d'introduire la constante des gaz parfait $R$ et on obtient l'équation.
+\item on en tire immédiatement la valeur des coefficients thermoélastiques dans ce cas ainsi que la relation de Mayer (p174)
+\item donner également les deux lois de Joule (p171)
+\end{itemize}
+
+\subsection{Energie d'un gaz parfait}
+\noindent
+Application évidente du théorème d'équipartition à un GP monoatomique puis diatomique. On obtient alors l'énergie puis $C\e{V}$. (Diu de phy. stat. si besoin) 
+
+
+\subsection{Application en thermométrie : échelle absolue [2]}
+\begin{itemize}
+\item Donner la position du problème : il faut étalonner de manière absolue les thermomètres commerciaux.
+\item A la base de cet étalonnage, il faut déterminer avec la plus grande précision la température de quelques points fixes. Pour cela, on utilise un thermomètre normal à hydrogène qui donne accès aux températures absolues (définies plus haut).
+\item expliquer le fonctionnement du thermomètre à hydrogène (p50) : revient à tracer des isothermes d'Amagat qu'on prolonge à pression nulle
+\end{itemize}
+
+
+\section{Appui théorique et limite du modèle du gaz parfait}
+\subsection{Théorie cinétique des gaz parfait [2]}
+\noindent
+\underline{Manipulation} : tube de Crookes. On montre que cette rotation "contre-intuitive" s'explique par le fait que la pression cinétique du gaz (l'ampoule n'est pas absolument vide) a une résultante bien plus importante que la résultante de la pression photonique. Par conséquent, ce sont les faces noires (où l'agitation thermique par échauffement est le plus important) qui sont motrices du mouvement.
+
+\mk
+\noindent
+Le chapitre 4 est clair sur ce sujet : 
+\begin{itemize}
+\item homogénéité et isotropie de la distribution des vitesses : les conséquences permettent de déduire la forme de la distribution des vitesses sous formes gaussienne imposée par l'isotropie
+\item donner alors sans démonstration la loi de distribution des vitesses de Maxwell pour la norme de la vitesse (il suffit pour cela d'exprimer $B$, la constante indéterminée en expliquant que l'on compare énergie cinétique et agitation thermique)
+\end{itemize}
+
+\subsection{Pression cinétique [4]}
+\begin{itemize}
+\item Le Diu de physique statistique fait le calcul simpliste (largement suffisant) en prenant le facteur $1/6$ pour l'isotropie des vitesses.
+\item Ensuite, exprimer l'énergie en fonction de la pression permet de déterminer la vitesse quadratique moyenne des particules en fonction de $T$ en l'identifiant avec l'énergie trouvée avec le théorème d'équipartition.
+\end{itemize}
+
+
+\subsection{Détente de Joule-Gay Lussac : écart au modèle des gaz parfait [2]}
+\begin{itemize}
+\item présenter succinctement la manipulation 
+\item montrer que le respect de la première loi de Joule implique que cette détente se fait à $\dd T=0$
+\item en pratique on n'observe pourtant une variation de température lors de la détente (souvent un refroidissement)
+\item C'est l'objet de la dernière partie de tenter d'expliquer entre autre ce constat. Pour ce faire, on affinera le modèle en tenant compte d'interactions entre les particules.
+\end{itemize}
+
+\section{Affinement du modèle : le gaz de Van Der Waals}
+\subsection{Construction de la fonction d'état [2]}
+Le BFR présente le modèle avec clarté (chapitre 12) : 
+\begin{itemize}
+\item donner le potentiel d'interaction de Van Der Waals 
+\item donner alors l'équation d'état et interpréter les deux paramètres introduits (en lien avec le potentiel modèle)
+\item donner des ODG des paramètres introduits (p267)
+\item il est important de constater que ces paramètres dépendent du gaz étudié et éventuellement des conditions (gamme de pression ou de température). Il n'y a donc plus d'équation universelle dès que l'on souhaite modéliser un gaz réel
+\end{itemize}
+
+
+\subsection{Réinterprétation de la détente de Joule-Gay Lussac [2]}
+\begin{itemize}
+\item prendre la démonstration du BFR p269 en l'allégeant
+\item on obtient alors le $\Delta T$ de la détente
+\item faire l'AN : en bon accord pour certain gaz mais pas toujours...
+\item l'hydrogène se réchauffe!! Ce qui n'est pas explicable par un gaz de VdW pour lequel le coefficient $a$ est toujours positif
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Conclusion} : 
+\begin{itemize}
+\item bilan de ce qu'on a vu : intérêt de l'universalité de l'équation du gaz parfait mais champ d'application limitée
+\item un modèle ne peut rendre compte parfaitement du comportement des gaz. On utilise différentes équations pour rendre au mieux compte de l'expérience
+\item D'autres modèles peuvent être déduits de la physique statistique : c'est le développement du Viriel. On peut alors observer l'effet de différents potentiels d'interaction sur l'équation d'état
+\item l'équation de Van Der Waals permet de rendre compte d'une transition de phase. En effet, à basse température elle présente une anomalie (compressibilité négative) impliquant l'impossibilité pour le système de rester sous une unique phase.
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Comment mesurer la constante d'Avogadro?}  
+
+\bk
+\noindent
+\textbf{2. Définir équilibre thermodynamique}  
+ 
+ \bk
+ \noindent
+\textbf{3. Montrer que pour un GP, $F(T,V,n)=-nRT \ln{\pa{\f{V}{n}b(T)}}$}  
+
+\bk 
+ \noindent
+\textbf{4. Définir la température thermodynamique}  
+
+\bk
+\noindent
+\textbf{5. Comment déterminer les points fixes ?}  
+
+\bk
+\noindent
+\textbf{6. Exemples de thermomètres usuels} 
+
+\bk
+\noindent
+\textbf{7. Démonstration de la loi de distribution des vitesses de Maxwell} 
+
+\bk
+\noindent
+\textbf{8. Qu'est ce qu'une équation d'état. L'équation de VDW en est-elle une?} 
+
+
+
+
+\end{document}

@@ -1,0 +1,174 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP06 : dynamique relativiste (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item dynamique newtonienne
+\item cinématique relativiste
+\item quadrivecteur position
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item équivalence masse-énergie
+\item intérêt des quadrivecteurs pour être certains d'avoir une écriture covariante
+\item permet une généralisation de la mécanique classique
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item il faut parler de collisions
+\item le principe d'action réaction est perdu!
+\item manipuler les quadrivecteurs et passer du temps sur les exemples
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Relativité restreinte, Grossetête, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : Montrer les limites du PFD de la dynamique classique aux hautes énergies. Prendre l'exemple de particules accélérées dans un Van Der Graff. Nous aurons toujours la même préoccupation (qui est celle d'Einstein) : on se base sur la transformation de Lorentz rendant invariante les équations de l'électromagnétisme, mais la mécanique newtonienne doit rester le cas limite basse énergie.
+
+
+\section{Relation fondamentale de la dynamique : approche quadrivectorielle}
+\subsection{RFD relativiste}
+\begin{itemize}
+\item la relation s'écrit comme en mécanique classique (on cherche à réécrire le principe d'inertie!)
+\item en revanche, ce qu'il se cache derrière chacune des grandeurs énoncées peut être différent
+\item donner la valeur attendue pour $E$ et $\vect{p}$ dans la limite non relativiste
+\item définir l'énergie cinétique dans ce cas
+\end{itemize}
+
+\subsection{Quadrivecteur impulsion-énergie}
+\begin{itemize}
+\item montrer que cette relation conduit à pouvoir former un quadrivecteur impulsion énergie (puisque le pseudo PS entre ce 4-vecteur et le 4-vecteur position est invariant)
+\item donner la forme du 4-vecteur et rappeler qu'il se transforme par transformation de Lorentz d'un référentiel à un autre
+\end{itemize}
+
+\subsubsection{Cas d'une particule de masse non nulle}
+\begin{itemize}
+\item suivre la démonstration du Grossetête : 
+\item se placer dans le référentiel propre, y exprimer le 4-vecteur impulsion-énergie
+\item appliquer la transformation de Lorentz pour passer dans un référentiel quelconque
+\item développer aux basses énergies
+\item en déduire la valeur prise par l'énergie dans le référentiel propre -> énergie de masse, indépendante du référentiel
+\item en déduire la relation entre 4-vecteurs $P=mV$
+\item en déduire la relation fondamentale : $E^2=m^2c^2+p^2c^4$
+\item donner la relation utile : $\vect{v}=\tf{c^2\vect{p}}{E}$
+\end{itemize}
+
+\subsubsection{Cas d'une particule de masse nulle}
+\begin{itemize}
+\item les équations de Maxwell prédisent que le signal lumineux (et donc les photons associés) se propagent à $c$ dans tout référentiel
+\item montrer alors la nécessité d'une masse nulle
+\item en déduire alors les relations fondamentales associées aux particules de masses nulles
+\end{itemize}
+
+\subsection{Quadrivecteur force}
+\begin{itemize}
+\item redonner les quatre forces fondamentales de l'univers
+\item préciser qu'en fait, la relativité restreinte ne traite bien que de la force électromagnétique (force de Lorentz)
+\item suivre la démarche du Grossetête pour avoir une écriture covariante du RFD 
+\item on obtient alors l'expression du 4-vecteur force dans un référentiel quelconque
+\item cas d'une particule isolée ->formulation relativiste du principe d'inertie : "La ligne d'univers de toute particule libre, soumise à aucune action extérieure est une droite"
+\item donner sans démonstration la loi de transformation du vecteur force par changement de référentiel -> montrer que la force est invariante dans la limite classique
+\end{itemize}
+
+\section{Mouvement d'une particule chargée}
+
+\subsection{Particule dans $E$ permanent}
+\begin{itemize}
+\item donner et appliquer le TEC à une particule chargée
+\item on obtient la formule classique mais avec une expression différente de $E/e{c}$
+\item en déduire la vitesse d'une particule (faire les cas limites)
+\item interpréter le graphe proposé en intro 
+\item montrer qu'un électron est facilement relativiste, pas un proton
+\end{itemize}
+
+\subsection{Particule dans $B$ permanent}
+\begin{itemize}
+\item déduire d'une approche énergétique que $v^2=constante$
+\item écrire alors le RFD : il ne diffère du cas classique que par le facteur $\gamma$
+\item donner l'équation classique du mouvement
+\item donner l'expression de la fréquence cyclotron et le rayon qui dans le cas relativiste dépend de la vitesse via le facteur $\gamma$
+\end{itemize}
+
+\subsection{Les accélérateurs de particules : cyclotron, synchrocyclotron et synchrotron}
+\begin{itemize}
+\item expliquer le principe du cyclotron 
+\item limité par la désynchronisation lors de la montée en énergie 
+\item on a alors conçu des synchrocyclotrons
+\item le synchrotron adapte par ailleurs l'intensité de son champ B pour garder une trajectoire de rayon constant.
+\end{itemize}
+
+\section{Chocs entre particules}
+\subsection{Système isolé de particules}
+\begin{itemize}
+\item en relativité il est impossible de définir un quadrivecteur pour un ensemble de particules (puisque la notion de simultanéité n'est pas conservée par changement de référentiel)
+\item on peut uniquement le faire pour des systèmes sans interaction puisqu'alors la notion de temps n'intervient plus!
+\item le quadrivecteur somme a toutes les propriétés du 4-vecteur impulsion-énergie
+\item définir un choc, dire que le 4-vecteur impulsion-énergie total n'est défini qu'avant et après le choc. La notion de simultanéité garde un sens a la condition d'avoir un choc très bref.
+\item définir chocs élastique/inélastique
+\item conservation de l'impulsion et de l'énergie totale pendant le choc
+\end{itemize}
+
+\subsection{Dynamique des chocs de particules, chocs élastiques}
+\begin{itemize}
+\item pour le moment on se place dans le référentiel galiléen et on étudie les relations classiques pour un chocs élastiques
+\item en déduire en particulier $\vect{P}_1\cdot\vect{P}_2-\tf{E_1E_2}{c^2}=\vect{P}_1'\cdot\vect{P}_2'-\tf{E_1'E_2'}{c^2}$
+\item appliquer cette équation au cas de la diffusion Compton (après avoir présenté l'expérience, le mode opératoire...)
+\end{itemize}
+
+\subsection{Energie de seuil : possibilité de réactions}
+\begin{itemize}
+\item introduire le référentiel de centre de masse
+\item expliquer la question : on cherche l'énergie disponible pour être transformée en masse -> production de particules lors d'un choc
+\item préciser que les particules ne peuvent être au repos dans le référentiel du laboratoire
+\item c'est uniquement vrai dans le référentiel du centre de masse (à définir)
+\item on cherche le seuil de création de particules (on se place donc dans le cas de particules toutes au repos dans le c.d.m) -> c'est l'énergie disponible dans le c.d.m
+\item faire le cas 1)collision d'une particule sur une cible 2)collision particule/particule
+\item faire les calculs sur transparent (manque de temps)
+\item en fait le calcul est bien plus simple pour une collision particule/particule
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : bilan de ce qui a été vu, ce qui se passe actuellement au Cern...
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Problèmes des collisionneurs par rapport au cible fixe?} Il faut accélérer les deux faisceaux, probabilité de rencontre bien plus faible  
+
+\bk
+\noindent
+\textbf{2. Différence entre le LEP et le LHC au Cern.} LEP : collision électron/positron, LHC collision proton/antiproton  
+ 
+ \bk
+ \noindent
+\textbf{3. Peut on construire une mécanique du solide relativiste?} Non, la notionde solide indéformable ne peut avoir de sens sans instantanéité.  
+
+\bk 
+ \noindent
+\textbf{4. Qu'est ce que l'expérience de Bertozzi?} C'est mon expérience introductive d'accélération d'électrons jusqu'à la limite relativiste.  
+\end{document}

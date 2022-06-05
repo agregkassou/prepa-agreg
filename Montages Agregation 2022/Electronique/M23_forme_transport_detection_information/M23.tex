@@ -1,0 +1,194 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M23 : Mise en forme, transport et détection de l'information}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item il faut montrer les éléments d'une chaine de transmission de l'information
+\item la modulation FM doit être le coeur du montage
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,2\!\!]] Traitement des signaux et acquisition de données, Cottet, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : le multiplexage sert d'intro
+
+
+\section{Modélisation d'une ligne de transmission complète}
+L'objectif de cette partie est d'illustrer qualitativement sur un exemple les 3 points du titre!
+\subsection{Mise en forme}
+\begin{itemize}
+\item maquette ENSC 355, haut parleur ENSC 441
+\item délivrer deux signaux (deux GBF un la 440Hz et un la 880Hz)
+\item régler l'offset des diodes pour qu'elles émettent dans leur plage linéaire
+\item lentille de 100 en sortie et assurer un faisceau parallèle
+\item envoyer sur un réseau $1200 traits/mm$ puis refocaliser avec lentille de 100
+\item photodiode amplifiée
+\item utiliser un HP avec ampli interne (attention, il faut un adaptateur NBC->jack)
+\item on parle alors mise en forme : modulation de l'intensité optique (donc en amplitude) de deux photodiodes de couleurs différentes (porteuses de fréquences différentes)
+\end{itemize}
+
+\subsection{Transport}
+\begin{itemize}
+\item multiplexage (lumière polychromatique en sortie) : on a conditionné le signal pour son transport
+\item ici, c'est un transport libre mais on pourrait imaginer une technologie guidée : fibre optique
+\end{itemize}
+
+\subsection{Détection}
+\begin{itemize}
+\item l'étage démultiplexage permet de sélectionner la porteuse désirée
+\item ici, un réseau permet de séparer spatialement le mode 1 en fonction de la longueur d'onde
+\item il suffit alors de placer la photodiode sur le bon point lumineux pour entendre l'un des deux signaux!
+\item on modélise ainsi l'ensemble de la ligne de transmission
+\end{itemize}
+
+\section{Transmission par modulation de fréquence : caractérisation indépendante des éléments}
+\subsection{Caractérisation du signal}
+\subsubsection{Spectre du signal}
+\begin{itemize}
+\item présenter rapidement la théorie : forme d'un signal modulé en fréquence
+\item utiliser un GBF en modulation de fréquence
+\item se placer d'abord à très basse fréquence (1Hz) de modulation et observer directement sur le signal temporel l'effet de la modulation : la sinusoïde "bat" : repérer l'excursion en fréquence
+\item passer en FFT et analyser le signal obtenu : mise en évidence des pics FFT et retrouver les grandeurs caractéristiques : fréquence centrale qui est la fréquence porteuse, écart entre pics qui est la fréquence de modulation, l'excursion influe sur l'amplitude des pics
+\end{itemize}
+
+\subsubsection{Bande de Carson}
+\begin{itemize}
+\item il est évidemment très important de connaître l'encombrement spectral d'un signal (place qu'il occupe dans la bande passante)
+\item définir la bande de Carson ($98\%$ de la puissance spectrale contenue) et donner sa valeur théorique
+\item vérifier expérimentalement que cela marche
+\item la méthode est de calculer la puissance de l'ensemble des pics de puissance significative et de regarder combien il faut de pics dans ces derniers pour atteindre $98\%$ de la puissance
+\item la puissance d'un pic est proportionnelle à $10^{\tf{V\e{dB}}{10}}$
+\end{itemize}
+
+\subsection{Détection du signal : la boucle à verrouillage de phase}
+Sans la fréquence de la porteuse, la démodulation est délicate. C'est tout l'objet de la PLL que de récupérer cette fréquence par verrouillage d'un oscillateur sur celle-ci.
+\subsubsection{Comparateur de phase}
+\begin{itemize}
+\item on peut rapidement évaluer le facteur de conversion du multiplieur (égal normalement à 1/10)
+\item choisir un filtre de fréquence de coupure raisonnable (5-10kHz)
+\item utiliser deux GBF locked-phase (à 10kHz par exemple) et mesurer la tension de sortie en fonction du déphasage entre les signaux
+\item la théorie donne évidemment une dépendance en $\cos{(\Phi_2-\Phi_1)}$ qu'on vérifiera
+\end{itemize}
+
+\subsubsection{Oscillateur contrôlé en tension (OCT)}
+\begin{itemize}
+\item utiliser les générateurs Thandar comme OCT
+\item calculer le coefficient de conversion tension/fréquence de l'OCT en envoyant au GBF une tension constante
+\item noter la plage sur laquelle l'OCT "suit"
+\end{itemize}
+
+\subsubsection{PLL : plage de capture et de verrouillage}
+\begin{itemize}
+\item cette fois on boucle la PLL et on constate les plages de fonctionnement (capture et verrouillage)
+\item dans un premier temps, on envoie simplement une sinusoïde au GBF sur une entrée du multiplieur et on constate les plages de verrouillage et de capture
+\item les noter explicitement et comparer les valeurs numériques aux valeurs attendues : la plage de capture est liée à la coupure du filtre (elle doit être sensiblement égale), la plage de verrouillage est liée à la capacité à fournir une tension suffisante à l'entrée de l'OCT (ici, l'OCT n'est pas limitant et ne sature pas, on pourra le vérifier). Cette tension maximale (cas ou le cosinus vaut $\pm1$) donne la fréquence maximale de balayage du Thandar hors de sa distance centrale
+\item pour tester plus facilement (et visuellement) les différents paramètres, on peut faire un joli montage : 
+\item utiliser un GBF pour obtenir un signal triangle à la fréquence $1Hz$ ($10V\e{pp}$, c'est important car sinon on ne balaye pas vraiment la fréquence affichée sur le second GBF...). envoyer ce signal en y1 de l'oscillo
+\item ce triangle arrive en Mod in du second GBF qui délivre un signal modulé en externe (prendre une plage de modulation de 40kHZ par exemple
+\item afficher en y2 de l'oscillo le signal de sortie du comparateur de phase
+\item en mode xy et avec persistance on observe la plage de capture et de verrouillage sur le balayage en fréquence (puisque x est proportionnel à la fréquence)
+\item on peut alors changer les paramètres du filtre et constater la variation de la plage de capture (changer $C$ et non $R$ pour ne pas modifier le pont diviseur avec l'entrée du Thandar) et changer les amplitudes des signaux pour constater la variation de la plage de verrouillage
+\item mais il est difficile d'être quantitatif, car il semble qu'on ne peut pas vraiment être certain qu'on module effectivement sur une plage de 40kHz
+\end{itemize}
+
+
+\section{Transmission par modulation de fréquence : étude en fonctionnement}
+\subsection{Fonctionnement en démodulation sur un signal}
+\begin{itemize}
+\item se placer dans une configuration signal radio classique au niveau des fréquences
+\item pour expliquer ce que l'on voit, il faut présenter le calcul (qui n'est pas vraiment donné dans les livres) :
+\centers{$f\e{s}(t)=f_0+K_0 U(t)=f\e{p}+m(t)$}
+\noindent
+avec $f\e{s}(t)$ la fréquence instantanée du signal modulée (et de sortie du Thandar sur la plage accrochée), $f_0$ la fréquence centrale du Thandar, $K_0$ le facteur de conversion tension/fréquence du Thandar, $f\e{p}$ la fréquence de la porteuse, $m(t)$ le signal modulé et $U(t)$ la tension en sortie du comparateur de phase (celle qu'on regarde)
+\item on a alors : 
+\centers{$U(t)=\f{f_0-f\e{p}}{K_0}-\f{1}{K_0}m(t)$}
+\item on a donc un signal contenant le signal de modulation! c'est gagné
+\item constater que quand $f_0\ne f\e{p}$, l'offset est non nul
+\item changer la fréquence de porteuse et constater les plages de verrouillage et de capture (plus faibles sur un signal modulé!)
+\item évaluer la bande de Carson et constater que si elle est supérieure à la plage de verrouillage, le système ne fonctionne plus
+\item enfin, constater que si le filtre est trop haute fréquence, il est évidemment plus rapide (en réponse à un créneau par exemple), mais il laisse également passer plus d'harmoniques et on peut observer des modulations résiduelles parasites -> nécessité d'un compromis! 
+\end{itemize}
+
+\subsection{Multiplexage : sélection d'un canal par choix de la fréquence centrale de l'OCT}
+\begin{itemize}
+\item utiliser une plaquette sommateur pour multiplexer les deux signaux
+\item l'un des signal est un la 440Hz (porteuse 100kHz), l'autre est le signal radio que l'on envoie en mod in d'un GBF (porteuse 200kHz)
+\item on peut regarder en FFT le signal tenu après sommation (visualisation de deux bandes de Carson distinctes
+\item régler le Thandar pour sélectionner l'une des deux fréquences et écouter au micro
+\item rapprocher alors les deux fréquences de porteuse (en modifiant celle que l'on n'écoute pas!) et voir simultanément l'effet d'encombrement spectral et de recouvrement à la fois sur le spectre et sur le signal audible!
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : Autour de la fabrication d'une radio FM, on a pu mettre en évidence les difficultés inhérentes à la transmission et à la réception d'une information. La PLL constitue la partie la plus importante du processus.
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Comment régler les photodiodes pour se placer hors saturation?}  
+
+\bk
+\noindent
+\textbf{2. Quel est le rôle du réseau en terme électronicien?} C'est le démultiplexeur  
+ 
+ \bk
+ \noindent
+\textbf{3. Quand l'oscilloscope utilise 1000 points, combien de points sont effectivement "utiles" au tracé.}  
+
+\bk 
+ \noindent
+\textbf{4. Quel est le sens de la bande de Carson sur un faible nombres de pics?} C'est plus difficile, mais c'est très fastidieux de faire un calcul pour beaucoup de pics! Alors il faut faire un choix!  
+
+\bk
+\noindent
+\textbf{5. Pour des phonons, $E$ est en $T^4$ et $C\e{V}$ en $T^2$. A quoi cela fait il penser?}  
+
+\bk
+\noindent
+\textbf{6. GPM dans la limite BT (limite classique non valide), que se passe-t-il?}  
+
+\bk
+\noindent
+\textbf{7. Les ddl de translation peuvent ils être quantifiés?}  
+
+\bk
+\noindent
+\textbf{8. pourquoi faut il $3n-6$ coordonnées pour repérer une molécule à $n$ atomes?}  
+
+\bk
+\noindent
+\textbf{9. Qu'est-ce qu'un phonon? Lien et différence avec un photon.}  
+
+\bk
+\noindent
+\textbf{10. Qu'est-ce que l'approximation classique?}  
+
+\end{document}

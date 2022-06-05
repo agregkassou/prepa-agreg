@@ -1,0 +1,152 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP49 : oscillateurs : portrait de phase et non linéarités (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item OH non amorti et amorti
+\item pendule simple et approximation des petits angles
+\item électrocinétique (montage à AO, systèmes bouclés)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item caractéristiques du non linéaire : enrichissement spectral, portrait de phase
+\item la linéarité est généralement une limite simplificatrice qui ne permet pas de tout décrire
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item les aspects non linéaires doivent être abordés sans développement calculatrices excessifs -> utiliser judicieusement la notion de portrait de phase
+\item un exemple concret sur un oscillateur construit pourrait enrichir la leçon
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] BUP n°744, "Le portrait de phase des oscillateurs"
+\item[[\,2\!\!]] L'ordre dans le chaos, Bergé, Hermann
+\item[[\,3\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,4\!\!]] Mécanique I, Faroux, Dunod (attention ce n'est pas le BFR de mécanique mais dans le FR!!!!)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+\begin{itemize}
+\item un système à 1ddl est entièrement décrit par la donnée des variables conjuguées $(x,p\e{x})$
+\item on imagine alors q'une représentation de la trajectoire dans cet espace peut être riche d'enseignement
+\item dans l'étude simple du pendule, on voit déjà apparaître des non linéarités aux grands angles. Si ces cas sont non analytiques, on verra que dessiner des portraits de phase permet d'interpréter facilement les phénomènes mis en jeu
+\end{itemize}
+
+\section{Oscillateurs non entretenus : visualisation dans l'espace des phases}
+\subsection{Généralités sur le portrait de phase}
+\begin{itemize}
+\item définir espace des phases et portrait de phase
+\item présenter un portrait de phase quelconque
+\item donner les éléments classiques d'étude d'un portrait de phase : sens de parcours, impossibilité pour les trajectoire de se recouper (déterminisme mécanique), trajectoire fermée/ouverte, réversibilité du temps...
+\end{itemize}
+
+\subsection{Application au cas de l'OH non amorti [1]}
+\begin{itemize}
+\item partir de l'équation et la résoudre rapidement
+\item en déduire la trajectoire dans l'espace des phases
+\item décrire le portrait de phase (lien entre trajectoire de phase et conditions initiales)
+\item cas idéal d'un pendule en petites oscillations, d'un système masse ressort...
+\end{itemize}
+
+\subsection{Cas de l'OH amorti ou amplifié [1]}
+\begin{itemize}
+\item ajout d'un frottement fluide
+\item équation encore analytique -> en déduire les trajectoires et tracer
+\item en profiter pour faire le lien entre énergie et portrait de phase (montrer que l'on se balade sur la courbe d'énergie potentielle (avec l'amplitude qui diminue quand l'énergie totale diminue)
+\item définir "attracteur" (ici c'est le point (0,0))
+\item traiter à la suite l'oscillateur harmonique amplifié
+\end{itemize}
+
+\subsection{Oscillateurs non linéaires : cas du pendule simple [1] [4]}
+\begin{itemize}
+\item la résolution temporelle devient cette fois non analytique
+\item on peut cependant développer le sinus d'ordre en ordre... faire le développement perturbait dans le cas faiblement non linéaire. On fait le calcul à l'ordre suivant non nul. on en déduit alors la période corrigée à l'ordre supérieure ainsi que la valeur du coefficient de l'harmonique supérieure -> on quantifie donc la génération d'harmonique
+\item parler des effets sur le spectre : l'amortissement revient à élargir les pics, les non linéarités créent des harmoniques
+\item en revanche, on obtient facilement (calcul énergétique) l'équation du portrait de phase
+\item montrer le résultat
+\item constater l'existence de trajectoire ouverte (mouvement révolutif) et fermée (mouvement oscillatoire)
+\item trajectoire critique (séparatrice) qui délimite le domaine libre et le domaine lié 
+\item là encore, interpréter en terme énergétique (l'énergie potentielle ne diverge pas et est périodique)
+\item maintenant, additionner les deux phénomènes : non linéarité et amortissement. Dessiner le cycle et interpréter
+\end{itemize}
+
+\section{Oscillateurs auto-entretenus}
+\subsection{Définitions et propriétés [2]}
+\begin{itemize}
+\item donner des exemples d'oscillateurs entretenus dans la nature (intro du Bergé)
+\item définir oscillateur entretenu et lister les contraintes à satisfaire
+\item un moyen simple est de faire dépendre le frottement de l'amplitude des oscillations
+\item l'équation de Van Der Pol est alors l'équation la plus simple répondant à ces paramètres, étudions là
+\end{itemize}
+
+\subsection{Modèle de l'oscillateur de Van Der Pol}
+\begin{itemize}
+\item expliquer avec les mains ce qu'il se passe (amplification des basses oscillations, amortissement des hautes oscillations)
+\item on s'attend donc à un régime intermédiaire d'oscillations entretenues 
+\item si ces oscillations sont stables, elles formeront un cycle fermé
+\item ce cycle est un attracteur du système -> on parle de cycle limite
+\item visualiser le cycle : il est non circulaire donc les oscillations sont non sinusoïdales
+\item le cycle est atteint indépendamment des conditions initiales : le cycle est uniquement déterminé par la valeur du paramètre d'amplification de l'oscillateur
+\end{itemize}
+
+\subsection{Cas du RLC à résistance négative [1] et [3]}
+\begin{itemize}
+\item utiliser le Duffait pour réaliser le montage en pratique
+\item le BUP est excellent dans les explications
+\item expliquer le montage mais sans détailler : le montage à résistance négative est supposé (on se limitera à ses caractéristiques de réponse)
+\item décrire les équations de fonctionnement électrique (en séparant régime linéaire et saturé)
+\item montrer le lien entre oscillateur de Van Der Pol et RLC à résistance négative. Exprimer dans ce cas particulier la fonction $A(x)$
+\item à faible saturation, les oscillations sont quasi sinusoïdales, comme l'indique le graphe temporel et le portrait de phase
+\item mais pour des amplifications supérieures, le caractère non linéaire devient vraiment plus marqué! Les oscillations ne sont clairement plus sinusoïdales
+\item le mouvement est toujours périodique : regarder la FFT! parler d'enrichissement spectral du signal -> il faut passer du temps dessus!
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+
+
+\begin{itemize}
+\item l'OH n'est pas toujours suffisant : prendre en compte non linéarités et effets d'amortissement
+\item le portrait de phase est un outil précieux de compréhension des systèmes non analytiques
+\item les non linéarités sont utiles pour créer des oscillateurs autoentretenus ou un enrichissement spectral (optique NL...)
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Définir oscillateur forcé et autoentretenu}  
+
+\bk
+\noindent
+\textbf{2. Bilan des effets des non linéarités.} fixent l'amplitude des oscillations et enrichissent le spectre  
+ 
+ \bk
+ \noindent
+\textbf{3.Comment passe-t-on de la relation de dispersion des phonons obtenue par diffraction à la densité de modes?}  
+ 
+
+\end{document}

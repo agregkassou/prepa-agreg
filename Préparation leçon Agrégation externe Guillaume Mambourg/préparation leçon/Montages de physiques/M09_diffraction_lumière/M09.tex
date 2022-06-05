@@ -1,0 +1,106 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M09 : diffraction des ondes lumineuses}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item preuve irréfutable du caractère ondulatoire de la lumière
+\item régimes limites de Fresnel et Franhofer
+\item aspect TF de la diffraction à l'infinie et exploitation pour le filtrage
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item parler de filtrage spatial semble incontournable
+\item il faut aussi parler de diffraction de Fresnel (et peut être rester qualitatif selon le temps à notre disposition)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Optique expérimentale, Sextant, Hermann
+\item[[\,2\!\!]] Expérience d'optique, Duffait, Breal
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : preuve que la lumière est une onde, phénomène largement exploité, il peut parfois s'avérer une complication expérimentale (dans la résolution des appareils par exemple).
+
+
+\section{Le phénomène de diffraction}
+\subsection{Condition de diffraction à l'infini : nombre de Fresnel [2]}
+\begin{itemize}
+\item il faut savoir retrouver seul le calcul du nombre de Fresnel (facile)
+\item le Duffait d'optique donne le montage
+\item ne pas utiliser de système de lentilles de projection (soit la figure est assez grande à l'oeil, soit on utilise une barrette CCD Caliens)
+\item on peut déjà qualitativement montrer le passage de la diffraction à l'infini à la diffraction de Fresnel (en ouvrant la fente ou en approchant l'écran)
+\item interpréter les différentes figures obtenues
+\item pour être quantitatif, chercher à retrouver la même figure de Fresnel (par exemple celle à $N_f=2$) pour différentes configurations du système)
+\end{itemize}
+
+\subsection{Pouvoir séparateur d'un instrument : critère de Rayleigh [1]}
+\begin{itemize}
+\item reprendre le montage proposé par le Sextant (utiliser éventuellement un Wollaston à la place du bifente si on n'en trouve pas d'assez larges)
+\item expliquer le critère de Rayleigh et le vérifier
+\end{itemize}
+
+\section{Mesure de taille : diffraction sur poudre de lycopodes}
+\subsection{Présentation [1]}
+\begin{itemize}
+\item suivre le protocole "diffraction par des spores de lycopodes" p123 du Sextant
+\item \underline{expérience préliminaire} : vérifier que la diffraction par un trou respecte la formule classique : $\theta=1,22 \tf{\lambda}{d}$
+\item présenter la manipulation (expliquer rapidement le principe de l'épurateur de faisceau, qui est du filtrage spatial passe-bas!)
+\item montrer le calcul du Duffait pour montrer l'effet de la sommation d'objets monodisperses répartis aléatoirement. Introduire la notion de facteur de forme / facteur de structure.
+\item on a la même figure de diffraction mais $N$ fois plus intense!
+\end{itemize}
+
+\subsection{Expérience [1]}
+\begin{itemize}
+\item reprendre le montage proposé par le Sextant
+\item \textbf{important : on placera l'objet diffractant pour que le faisceau élargi éclaire la plus grande surface de spores, sans toutefois éclairé les bords de la lame}
+\item expliquer ce que l'on observe en accord avec ce qu'on s'attend
+\end{itemize}
+
+\subsection{Exploitation et comparaison des résultats [1]}
+\begin{itemize}
+\item mesurer la taille de l'anneau central pour différentes valeurs de $D$
+\item régression linéaire sur les résultats
+\item obtenir alors la taille des objets
+\item traiter correctement les incertitudes (peu de manips quantitatives dans ce montage)
+\item si possible, mesurer au microscope avec mire graduée la taille des spores pour comparaison (et pour s'assurer de leur quasi sphéricité)
+\end{itemize}
+
+\section{Filtrage spatial}
+\subsection{Mise en évidence : filtrage passe-bas [1]}
+\begin{itemize}
+\item suivre le protocole de l'expérience d'Abbe p128 du Sextant
+\item être pédestre pendant l'exposé pour présenter ce qu'on fait, comment on règle... L'expérience doit être faite devant le jury complètement
+\item expliquer qu'alors on peut faire du filtrage spatial puisqu'on a accès directement au plan de Fourier
+\item montrer le filtrage passe haut d'un grillage fin
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Prendre une lentille $L=250$ plutôt. Permet d'obtenir un plan de Fourier plus grand (plus facile pour filtrer)
+\end{remarque}
+
+
+\subsection{Filtrage passe-haut : strioscopie [1]}
+\begin{itemize}
+\item reprendre la manipulation précédente
+\item expliquer que l'on obtient un excellent contraste sur un objet de phase (faire le petit calcul avec le DL de $\ex{\jr \varphi}$)
+\item souligner que le principe c'est : \centers{$t(x,y) \rightarrow TF\pac{t(x,y)} \rightarrow \text{filtrage} \rightarrow TF^{-1}$}
+\noindent
+ La TF inverse permet de revenir dans l'espace réel. Sur l'écran on voit l'image de la grille filtrée
+\end{itemize}
+
+
+\end{document}

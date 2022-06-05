@@ -1,0 +1,127 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M20 : induction auto-induction}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item technique de mesure
+\item valeur d'inductance type
+\item application des effets inductifs
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Dictionnaire de physique expérimentale , tome III l'électronique, Quaranta, Editions Pierron
+\item[[\,2\!\!]] Dictionnaire de physique expérimentale , tome IV l'électricité, Quaranta, Editions Pierron
+\item[[\,3\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,4\!\!]] BUP n°691, "Mise en évidence expérimentale de l'énergie emmagasinée dans un condensateur ou dans une bobine"
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : bref historique de la découverte expérimentale de l'induction
+
+
+\section{Mesure de $L$ et $M$}
+\subsection{Mesure de l'impédance d'une bobine : auto-induction [3]}
+\begin{itemize}
+\item utiliser le montage classique à AO de mesure d'impédance inconnue (convertisseur courant->tension avec le dipôle à mesurer reliant la sortie à la borne -)
+\item ainsi la fonction de transfert s'écrit : 
+\centers{$\f{v\e{s}}{v\e{e}}=-\f{D}{R}$}
+\item on obtient donc facilement la caractéristique de $D$ en mesurant gain et phase pour différentes fréquences
+\item dans le cas d'une bobine, à basse fréquence (en l'absence d'effet capacitif donc), on peut donc évaluer $L$ ainsi que la résistance interne de la bobine (et percevoir éventuellement un effet de peau)
+\end{itemize}
+
+\subsection{Mise en évidence de l'inductance mutuelle : mesure de $M$ [2]}
+\begin{itemize}
+\item alimenter une première bobine avec un GBF de puissance (mesurer le courant à l'aide d'une pince ampèremétrique par exemple)
+\item mesurer la tension aux bornes d'une seconde bobine 
+\item les deux seront visualisés à l'oscilloscope
+\item injecter un signal triangle et constater que l'on récupère un signal rectangle (caractère déviateur de la loi de Faraday)
+\item travailler ensuite en sinusoïdal et constater que l'amplitude de $e$ est proportionnelle à la fréquence
+\item on peut également constater la proportionnalité à l'amplitude du courant
+\item ainsi on comprend que l'on peut écrire $e=M\ddf{i}{t}$
+\item mesurer alors au LC-mètre le coefficient de mutuelle : mesurer au LC-mètre l'inductance totale des deux bobines en plaçant la connectique une fois dans le même sens, une fois en opposition : on obtient alors $2(L+M)$ et $2(L-M)$. Il est alors facile de remonter à la valeur de $M$
+\end{itemize}
+
+\section{Phénomènes liés à l'induction}
+\subsection{Opposition à l'établissement d'un courant [2]}
+\begin{itemize}
+\item "Etude quantitative du régime transitoire" p42 du Quaranta
+\item on cherche à quantifier le temps de montée du circuit RL (très simple et permet de montrer l'effet de retard à l'établissement du courant
+\item évidemment on travaille à basse amplitude donc en régime non saturé (ce qui assure que $L$ a du sens)
+\item ne pas oublier le suiveur pour rendre le GBF parfait
+\end{itemize}
+
+\subsection{Stockage d'énergie sous forme magnétique [2] et [4]}
+\begin{itemize}
+\item suivre le Quaranta p46, mais on va simplement décharger dans une résistance en mesurant la tension à ses bornes au cours du temps à l'oscilloscope en mode single
+\item l'idée du montage est de charger (à courant imposé) une bobine avec noyau de fer et entrefer d'épaisseur variable puis de vider l'énergie accumulée dans une résistance 
+\item il suffira ensuite d'en déduire la puissance dissipée dans la résistance ($P=U^2/R$) puis d'intégrer pour avoir l'énergie totale dissipée
+\item on constate que l'énergie accumulée présente un extremum pour une certaine valeur d'entrefer (à régler avec plusieurs épaisseurs de feuilles de papier)
+\item l'expérience est semi-quantitative : elle permet d'insister sur le caractère non linéaire de la relation entre $\phi$ et $i$ (ou le champ excitateur $H$)
+\item en fait la valeur $L$ qui donne la proportionnalité entre les deux grandeurs n'est valable que tant que le milieu n'est pas saturé
+\item en toute généralité, l'énergie volumique stockée s'écrit $\Int{0}{B}H\dd B$
+\item on comprend alors que le maximum d'énergie stockée à excitation imposée est atteint pour un optimum entre vitesse de montée et non saturation
+\item le BUP explique très bien les choses : montrer l'allure des graphes $H-B$ en fonction de la largeur de l'entrefer
+\end{itemize}
+
+
+\section{Applications}
+\subsection{Freinage par induction}
+\begin{itemize}
+\item rester qualitatif sur cette partie 
+\item utiliser la petite maquette de démonstration de l'effet des courants de Foucault pour dissiper l'énergie
+\item on peut montrer que le feuilletage du matériau réduit cet effet (c'est pourquoi les noyaux de transfo sont feuilletés)
+\item expliquer l'intérêt pour le freinage des poids lourds par exemple (dissipation non mécanique)
+\end{itemize}
+
+
+\subsection{Fluxmètre magnétique [2]}
+\begin{itemize}
+\item ENSC 373
+\item le circuit intégrateur doit être ajusté finement (en particulier il faut prendre des AO compensés!)
+\item ici on fait un intégrateur pur (pas de résistance en parallèle de la capacité) donc on intègre également les BF et le continu d'où la grande sensibilité à la dérive
+\item on peut alors mesurer le champ magnétique d'un aimant, après intégration on a
+\centers{$\abs{v\e{out}}=\f{N}{RC}(\phi\e{final}-\phi\e{initial})$}
+
+\end{itemize}
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ouvrir sur l'ensemble des applications électrotechniques de l'induction. En particulier moteurs et transformateurs
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Quelles sont les limites de l'AO? Limite du montage à AO pour mesurer l'impédance d'un composant inconnu.}  
+
+\bk
+\noindent
+\textbf{2. Equivalence d'une bobine à BF?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Expliquer l'effet capacitif dans une bobine à très haute fréquence.}  
+
+\end{document}

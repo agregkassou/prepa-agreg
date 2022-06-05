@@ -1,0 +1,174 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP46 : propriétés macroscopiques des corps ferromagnétiques (L3)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item électromagnétisme dans les milieux (paramagnétique, diamagnétique)
+\item notion sur l'aspect microscopique des corps ferromagnétique
+\item électrotechnique : transformateur idéal
+\item connaissance élémentaire sur la notion d'hystérésis
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item donner les ODG relatifs au ferromagnétisme
+\item hystérésis (raison, conséquences, matériaux durs/doux)
+\item large domaine d'application
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item il ne faut pas parler des propriétés microscopiques mais uniquement de leur conséquence (même si on peut les citer)
+\item faire de vrais calculs d'électrotechnique : cette leçon doit aller jusque là
+\item utiliser l'aspect "magique" du magnétisme pour le rendre attrayant.
+\item la théorie microscopiques doit (évidemment) être maitrisée
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Electromagnétisme II, Feynman, Dunod (domaines de Weiss)
+\item[[\,2\!\!]] Electromagnétisme, PC-PSI, H-prépa (central pour cette leçon)
+\item[[\,3\!\!]] La physique par les objets du quotidien, Ray \& Poizat, Belin (enregistrement magnétique)
+\item[[\,4\!\!]] Magnétisme : matériaux et applications, Trémolet de Lacheisserie, EDP Sciences (enregistrement magnétique)
+\item[[\,5\!\!]] Electromagnétisme IV, BFR, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : Phénomène connu depuis très longtemps (mais incompris). Formidable amélioration technique depuis que le phénomène est mieux compris : parler des innombrables développements de grands intérêts : aimants, transformateurs, moteurs...
+
+
+\section{Propriétés macroscopiques des corps ferromagnétiques}
+\subsection{Un modèle linéaire à oublier [5]}
+\begin{itemize}
+\item rappeler succinctement l'électromagnétisme dans les milieux
+\item présenter le cas des dia/para : linéarité, valeur de la susceptibilité (tracer éventuellement des courbes $M=f(H)$ pour comparer ensuite avec le cas du ferro)
+\item dire que ferro est caractérisé par une interactions entre les moments magnétiques de la matière. Avec deux conséquences : une susceptibilité énorme (puisque la réponse est auto-amplifiée par l'orientation des moments) qui conduit à des régimes saturés à champ raisonnable et des effets d'hystérésis (le matériau conserve la mémoire de son état passé)
+\end{itemize}
+
+\subsection{Courbe de réponse d'un ferromagnétique [2] et [5]}
+\begin{itemize}
+\item \underline{manipulation} : Utiliser les indications du Hprépa pour tracer le cycle d'hystérésis (il détaille en particulier le choix de l'intégrateur!)
+\item interpréter : montrer la saturation du matériau, montrer l'hystérésis (chemin différent selon le sens de l'aimantation)
+\item définir sur ce cycle aimantation rémanente et champ coercitif
+\item définir matériau dur/doux, donner des ODG
+\item on verra dans la suite que l'aire du cycle est lié à des pertes par cycle
+\end{itemize}
+
+\subsection{Domaine de Weiss : vers une explication de l'hystéréris [1]}
+\noindent
+Suivre le chapitre 37.3 du Feynman
+\begin{itemize}
+\item la théorie microscopique prévoit une aimantation spontanée à champ nul. Or un bout de fer n'est pas aimanté spontanément.
+\item compétition entre énergie d'interaction et minimisation de l'énergie magnétique : naissance de domaine de Weiss séparé par des parois (Dans ces domaines, l'aimantation vaut l'aimantation à champ nulle à la température donnée). Le champ extérieur résultant est nul.
+\item explication de l'hystérésis par des phénomènes dissipatifs lors du déplacement des parois de Bloch dans un cycle d'aimantation
+\item on peut alors distinguer les matériaux durs (très dissipatif, gel de l'orientation) et doux (faible dissipation, parois de Bloch mobiles, le matériaux conserve peu la mémoire de son aimantation précédente).
+\end{itemize}
+
+\subsection{Transition para/ferro des corps ferromagnétiques [5]}
+\noindent
+\underline{manipulation} : expérience du clou qui se détache de l'aimant par chauffage
+
+
+\noindent L'interprétation est faite dans le BFR. Donner des ODG de températures de Curie.
+
+\section{Exemples d'application des corps ferromagnétiques}
+\subsection{Matériau doux : exemple du transformateur [2]}
+\subsubsection{Rappel : le transformateur idéal}
+\noindent
+L'idée de cette partie est de faire un rappel sur le principe du transformateur et les principaux résultats dans le cas idéal sans perte. Cette partie a déjà été vue par les étudiants.
+\begin{itemize}
+\item géométrie d'un transformateur, notion de primaire/secondaire, hypothèse de flux commun, aucune perte dans le circuit (ni effet résistif, ni effet inductif)
+\item donner le rapport de transformation en tension
+\item donner le rapport de transformation en courant (dans l'hypothèse d'un courant magnétisant (à définir) négligeable)
+\item modèle schématique de transformateur idéal
+\end{itemize}
+
+\subsubsection{Mise en évidence des pertes : modèle de transformateur réel}
+\begin{itemize}
+\item commencer par les pertes à modélisation linéaires simples : inductance de fuite (perte de canalisation) et résistance du bobinage
+\item s'intéresser ensuite aux pertes dans le milieu magnétique
+\item on sépare alors les pertes par courant de Foucault (par induction dissipative dans le matériau) et les pertes par hystérésis (faire le petit calcul liant aire du cycle et perte)
+\item expliquer le choix des matériaux pour un transformateur : matériaux doux pour éviter les pertes par hystérésis et matériaux isolants (céramiques type ferrites) ou feuilletés (dans le domaine basse fréquence et pour des énergies faibles)
+\end{itemize}
+
+\subsection{Matériaux durs : enregistrement magnétique [3] et [4]}
+Reprendre les idées dans la réf. 3. La réf. 4 est très spécialisée mais permet un complément en cas de besoin. Ici, on cherchera simplement à donner l'idée générale de fonctionnement et à expliquer en quoi un matériau à hystérésis est intéressant pour être utilisé comme mémoire! Les ODG sont très impressionnant, il faut les donner.
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : 
+\begin{itemize}
+\item \underline{bilan} : revenir sur le cycle hystérésis et la grande différence d'ODG entre matériau dur et doux. Point central de l'utilisation des matériaux ferro.
+\item \underline{ouverture} : citer les machines électriques qui forment un autre pan énorme de l'utilisation aussi bien d'aimants permanents (machines de faible puissance) que de ferro doux.
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Donner d'autres exemples d'application des matériaux doux.}  
+
+\bk
+\noindent
+\textbf{2. Comment ramener un matériau ferromagnétique à aimantation nulle?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Lois de Descarte pour la réfraction de $\vect{B}$ à l'interface milieu/air.}  
+
+\bk 
+ \noindent
+\textbf{4. Que vaut la pente de la courbe $\vect{B}=f(\vect{H})$ à saturation?}  
+
+\bk
+\noindent
+\textbf{5. Pourquoi avoir des pièces coniques au niveau de l'entrefer?}  
+
+\bk
+\noindent
+\textbf{6. Comment marche une pince ampéremétrique?}  
+
+\bk
+\noindent
+\textbf{7. Existe-t-il des matériaux non isotropes?}  
+
+\bk
+\noindent
+\textbf{8. Comment varie $\mu\e{r}$ avec la fréquence?}  
+
+\bk
+\noindent
+\textbf{9. Préciser le sens de parcours du cycle d'hystérésis.}  
+
+\bk
+\noindent
+\textbf{10. Comment mesurer l'aimantation de saturation avec du matériel de lycée?} 
+
+\bk
+\noindent
+\textbf{11. Comment tracer manuellement un cycle d'hystérésis?}
+
+\bk
+\noindent
+\textbf{12. Comment choisir les fréquences de coupure de l'intégrateur pour visualiser le cycle d'hystérésis?}
+
+\end{document}

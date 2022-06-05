@@ -1,0 +1,136 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP11 : Premier principe de la thermodynamique}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item mécanique du point (changement de référentiel)
+\item notion de transformation quasi statique / réversible
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item le premier principe exprime une conservation de l'énergie
+\item faire le lien avec une approche mécanistique (TEC)
+\item le fait que $U$ soit une fonction d'état n'est pas trivial : c'est le postulat fondamental de la thermodynamique (fondé sur la physique statistique)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item une argumentation à partir de la mécanique est requise
+\item $U$ définit une grandeur conservative qui n'évolue pas pour un système isolé
+\item ancrer la leçon dans l'expérience (il faut faire ressortir des grandeurs mesurables)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] BUP n°832, "énergie en mécanique et en thermodynamique" (très clair sur le sujet, indispensable!)
+\item[[\,2\!\!]] Thermodynamique, Diu, Hermann (clair en complément)
+\item[[\,3\!\!]] BFR de thermodynamique, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : Partir du \textbf{miracle de la thermodynamique} : être capable de définir l'état d'un système constitué d'un grands nombres de particules avec un nombres réduits de variables. La thermodynamique ne donne pas accès à l'énergie absolue d'un gaz de manière simple (par exemple, elle ne dit rien de l'énergie macroscopique ou des énergies de liaison dans les particules par exemple). En revanche, dans de très nombreux cas, elle est \textbf{efficace} pour exprimer les \textbf{variations d'énergie}.
+
+
+
+\section{De la mécanique à la thermodynamique}
+\subsection{Théorème de l'énergie cinétique [1]}
+\begin{itemize}
+\item TEC pour un système de points matériels
+\item appliquer le premier théorème de Koenig (référentiel barycentrique)
+\item séparer travail des forces conservatives et non conservatives
+\item le travail des forces conservatives est alors pris comme variation d'énergie potentielle
+\item on obtient le TEC sous la forme qui nous intéresse : insister sur le fait que c'est la conservation de l'énergie
+\item les forces non conservatives sont \textbf{uniquement} non conservatives! (on peut se reporter à Feynman dans cette affirmation)
+\end{itemize}
+
+
+\subsection{Le travail des forces extérieurs explicité [1]}
+\begin{itemize}
+\item en thermo, on insiste sur les modes de mouvement auxquels ces transferts sont destinés : séparation entre travail et chaleur
+\item transfert de travail : apport d'énergie à des modes macroscopiques de mouvement. montrer qu'il peut s'exprimer comme le produit de la variation d'une grandeur d'état extensive macroscopique par la grandeur de contrainte extérieure conjuguée
+\item transfert thermique : apport à des modes microscopiques d'énergie. notion intuitive mais difficile à définir avec précision (on se rappelle que Diu la définit comme $\Delta U - W$). Dans un cas réversible, on peut néanmoins la définir à partir de l'entropie et de la température.
+\end{itemize}
+
+
+\subsection{Quelques exemples de travaux mécaniques [2]}
+\noindent
+Citer plusieurs exemples
+\begin{itemize}
+\item forces de pression (cas simple d'un piston puis généralisation supposée)
+\item tension de surface (cas simple sur une structure rail de Laplace avec film de savon puis généralisation supposée)
+\item travail électrique fourni par un générateur de tension (faire un schéma illustratif en isolant le système considéré)
+\end{itemize}
+
+\section{Premier principe de la thermodynamique}
+\subsection{L'énergie interne [1]}
+\noindent
+Définir l'énergie interne : prendre celle du BUP (en ayant conscience que cette définition est arbitraire, il faudra juste rester cohérent!)
+
+\subsection{Notion de système et d'équilibre thermodynamique (rappel) [3]}
+\noindent
+Prendre les définitions préliminaires du BFR par exemple!
+
+\subsection{Enoncé du premier principe [2]}
+\begin{itemize}
+\item Utiliser la définition du Diu : "l'énergie interne est une fonction d'état $U(S,V,N,X)$"
+\item C'est cette affirmation qui est le premier principe : il faut insister là dessus : cela n'a rien de trivial et ce n'est pas démontrable en mécanique. C'est la force de la thermodynamique de pouvoir d'écrire l'état d'un système à partir d'un petit nombre de variables d'état
+\item Dans le cas particulier où l'énergie macroscopique est constante, il vient finalement : $\Delta U = W + Q$. Pour un système isolé, cette grandeur est donc conservée.
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Faire remarquer que l'on peut de cette manière définir sans ambiguité $Q$ comme étant $\Delta U - W$. C'est rigoureux mais on perd le sens physique.
+\end{remarque}
+
+\subsection{Coefficients calorimétriques : répartition de $Q$ [3]}
+\noindent
+Le BFR (p160) donne la définition la plus opérante pour la leçon. Partant de la différentiation sur $(T,V)$ de la fonction d'état $U$ et en utilisant la relation du premier principe, on obtient l'expression de $\ell$ et $C\e{V}$.
+
+
+\section{Application du premier principe}
+\subsection{Interconversion des formes d'énergie : expérience historique de Joule [2]}
+\begin{itemize}
+\item présenter l'expérience
+\item faire la démonstration : on remonte à la valeur de $C\e{V}$ (en pratique $C\e{P}$, mais on peut les confondre pour un fluide)
+\item insister sur le fait qu'on montre ainsi la possibilité d'interconversion des formes d'énergie, renforçant encore la théorie de la chaleur comme une forme d'énergie
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Si la conversion d'énergie mécanique en chaleur est aisée, la réciproque est fausse. Il n'est pas possible d'abaisser la température du fluide pour remonter la masse spontanément. Ce constat, intuitif, est à mettre en lien avec le second principe et n'apparait pas dans le premier principe.
+\end{remarque}
+
+
+\subsection{détente de Joule Gay Lussac : 1er loi de Joule [3]}
+\begin{itemize}
+\item présenter la manipulation (isoler le système gaz en expansion)
+\item on montre alors que si $\dd T=0$, $U$ est indépendant de $V$ -> 1er loi de Joule
+\item En particulier, un gaz parfait vérifie la première loi de Joule. Cette détente est donc un test du caractère parfait d'un gaz
+\item Le BFR donne une explication en termes de forces d'interaction du refroidissement du gaz à la détente
+\end{itemize}
+
+
+\subsection{L'énergie interne n'est pas l'énergie totale : le problème du patineur [1]}
+\noindent
+Reprendre l'exemple du BUP : "enfant sur patins à roulettes". On montre ainsi un cas où l'énergie macroscopique n'est pas conservée. -> Exemple important pour montrer que les termes oubliés ne doivent pas toujours l'être...
+
+\mk
+\noindent
+\textbf{Conclusion} : Ouvrir sur l'intérêt pour la compréhension des phénomènes de la thermodynamique. La compréhension des machines thermiques repose largement sur cette possibilité d'interconversion entre les formes d'énergie. Néanmoins, on l'a souligné à propos de l'expérience de Joule, la thermodynamique est incomplète sans le second principe. L'utilisation simultanée des deux principes permet de comprendre alors que la chute de la masse va spontanément réchauffer l'eau ; mais qu'il n'existe pas d'évolution spontanée telle que l'eau se refroidit pour remonter la masse.
+
+
+
+\end{document}

@@ -1,0 +1,151 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP19 : conversion de puissance électromécanique (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item induction électromagnétique
+\item force de Lorentz, de Laplace
+\item champ magnétique tournant (production)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item renversabilité de la conversion
+\item le rendement de la conversion est de 1, auquel s'ajoute les pertes (à ne pas confondre avec le rendement des machines thermiques, nécessairement inférieur à 1)
+\item importance pratique : quotidien, industrie, transport...
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item ne pas être uniquement descriptif, il faut poser et justifier les modèles
+\item pour autant cette leçon doit comporter un aspect technique et il faut  mettre en évidence les limitations réelles, les pertes...
+\item il y a une leçon d'induction! ici, il convient de l'utiliser
+\item bien choisir l'orientation des circuits dès le début et le dire 
+\item ne pas parler de "réversibilité" mais de "renversabilité"
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] H-prépa PSI-PSI*, Brebec, Hachette (contient la leçon)
+\item[[\,2\!\!]] "Actualisation des connaissances sur les moteurs électriques", BUP n°846 (beaucoup d'ODG intéressants)
+\item[[\,3\!\!]] J'intègre PC-PSI, Sanz, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [2]} : Intérêt de l'électricité pour le transport : on peut déconnecter le lieu de production et de consommation d'énergie mécanique. Mais alors il est crucial de développer des moyens pour la conversion (aussi bien dans les centrales que sur les lieux de consommation). C'est tout l'enjeu de la conversion électromécanique de puissance. -> on pourra s'aider d'un petit schéma d'un système électrique (centrale, ligne de transport, consommateurs)
+
+
+\section{Introduction à la conversion électromécanique}
+\subsection{Bilan de puissance de la force de Lorentz sur un porteur de charge [3]}
+\begin{itemize}
+\item force de Lorentz dans $B$ pour un porteur de charge
+\item force sur un volume élémentaire (\textbf{attention!! Il faut considérer également les cations qui sont des charges fixes, et montrer ensuite que leur puissance est nulle. Mais la démo du J'intègre est fausse!})
+\item bilan de puissance
+\item identifier $\dd P\e{Lap}$ et $\dd P\e{elec}$
+\item il y a couplage électromécanique parfait (se rajoute évidemment des pertes)
+\item rappeler pour la suite l'expression du champ électromoteur local pour un champ fixe
+\end{itemize}
+
+\subsection{Exemple des rails de Laplace [3]}
+\begin{itemize}
+\item permet de fixer les idées sur un cas simple
+\item \underline{manipulation} : rail de Laplace en générateur (on donne vitesse initiale)
+\item expression du champ électromoteur dans ce cas
+\item suivre alors la chaine $e(t) \rightarrow i(t) \rightarrow \vect{F}\e{Lap}$ (application de la théorie de l'induction)
+\item vérifier alors $P\e{Lap}+P\e{elec}=0 $
+\item \underline{manipulation} : rail de Laplace en régime moteur (générateur extérieur)
+\item on montre ainsi la renversabilité de la conversion -> principe général pour la suite
+\end{itemize}
+
+\subsection{Conversion de puissance [3]}
+reprendre le graphique du j'intègre en conclusion du MCC définissant le type de fonctionnement en fonction du signe des grandeurs (faire sur transparent et commenter devant jury)
+
+\section{Machine à courant continue}
+\subsection{Structure, principe de fonctionnement [1]}
+\begin{itemize}
+\item voir si on peut faire la présentation directement sur une MCC démontée
+\item carte du champ $B$ au niveau du rotor
+\item architecture générale (rotor, stator)
+\item principe de fonctionnement avec une spire unique
+\item nécessité d'un système de commutation + comment il marche
+\item bien fixer les conventions de signe
+\item faire une courte remarque sur le bobinage en pratique. dire que c'est compliqué!
+\end{itemize}
+
+\subsection{Equations de fonctionnement, renversabilité [3]}
+\begin{itemize}
+\item on obtient alors $e$ sur une spire
+\item équation $e=\phi_0 \, \omega$
+\item cas d'une machine réelle : les explications restent valables pour chaque conducteur, si bien que $e=\phi_0 \, \omega$ reste valable avec un coefficient adapté (lié à la structure du moteur)
+\item calcul du couple à partir des forces de Laplace
+\item montrer que le bilan énergétique est OK
+\end{itemize}
+
+\subsection{Etude en fonctionnement moteur, pertes [1] et [2]}
+\begin{itemize}
+\item équation d'ordre 2 en $\omega$ que l'on simplifie (faire tout sur transparent)
+\item obtenir la condition de démarrage et préciser que l'on doit limiter la surtension pour ne pas avoir des courants trop important à l'allumage
+\item déterminer les points de fonctionnement en régime établi (suivre le Hprépa, tous les graphes sur transparent) -> $\omega$ dépend du couple, pas top!
+\item donner des exemples d'usage de la MCC et les puissances associées
+\item : points sur les pertes : cuivre, fer, de commutation, mécanique -> donner ODG de rendement
+\end{itemize}
+
+\section{Machines à champ tournant : exemple de la machine synchrone}
+\subsection{Structure, principe de fonctionnement [1]}
+\begin{itemize}
+\item structure générale
+\item action d'un champ $B$ sur un moment magnétique
+\item expression du couple en fonction de l'angle
+\item nécessité du synchronisme pour avoir un couple moyen non nul
+\end{itemize}
+
+\subsection{Etude du fonctionnement [3]}
+\begin{itemize}
+\item démarrage seul impossible
+\item vitesse associée à la vitesse de rotation du champ (elle ne varie pas avec la charge!)
+\item point de fonctionnement moteur, discuter de la stabilité
+\item explication avec les mains (à l'aide d'un transparent) le fonctionnement d'un alternateur (sans calcul)
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item \underline{bilan} : la conversion électromécanique repose sur l'induction magnétique. De nombreux convertisseurs existent chacun pour des applications spécifiques. On aurait pu parler des moteurs asynchrones mais aussi des HP et des micros...
+\item \underline{ouverture} : importance de l'électronique de commande pour le contrôle des moteurs (tension progressive pour l'allumage d'une MCC, modifier la fréquence du champ tournant pour modifier la vitesse de rotation du moteur...). Le développement de l'électronique a accompagné celui des convertisseurs!
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Pourquoi s'intéresse-t-on à la valeur moyenne du couple dans le cas des machines à champ tournant?}  
+
+\bk
+\noindent
+\textbf{2. Quelle est la différence entre force de Lorentz et de Laplace?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Définition de la notion de courant de Foucault. Donner des exemples. Comment lutter contre?}  
+
+\end{document}

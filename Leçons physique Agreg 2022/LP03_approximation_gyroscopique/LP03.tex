@@ -1,0 +1,224 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP03 : approximation gyroscopique (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item théorèmes généraux de la mécanique des solides
+\item bases de magnétisme
+\item bases de mécanique quantique (notion de spin, de moment cinétique et magnétique)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item généralité de l'approximation gyroscopique (faire les ODG pour tester!)
+\item comportement paradoxal du mouvement des solides en rotation
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item énoncer les hypothèses de l'approximation et les vérifier sur les exemples traités
+\item connaître les principes de fonctionnement et les performances des gyroscopes modernes
+\item faire une manip introductive
+\item utiliser la banque de transparent pour avoir des schémas clairs
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Mécanique, Perez, Masson
+\item[[\,2\!\!]] Les astuces de Feynman, Feynman, Pearson
+\item[[\,3\!\!]] Mécanique quantique I, Cohen, Hermann
+\item[[\,4\!\!]] Panorama de la physique, Pietryk, Belin
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+
+\noindent
+\underline{manipulation} : montrer une toupie. Mouvement tout à fait paradoxal. A l'arrêt, elle chute par l'effet de son poids. Mais en rotation, elle se maintient. Constater aussi le mouvement de précession.
+
+\mk
+\noindent
+La leçon a pour but de comprendre ce mouvement et d'envisager les différentes applications, aussi bien dans le domaine macroscopique (en particulier pour le guidage inertiel) que dans le domaine macroscopique (mouvement des moments magnétiques élémentaires soumis à un champ)
+
+
+\section{Introduction à partir de l'étude de la toupie}
+\subsection{Vecteur rotation d'un solide en rotation autour d'un point fixe}
+\begin{itemize}
+\item définir les angles d'Euler (Perez p235) -> utiliser schéma du fond de transparent
+\item vecteur rotation
+\item cas d'un solide à symétrie de révolution -> utilisation de la base de Résal $Re$
+\item écriture de $\vect{\omega}_{S/R}$ dans $Re$
+\item écriture de $\vect{\omega}_{Re/R}$ dans $Re$
+\end{itemize}
+
+\subsection{Equation du mouvement}
+\begin{itemize}
+\item Perez p382
+\item on se place dans le cadre de la toupie! présenter schéma et montrer les forces qu'elle subit -> point fixe = point de contact au sol
+\item TMC au point fixe dans $R$ puis dans $Re$
+\item justifier que la matrice d'inertie est diagonale (avec les mains)
+\item exprimer le moment du poids
+\item ne pas détailler le passage dans la base de Résal
+\item on obtient un système complexe de 3 équations (sur transparent)
+\item on montre simplement que c'est compliqué! on ne cherchera pas à le résoudre
+\end{itemize}
+
+\subsection{Approximation gyroscopique}
+\begin{itemize}
+\item Perez p385
+\item définir l'approximation
+\item TMC dans $R$ en exprimant $\vect{OC}$ en fonction de $\vect{L}_O$
+\item équations du mouvement simplifiées
+\item montrer que $L_{Oz}=C^{ste}$ et $\norme{\vect{L}_{O}}=C^{ste}$
+\item dégager la pulsation de Larmor $\omega_L$
+\item montrer le mouvement de précession dans le plan (pour gagner du temps, on montre simplement que la solution marche)
+\end{itemize}
+
+\begin{remarque}
+\noindent
+En fait, l'approximation porte plutôt sur le moment cinétique que sur le vecteur rotation. Par conséquent, l'approximation est équivalente si les coefficients de la matrice d'inertie sont du même ordre de grandeur.
+\end{remarque}
+
+\subsection{Condition de validité}
+\begin{itemize}
+\item Perez p387
+\item ODG pour une toupie conique -> on montre que l'approximation est valide (\textbf{Attention! L'AN du Perez est fausse, il faut la refaire})
+\item parler du comportement paradoxal du mouvement : la toupie s'oppose à la gravité qui tend à la faire tomber
+\end{itemize}
+
+\mk
+\noindent
+\underline{transition} : 
+étude très générale puisque tout mouvement dans un référentiel barycentrique se fait par rapport à un point fixe. L'étude ne se réduit donc pas à la toupie! La rotation de la Terre sur elle-même est également un mouvement de rotation autour de son centre de masse (point fixe).
+
+\section{Effets dans le domaine macroscopique}
+\subsection{Précession des équinoxes}
+\begin{itemize}
+\item Perez p389
+\item expliquer les termes constituants le moment exercé par les astres sur la Terre. Insister sur le fait que ce couple est liée à la non sphéricité de la Terre
+\item travailler alors par analogie direct avec le cas de la toupie (\textbf{attention, ce n'est pas clair dans le Perez même si toutes les idées y sont. En particulier les notations sont maladroites. Remplacer $\dot{\psi}$ par $\omega_L$.})
+\item simplifier alors l'expression comme Perez et évaluer ODG de la période de précession des équinoxes
+\end{itemize}
+
+\subsection{Le gyroscope}
+\begin{itemize}
+\item faire principalement sur transparent et rapidement. il faut garder du temps pour III
+\item présenter le gyroscope (éléments géométriques et lien avec le système toupie)
+\item concentrer les manipulations ici et montrer alors tout ce qu'on a déjà vu sur ce gyroscope
+\item \underline{manipulation 1} : utiliser un gyroscope équilibré (aucune force ne s'exerce sur lui), le poser sur le tabouret tournant. Montrer qu'il conserve son axe de rotation lorsque l'on fait tourner le tabouret (alors qu'il n'est pas conservé si le disque est arrêté) -> \textbf{conservation de $L_{O}$ en l'absence de couple}
+\item \underline{manipulation 2} : utiliser un gyroscope déséquilibré (à l'arrêt, les masses sont mal équilibrées, et l'axe de rotation vient en butée). Une fois la rotation lancée, on observe un redressement de l'axe et un mouvement de précession! C'est exactement la toupie! -> \textbf{précession en présence d'un couple}
+\item \underline{manipulation 3} : utiliser un gyroscope équilibré. Axe reste fixe en l'absence de couple extérieur. Retirer ou ajouter une masse afin d'exercer un couple. Apparition d'une précession dans un sens ou dans l'autre selon la direction du couple -> \textbf{précession en présence d'un couple, directionnalité}
+\item présenter l'intérêt pratique en guidage (avions, bateau, sous-marin...)
+\item donner quelques pistes pour résoudre les difficultés techniques (recalibrage régulier du cap à l'aide d'autres instruments, liaisons d'excellentes qualités, système de rétroaction pour limiter le mouvement d'ensemble du gyroscope)
+\item développer cette partie selon le temps disponible
+\end{itemize}
+
+\section{Effets dans le domaine microscopique}
+\subsection{Moment magnétique soumis à un champ magnétique permanent}
+\begin{itemize}
+\item utiliser complément $F_{IV}$ du Cohen
+\item traitement classique d'un moment magnétique soumis à un champ $B$ permanent
+\item écriture du TMC dans $R$
+\item introduire sans démonstration le rapport gyromagnétique $\gamma$. \textbf{C'est ici que l'approximation gyroscopique intervient. Il faut absolument le dire.} Le TMC ressemble formellement au précédents cas. La résolution sera donc identique.
+\item \textbf{vérifier la validité de l'approximation gyroscopique. Pour cela, comparer la valeur du moment cinétique de précession au moment cinétique intrinsèque}
+\item traitement par analogie directe
+\item montrer que $L_{Oz}=C^{ste}$ et $\norme{\vect{L}_{O}}=C^{ste}$
+\item dégager la pulsation de Larmor $\omega_0$
+\item ODG pour s'assurer que l'approximation est vérifiée (pour un spin $1/2$ par exemple)
+\end{itemize}
+
+\subsection{Résonance magnétique}
+\begin{itemize}
+\item être très rapide sur cette partie, c'est presque hors sujet. Ca permet juste de montrer l'application de l'équation à des cas concrets.
+\item présenter la situation et introduire le repère tournant
+\item définir $\omega_0$ et $\omega_1$
+\item TMC dans le référentiel terrestre (galiléen) et puis dans le référentiel tournant
+\item définir $\vect{B}\e{eff}$ 
+\item mouvement de précession dans le référentiel tournant autour de $\vect{B}\e{eff}$ 
+\item condition de résonance
+\item à résonance, champ tournant peut inverser le spin (retournement)
+\item il y a alors un maximum d'absorption de l'OEM par l'échantillon (ce qui est détectable)
+\item \underline{application} : analyse chimique : la condition de résonance dépend de l'entourage du proton résonant (à développer selon le temps à l'aide d'un livre de chimie organique de spé). On fait donc un scan en fréquence de l'échantillon et on repère les pics d'absorption.
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion [4]}
+\begin{itemize}
+\item \underline{bilan} : l'approximation est valable dans de nombreux systèmes physiques, d'où son intérêt pratique!
+\item \underline{ouverture} : parler de l'utilisation de la RMN dans le domaine médical (utiliser "Panorama de la physique" pour avoir une idée rapide du fonctionnement de la méthode de scan)
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Dans les smartphones, ce sont des gyromètres. expliquer leur fonctionnement.}  
+
+\bk
+\noindent
+\textbf{2. Comment fonctionnent les correcteurs de trajectoire dans les véhicules?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Peut-on appliquer le TMC en tout point?}  
+
+\bk 
+ \noindent
+\textbf{4. Définir un couple.}  
+
+\bk
+\noindent
+\textbf{5. Peut-on imaginer une géométrie de l'objet pour laquelle l'approximation gyroscopique ne soit pas vérifiée bien que la condition sur les vitesses de rotation soit vérifiée?}  
+
+\bk
+\noindent
+\textbf{6. Comment mesure-t-on expérimentalement l'aimantation d'un échantillon? Et dans les gaz?}  
+
+\bk
+\noindent
+\textbf{7. Unité du rapport gyromagnétique. ODG typique.}  
+
+\bk
+\noindent
+\textbf{8. Interprétation quantique de la RMN. Qu'appelle-t-on oscillation de Rabi?}  
+
+\bk
+\noindent
+\textbf{9. Qu'est-ce qu'un gyroscope optique?}  
+
+\bk
+\noindent
+\textbf{10. Peut-on interpréter la RMN en terme d'émission/absorption? Quel serait alors le processus d'émission?}  
+
+\bk
+\noindent
+\textbf{11. Définir "moment magnétique".}
+
+\bk
+\noindent
+\textbf{12. Définir "mouvement de Poinsot".}
+
+\bk
+\noindent
+\textbf{13. Définir "degrés de liberté".}
+
+\end{document}

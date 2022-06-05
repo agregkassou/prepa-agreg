@@ -1,0 +1,122 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP07 : notion de viscosité d'un fluide, écoulement visqueux}
+
+\encadreminipage{9cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item hydrostatique
+\item notion de diffusion / convection
+\item cinématique des fluides
+\item équation d'Euler
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item montrer que la viscosité est un phénomène courant (exemples de la vie quotidienne)
+\item insister sur l'origine physique de la viscosité
+\item c'est un phénomène de nature diffusive et donc dissipative (chauffe le fluide)
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Gouttes, bulles, perles et ondes, De Gennes, Belin
+\item[[\,2\!\!]] Hydrodynamique physique, Guyon, Hulin, Petit, EDP Sciences
+\item[[\,3\!\!]] Cap Prépa physique PC-PC*, Pearson 
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+intuiter la notion de viscosité dans des écoulement simples + petite approche historique (les petits encarts du Cap Prépa sont adaptés à cela)
+
+\section{Notion de viscosité}
+\subsection{Force surfacique de viscosité [3]}
+Mise en évidence du phénomène par expérience qualitative : écoulement Couette plan avec glycérol coloré. L'entraînement du fluide ne peut pas être expliqué par une contrainte normale de pression. Il existe une force de contrainte tangentielle due à la viscosité du fluide). Cet exemple est intéressant car on se place dans le cas ou la force motrice est \textbf{uniquement} la viscosité. On introduit alors la force surfacique de viscosité (dans l'hypothèse d'un fluide newtonien) dans le cas d'un écoulement 1D.
+
+\begin{remarque}
+\noindent
+Profiter pour commenter la dépendance de la force à la surface et au taux de cisaillement et l'orienter (signe) : le fluide rapide entraîne le fluide lent!
+\end{remarque}
+
+
+\subsection{Interprétation microscopique [2]}
+On interprète la diffusion de quantité de mouvement via la diffusion de particules (faire un schéma clair à partir du Guyon mais ne pas présenter les calculs). L'objectif n'est pas de se donner un modèle mais de comprendre physiquement le phénomène. Expliquer le phénomène comme un échange de particules dont la vitesse moyenne selon $x$ est différente. 
+
+
+\subsection{Facteur influançant la viscosité : la température [2]}
+On reprend les modèles exposés dans le Guyon pour interpréter la viscosité des gaz et des fluides condensés : 
+\begin{itemize}
+\item Dans les gaz, on prend un modèle de type cinétique des gaz et on obtient une loi 
+\centers{$\eta = \f{\sqrt{mT}}{\sigma}$}
+La viscosité croit donc avec $T$. L'agitation thermique augmente la viscosité.
+\item Dans les liquides, on prend un modèle plus réaliste de particules sur réseau. Chaque molécule se déplace par saut d'une énergie d'activation pour aller vers l'autre site. Ce saut est d'autant plus facile que l'agitation thermique est élevée (loi de type Arrhénius). Une contrainte peut alors plus facilement mettre en mouvement le fluide à haute température, la viscosité diminue!
+
+\end{itemize}
+
+
+\section{Dynamique des écoulements visqueux}
+
+\subsection{Force volumique de viscosité [3]}
+\begin{itemize}
+\item passer de la force surfacique à la force volumique 
+\item généralisation 1D -> 3D
+\end{itemize}
+
+\subsection{équation de NS + CL [3]}
+\noindent
+\textbf{équation de NS} : On se place dans le cas d'un fluide incompressible et newtonien. On ajoute un terme à l'équation d'Euler pour obtenir l'équation de Navier-Stokes. 
+
+\noindent
+\textbf{CL} : La non pénétrabilité du fluide impose que la vitesse normale est nulle sur les obstacles. La viscosité implique aussi que la vitesse tangentielle doit être nulle (sinon on aurait une contrainte locale divergente). Une autre condition apparaît pour les surfaces libres (cette fois on fait un PFD sur la surface qui donne la condition d'égalité des contraintes tangentielles de part et d'autre de la surface).
+
+
+
+
+\subsection{Nombre de Reynolds [3]}
+Le Cap Prépa en donne une présentation claire et exhaustive
+
+\begin{itemize}
+\item bien expliciter terme de convection et de diffusion (sens physique)
+\item définir $Re$
+\item discriminer les types d'écoulement en fonction de $Re$ (préciser que initialement $Re$ est introduit pour séparer écoulement laminaire et turbulent)
+\item ici on s'intéresse à la limite $Re=1$ qui sépare écoulement visqueux et écoulement parfait. Les écoulements visqueux sont les écoulements à bas Reynolds.
+\end{itemize}
+
+
+\section{Exemple d'écoulement visqueux}
+
+\subsection{Couette plan [3] par exemple}
+\begin{itemize}
+\item Permet de revenir sur l'exemple introductif de la leçon de manière plus quantitative. 
+\item calculer le $Re$ de l'écoulement
+\item bien poser le problème, considérer les symétries et invariances
+\item trouver le champ des vitesses. Montrer la réversibilité associée au système d'équation (qui se voit en pratique)
+\item On peut mener le bilan de puissance sur l'écoulement. Permet de mettre en évidence le caractère dissipatif de la viscosité (attention : la démo est à connaître, aucun livre ne semble la proposer)
+\end{itemize}
+
+\subsection{Effet Marangoni, larmes de vin}
+\subsubsection{position du problème}
+Mettre en place le problème. Expliquer qualitativement que l'évaporation différentielle crée un gradient vertical de tension de surface.
+
+\subsubsection{condition d'ascension}
+Mettre en équation le problème et, décrire le profil ascensionnel et donner le critère de montée. Il convient d'insister sur les conditions limites (celle en contact avec l'air étant assez exotique!)
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+
+
+\noindent
+introduire la notion de couche limite -> il y a toujours une viscosité à considérer dans une zone proche des parois (même pour les écoulements parfaits à grande échelle).
+
+
+\end{document}

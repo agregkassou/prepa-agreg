@@ -1,0 +1,172 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP12 : Evolution et condition d'équilibre d'un système thermodynamique fermé (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item thermodynamique de L1 (fonction d'état, réversibilité, travail, chaleur...)
+\item Premier et second principe
+\item le gaz parfait
+\item les fonctions caractéristiques
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item Un potentiel dépend des conditions extérieures et n'est pas une fonction d'état
+\item Insister sur l'objectif des potentiels : reformulation pratique des principes afin de prédire l'évolution d'un système et d'étudier l'équilibre
+\item universalité de la méthode
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item Ecrire systématiquement les variables et paramètres des fonctions
+\item Ne pas faire que le cas du corps pur en équilibre avec un thermostat (la bulle est sympathique!)
+\item Pour définir un équilibre, l'analogie avec la mécanique doit être faite
+\item Définir le système considéré et la transformation envisagée avant d'écrire des calculs
+\item Distinguer variables internes et paramètres extérieurs (à faire apparaître dans chacun des cas traités)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Thermodynamique, Diu, Hermann
+\item[[\,2\!\!]] Thermodynamique, Choimet, Précis Bréal (clair sur les potentiels thermo)
+\item[[\,3\!\!]] J'intègre physique PC-PSI, Dunod (exercice bulle) 
+\item[[\,4\!\!]] Thermodynamique, Diu, Hermann (pour la démo de Laplace)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]}
+Considérer un point matériel pouvant se déplacer selon une direction et soumis à un potentiel présentant un extremum. Faire un DL de Taylor à l'ordre 2 autour de ce puits. On en tire plusieurs conclusions : 
+\begin{itemize}
+\item à l'équilibre l'ordre 1 s'annule
+\item le signe de l'ordre 2 dépend de la stabilité de l'équilibre
+\item la condition d'évolution spontanée est : $\dd E\e{p}<0$
+\end{itemize}
+\mk
+
+
+
+\section{Le second principe : un principe d'évolution}
+\subsection{Paramètres de contrôle, variables internes [1]}
+\begin{itemize}
+\item rappeler la définition d'équilibre thermodynamique
+\item définir soigneusement paramètre extérieur (de contrôle) et variable interne. Prendre l'exemple proposé par Diu du récipient séparé en deux par une paroi mobile ou non.
+\end{itemize}
+
+\subsection{Le postulat fondamental de la thermodynamique [1]}
+Reprendre l'énoncé donné dans le Diu. Insister sur le fait que l'état d'un système soit réductible a peu de variables n'a rien de trivial.
+
+\subsection{Néguentropie et potentiels thermodynamiques [1]}
+\begin{itemize}
+\item définir la néguentropie ($-S$) et expliciter le fait que pour un système isolé, celle-ci joue le rôle de potentiel au sens déjà donné en mécanique : équilibre, stabilité et condition d'évolution spontanée. [pas de source particulière]
+\item donner une définition claire de potentiels thermodynamiques (celle du Diu qui est donnée dans le cas de mécanique dans l'intro du chapitre 5).
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Préciser que le potentiel thermodynamique n'est pas une fonction d'état. Il est défini à tout instant (y compris hors équilibre) et prend la valeur hypothétique qu'aurait la fonction d'état sous le jeu de paramètres considérés lors de l'évolution. L'identification entre fonction d'état et potentiel n'est possible qu'à l'équilibre
+\end{remarque}
+
+
+\section{Potentiels thermodynamiques adaptés}
+\subsection{Cas d'un système isolé}
+Nous avons vu que la néguentropie (l'entropie) était un potentiel thermodynamique adapté au cas d'un système isolé. Préciser alors le sens du mot adapté dans ce contexte (un potentiel ne sera adapté à un problème que s'il prend bien en compte les paramètres extérieurs). La relation entre $U$ et $S$ étant biunivoque, on peut montrer que $U^*$ est également un potentiel thermodynamique adapté à un système isolé.
+
+\subsection{Condition d'évolution et d'équilibre d'un système en contact avec un thermostat [2]}
+\noindent
+Traité clairement dans le Choimet, démarche à suivre
+\begin{itemize}
+\item Utiliser premier et second principe pour trouver l'inégalité attendue sur une évolution
+\item introduire alors la fonction $F^*$
+\item constater que $F^*$ est un potentiel thermo par somme de $U^*$ et $S^*$
+\item $F^*$ est donc le potentiel thermo adapté à une évolution en contact d'un thermostat
+\item utiliser la première identité thermo pour montrer qu'à l'équilibre $T=T_0$
+\item montrer qu'alors $F^*=F$
+\end{itemize}
+
+
+\subsection{Condition d'évolution et d'équilibre d'un système en contact avec un thermostat et un pressostat [2]}
+Là encore très clair dans le Choimet. Faire plutôt sur transparent pour gagner du temps -> même démarche. On introduit alors la fonction $G^*$.
+
+\begin{remarque}
+\noindent
+Faire remarquer que $G^*$ est d'un grand intérêt pratique : en chimie par exemple, on travaille souvent à $(P,T)$ fixé.
+\end{remarque}
+
+\subsection{Stabilité d'un équilibre thermodynamique et conséquence [2]}
+Prendre l'exercice du Choimet proposé sur l'équilibre. On montre ainsi que la stabilité de l'équilibre contraint le signe des coefficients élastiques et calorimétriques (ici compressibilité).
+
+
+\section{Application : échanges gazeux entre deux bulles de savon [3]}
+L'exercice p861 (corrigé p1540) du J'intègre permet d'avoir l'esprit mais la résolution proposée par Greg est plus claire et en lien avec ce qui a été fait. Il faut donc connaître l'exo un peu par coeur. 
+\subsection{Position du problème}
+il est essentiel de bien poser le problème : définir le système, indiquer que l'atmosphère joue le rôle de thermostat et de pressostat et que l'on va donc utilisé $G^*$
+
+\subsection{Mise en évidence expérimentale}
+\noindent
+\underline{Manipulation} : Utiliser le dispositif expérimental pour montrer la vidange des petites bulles dans les grosses
+
+\begin{remarque}
+\noindent
+Faire à ce propos une remarque sur la maturation des mousses -> tend vers une mousse de grosses bulles
+\end{remarque}
+
+\subsection{Evolution et condition d'équilibre du système}
+\begin{itemize}
+\item écrire la différentielle $\dd G^*$ du système constitué des deux bulles et des deux films savonneux.
+\item en déduire les conditions d'équilibre : égalité des températures et loi de Laplace pour chacune des bulles.
+\item on décrit enfin l'évolution du système en utilisant le fait que l'évolution est quasi statique et qu'alors à tout instant l'équilibre est atteint pour chacune des bulles si bien que 
+\centers{$\dd G^*=\dd G=(\mu_1-\mu_2)\dd n_1 $}
+\item exprimer enfin la relation entre potentiel chimique et pression. Utilisant finalement la loi de Laplace, on lie la différence entre les rayons des bulles au sens d'évolution.
+\end{itemize}
+
+\mk
+\noindent
+\textbf{Conclusion [1]}
+Revenir sur la généralité de l'utilisation des potentiels (faire remarquer que des systèmes magnétiques ou polarisables, des systèmes possédant une raideur... peuvent également être décrit par ce formalisme). Les potentiels permettent alors : 
+\begin{itemize}
+\item de déterminer l'état d'équilibre
+\item de connaître le sens d'évolution d'un système
+\item de déduire le signes des coefficients (en lien avec la stabilité de l'équilibre trouvé)
+\end{itemize}
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Lien entre potentiels thermodynamiques et potentiels statistiques}  
+
+\bk
+\noindent
+\textbf{2. Citer un exemple concret où l'introduction de $F^*$ est intéressante}  
+ 
+ \bk
+ \noindent
+\textbf{3. Qu'est-ce qu'un potentiel thermodynamique?}  
+
+\bk 
+ \noindent
+\textbf{4. Interprétation des potentiels thermodynamiques à partir des fonctions d'état. Quand a-t-on égalité ?}  
+
+\bk
+\noindent
+\textbf{5. Qu'est-ce que la métastabilité?}  
+ 
+
+
+
+\end{document}

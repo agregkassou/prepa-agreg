@@ -1,0 +1,137 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M03 : dynamique des fluides}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item équation de NS est délicate. Il faut se placer dans le cas d'écoulement simplifié
+\item un écoulement est complètement caractérisé par son $Re$. C'est la grandeur pertinente à toujours faire ressortir.
+\item Deux cas limites vont être abordés : les écoulements supposés parfait (laminaire, non visqueux) et les écoulements visqueux.
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Quaranta, tome I, mécanique
+\item[[\,2\!\!]] Hydrodynamique physique, Guyon, Hulin, Petit, EDP Sciences
+\item[[\,3\!\!]] Gouttes, bulles, perles et ondes, De Gennes, Belin
+\item[[\,4\!\!]] Cap Prépa PC-PC*, Pearson
+\item[[\,4\!\!]] Mécanique des solides et des fluides, Boulomié, Puf
+\end{itemize}
+}
+
+\section{Modèle de l'écoulement parfait et limites}
+\subsection{Effet Venturi [4]}
+Utiliser pour cette manipulation la soufflerie de Cachan + tube de section variable + 4 baromètres différentiels à colonne d'eau. Il est nécessaire de calibrer préalablement la vitesse de l'air en un point quelconque de la soufflerie en fonction de la tension d'alimentation du ventilateur (piloté par un rhéostat). Cet étalonnage se font avec un petit anémomètre. La conservation du débit volumique permet alors de connaître la vitesse en tout point du tube en fonction de la section. 
+Pour une mesure plus précise, on peut tracer une droite de régression : différence de surpression à deux points de section différente en fonction de la vitesse de l'air au carré.
+
+\begin{remarque}
+\noindent
+Il faut calculer le Reynolds de l'écoulement. Notons qu'il n'est pas exclu que l'écoulement ne soit pas parfait sur l'ensemble du tube, ni partout laminaire. Ce qui peut expliquer d'éventuels écarts à la théorie. De toute façon, il faut probablement rester assez qualitatif sur cette manipulation.
+\end{remarque}
+
+\subsection{Vidange d'un réservoir, formule de Torricelli [2]}
+Application directe de la relation de Bernoulli. On cherche à retrouver expérimentalement la loi des vitesses attendues. L'expérience marche convenablement et est reproductible à condition de prendre plusieurs précautions (sinon des erreurs systématiques vont apparaître). On fait un tracé du type $h=f(t)$. L'objectif est de vérifier l'applicabilité de notre modèle. Il est inutile d'essayer de remonter à $g$ par exemple. Ca serait une méthode stupide. On pourra calculer $Re$ dans le tube. En fait, l'écoulement est visqueux dans le tube, mais le profil parabolique type Poiseuille n'a pas le temps de s'établir sur un tube court, il n'y a donc pas de perte de charge. Finalement, vu qu'on ne parvient pas à un ajutage de Borda, nous pouvons remonter à la section effective du tube (le fait que la droite soit droite confirme notre modèle d'écoulement.
+
+\noindent
+\textbf{Précautions à prendre}
+\begin{itemize}
+\item A priori, l'écoulement n'est pas irrationnel au niveau de la section de sortie. Mais ce n'est pas un problème puisque on applique Bernoulli sur une ligne de courant
+\item il faut faire un choix raisonnable pour la section du tube : pas trop petit pour pouvoir négliger la viscosité, pas trop grand pour rester dans les hypothèses d'un écoulement quasi stationnaire (3mm par exemple)
+\item choisir la longueur du tube : pas trop long pour limiter les pertes de charge par viscosité et assez long pour pouvoir rentrer dans la cuve (ajutage de Borda, bien fait dans le Guyon p.281). Dans ce cas, la section réelle de l'écoulement vaut la moitié de la section du tube. (quelques centimètres de longueur est un bon choix).
+
+\end{itemize}
+
+
+\subsection{Ecart au modèle : perte de charge dans un tube [4]}
+Manip qualitative où l'on montre la perte de charge (tuyau en verre relié à une arrivée d'eau et avec des colonnes verticales qui servent de manomètres). On écrit l'équation de Bernoulli et on constate qu'il y a chute de pression bien que le terme de vitesse (conservation du débit) et le terme gravitaire (écoulement horizontal) soient constants. Donc la relation de Bernoulli n'est plus vérifiée. L'écoulement est dissipatif, il faut introduire de la viscosité. exo Cap Prépa p.223
+
+\begin{remarque}
+\noindent
+Le phénomène est explicité quantitativement dans la partie suivante.
+\end{remarque}
+
+
+
+\section{Ecoulement visqueux}
+
+\subsection{Ecoulement très visqueux [2]}
+On commence par une petite expérience qualitative pour montrer la réversibilité d'un écoulement où le terme convectif est négligeable devant le terme diffusif (de viscosité). On cisaille lentement du glycérol (où l'on a constitué une région colorée) en aller-retour. L'équation étant réversible (des conséquences opposées donne un champ des vitesses opposé), le colorant se recondense au même point (à la diffusion du colorant près). Cet écoulement est dit \textbf{écoulement de Stokes} ou écoulement rampant. Présenté dans le Guyon p.445
+\centers{$\eta \Delta{\vect{v}}=\grad{p}-\rho \vect{g}$}
+
+\begin{remarque}
+\noindent
+Ne pas oublier de faire le calcul du $Re$!
+\end{remarque}
+
+\subsection{Vase de Mariotte [1] et [4]}
+L'objectif est de mettre en évidence la perte de charge dans un tube long de manière quantitative cette fois. La présentation de la manipulation est disponible dans le Quaranta et le Cap Prépa permet de retrouver les expressions d'un écoulement de Poiseuille cylindrique. On fait une pesée du fluide en sortie en fonction du temps durant l'écoulement. On en déduit le débit que l'on compare au débit théorique d'un écoulement de Poiseuille cylindrique. Il faut prendre plusieurs précautions pour que l'expérience ne présente pas d'erreur systématique/ L'objectif de toutes ces précautions est d'isoler les effets dus à la viscosité.
+\begin{itemize}
+\item le tube bulleux permet de maintenir une hauteur iso-pression dans le vase constante dans le temps (indépendant de la vidange). Il faut vider le tube de son eau avant le début de la manipulation. Le fait que ça bulle n'est pas un problème. La tension de surface de la bulle induit une différence de pression par rapport à $P\e{atm}$ négligeable (de l'ordre de 15Pa). On peut donc supposer que le bout du tube est une surface iso-pression.
+\item il faut choisir un tube long (longueur supérieure à 1m) pour que les effets de la viscosité soient clairement perceptible et que la longueur d'établissement du profil parabolique de vitesse soit négligeable devant la longueur totale du tube
+\item choisir un diamètre raisonnable (3mm est un bon compromis). Ainsi on obtient un bon compromis entre une vidange assez lente, un effet de la viscosité largement perceptible et un écoulement suffisant pour ne pas avoir un effet goute à goute en sortie (car alors les effets de tension de surface ne sont plus négligeables).
+\end{itemize}
+
+\subsection{Viscosimètre par chute de billes [2]}
+L'expérience est simple mais on cherche à mener une expérience de métrologie. Il faut donc soigner l'étude statistique et l'influence possible de paramètres perturbateurs.  On fait la mesure avec du glycérol mais on ne cherchera pas à faire un lien avec une valeur tabulée (trop de paramètres non contrôlés dans la qualité du glycérol). On fait notre propre mesure.
+
+\noindent
+\textbf{Méthode de mesure}
+\begin{itemize}
+\item on fait 10 à 20 lancers indépendant avec différentes billes (potentiellement de différents diamètres) et on calcule pour chaque lancers la viscosité obtenue. On calcule alors la moyenne et l'écart type sur cette série statistique. Il est important de faire ainsi (avec plusieurs billes) pour s'affranchir de la forte dispersion sur le rayon des billes (et leur sphéricité)
+\item on remontera à la viscosité du glycérol en supposant connu sa masse volumique (elle varie peu en fonction des caractéristiques)
+\item insister sur le fait qu'on atteint le régime limite rapidement : calculer le temps d'établissement de ce régime $\tau$ puis le produit $v\e{lim} \tau$ fournit la distance avant que le régime soit établi
+\item montrer que la force de Stokes s'applique (régime de faible vitesse). Calculer le $Re$ de l'écoulement. Pour cela, il suffit d'évaluer la vitesse limite atteinte.
+\item montrer que les effets de bord sont négligeables dans le traitement du problème (effet des parois et du fond). La discussion est faite dans le Guyon. Il faut l'avoir en tête. C'est le phénomène probablement le moins négligeable.
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Comment calibrer la soufflerie? Est ce une droite?}  
+
+\bk
+\noindent
+\textbf{2. Définir le critère de Mach? L'hypothèse d'incompressibilité était elle toujours vérifiée?}  
+ 
+ \bk
+ \noindent
+\textbf{3.Comment passe-t-on de la relation de dispersion des phonons obtenue par diffraction à la densité de modes?}  
+
+\bk 
+ \noindent
+\textbf{4. Comment expliquer les écarts à la théorie dans l'expérience de Venturi?}  
+
+\bk
+\noindent
+\textbf{5. Comment prendre en compte les pertes de charge dans l'expérience de vidange de Torricelli? Peut on jouer dessus?}  
+
+\bk
+\noindent
+\textbf{6. Est-ce un problème qu'il y ait des bulles dans le vase de Mariotte vis-à-vis de la constance de la pression?}  
+
+\bk
+\noindent
+\textbf{7. Quelles sont les hypothèses d'application de Navier-Stokes?}  
+
+\bk
+\noindent
+\textbf{8. Comment varie la viscosité avec la température?}  
+
+\bk
+\noindent
+\textbf{9. Est-ce un principe fondamental de la physique que de dire que la vitesse d'un fluide est nulle sur les parois?}  
+
+
+\end{document}

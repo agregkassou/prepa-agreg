@@ -1,0 +1,107 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M35 : moteurs}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item on cherche à faire une caractérisation complète
+\item la finalité c'est d'avoir de la puissance (et de réduire les pertes)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item s'approcher du régime nominal du moteur quand c'est possible, sinon les calculs de rendement sont ridicules
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] notice ENSC287
+\item[[\,2\!\!]] Electronique : signaux et systèmes, conversion de puissance, Boussié, Puf (pour une aide sommaire sur les bilans)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : on va étudier l'ensemble des caractéristiques d'un moteur électrique (MCC). En particulier, on s'intéresse au rendement et on fera une étude séparée des pertes.
+
+
+\section{Caractérisation électromécanique du moteur}
+\subsection{Coefficient de couplage électromécanique}
+\begin{itemize}
+\item relever la tension à vide aux bornes de la génératrice
+\item dans ce cas, en l'absence de courant, on vérifie la loi $E=K \Omega$
+\item s'assurer que c'est une droite et donner la valeur du coefficient $K$ (elle sera utile par la suite)
+\end{itemize}
+
+\subsection{Résistance de l'induit : tension de seuil}
+\begin{itemize}
+\item on se place en configuration bloquée (les deux machines alimentées dans le sens inverse) 
+\item en l'absence de mouvement par blocage, les seules pertes sont dues à l'effet Joule. 
+\item on relève alors la caractéristique i-U de la machine 
+\item on constate l'existence d'une tension seuil (due au contact des balais) et une résistance de bobinage dans les machines $U=U\e{seuil}+ R\e{MCC}I$
+\item on a fait le relevé pour l'une des machines (mesure de la tension aux bornes d'une unique machine)
+\end{itemize}
+
+\section{Etude des pertes}
+\subsection{méthode d'évaluation des pertes cuivre}
+\begin{itemize}
+\item les pertes cuivre se déduisent facilement des résultats précédents
+\item on connait la résistance des bobinages ainsi que la valeur des courants passant
+\item on peut alors facilement tracer les pertes cuivres en fonction de la charge pour les différentes vitesse de rotation considérées.
+\end{itemize}
+
+\subsection{Evaluation des pertes fer et mécaniques}
+\begin{itemize}
+\item on travaille cette fois-ci à vide
+\item dans ces circonstances, la puissance d'entrée est due aux pertes fer, mécaniques et joule dans la première machine
+\item en mesurant la puissance et le courant d'entrée en fonction de la vitesse de rotation, on déduit facilement la puissance dissipée par les pertes fer et mécanique
+\item la relation est linéaire, ce qui justifie une hypothèse frottement sec 
+\item on en déduit la valeur du couple sec (attention, ce couple tient compte des pertes fer!)
+\item ces pertes restent indépendantes de la charge pour le bilan final
+\item on peut évaluer grossièrement les pertes mécaniques par mesure du courant d'alimentation au démarrage. On a en effet évalué la valeur de $K$ en début de montage et on a la relation $C=KI$ qui nous permet de connaître le couple au démarrage connaissant l'intensité au démarrage. On obtient alors une valeur du couple uniquement mécanique (mais attention, rien ne dit que le couple statique soit identique au couple dynamique, mais ça donne une idée)
+\end{itemize}
+
+
+
+
+\section{Etude du rendement en charge}
+\subsection{Position du problème, méthode de mesure}
+\begin{itemize}
+\item on place une charge sur la génératrice et on va relever le rendement en fonction de la puissance absorbée par la charge (à faire varier en variant la valeur de la résistance de charge) en se plaçant à \textbf{vitesse de rotation constante}.
+\item on mesure la puissance d'entrée et de sortie et le courant d'entrée et de sortie 
+\item faire ce relevé pour deux vitesses de rotation différente (ne pas aller trop bas pour éviter de travailler à trop basse puissance et de subir plus fortement l'erreur des wattmètres)
+\item tracer le rendement pour une machine. Pour cela on a besoin de la puissance disponible sur l'arbre. Pour ce faire, on soustrait à la puissance d'entrée les pertes joule, mécanique et fer de la machine 1. (On utilise pour cela la partie II)
+\end{itemize}
+
+\subsection{Résultat de l'étude de rendement}
+\begin{itemize}
+\item montrer les résultats et commenter
+\item les rendements sont meilleurs à haute vitesse on se rapproche du fonctionnement nominal
+\item le rendement augmente rapidement avec la puissance transférée, atteint un maximum puis chute lentement
+\item nous allons expliquer ces tendances en détaillant l'étude des pertes
+\end{itemize}
+
+\subsection{Cohérence des résultats : comparaison avec le rendement obtenu }
+\begin{itemize}
+\item On peut alors tracer sur un même graphe, pour les différentes vitesse de rotation, les pertes Joules du moteur et de la génératrice, les pertes fer et mécaniques puis les pertes totales mesurées lors de l'étude du rendement. 
+\item on s'assure alors de la cohérence globale des résultats (que l'on n'a pas oublié de pertes, que les wattmètres ne donnent pas des résultats absurdes)
+\item enfin, on interprète les résultats sur le rendement : très faible au début à cause des pertes fer et mécanique constantes, décroissant sur la fin à cause des pertes joule qui augmentent rapidement (non linéairement)
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : il existe des moteurs thermiques!
+
+ 
+
+\end{document}

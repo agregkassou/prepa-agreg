@@ -1,0 +1,124 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M16 : milieux magnétiques}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item présenter les différents matériaux magnétiques
+\item on fera une étude plus détaillée des milieux ferromagnétiques
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Dictionnaire de physique expérimentale : tome IV l'électricité, Pierron
+
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : donner une définition macroscopique d'un milieu magnétique. Insister déjà sur les difficultés de non linéarités des milieux ferromagnétiques qui ont une réponse très forte.
+
+
+\section{Champs magnétiques dans la matière}
+\subsection{Interaction entre un champ magnétiques et différents milieux magnétiques [1]}
+\begin{itemize}
+\item expérience qualitative afin de montrer le comportement de différents matériaux magnétiques en présence de champ
+\item on montrera l'action sur un barreau de dia, de para et de ferromagnétique
+\item attention, l'interprétation n'est pas si simple. C'est l'inhomogénéité du champ qui induit cet alignement (on maximise la partie du barreau dans le champ pour un para, on minimise pour un dia)
+\item on peut faire la manipulation avec de l'$O_2$ liquide. Liquifier l'$O_2$ dans un tube à essai plongé dans l'azote liquide et refroidir les pièces polaires à l'azote liquide. Il se forme alors un pont d'$O_2$ liquide 
+\end{itemize}
+
+
+\subsection{Existence d'une température de transition para-ferro : mesure de $T\e{C}$}
+\begin{itemize}
+\item Montrer le détachement de l'aimant du thermomètre à embout ferro lorsqu'on le chauffe. 
+\item On obtient alors la température de Curie à quelques dizaines de degrés
+\item il faut chauffer au chalumeau et non au bec Bunsen pour avoir assez de puissance
+\item minimiser le couple induit par le poids pour limiter l'erreur mais il faut quand même que le détachement soit bien visible...
+\item essayer particulièrement sur la fin de chauffer uniformément la sonde
+\end{itemize}
+
+
+
+\subsection{Domaine de Weiss : mise en évidence des limites du modèle ferromagnétique}
+\begin{itemize}
+\item ENSC 46!
+\item manipulation simple mais attention à l'interprétation
+\item utiliser le microscope adapté 
+\item éclairer en lumière blanche et mettre un polariseur
+\item caméra flexcam avec objectif prééquipé d'un analyseur
+\item faire le point
+\item attention, c'est un matériau ferrimagnétique (et non ferro) et déposé en couche mince
+\item l'orientation se fait orthogonalement à l'échantillon et dépend des domaines
+\item le champ magnétique local est lié à l'état de polarisation local de l'échantillon
+\item l'échantillon tourne la polarisation rectiligne par effet Faraday
+\end{itemize}
+
+
+\section{Comportement spécifique des matériaux ferromagnétiques}
+\textbf{Dans cette partie, il faut être quantitatif : il faudra donc calibrer le signal reçu à l'oscilloscope (champ $B$ et $H$ associés à la tension captée)}
+\subsection{Courbe de première aimantation : forte susceptibilité et saturation}
+\begin{itemize}
+\item dans toute la suite on travaillera avec une alimentation sous forme d'autotransformateur (donc le 50Hz est imposé)
+\item étalonner nos mesures : de la tension dans la bobine de mesure, on remonte facilement à $\phi$ puis à $B$ connaissant la section. De même, le théorème d'Hopkinson permet de relier facilement le courant d'alimentation au champ excitateur $H$
+\item se placer à très faible excitation pour rester dans le domaine linéaire et évaluer la valeur de $\mu\e{r}$ dans le matériau
+\item ensuite monter en courant d'alimentation et montrer la saturation
+\end{itemize}
+
+
+\subsection{Cycle d'hystérésis}
+\begin{itemize}
+\item montrer le régime transitoire vers le cycle d'hystérésis saturé (se placer en mode persistance à l'oscillo)
+\item évaluer avec le champ rémanent et le champ coercitif associé à ce matériau et comparer à des valeurs tabulées
+\end{itemize}
+
+
+\section{Applications des milieux ferromagnétiques}
+\subsection{Mesure du champ magnétique d'un aimant permanent [1]}
+\begin{itemize}
+\item ENSC 373
+\item le circuit intégrateur doit être ajusté finement (en particulier il faut prendre des AO compensés!)
+\item ici on fait un intégrateur pur (pas de résistance en parallèle de la capacité) donc on intègre également les BF et le continu d'où la grande sensibilité à la dérive
+\item on peut alors mesurer le champ magnétique d'un aimant, après intégration on a
+\centers{$\abs{v\e{out}}=\f{N}{RC}(\phi\e{final}-\phi\e{initial})$}
+
+\end{itemize}
+
+
+\subsection{Utilisation d'un ferromagnétique doux dans un transformateur : évaluation des pertes fer [1]}
+\begin{itemize}
+\item on détaillera l'utilisation d'un ferro doux pour un transformateur en insistant sur les aspects matériaux
+\item expliquer pertes par hystérésis et par courant de Foucault (il est difficile de les séparer expérimentalement)
+\item utiliser un GBF de puissance et se mettre en secondaire ouvert
+\item faire les mesures au wattmètres
+\item on pourra faire une étude en fréquence : les pertes par hystérésis évoluent linéairement avec la fréquence, les pertes par courant de Foucault sont au carré.
+\item au vu du temps probablement ne pas faire d'ajustement.
+\end{itemize}
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Evaluer le champ maximal induit par un aimant permanent.}  
+ 
+
+\end{document}

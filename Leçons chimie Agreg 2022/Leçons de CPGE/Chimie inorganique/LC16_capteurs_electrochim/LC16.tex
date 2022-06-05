@@ -1,0 +1,126 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LC 16 : capteurs électrochimiques (L)}
+
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item présenter la théorie et la spécificité de ces capteurs
+\item montrer l'intérêt en dosage
+\item insister sur le "comment faire". Ce montage se doit d'être pratique, et d'expliquer clairement chaque étape de l'utilisation de ces capteurs
+\end{itemize}
+}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Chimie PCSI, Grecias, Tec \& Doc
+\item[[\,2\!\!]] Des expériences de la famille Red/Ox, Cachau, De Boeck
+\item[[\,3\!\!]] Physique chimie Terminale S, Hachette
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : définir l'électrochimie (couplage entre phénomènes électriques et chimiques) et ce qu'est un capteur électrochimique (utiliser ce couplage pour remonter à une grandeur chimique à partir d'une grandeur électrique). 
+
+\begin{remarque}
+\noindent
+Les mesures de conductance en sont exclues. En effet, en conductimétrie, ce n'est pas les propriétés électriques de la solution mais simplement sa capacité à conduire le courant. 
+\end{remarque}
+
+
+\section{Principe du capteur potentiométrique}
+\subsection{Rappels : demi-pile, potentiel d'électrode et pile [1] et [3]}
+\begin{itemize}
+\item rappeler électrode, solution électrolytique...
+\item rappeler les définitions, traiter le cas simple de la pile Daniell en présentant les couples en présence, les demi-équations, et la réaction globale redox
+\item \underline{manipulation} : montrer la construction de la pile en direct (permet de présenter en situation tous les éléments)
+\item on branche un voltmètre et on met en évidence l'existence d'une ddp
+\item par conséquent, les deux demi-piles ne sont pas au même potentiel
+\end{itemize}
+
+\subsection{Relation de Nernst [1]}
+\begin{itemize}
+\item l'introduction de cette formule est délicate au niveau TS mais nécessaire 
+\item la formule est au programme de STL en cas de question du jury 
+\item existence d'un potentiel caractéristique d'une demi pile
+\item ce potentiel dépend du couple mis en jeu via le potentiel standard mais aussi de la température et des concentrations des espèces
+\item donner la formule de Nernst et la commenter (dépendance aux espèces, et définition du potentiel standard)
+\item noter la ressemblance avec la formule liant pH et pKa
+\end{itemize}
+
+\subsection{Nécessité d'un potentiel de référence : l'ESH [1]}
+\begin{itemize}
+\item un potentiel est défini à une constante près
+\item il faut donc fixer une convention en particulier pour définir une table de potentiels standard
+\item choix d'une électrode bien définie : l'ESH
+\item donner alors une définition d'un potentiel standard quelconque par rapport à celui de l'ESH
+\item cette électrode est non réalisable en pratique, en fait on réalisera une électrode normale à hydrogène (même électrode mais on tient compte de l'activité de solutions concentrées)
+\end{itemize}
+
+\section{Réalisation pratique des électrodes}
+\subsection{Classification des électrodes [1]}
+\begin{itemize}
+\item reprendre les définitions du Grécias
+\item donner pour chacun un exemple
+\end{itemize}
+
+
+\subsection{Electrodes de référence : présentation de l'ECS [2]}
+\begin{itemize}
+\item 2.B.1 p96 du Cachau
+\item dans les réalisations expérimentales, on utilise souvent l'ECS comme référence
+\item cette électrode plonge directement dans la solution à analyser pour assurer le contact électrique avec la solution
+\item en fait c'est l'équivalent d'une demi pile de potentiel fixé dont le tampon fritté est l'équivalent du pont salin habituel
+\item schéma de l'électrode, formule de Nernst et potentiel de l'électrode
+\item expliquer comment elle peut maintenir un potentiel indépendant de la solution extérieure
+\end{itemize}
+
+\subsection{Exemples de choix d'électrodes de mesures [2]}
+\begin{itemize}
+\item 2.B.1 p96 du Cachau
+\item expliquer comment choisir les électrodes selon ce que l'on souhaite mesurer
+\item \underline{manipulation} : observer le potentiel obtenu pour respectivement : 1) solution de Fe(II) avec électrode Fe, 2) solution de Fe(III) avec électrode Fe, 3) solution Fe(II) et Fe(III) avec électrode inerte platine, 4) solution Fe(II) et Fe(III) avec électrode Fe (montrer qu'alors on ne mesure pas le potentiel "attendu")
+\item dans chaque cas, on expliquera le choix et la demi-pile formée effectivement
+\end{itemize}
+
+\subsection{le pH-mètre : un cas particulier de potentiométrie [1]}
+\begin{itemize}
+\item présenter le principe de fonctionnement et l'allure de l'électrode
+\item nécessité d'un étalonnage
+\end{itemize}
+
+\section{Application des capteurs électrochimiques}
+\subsection{Dosage suivi par potentiométrie : dosage des ions Fe(II) par les ions Ce(IV) [2]}
+\begin{itemize}
+\item suivre le protocole du Cachau p435 "titrage des ions Fe(II) dans un antimousse de jardin"
+\item faire directement le dosage sur sel de Mohr même si c'est plus artificiel -> ça a le mérite de mieux marcher!
+\item présenter la manipulation et la faire
+\item ne pas utiliser d'indicateurs colorés, ils marchent plutôt mal et puis on fait le suivi, il n'y en a pas besoin!
+\item déterminer la concentration de la "solution inconnue" (attention le cérium est cher et adapter la dilution pour en avoir une consommation raisonnée)
+\item on ne cherchera pas à en faire une interprétation complète. Remarquer simplement qu'à l'équivalence, on passe d'un potentiel imposé par les ions Fe à un potentiel imposé par les ions cérium -> l'équivalence est donc repérée par un saut de potentiel
+\item tracer la dérivée pour plus de précision mais dans ce cas, prendre beaucoup de points à l'équivalence
+\end{itemize}
+
+\subsection{Etalonnage et mesure à l'aide d'un pH-mètre [2]}
+\begin{itemize}
+\item étalonner le pH-mètre
+\item mesurer le pH de plusieurs produits de consommation courante (Coca, vinaigre, eau de source, vin, eau de javel...)
+\item pour montrer l'intérêt, on pourra comparer la précision à celle obtenue avec le papier pH
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : bilan et ouverture sur les dosages par suivi conductimétriques qui ne mettent pas directement en jeu les propriétés électriques de la solution mais sa capacité à conduire. 
+
+
+
+\end{document}

@@ -1,0 +1,168 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP02 : caractère non galiléen du référentiel terrestre (L1)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item mécanique newtonienne
+\item référentiel galiléen
+\item cinématique du changement de référentiel
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item ordres de grandeurs (limite du caractère galiléen d'un référentiel)
+\item certains effets ne s'expliquent que par le caractère non galiléen du référentiel terrestre
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item fil conducteur : définir référentiel galiléen puis dire quels référentiels le sont
+\item faire des schémas clairs, adopter des conventions constantes
+\item le pendule de Foucault est dangereux (de nombreuses approximations délicates)
+\item être rigoureux sur la notation des référentiels
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Mécanique PCSI-MPSI, Brasselet, Puf
+\item[[\,2\!\!]] Mécanique newtonienne du point 1ere année, Grossetête, Ellispes
+\item[[\,3\!\!]] Sciences de la Terre et de l'univers, Daniel, Vuibert
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]} : Partir de l'"intuition" que le référentiel terrestre n'a aucune raison d'être galiléen. Si nous sommes galiléen, rien ne l'est autour de nous! Après avoir abandonné le géocentrisme, c'est dommage! La leçon contient un double objectif :
+\begin{itemize}
+\item le référentiel galiléen est une approximation qui se révèle plus ou moins judicieuse suivant l'expérience
+\item interpréter certains phénomènes physiques relevant du caractère non galiléen du référentiel terrestre
+\end{itemize} 
+
+
+
+\section{Le référentiel terrestre}
+\subsection{Rappel [1]}
+\begin{itemize}
+\item définir référentiel galiléen
+\item postulat d'existence dans le cadre de la mécanique newtonienne
+\item définir référentiel non galiléen 
+\item donner l'accélération dans un référentiel non galiléen
+\item écrire le PFD en référentiel non galiléen
+\end{itemize}
+
+\subsection{Différents référentiels [1]}
+\begin{itemize}
+\item présentation synthétique sous forme de tableau récapitulatif (centre, axes, mouvement par rapport à...)
+\item schéma explicatif (introduire l'axe de rotation terrestre et son angle par rapport à l'écliptique)
+\item mais \textbf{ne pas} parler des saisons (c'est HS!)
+\end{itemize}
+
+\subsection{Quels référentiels sont galiléens? [1]}
+\begin{itemize}
+\item reprendre la partie 1.2 "les différents référentiels envisageables" du Brasselet
+\item insister sur le fait que l'important est qu'il existe un référentiel galiléen. Le connaître n'est pas essentiel
+\item Le caractère galiléen d'un référentiel est une question de niveau d'approximation. Elle doit être cohérente avec la description que l'on fait du phénomène.
+\end{itemize}
+
+\section{Effet de la translation du référentiel terrestre : les marées}
+\subsection{Expérience de pensée d'Einstein : terme de marée [1]}
+\begin{itemize}
+\item décrire l'expérience du physicien dans l'ascenseur
+\item expliquer le caractère galiléen du référentiel de Copernic pour l'étude de mouvements sur Terre par exemple.
+\item appliquer au cas du système Terre + autre corps
+\item écart au cas galiléen souvent négligeable mais pas toujours
+\item mettre en évidence le terme de marée
+\end{itemize}
+
+\subsection{Théorie statique des marées [1]}
+\begin{itemize}
+\item PFD dans le référentiel géocentrique
+\item identification du terme de marée
+\item DL à l'ordre 1 + ODG dans le cas d'une contribution de la Lune, du Soleil, de Mars...
+\item montrer que la contribution du Soleil au mouvement de la Lune est non négligeable
+\item expliquer le phénomène de marée terrestre avec les mains
+\item répondre à quelques questions du Brasselet comme c'est fait : 2 marées par jour, pourquoi l'heure de marée se décale-elle, amplitude des marées
+\end{itemize}
+
+\subsection{Ordre de grandeur de marnage, vers une théorie dynamique des marées [1]}
+\begin{itemize}
+\item expliquer succinctement la raison pour laquelle il y a de forts écarts au marnage moyen (marnage nul en Méditerranée, marnage gigantesque dans la baie du MSM)
+\item lien avec un temps de réponse caractéristique dépendant du lieu
+\item angle de retard entre la position de la Lune et le bourrelet océanique
+\end{itemize}
+
+\section{Effet de la rotation du référentiel terrestre}
+\subsection{PFD dans le référentiel terrestre [1]}
+\begin{itemize}
+\item on se place dans le cadre de $R\e{G}$ galiléen et on se limite à l'influence de la rotation
+\item écriture du PFD dans $R\e{T}$
+\item identifier le terme centrifuge et le terme de Coriolis
+\end{itemize}
+
+\subsection{Poids d'un corps [1]}
+\begin{itemize}
+\item définir le poids (en incluant le terme d'inertie)
+\item ODG de la contribution de ce terme
+\item souvent négligeable (même ODG que les variations dues à la non sphéricité de la Terre, \textbf{ce qui est logique puisque cette déformation est due au terme centrifuge}!)
+\end{itemize}
+
+\subsection{Anticyclone, depression et lavabo [1], [2] et [3]}
+\begin{itemize}
+\item utiliser photos sur transparent : dépression dans l'hémisphère nord et sud, sens inverse de rotation!
+\item non négligeable si $\vect{g}$ orthogonal à $\vect{F}\e{ic}$ \textbf{ET} si $T\e{exp}>T\e{rot}$
+\item expliquer l'équilibre géostrophique des vents ou des courants marins : vent sous gradient de pression -> force de Coriolis à vitesse non nulle -> équilibre $\grad{(P)}=\vect{F}\e{ic}$
+\item ODG de la vitesse des vents dans une dépression (utiliser l'exo 6 p146 du Grossetête)
+\item montrer que le terme est insuffisant pour influencer le sens d'écoulement dans un lavabo (utiliser "Coriolis et les baignoires", p267 du "Sciences de la Terre et de l'univers")
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion [2]} :
+\begin{itemize}
+\item \underline{bilan} :revenir sur les points clés 
+\item \underline{ouverture} : l'effet du retard du bourrelet océanique sur la position de la Lune est à associé à un phénomène dissipatif. A terme, on tendra vers un synchronisme entre le mouvement de rotation de la Terre et de la Lune autour d'elle. La Lune est déjà synchrone. Par conservation du moment cinétique total, l'effet tend au rapprochement ou à l'éloignement selon les cas entre la planète et son satellite (utiliser p136 du Grossetête "les effets des marées dans le système solaire")
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Définir la notion de référentiel.}  
+
+\bk
+\noindent
+\textbf{2. Quelle est la différence entre un repère et un référentiel.}  
+ 
+ \bk
+ \noindent
+\textbf{3. Référentiel de Kepler? référentiel de Copernic? Quelle différence?}  
+
+\bk 
+ \noindent
+\textbf{4. Différence entre jour terrestre et sidéral.}  
+
+\bk
+\noindent
+\textbf{5. Comment définit-on les coefficients de marée?}  
+
+\bk
+\noindent
+\textbf{6. Pourquoi parle-t-on de période à l'infini à l'équateur dans l'expérience de Foucault?}  
+
+\end{document}

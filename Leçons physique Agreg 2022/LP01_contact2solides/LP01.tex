@@ -1,0 +1,150 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP01 : Contact entre deux solides - frottement}
+
+\encadreminipage{9cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item cinématique du solide
+\item théorèmes fondamentaux de dynamique du solide
+\item notion de torseur
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item Choix de l'équation de Coulomb à ajouter selon qu'il y ait ou non glissement
+\item Rôle pas toujours négatif des frottements (sans frottement, pas de roue motrice!)
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Tout-en-un physique PC-PC* (MP-MP*), Dunod
+\item[[\,2\!\!]] Mécanique 2 2e année, Gié, Tec \& Doc
+\end{itemize}
+}
+
+\section{Cinématique du contact [chapitre 24]}
+\subsection{Modèle du solide indéformable}
+donner la définition et insister sur les conséquences du modèle.
+\begin{itemize}
+\item bon modèle pour les solides usuels utilisés dans des conditions de contraintes usuelles
+\item 6 ddl au plus par solide (pas de ddl internes)
+\item la déformation de la surface de contact est par conséquent négligeable
+\end{itemize}
+
+\subsection{Différents types de contact (dessin sur transparent)}
+\begin{itemize}
+\item ponctuel : sphère-plan
+\item linéique : cylindre-plan
+\item surfacique : plan-plan
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Contact non ponctuel est équivalent au blocage de certains ddl.
+\end{remarque}
+
+\subsection{Mouvements de contact}
+Se placer dans le cas d'un contact ponctuel. Introduire les deux solides ainsi que les points de contact $I$, $I_1$ et $I_2$. Introduire le torseur cinématique de contact entre les deux solides au point I dans le référentiel lié à $\Sigma_2$ en considérant le mouvement de $\Sigma_1$. Séparer alors les composantes : 
+
+\mk
+\noindent
+\textbf{Vitesse de glissement} : L'introduire et préciser quelle est dans le plan tangent au contact
+
+\mk
+\noindent
+\textbf{Roulement et pivotement} : L'introduire et séparer les composantes normales (pivotement) et tangentielles (roulement)
+
+\begin{remarque}
+\noindent
+Dans la suite, on ne s'intéressera pas au pivotement mais ce n'est pas limitant (ça donnerait simplement un ddl supplémentaire).
+\end{remarque}
+
+\mk
+\noindent
+\textbf{roulement sans glissement} : Définir les conditions d'obtention de ce régime
+
+
+\subsection{démarrage d'un vélo}
+On cherche le couple maximal à appliquer sur la roue d'un vélo pour démarrer sans patiner. S'aider de l'exercice d'application A.2 du chapitre 27. Ici, l'objectif est d'introduire la paramétrisation du problème et d'obtenir par des théorèmes classiques le rapport des actions normale et tangentielle sur la roue motrice.
+
+\section{Actions mécaniques de contact}
+\subsection{Torseur des actions mécaniques de contact}
+Ce torseur s'exprime au point I et exprime l'ensemble des actions mécaniques de contact entre les deux solides. Insister sur le fait que ce torseur est indépendant du référentiel d'étude
+
+\mk
+\noindent
+\textbf{Résultante mécanique} : séparer composante normale (non pénétration) et tangentielle (frottement de glissement)
+
+
+\mk
+\noindent
+\textbf{Moment des forces} : L'introduire et séparer les composantes normales (frottement de pivotement) et tangentielles (frottement de roulement)
+
+\begin{remarque}
+Dans le cas d'un contact rigoureusement ponctuel (cas que nous étudierons par la suite), les actions mécaniques de contact se réduisent à un glisseur en I, le moment des forces est donc nul. Même si le contact n'est pas ponctuel, il est possible de se ramener à ce cas (il existe toujours un point d'application de la surface de contact où la résultante est un glisseur).
+
+\mk
+A priori, les valeurs des actions de contact sont des inconnues du problème. 
+\end{remarque}
+
+
+\subsection{Approche microscopique}
+chercher dans le BFR?
+
+\subsection{Lois d'Amontons-Coulomb pour le frottement de glissement}
+Coulomb s'intéresse sous l'impulsion de l'académie des sciences, aux problèmes de frottement dans la construction des bateaux. Il s'appuie sur son expérience pour proposer un modèle phénoménologique au frottement. 
+
+\mk
+Ces lois peuvent être rapidement mises en évidence à l'aide d'un plan incliné sur lequel on fait glisser des masses. Le modèle phénoménologique sépare deux cas.
+
+
+\mk
+\noindent
+\textbf{absence de glissement ($v\e{g}\ne 0$)} : inégalité et cône de frottement statique (direction et norme de la composante tangentielle a priori inconnue)
+
+
+\mk
+\noindent
+\textbf{avec glissement ($v\e{g}= 0$)} : égalité (composante tangentielle de norme connue et de direction opposée à celle de la vitesse -> frottement!), cône de frottement dynamique
+
+
+\mk
+\noindent
+\textbf{valeurs de coefficients de frottement} : donner quelques valeurs caractéristiques et les commenter
+
+\subsection{Mouvement fixe glisse}
+Utiliser l'exo d'application B.5 du chapitre 27 du J'intègre. Tracer le mouvement du solide. Remarquer que souvent, lorsqu'il y a des frottements secs, le mouvement ne peut se réduire à une unique équation différentielle. Appliquer ce cas à celui d'un archet sur la corde d'un violon : le son est produit par un mouvement de type fixe-glisse
+
+\section{Aspects énergétiques [2]}
+Reprendre l'excellent exercice 6.6 p89 du Gié de mécanique.
+
+\subsection{Puissance totale des actions de contact}
+\begin{itemize}
+\item donner la puissance totale de l'action de contact
+\item puissance due uniquement aux frottements
+\item cette puissance est nécessairement dissipative (comme attendu pour du frottement) -> donner le sens thermodynamique de cela
+\end{itemize}
+
+\subsection{Puissance transférée par frottement}
+\begin{itemize}
+\item reprendre l'exemple du Gié avec le tapis d'entrainement
+\item dresser le tableau des puissances transférées 
+\item la puissance dissipée par le système total est invariante par changement de référentiel et toujours négative
+\item par contre la puissance transférée du tapis au solide dépend du référentiel et est positive (effet moteur) dans le référentiel fixe
+\item les frottements peuvent donc être moteur!!! C'est pourquoi on fait des pneus de fort coefficient de frottement avec le bitume
+\end{itemize}
+
+
+
+
+
+
+\end{document}

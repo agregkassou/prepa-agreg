@@ -1,0 +1,187 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP13 : Application des deux premiers principes de la thermodynamique au fonctionnement des machines thermiques (L1)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item état gazeux et liquide, transition de phase
+\item 2 principes de la thermodynamique
+\item diagramme $(P,V)$ et $(T,S)$
+\item premier principe industriel
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item la thermodynamique sert à quelque chose
+\item le cas limite d'une transformation réversible n'est pas le Graal. On privilégie la puissance
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item il n'est pas nécessaire qu'un cycle soit réversible pour être représenté sur un diagramme
+\item l'un des buts de la leçon est de montrer que la thermodynamique est un guide puissant dans la conception pratique de machines
+\item souligner l'intérêt de ces machines
+\item faire une \textbf{leçon pratique et technique}! les applications précises doivent prendre plus de la moitié de la leçon
+\item les cycles classiques (Beau de Rochas, Diesel, Rankine) doivent être connus
+\item différencier rendement et efficacité
+\item faire des AN partout!
+\item le moteur Stirling est à éviter! aucun intérêt pratique.
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Tec \& Doc, Grecias (parfait pour cette leçon)
+\item[[\,2\!\!]] Une histoire des idées en physique, Locqueneaux (intro)
+\item[[\,3\!\!]] BUP n°832, "le réfrigérateur"
+\item[[\,4\!\!]] L'intègre, PCSI, Dunod (pour le réfrigérateur)
+\item[[\,5\!\!]] Machines thermiques, Koller, Dunod (pour des compléments précis)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [2]}
+Poser l'intérêt de la thermodynamique dans le contexte historique de l'amélioration des performances des machines à vapeur. En particulier p107 : développement de Carnot.
+
+\section{Machines thermiques : généralités [1]}
+\subsection{Définition}
+\begin{itemize}
+\item définir "machines thermiques"
+\item schéma conventionnel (parler de la convention récepteur)
+\end{itemize}
+
+\subsection{Les deux principes de la thermodynamique [1]}
+\begin{itemize}
+\item donner les deux principes dans le cas d'un processus cyclique
+\item montrer qu'un moteur monotherme n'est pas possible
+\item parler de la possibilité d'un récepteur monotherme : simple chauffage (efficacité unitaire)
+\end{itemize}
+
+\subsection{Machines dithermes : classification [1]}
+\begin{itemize}
+\item donner une classification des machines dithermes type diagramme de Raveau mais sous forme de tableau : c'est finalement plus explicite (moteur, réfrigérateur, pompe à chaleur)
+\item donner le théorème de Carnot et le cycle associé. C'est le cycle assurant le meilleur rendement. Il est valable pour les trois machines, bien que Carnot ait développé sa théorie pour le moteur. 
+\item dire que le meilleur rendement n'est pas unitaire : limite fondamentale de la thermodynamique lors de la conversion d'énergie thermique en travail
+\item \textbf{dire que le cycle réversible est un cycle limite mais d'aucun intérêt pratique : il est à puissance nulle.}
+\item faire enfin un grand tableau avec les trois machines donnant pour chacune : schéma de situation, rendement/efficacité maximale (avec ODG) et puissance pour des systèmes de taille classique (Le Koller donne des ODG pour plusieurs machines)
+\end{itemize}
+
+\section{Moteurs thermiques }
+\subsection{Moteur à combustion interne : cycle Beau de Rochas [1]]}
+\begin{itemize}
+\item présenter le cycle réel et une coupe du moteur (avec des schémas des différents moments du cycle) -> trouver un transparent fait
+\item expliquer la notion de moteurs 4 temps
+\item lister les hypothèses admissibles (conservation de la qualité du gaz pendant la combustion entre autre)
+\item donner alors le cycle Beau de Rochas associé permettant l'étude
+\end{itemize}
+
+\subsection{Evaluation du rendement théorique et de la puissance attendue [1] et [5]}
+\begin{itemize}
+\item donner le rendement théorique en fonction du taux de compression et le comparer au rendement réel des moteurs
+\item repérer les principales sources de pertes
+\item état de l'art du rapport poids puissance des moteurs actuels (p187 du Koller) -> c'est le paramètre d'intérêt pour l'ingénieur!
+\end{itemize}
+
+\subsection{Cycle Diesel : intérêt pratique de l'injection en fin de compression [5]}
+\begin{itemize}
+\item montrer le cycle Diesel
+\item principale différence : injection de carburant après compression permettant d'atteindre de fort taux de compression (meilleur rendement mais moteur plus lourd car pression atteinte plus élevée) et l'isochore est remplacée par une isobare
+\item donner le rapport poids/puissance des différents types de moteurs
+\end{itemize}
+
+\section{Réfrigérateurs à compresseur}
+\subsection{Principe de fonctionnement [4] et [3]}
+\noindent
+Les généralités sont bien traitées dans le J'intègre
+\begin{itemize}
+\item schéma constitutif
+\item présentation du schéma global
+\item définir les 4 éléments : condenseur, compresseur...
+\end{itemize}
+
+\subsection{Application du premier principe industriel [4]}
+\begin{itemize}
+\item application du premier principe industriel aux 4 éléments : bilan sur un cycle
+\item définir alors l'efficacité
+\item calculer l'efficacité théorique d'un cycle réversible en fonction des températures des deux sources
+\end{itemize}
+
+\subsection{Diagramme $(P,h)$ [3]}
+\begin{itemize}
+\item montrer le diagramme complet sur un transparent déjà fait
+\item expliquer attentivement les différents réseaux de courbes
+\item tracer le cycle pour un jeu de paramètre donné
+\item évaluer alors le rendement réel
+\item \textbf{évaluer la puissance de refroidissement par unité de masse de fluide. On pourra ainsi donner un ODG du débit massique nécessaire à par exemple un refroidissement de $1kW$ (ce qui est un bon ODG de la capacité de refroidissement d'un réfrigérateur domestique de $300W$ en moyenne). On peut alors comparer ce résultat au débit de liquide nécessaire pour obtenir le même refroidissement sans transition de phase. On comprend alors tout l'intérêt d'utiliser des composés pouvant se vaporiser à la température de la source froide.}
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item rappeler le compromis crucial entre amélioration du rendement et conservation d'une puissance élevée
+\item insister sur l'importance de la thermodynamique dans la compréhension (et donc l'amélioration) des machines thermiques. Les enjeux pour nos sociétés sont énormes. 
+\end{itemize}
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. sources d'irréversibilité des machines thermiques}  
+
+\bk
+\noindent
+\textbf{2. Cycle de Carnot et applications}  
+ 
+ \bk
+ \noindent
+\textbf{3. Qu'est-ce qui intéresse le plus les ingénieurs? rendement ou puissance?}  
+
+\bk 
+ \noindent
+\textbf{4. formule du fréon}  
+
+\bk
+\noindent
+\textbf{5. Pour un piston la compression est-elle quasi statique?}  
+
+\bk
+\noindent
+\textbf{6. Sens d'un cycle moteur dans un diagramme $(P,V)$ ou $(T,S)$} 
+
+\bk
+\noindent
+\textbf{7. Connaître les cycles moteur classique} 
+
+\bk
+\noindent
+\textbf{8. Moteur à 2/4 temps?} 
+
+\bk
+\noindent
+\textbf{9. diesel (gasoil) et essence?} 
+
+\bk
+\noindent
+\textbf{10. Cycle de Rankine, cycle de Hirn?} 
+
+\bk
+\noindent
+\textbf{11. Un moteur thermique peut-il démarrer seul?} 
+
+
+\end{document}

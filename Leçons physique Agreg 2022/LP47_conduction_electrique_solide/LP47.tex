@@ -1,0 +1,179 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP47 : mécanisme de la conduction électrique dans les solides (L2)}
+
+
+\encadreminipage{14cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item électromagnétisme : densité de charges et de courant, équations de Maxwell, force de Lorentz
+\item thermodynamique : théorie cinétique des gaz
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item application et limite du modèle de Drude
+\item intérêt des SC pour l'effet Hall
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item être particulièrement vigilant à la cohérence dans le niveau de la leçon
+\item la théorie des bandes n'est pas un passage obligé (difficile à concilier avec une présentation de la loi d'Ohm...)
+\item la transparence UV des métaux est hors sujet ici
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Electromagnétisme, Perez, Masson (central dans la leçon)
+\item[[\,2\!\!]] Magnétisme : statique, induction et milieux, Garing, Ellispes
+\item[[\,3\!\!]] Electormagnétisme II, BFR, Dunod (\textbf{Attention, il faut prendre celui correspondant à l'ancien programme!!!!!!!!})
+\item[[\,4\!\!]] Physique des solides, Ashcroft, EDP Sciences
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+
+\noindent
+\textbf{manipulation} : Montrer qu'une mine de crayon est conductrice! Il n'y a pas que les métaux... Phénomène très général aux applications multiples. Cependant, comment expliquer que des matériaux assez semblables aient des conductivités si différentes? 
+
+
+\section{Conduction électrique en présence d'un champ E}
+\subsection{Loi d'Ohm [1]}
+\begin{itemize}
+\item insister sur le fait que c'est purement phénoménologique
+\item faire le lien avec la loi de Fick / de Fourier
+\item donner la loi d'Ohm locale
+\item donner alors la loi intégrale et l'expression de $R$ dans le cas particulier d'un fil de section constante
+\item donner des ODG et dire que $\sigma$ est scalaire constant car le milieu est homogène isotrope
+\end{itemize}
+
+\begin{remarque}
+\noindent
+dire que d'autres gradients peuvent induire des déplacements de charges. Le gradient adapté est en fait le gradient de potentiel chimique
+\end{remarque}
+
+\subsection{De la nécessité de trouver un modèle microscopique pour justifier le modèle [pas de réf.]}
+\begin{itemize}
+\item \textbf{problématique} : dépendance de $\sigma$ avec $T$, la nature du matériau...
+\item \textbf{Contexte} : découverte de l'électron motive la recherche d'un modèle, mais problème non analytique (trop de particules!)
+\item utilisation de la physique statistique et de la théorie cinétique des gaz pour obtenir un modèle microscopique. Ce modèle devant permettre d'interpréter les phénomènes observés
+\end{itemize}
+
+\section{Modélisation microscopique de la conduction électrique}
+\subsection{Hypothèses du modèle [4]}
+Le Ashcroft distingue clairement les 4 hypothèses à l'origine du modèle de Drude (début du chapitre 1)
+
+\subsection{Modèle de Drude [3]}
+Le traitement est plus clair dans le BFR (PFD puis moyenne), mais il est également fait dans le Ashcroft. On obtient alors la vitesse de dérive comme la vitesse acquise sur le temps moyen $\tau$ entre deux collisions. Ayant cette vitesse, on a facilement la densité volumique de courant $\vect{j}$.
+
+\subsection{Modèle de Drude : succès, défauts, limites [1] et [3]}
+\begin{itemize}
+\item succès : on obtient un modèle de la conduction dans les solides
+\item limite : le libre parcours moyen est bien supérieur à la distance interatomique : ce n'est donc pas des collisions avec le réseau qui explique la "viscosité" (Pérez)
+\item succès : permet d'expliquer la variation avec $T$ de la résistivité par une interaction plus forte avec les états de vibration du réseau (phonons) -> BFR
+\item succès : effet des défauts et impuretés (indépendant de $T$) -> BFR
+\item limite : la perturbation induite par $\vect{E}$ doit rester négligeable (vitesse de dérive négligeable devant vitesse thermique, c'est toujours le cas dans les bons conducteurs). Fait un peu dans le Pérez
+\item limite : validité en régime variable
+\end{itemize}
+
+\section{Conséquences de l'apparition d'un champ magnétique}
+\subsection{Conduction en régime variable : effet de peau [2]}
+Le traitement du Garing p177 est excellent. C'est fait sur un conducteur cylindrique (moins scolaire). Les équations ne sont pas analytiques. Ne pas passer beaucoup de temps dessus, donner directement le résultat. On mène le calcul jusqu'à l'expression de $R$. ODG de l'épaisseur de peau à $50Hz$. Expliquer alors l'intérêt d'utiliser des conducteurs multibrins pour plus d'efficacité sur les lignes HT en particulier. 
+
+\subsection{effet Hall : application à la mesure de champ magnétique permanent [1]}
+\begin{itemize}
+\item présenter par un schéma la configuration expérimentale
+\item reprendre la démonstration du Pérez et obtenir la constante de Hall
+\item permet la réalisation de magnétomètre à effet Hall (en pratique, on utilise des SC et non des métaux pour avoir une constante de Hall bien supérieure)
+\item ODG pour un métal et un SC (ici un SC est simplement l'équivalent d'un métal avec très peu de porteurs)
+\item \textbf{manipulation} : si le temps le permet, petite présentation de la maquette Hall et montrer que la tension de Hall évolue avec la valeur du champ magnétique.
+\end{itemize}
+
+
+\bk
+\noindent
+\textbf{Conclusion} : 
+\begin{itemize}
+\item bilan : le modèle de Drude, bien que simpliste, peut expliquer la plupart des phénomènes de conduction.
+\item Cependant, ces bons résultats ne doivent pas masquer la nature purement quantique du phénomène. Seule la physique du solide et un traitement quantique permet de rendre compte des propriétés de conduction des solides.
+\item ouverture : parler de la théorie des bandes (MQ), permettant entre autres de discriminer isolant, conducteur, SC...
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Le modèle de Drude permet-t-il d'expliquer l'ensemble des phénomènes liés à la magnétorésistance?}  
+
+\bk
+\noindent
+\textbf{2. Pourquoi le métal devient transparent pour $\omega>\omega\e{p}$?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Comment estimer la densité électronique du cuivre?}  
+
+\bk 
+ \noindent
+\textbf{4. Comment est faite une résistance en électronique?}  
+
+\bk
+\noindent
+\textbf{5. Pourquoi néglige-t-on la capacité thermique des électrons de conduction dans un métal?}  
+
+\bk
+\noindent
+\textbf{6. Pourquoi il est important d'ajuster le potentiomètre à 0 avant l'expérience de Hall?} 
+
+\bk
+\noindent
+\textbf{7. Comment Drude a-t-il déterminé la valeur de $\tau$?} 
+
+\bk
+\noindent
+\textbf{8. Pourquoi la loi d'Ohm n'est elle plus valable pour des objets de petite taille?} 
+
+\bk
+\noindent
+\textbf{9. Fonctionnement d'un galvanomètre} 
+
+\bk
+\noindent
+\textbf{10.Comment les formules changent si on considère plusieurs types de porteurs?} 
+
+\bk
+\noindent
+\textbf{11. Quelles sont les particules médiatrices des différentes interactions? }
+
+\bk
+\noindent
+\textbf{11. Pourquoi utiliser SC plutôt que métal dans sonde à effet Hall?} 
+
+
+\bk
+\noindent
+\textbf{12. Quelle est la résistance du corps humain? Intensité mortelle?} 
+
+\bk
+\noindent
+\textbf{11. Quelle est la nature du niveau de Fermi? Comment mesure-on un potentiel chimique?} 
+
+
+
+\end{document}

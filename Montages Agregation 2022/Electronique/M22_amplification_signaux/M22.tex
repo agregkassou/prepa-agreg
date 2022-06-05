@@ -1,0 +1,120 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M22 : Amplification de signaux}
+
+\encadreminipage{9cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item électrocinétique
+\item représentation complexe d'un signal harmonique
+\item notion d'impédance complexe
+\item fonction de transfert
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item créer un étage d'amplification adéquat pour un système micro/HP
+\item objectifs de l'amplification : amplifier le niveau d'un signal sans distorsion et avec un rendement maximal
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,2\!\!]] Expériences d'électronique, Duffait, Bréal
+\item chercher un bouquin d'électrotech de TSI
+\end{itemize}
+}
+
+\hrulefill
+
+\mk
+\textbf{Expériences introductives}
+\begin{itemize}
+\item Brancher directement micro sur HP : signal non amplifié et en plus distordu! L'étage d'amplification apparait donc nécessaire
+\item On peut observer le niveau de signal en tension de la voix aux bornes du micro (10mV environ)
+\item L'impédance du HP est bien inférieure à celle du micro, la tension a ses bornes est donc très faible
+\item La première idée est donc d'amplifier la tension pour avoir un niveau de tension sur l'HP raisonnable (grandeur nominale)
+\end{itemize}
+
+
+\hrulefill
+
+\section{Amplification en tension}
+\subsection{Amplificateur non inverseur}
+On pose sur le problème un regard d'ingénieur : comment réaliser l'amplification souhaitée avec le matériel dont un dispose ? Les montages classiques d'amplification se font à partir d'AO. Dans notre cas, l'AO est une boîte noire dont on cherche à caractériser le fonctionnement dans notre montage (en fait AO= série de transistors et de capa...). 
+
+
+\noindent
+-> Montage d'un ampli non inverseur classique. 
+
+
+\subsection{Produit gain bande passante}
+Micro et HP ont une bande passante d'environ 8kHz. Pour ne pas dégrader la qualité de restitution de l'ensemble, on cherche donc à conserver cette bande passante, d'où l'intérêt de cette étude. 
+
+\mk
+\noindent
+-> tracé de $G \, f\e{c}=f(f\e{c})$. Comme attendu, le produit est conservé pour des bandes passantes assez basse, mais se dégrade ensuite (la modélisation passe bas d'ordre 1 n'est plus vérifiée pour l'AO).
+
+\mk
+\noindent
+-> On cherche alors à adapter les résistantes pour avoir un gain maximal tout en respectant le critère sur la bande passante (8kHz). Calculer le niveau de signal attendu en sortie pour une entrée de 10 mV (caractéristique du micro)
+
+
+\subsection{limitation en courant}
+Constater les limitations en courant de l'AO en mettant une charge de quelques Ohms (ODG du HP). L'amplification n'est donc pas suffisante pour avoir un fonctionnement correct (l'ampli en tension est très faible si l'on ne veut pas saturer en courant).
+
+
+\section{Amplification en courant}
+\subsection{transistor bipolaire (pp 66-67)}
+On s'intéresse à son utilisation dans le cas d'un montage en mode amplification de courant. Faire alors le tracé $I/e{C}=f(I\e{B})$ et mesurer le coefficient d'amplification en courant $\beta$. Mesurer la tension de polarisation $V\e{BE}$ et s'assurer qu'elle est constante. 
+On peut faire des relevés pour plusieurs $V\e{CE}$ si le temps le permet (en prenant par exemple 5,10 et 15V car on s'attend à environ 10V par la suite).
+
+\mk
+\noindent
+-> On obtient alors un ampli en courant mais unidirectionnel (puisque la polarisation doit être passante). Pour amplifier le signal micro, on fait donc un système à deux transistors (chacun amplifiant un des signes). C'est le montage push-pull
+
+\subsection{Push pull élémentaire (p130)}
+S'assurer à l'oscillo que le signal est globalement bien reproduit avec ampli mais que le signal est distordu (effet de seuil de polarisation conduisant à une distorsion de raccordement). Expliquer le montage et le choix des valeurs de résistances (ne pas mettre les résistances de sécurité, le montage est assez solide pour s'en passer et sinon il faudrait expliquer leur emploi). Ne pas faire de mesure à ce stade!
+
+\subsection{Push pull à distorsion corrigée (p131)}
+Expliquer l'intérêt de l'ajout des diodes (comme elles sont toujours passantes, elles restent polarisées et donc les transistors aussi! -> il n'y a plus d'effet de seuil).
+Expliquer le choix des valeurs de résistance (y compris les petites résistances pour éviter l'emballement).
+
+\mk
+\textbf{Mesures à effectuer}
+\begin{itemize}
+\item mesurer le rendement du dispositif ($\tf{P\e{sortie}}{P\e{alim}}$) en fonction de la tension d'entrée
+\item mesurer le taux de distorsion harmonique (bon critère pour juger de la non distorsion du signal) en fonction de la tension d'entrée
+\centers{$\tau=\f{\sqrt{ \Sigma V\e{S,eff,i}^2}}{V\e{S,eff,1}}$}
+Les harmoniques sont à mesurer en mode FFT de l'oscilloscope 
+\end{itemize}
+
+
+
+\hrulefill
+
+\mk
+\textbf{Conclusion}
+Le montage global est alors la mise en série micro/ampli en tension/ampli en courant/HP. On obtient le niveau d'amplification désirée sans distorsion. L'ampli est réalisée! Quelques paramètres sont à choisir astucieusement afin que le système d'ampli soit homogène et performant : 
+
+\begin{itemize}
+\item le gain de l'ampli en tension doit respecter la bande passante. Il faut s'arranger pour qu'on obtienne la tension nominale du HP en sortie
+\item le montage push pull assure l'amplification en courant. Tant que les sources externes de tension pourront suivre, il offrira l'amplification nécessaire au fonctionnement en régime nominal du HP.
+
+\end{itemize}
+
+
+\mk
+\textbf{Ouverture}
+L'amplification optique est également un domaine très riche. On peut citer les amplificateurs pour créer des lasers mais aussi les répéteurs disposés sur les lignes de fibres optiques qui réalisent l'amplification cohérente du signal. 
+
+\hrulefill
+
+
+\end{document}

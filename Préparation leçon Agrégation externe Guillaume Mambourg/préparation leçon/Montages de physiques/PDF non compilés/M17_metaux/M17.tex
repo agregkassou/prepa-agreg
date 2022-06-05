@@ -1,0 +1,92 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M17 métaux}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item caractéristiques communes des métaux
+\item étudier les caractéristiques dans différents domaines (essayer d'en faire une caractérisation assez exhaustive
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Dictionnaire de physique expérimentale : tome II la thermodynamique, Quaranta, Pierron
+\item[[\,2\!\!]] Sismologie, Montagner, Hachette (pour la vitesse de propagation)
+\item[[\,3\!\!]] Thermodynamique PC-PSI, Choimet, Précis Bréal
+\item[[\,4\!\!]] Dictionnaire de physique expérimentale : tome I mécanique, Quaranta, Pierron
+\item[[\,5\!\!]] Dictionnaire de physique expérimentale : tome II thermodynamique, Quaranta, Pierron
+\item[[\,6\!\!]] Les semi-conducteurs, Ngô, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : annoncer le plan d'étude. On cherche à lister les caractéristiques essentielles des métaux.
+
+
+\section{Propriétés électriques}
+\subsection{Conductivité de l'aluminium}
+\begin{itemize}
+\item utiliser un montage à 4 fils : prise de tension sur le matériau d'intérêt (les fils de prise de tension étant traversés par aucun courant) -> on s'affranchit alors de la résistance des fils et de la connectique
+\item on relève alors la caractéristique courant/tension (pour éventuellement plusieurs distances entre électrodes)
+\item on remonte alors à la résistance puis à la conductivité du matériau connaissant sa section
+\item on trouve des valeurs inférieures à celle de l'aluminium (métal impur et ayant subi de l'écrouissage)
+\item on préfère l'aluminium au cuivre car alors les tensions mesurables sont plus importantes, ce qui réduira l'erreur!
+\end{itemize}
+
+
+\subsection{Effet de la température sur la conductivité [1]}
+\begin{itemize}
+\item prendre une sonde type thermistance platine
+\item montrer la variation de la résistance avec la température 
+\item cette variation doit être linéaire avec la température (comparée la pente à celle donnée par le Quaranta p283)
+\end{itemize}
+
+\section{Propriétés thermiques}
+\subsection{Conduction thermique en régime stationnaire [1]}
+\begin{itemize}
+\item on s'aide du Quaranta de thermo p60, même si la manipulation ne ressemble pas tout à fait.
+\item ENSC 449
+\item on travaille à flux thermique imposé (par la source de chaleur environ 30W)
+\item dans la théorie 1D (donc sans perte), et en régime stationnaire, l'équation de la chaleur se limite à une équation de Laplace et il vient
+\centers{$\theta(x)=ax+b \qqetqq j\e{th}=-\lambda \ddf{T}{x}=-\lambda a$}
+\end{itemize}
+
+\subsection{Résultats : interprétation et limites [1]}
+\begin{itemize}
+\item la puissance joule est mesurée précisément (c'est la puissance électrique injectée). Il suffit alors de diviser par la section pour avoir le flux surfacique d'énergie
+\item ainsi, connaissant $a$ et $j\e{th}$, on remonte à la conductivité
+\item la manipulation donne le bon ordre de grandeur mais inutile de la pousser trop loin. La régression est relativement linéaire (mais pas tout à fait), ce qui permet de justifier un modèle sans perte (s'il y avait des pertes, elles dépendraient de la température locale et la courbe serait convexe). En fait la majorité des pertes ont lieu en entrée. Le $j\e{th}$ injecté est largement surestimé (une partie de la puissance ne part pas dans la barre). Il pourrait être intéressant de tenter de parfaire l'isolation de cette partie (coton + aluminium)
+\end{itemize}
+
+\section{Propriétés mécaniques}
+\subsection{Vitesse du son dans le Duralumin [2]}
+\begin{itemize}
+\item ENSC 410 (la fiche est très complète, il suffit de la suivre)
+\item dans ce montage, on fera une évaluation rapide des vitesses longitudinales et transversales par mesure des angles limite de réfraction
+\item utiliser les expressions données dans le Montagner pp 55-56 : relie vitesse de propagation et coefficients de Lamé puis module d'Young et coefficients de Lamé. Il faut uniquement connaître la masse volumique du matériau
+\end{itemize}
+
+\subsection{Evaluation du module d'Young d'un réglet métallique [4]}
+\begin{itemize}
+\item prendre un petit réglet métallique dont les dimensions sont connues (et si possible le matériau pour comparer à une valeur tablée, mais il est probable que ça soit un alliage)
+\item on choisira un réglet tel que la flexion est négligeable sous l'effet de son propre poids : ça simplifie considérablement les calculs puisque le couple est alors localisé à l'extrémité du réglet
+\item il est important d'avoir une fixation rigide du réglet pour avoir de bons résultats
+\item évaluer la flèche maximale pour différentes masses attachées au bout (et éventuellement pour différentes longueurs)
+\item il suffit de placer un écran blanc derrière pour repérer
+\item une formule de théorie des poutres permet de remonter au module d'Young de la barre après mesure de sa flèche, le Quaranta donne : 
+\centers{$h=\f{F\ell^3}{3EI}$}
+\noindent
+avec $I=\tf{ab^3}{12}$ le moment quadratique de la section droite avec $a$ la largeur du réglet et $b$ son épaisseur
+\end{itemize}
+
+
+
+
+\end{document}

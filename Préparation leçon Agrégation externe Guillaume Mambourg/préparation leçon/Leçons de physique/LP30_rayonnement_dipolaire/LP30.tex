@@ -1,0 +1,194 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP30 : rayonnement dipolaire électrique}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item équation de Maxwell (ondes électromagnétiques dans le vide)
+\item modèle de l'électron élastiquement lié
+\item analyse vectorielle
+\item notion d'OPPM
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item hypothèses du modèle du dipôle rayonnant
+\item une charge doit être accélérée pour rayonner
+\item dégager la structure des champs rayonnés
+\item une charge doit être accélérée pour rayonner
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item le calcul du champ rayonné doit être présenté de manière synthétique en dégageant clairement les hypothèses (et en les discutant)
+\item la discussion des résultats (forme du champ, polarisation...) doit être menée.
+\item il faut se garder du temps pour les applications qui sont importantes dans cette leçon
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Cap Prépa physique PC-PC*, Pearson 
+\item[[\,2\!\!]] J'intègre, PC-PC*, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+\noindent
+Reprendre celle du Cap Prépa
+\begin{itemize}
+\item on a étudié la propagation des OEM mais comment les produire ?
+\item grande importance technologique, en particulier en télécoms
+\item explique les phénomènes de diffusion du rayonnement EM par les milieux matériels
+\end{itemize}
+
+\section{Champ rayonné par un dipôle}
+\subsection{Position du problème [2]}
+\begin{itemize}
+\item expression de $\vect{p}$ + condition de validité de l'approximation dipolaire
+\item calcul non relativiste
+\item calcul dans la zone de rayonnement (grande distance devant $\lambda$)
+\item schéma clair sur transparent de la configuration du problème (repérage angulaire)
+\end{itemize}
+
+\subsection{Champs dans la zone de rayonnement et commentaires physique [2]}
+\begin{itemize}
+\item donner sans aucune démonstration la forme des champs dans la zone de rayonnement
+\item ensuite reprendre les commentaires fait dans le Dunod
+\item rayonnement non isotrope
+\item décroissance en $\tf{1}{r}$
+\item dérivée seconde de $\vect{p}$, donc accélération des charges!
+\item les symétries permettaient d'intuiter l'orientation de E et B
+\end{itemize}
+
+
+%\subsection{Potentiel retardé [1]}
+%\begin{itemize}
+%\item faire la présentation de cette partie sur transparent -> c'est hors programme
+%\item présenter $\vect{A}$ (car $\div \vect{B}=0$)
+%\item nécessité du potentiel retardé à grande distance
+%\item expression générale de $\vect{A}$ puis expression simplifiée en fonction de $\vect{p}$ (utilisation de l'approximation dipolaire)
+%\end{itemize}
+%
+%\begin{remarque}
+%\noindent
+%Ne pas parler du choix de jauge mais faut le savoir. Ce n'est pas important ici puisqu'on n'exprimera pas le potentiel $V$.
+%\end{remarque}
+%
+%\subsection{Calcul des champs E et B [2] et surtout à savoir faire! }
+%\begin{itemize}
+%\item on se limite à la zone de rayonnement. Dans cette zone, la sphéricité de l'onde est négligeable et on peut la considérer localement plane et dirigée selon $\vect{u}\e{r}$. On fait ce postulat pour la résolution
+%\item Par ailleurs on ne considère que des OPPM (il est facile par linéarité des équations de traiter n'importe quel problème par décomposition)
+%\item le calcul est alors très simplifié dans ce cas (simplification des opérateurs différentiels pour des OPPM)
+%\item ne pas oublier qu'on garde des potentiels retardés (donc on dérive en $t'=t-\tf{r}{c}$
+%\item s'assurer de la structure onde plane que l'on obtient (nécessaire vue nos hypothèses)
+%\item écrire finalement les expressions générales de E et B sans les démontrer en fonction des dérivées temporelles de $\vect{p}$.
+%\end{itemize}
+
+\subsection{Puissance rayonnée [2]}
+\begin{itemize}
+\item calcul de $\vect{\Pi}$ et diagramme de rayonnement
+\item calcul de la puissance surfacique : $\dd P= \vect{\Pi} \cdot \vect{u}\e{r} \, r^2 \, \dd \Omega$
+\item $P\e{tot}=\int \dd P$
+\item $\moyenne{P\e{tot}}$
+\item commentaires physiques
+\end{itemize}
+
+
+\section{Rayonnement dipolaire microscopique}
+
+\subsection{diffusion par des dipôles élémentaires [2]}
+\begin{itemize}
+\item la matière est polarisable sous l'effet d'un champ extérieur (y compris d'une OEM)
+\item montrer sur transparent le modèle de l'électron élastiquement lié (point de vue classique)
+\item dire qu'on isole un unique dipôle (comportement indépendant)
+\item PFD et obtention de $\vect{p}$ -> filtre passe bas
+\item ODG de $\omega_0$ et $\tau$ dans le modèle -> expression simplifiée de $\vect{p}$
+\end{itemize}
+
+\subsection{effet chromatique [2]}
+\begin{itemize}
+\item montrer la manipulation : tube contenant une suspension diffusante -> on observe bien la diffusion préférentielle du bleu (le faisceau non diffusé prend une teinte orangée)
+\item on utilise alors notre modèle pour expliquer
+\item réexporter la partie précédente -> établir $\moyenne{P}$ comme une fonction de $I$ et $\omega^4$ -> explique alors la couleur bleue du ciel!
+\item expliquer le Soleil rouge le soir. Selon le temps restant, faire avec les mains ou faire un bilan de puissance sur une tranche $\dz$ pour obtenir une longueur caractéristique de diffusion que l'on déterminera
+\end{itemize}
+
+\subsection{Polarisation par diffusion [2]}
+\begin{itemize}
+\item faire l'expérience : donner des polariseurs au jury et leur proposer d'observer le tube bien orthogonalement à sa longueur
+\item explication bien faite dans le Dunod -> si on observe dans la direction orthogonale à l'éclairage solaire, la lumière est théoriquement totalement polarisée
+\item conclure : la diffusion produit une lumière polarisée à partir d'une lumière non polarisée
+\end{itemize}
+
+
+\section{rayonnement d'antenne}
+\subsection{Rayonnement d'une antenne de petite taille [1]}
+\begin{itemize}
+\item montrer que dans l'ARQS, on peut lier $\vect{p}$ et $\vect{j}$
+\item ARQS valable pour des antennes tel que $\ell \ll \lambda$
+\item un $\vect{j}$ variable fournit donc l'équivalent d'un dipôle oscillant
+\item expliciter alors $\moyenne{P\e{ray}}$ et introduire la résistance de rayonnement
+\item montrer la dépendance en $\ell$ -> intérêt d'une grande antenne (sans dépasser $\lambda/2$ pour ne pas avoir d'interférences destructives)
+\end{itemize}
+
+\begin{remarque}
+\noindent
+En pratique, $\ell \simeq \lambda$, l'ARQS n'est donc pas vérifiée et le calcul est plus délicat
+\end{remarque}
+
+\subsection{Rayonnement d'une antenne réelle [1]}
+\begin{itemize}
+\item poser le problème (schéma sur transparent)
+\item expliquer le principe de la discrétisation 
+\item écrire le champ électrique élémentaire
+\item faire le DL à grande distance (dans la zone de rayonnement de l'antenne)
+\item écrire le champ total rayonné en un point (sous forme intégrale)
+\item donner la forme de la distribution de courant dans l'antenne
+\item ne pas chercher à faire le calcul mais expliquer l'idée de fréquence propre (pour éviter des effets d'interférences destructives)
+\item donner les diagrammes de rayonnement
+\end{itemize}
+
+
+\bk
+\noindent
+\textbf{conclusion} : ouvrir sur le rayonnement cyclotron (regarder dans panorama de la physique)
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Pourquoi avoir choisi de traiter le problème avec le potentiel vecteur?}  
+
+\bk
+\noindent
+\textbf{2. Forme du champ rayonnée. Polarisation.}  
+ 
+ \bk
+ \noindent
+\textbf{3. Pourquoi utilise-on en pratique des antennes $\lambda/2$?}  
+
+\bk 
+ \noindent
+\textbf{4. Qu'est-ce qu'un onduleur dans un synchrotron?}  
+
+\bk
+\noindent
+\textbf{5. Peut-on faire un modèle équivalent mais qui engendre des polarisations circulaires?}  
+
+
+\end{document}

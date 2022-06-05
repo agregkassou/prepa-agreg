@@ -1,0 +1,135 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP32 : Interférences à deux ondes (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item optique géométrique
+\item électromagnétisme
+\item physique des ondes
+\item détecteurs optique (notion)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item Tout détecteur optique réalise un moyennage
+\item Interférences apparaissent sous condition de cohérence (à bien expliciter tout au long de la leçon)
+\item A priori, il faut superposer les champs. Mais pour des contributions incohérentes, on peut superposer directement les intensités (puisque les interférences ne sont pas possibles)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Cap Prépa, PC-PC*, Pearson
+\item[[\,2\!\!]] J'intègre, PC-PC*, Dunod
+\item[[\,3\!\!]] Optique, une approche expérimentale et pratique, De Boeck
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+expérience qualitative : 1 fente -> 2 fentes. Apparition visible d'interférences. Phénomènes contre-intuitif où lumière+lumière=obscurité. 
+
+\section{Interférences à deux ondes}
+\subsection{Description ondulatoire de la lumière et détecteurs [1]}
+Sur cette partie il faut être clair et concis (pour gagner du temps! la leçon est très longue). Les idées suivantes doivent apparaître : 
+\begin{itemize}
+\item modèle ondulatoire de la lumière : onde électro-magnétique
+\item approximation du modèle scalaire (polarisation oubliée)
+\item définition de l'éclairement comme valeur moyenne quadratique du champ
+\item le moyennage temporel est du aux détecteurs. Comparer en ODG le temps de réponse de différents détecteurs par rapport aux fréquences optiques. 
+\item Introduire et expliquer la notion de chemin optique. On restera dans le cas de propagation rectiligne.
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Il n'est pas nécessaire d'introduire l'écriture complexe ici. On n'en aura pas besoin. Une fois que la formule est établie, on ne fait que l'utiliser dans différentes configurations pratiques.
+\end{remarque}
+
+
+\subsection{Superposition de deux ondes [1]}
+Faire le calcul de l'intensité lumineuse de la somme de deux OPPM (a priori pas même fréquence, ni même phase à l'origine) en restant avec des cosinus. Faire ressortir le terme d'interférence sans chercher à calculer la moyenne temporelle.
+
+\subsection{Condition d'obtention d'interférences [2]}
+La moyenne temporelle sur le temps d'intégration doit être non nulle. Il faut vérifier : 
+\begin{itemize}
+\item condition sur la polarisation (souvent lumière non polarisée! pas de problème)
+\item condition sur la fréquence : $\omega_1=\omega_2$
+\item condition sur la phase ) l'origine : $\Delta\phi_0$ indépendant de $t$.
+\end{itemize}
+
+\noindent
+Donner sous ces conditions formule classique d'interférence à deux ondes.
+
+
+\section{Figures d'interférences et dispositifs interférentiels}
+
+\subsection{Figures d'interférences [1]}
+\begin{itemize}
+\item réinterpréter le déphasage : $\Delta\phi=\f{2\pi}{\lambda}\delta$
+\item donner la condition pour laquelle on a franges brillante / sombre
+\item introduire l'ordre d'interférence et revenir alors sur la condition frange brillante / sombre ($p$ entier ou demi entier)
+\item les franges brillantes sont des surfaces équi-déphasage : montrer les hyperboloïdes (existe des transparents tout fait?)
+\end{itemize}
+
+\subsection{Principe d'obtention de deux sources cohérentes : exemple de fentes d'Young [2]}
+\begin{itemize}
+\item utilisation d'une unique source primaire dont on fait deux sources primaires par division de front d'onde ici (faire le schéma et repérer les sources)
+\item faire remarquer sur le fait qu'en principe, on devrait considérer les effets de la diffraction par les fentes sources secondaires.
+\item dessiner les figures obtenues selon les plans de coupe des hyperboloïdes
+\item introduire la notion d'interfrange : distance sur l'écran entre deux franges brillantes
+\item balancer sans calcul les différences de marche dans les deux configurations (avec schéma sur transparent) et donner dans chaque cas l'interfrange
+\end{itemize}
+
+
+\subsection{Second système classique de génération d'interférences : le Michelson [3]}
+\begin{itemize}
+\item on a vu un système à division du front d'onde, on va voir maintenant la division d'amplitude (intérêt : système bien plus lumineux!). 
+\item présentation de principe sur transparent de l'interféromètre
+\item introduire la configuration repliée et montrer qu'alors on peut voir le système comme l'analogue géométrique des fentes d'Young ou l'on peut reproduire les deux configurations : anneaux et franges rectilignes
+\end{itemize}
+
+
+
+\section{Cohérence}
+
+\subsection{Introduction [1]}
+Jusqu'à maintenant, nous considérions le cas d'une source primaire parfaitement monochromatique et ponctuelle (d'étendue spatiale nulle). C'est évidemment une idéalisation. Il convient donc d'étudier les effets de ces phénomènes sur le contraste des franges (limitation en cohérence spatiale et temporelle). Dans ce cas, les "sources" sont incohérentes, nous sommerons donc directement les intensités.
+
+\noindent
+Introduire alors la notion de contraste et faire les cas limites $C=0$ et $C=1$.
+
+\subsection{Cohérence spatiale [3]}
+Application au cas de deux sources ponctuelles incohérentes séparées d'un angle $\alpha$. Mentionner l'application en interférométrie stellaire pour la résolution d'un système d'étoiles double (mesure historique de Michelson). On se place en configuration franges rectilignes. bien fait dans le Houard partie interférométrie stellaire
+
+\begin{remarque}
+\noindent
+Ici la perte de contraste est homogène sur l'ensemble de la figure à l'écran. Le contraste ne dépend que de la distance entre les deux sources secondaires (les deux fentes).
+\end{remarque}
+
+\subsection{Cohérence temporelle [1]}
+On fait l'étude sur le doublet du sodium. Insister sur le fait que si le brouillage peut être gênant, c'est aussi un très bon moyen de faire de la spectroscopie haute résolution.
+
+\begin{remarque}
+\noindent
+Ici au contraire de la cohérence spatiale, le contraste varie avec la position à l'écran. On observe des pertes périodiques de contraste par translation du système de franges.
+\end{remarque}
+
+
+\noindent
+\textbf{Conclusion}
+Ouvrir sur la spectroscopie par interférométrie. Le terme de contraste est directement la transformée de Fourier du spectre de la source.
+
+
+\begin{remarque}
+\noindent
+Même s'il ne faut pas les mentionner explicitement, il faut être au point sur les théorèmes de cohérence pour répondre aux questions : théorème de Winer-Kintchine et Van Cittert-Zernicke.
+\end{remarque}
+\end{document}

@@ -1,0 +1,114 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP33 : Interféromètre à division d'amplitude (L2)}
+
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item optique ondulatoire et interférence
+\item notion de cohérence
+\item division du front d'onde
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item intérêt de la division d'amplitude sur le gain en contraste pour des sources étendues. En contrepartie, il faut prendre garde à la localisation des franges. (Ce point est crucial dans cette leçon!)
+\item aspect technologique (en particulier du Michelson) : c'est cette leçon qui introduit le matériel!
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Hprépa, optique ondulatoire, Hachette (indispensable sur la localisation)
+\item[[\,2\!\!]] Cap Prépa, PC-PC*, Pearson
+\item[[\,3\!\!]] J'intègre, PC-PC*, Dunod
+\item[[\,4\!\!]] Optique, une approche expérimentale et pratique, Houard, De Boeck
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+Montrer les limites de la méthode de division du front d'onde. Le contraste reste raisonnable pour des sources très peu étendue. On peut faire un ODG de la taille maximale d'une source à la première annulation du terme de contraste pour un système typique de fentes d'Young. Ce genre de système est donc très peu lumineux.
+
+\section{Interférences en source étendue}
+\subsection{Extension de la source [1]}
+Le Hprépa est excellent sur cette partie. Il faut l'utiliser! 
+\begin{itemize}
+\item On fait le calcul de la variation du chemin optique lorsque l'on se déplace sur la source. Attention, il y a une erreur de signe. Ce calcul est analogue à celui fait dans le cadre de l'approximation dipolaire (avec DL1 de la racine).
+\item Pour pouvoir utiliser une source étendue tout en conservant un bon contraste, il faut que le chemin optique $\delta(S,M)$ soit peu sensible à la position sur la source $S$. On cherche donc la condition d'insensibilité au premier ordre : $\vect{u}_2-\vect{u}_1=0$ -> $S_0$, $A_1$ et $A_2$ sont alignés!
+\end{itemize}
+
+
+\subsection{Inérêt de la division d'amplitude [1]}
+\begin{itemize}
+\item en division du front d'onde, la condition précédente d'alignement n'est pas réalisable, on reste donc sensible à l'ordre 1 à la taille de la source et la cohérence ne peut être bonne.
+\item en revanche, en division d'amplitude, on partage l'amplitude et on peut alors conserver l'alignement géométrique des sources primaire et secondaires. C'est l'intérêt de cette méthode : \textbf{on peut conserver un contraste élevé avec une source étendue qui assure une bonne luminosité}.
+\item énoncer alors le théorème de localisation des franges (par la suite, dans un système à division d'amplitude, la recherche de la localisation des franges est primordiale).
+\end{itemize}
+
+
+\section{Interféromètre de Michelson}
+
+\subsection{Présentation et principe [4]}
+Le Houard est clair et concis sur cette partie. Il est suffisant.
+\begin{itemize}
+\item bref historique : citer la confirmation de la relativité par l'expérience de Michelson-Morlay! Appareil de métrologie de grande précision.
+\item présenter l'interféromètre (avec un vrai appareil) en insistant sur les points techniques (séparatrice, compensatrice et son rôle, miroirs, vis de réglages...)
+\item donner un schéma minimaliste de l'appareil
+\item introduire la représentation "repliée" de l'appareil (positionner les sources secondaires après réflexion sur les miroirs. Dans la suite, on utilisera uniquement cette configuration
+\end{itemize}
+
+\subsection{Lame d'air [4]}
+\begin{itemize}
+\item schéma équivalent
+\item démontrer rapidement la formule de différence de marche
+\item lieu de localisation, faire un schéma (à l'infini, il n'y a donc pas de limite liée à la taille de la source) -> c'est génial et il faut le souligner!
+\item donner les conditions pratiques d'éclairage (choix des lentilles)
+\item \textbf{manipulation pratique} : montrer les annulations périodiques du contraste pour une lampe à Sodium (donner la formule théorique). Montrer que le contraste est indépendant de la taille de la source. Dire que les deux longueurs d'onde ne sont pas résolues (évidemment puisque la "largeur à mi hauteur" correspond à l'interfrange, quand les maxima sont écartés au maximum, il y a donc simplement annulation du contraste, mais on ne voit rien!), ça sera utile par la suite. Dire que ce principe a des applications en spectroscopie, puisque le contraste est directement relié au spectre de la source. -> \textbf{Première application métrologique en spectroscopie}.
+\end{itemize}
+
+\subsection{Coin d'air [4]}
+Le Cap Prépa en donne une présentation claire et exhaustive
+
+\begin{itemize}
+\item schéma équivalent
+\item démontrer rapidement la formule de différence de marche (préciser qu'on se place à angle d'incidence nul (comme c'est le cas expérimentalement)
+\item lieu de localisation, faire un schéma (au niveau des miroirs) -> si on travaille bien on peut donc continuer à travailler en source étendue
+\item donner les conditions pratiques d'éclairage (choix des lentilles). Ici la conjugaison miroir/écran est critique!
+\item \textbf{manipulation pratique} : passer en coin d'air et en configuration lumière blanche. Mesurer l'épaisseur d'une lame de microscope avec une AN rapide pour le principe (si le temps). -> \textbf{Seconde application métrologique en mesure de longueur}.
+\end{itemize}
+
+
+\section{Interférométrie à ondes multiples : Fabry-Pérot}
+
+\subsection{Description [4]}
+\begin{itemize}
+\item Présenter le dispositif en vrai
+\item schéma sur transparent des ondes multiples dans la cavité
+\item en terme de différence de marche, c'est l'équivalent d'un Michelson en lame d'air mais avec des ondes multiples
+\end{itemize}
+
+\subsection{Figure d'interférence [1] et [4]}
+\begin{itemize}
+\item donner la figure d'interférence associée pour le FP
+\item calculer la largeur à mi hauteur d'un pic (pour $R=0.9$ par exemple) en terme de déphasage puis en terme de rayon à l'écran (fait dans le Cap Prépa)
+\item comparer cette valeur à la différence de rayon de deux anneaux dus à chacune des longueurs d'onde
+\end{itemize}
+
+\bk
+\noindent
+\textbf{Conclusion}
+\noindent
+Revenir sur l'intérêt de la division d'amplitude : localisation pour travailler en source étendue!
+
+\noindent
+Citer des applications à l'interférométrie : mesure de défauts de surface (sensibilité à $\lambda$), spectroscopie...
+
+\end{document}

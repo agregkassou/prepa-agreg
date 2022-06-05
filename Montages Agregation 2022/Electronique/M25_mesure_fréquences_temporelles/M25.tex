@@ -1,0 +1,107 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M25 : mesures de fréquences temporelles}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,2\!\!]] Dictionnaire de physique expérimentale : l'électronique, Quaranta, Pierron
+\item[[\,3\!\!]] Thermodynamique PC-PSI, Choimet, Précis Bréal
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : domaine très vaste. Dans de nombreux cas, les mesures de fréquence concernent des fréquences "rapides", que l'homme est bien incapable d'évaluer seul. On introduira entre autre l'utilisation de l'oscilloscope et ses limites.
+
+
+\section{Mesures de fréquence dans le domaine temporel}
+\subsection{périodicité d'une oscillation mécanique}
+\begin{itemize}
+\item acquisition Pasco sur oscillateur découplé
+\item se placer dans la limite petits angles et évaluer la fréquence 
+\item comparer à la valeur théorique de la fréquence d'oscillation d'un pendule pesant en $\omega=\sqrt{\tf{g}{\ell}}$
+\item à faire très rapidement : on veut juste montrer que l'on est capable de mesurer une fréquence
+\end{itemize}
+
+\subsection{Stabilité en fréquence}
+\begin{itemize}
+\item on cherche à montrer la stabilité en fréquence du secteur et des GBF que l'on utilise
+\item pour cela, il suffit de décaler fortement le signal observé du trigger. ainsi, les faibles instabilités de fréquence vont s'accumuler et le signal va osciller
+\item remarquons que les erreurs peuvent aussi être dues à l'oscilloscope (qui possède également une horloge). On prouve simplement que nos horloges ne sont pas absolument parfaites!
+\end{itemize}
+
+\section{L'oscilloscope}
+\subsection{Echantillonnage temporel}
+Dans cette partie, l'objectif est de mettre en évidence que le signal est aussi échantillonné en temps. En particulier, nous chercherons à exhiber deux régimes de quantification : 
+\begin{itemize}
+\item Pour visualiser le pas de temps, il n'y a pas de méthodes miracles (parce qu'une fonction n'admet qu'un point par antécédent...). On prend donc un signal nul au GBF. On se place en mode sans "vector" et on visualise les points (difficile à voir si on n'est pas proche). On se propose alors de montrer les deux limites de quantification
+\item \textbf{limite en fréquence d'acquisition} : On se place sur la base de temps minimale (5 ns/div). On mesure alors le pas de quantification. On obtient alors la fréquence maximale d'échantillonnage $f\e{c}^{max} \simeq 1.9 \U{GSa.s^{-1}}$. Ce qui nous donne $94$ points acquis... On est bien loin des capacités mémoire de l'appareil!
+\item \textbf{limite en profondeur mémoire} : Cette fois, utiliser une longue base de temps (500 ms/div suffira). On mesure alors le pas de quantification en temps. Sachant que l'on a fait une acquisition sur 5s, on obtient une acquisition de $3.4M$ points. On est proche des limites de l'appareil. Cette fois, on est limité par la capacité mémoire.
+\end{itemize}
+
+
+\subsection{Analyse spectrale : FFT à l'oscilloscope}
+\begin{itemize}
+\item On met en évidence le sous échantillonnage fait pour la FFT sur l'oscilloscope. Constater qu'il prend au plus 1000 points pour faire la FFT. Rappelons que le critère de Shannon impose $f\e{e}>2 f\e{max}^{signal}$.
+\item appliquer au cas qui va nous intéresser : mesurer la fréquence de résonance ainsi que le facteur de qualité d'un diapason. On constate qu'il est impossible de respecter le critère de Shannon et d'avoir une résolution spectrale suffisante.
+\end{itemize}
+
+
+\section{Mesure de fréquence dans le domaine fréquentiel par TF}
+\subsection{fréquence de résonance d'un diapason}
+On multiplie le signal micro par celui d'un GBF fournissant une sinusoïde à $f\e{GBF}=430 Hz$ (par exemple). Le signal est donc autour de la fréquence translatée $f\e{t}=10Hz$. Le respect du critère de Shannon impose alors une acquisition à $f\e{e}=40Hz$ (pour être large). On peut alors faire l'acquisition sur un temps long de $25s$. La résolution spectrale est dans ce cas de $\tf{1}{25}=0.04Hz$. Dans ce cas, on doit pouvoir résoudre notre pic directement avec le mode FFT de l'oscilloscope (et les 1000 points d'acquisition).
+
+\begin{remarque}
+Faire une remarque sur l'importance du fenêtrage! Quel mode choisir pour avoir la bonne résolution du pic spectralement entre autre.
+\end{remarque}
+
+\subsection{Spectre d'un instrument à corde}
+\begin{itemize}
+\item \textbf{attention, ne pas oublier de faire partir le matériel à l'agrég!}
+\item exciter une corde de piano par pincement (donner un triangle de position initiale)
+\item acquisition au micro et TF
+\item montrer que l'on obtient le fondamental puis les harmoniques
+\item on peut intégrer ce spectre sur Igor : on obtient alors facilement l'"aire" sous chaque pic et donc la puissance spectrale. On constate comme attendu dans la théorie une décroissance en $1/n^2$
+\item il faut rester assez qualitatif tout de même
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ouvrir sur le domaine de l'optique justement!
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Lorsque l'on mesure la fréquence de résonance du diapason, est-ce la mesure de la fréquence propre que l'on fait?} A priori oui, puisque l'on peut l'assimiler à un passe bande, sa fréquence propre est donc indépendante de $Q$.  
+
+\bk
+\noindent
+\textbf{2. Quelle est l'incertitude en fréquence sur la fréquence de l'oscilloscope? Horloge interne?} Horloge interne est un quartz, facteur de qualité $Q=10^4-10^6$
+ 
+ \bk
+ \noindent
+\textbf{3.Comment passe-t-on de la relation de dispersion des phonons obtenue par diffraction à la densité de modes?}  
+
+\bk 
+ \noindent
+\textbf{4. Mode d'un laser : que détecte-on avec un analyseur de spectre?} Les battements entre modes. Les fréquences optiques sont évidemment inaccessibles.   
+
+\bk
+\noindent
+\textbf{5. Lier paramètres de l'acquittions et résolution en TF.}  
+
+
+\end{document}

@@ -1,0 +1,171 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP37 : aspect corpusculaire du rayonnement : notion de photon (L3)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item relativité restreinte
+\item étude des OEM
+\item modèle de l'électron élastiquement lié
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Physique atomique I, Cagnac, Dunod
+\item[[\,2\!\!]] Ondes électromagnétiques dans le vide et les milieux conducteurs, Garing, Ellipses
+\item[[\,3\!\!]] Sources de photons uniques et expériences à choix retardé de Wheeler, Jacques, EDP Sciences
+\item[[\,4\!\!]] Les lasers : cours et exercices corrigés, Dangoisse, Dunod 
+\item[[\,5\!\!]] Introduction aux lasers et à l'optique quantique, Aspect, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : intro historique en rappelant à quel point le débat a oscillé entre partisans des corpuscules de lumière et ceux d'une théorie ondulatoire. Maxwell a finalement mis tout le monde d'accord jusqu'à l'effet photoélectrique...
+
+
+\section{La quantification de l'énergie}
+\subsection{Effet photoélectrique}
+\begin{itemize}
+\item \underline{manipulation} : montrer qualitativement le phénomène : électroscope sous irradiation UV (avec ajout ensuite d'une plaque de verre qui filtre les UV pour montrer l'importance de la longueur d'onde)
+\item techniques plus avancées permettent de prouver que les charges arrachées sont des électrons
+\item constatation d'une énergie minimale
+\item faire le schéma du dispositif réel
+\item on cherche à interpréter le $V_0$ obtenu
+\item tracer les caractéristiques obtenues lorsqu'on fait varier la puissance du faisceau incident puis la longueur d'onde
+\item expliquer la nécessité d'introduire une quantification des échanges d'énergie pour interpréter l'évolution du potentiel d'arrêt avec la fréquence
+\item \textbf{attention, on prouve uniquement ici la quantification des échanges d'énergie, pas l'existence du photon.} Cependant, pour la suite, on supposera son existence comme entité bien définie
+\end{itemize}
+
+\subsection{Application au photomultiplicateur}
+\begin{itemize}
+\item problème de la mesure de faible luminosité (jusqu'au photon unique)
+\item donner le principe du PM ->amplification par possibilité d'arracher des électrons en accélérant successivement les électrons entre les dynodes
+\item donner des ODG de la sensibilité de ce type de capteur -> détecte un photon unique!!
+\item attention cependant, si on peut en effet détecter un photon, on ne les détecte pas tous (rendement quantique). Par ailleurs, le bruit thermique produit des artefacts semblables aux photons -> souvent on détecte donc des corrélations plutôt!
+\end{itemize}
+
+\subsection{Relation de De Broglie}
+\begin{itemize}
+\item proposé par De Broglie pour fournir un cadre ondulatoire à la matière
+\item cependant, cette relation peut être transférée de manière équivalente pour quantifier les OEM
+\item par contre attention, il faut travailler avec des notations relativistes, puisque le photon est toujours relativiste!
+\end{itemize}
+
+\section{Impulsion et spin du photon}
+\subsection{Impulsion du photon : effet Compton}
+\begin{itemize}
+\item on cherche à vérifier que le photon possède une impulsion
+\item schéma de la manipulation
+\item présentation des résultats (avec rapide point historique)
+\item présenter le calcul relativiste et le système d'équation à résoudre, mais ne pas le résoudre
+\item donner le résultat du calcul, qui permet d'interpréter parfaitement les résultats expérimentaux obtenus
+\item c'est donc une confirmation éclatante du fait que le photon possède une impulsion
+\end{itemize}
+
+\subsection{Application : ralentissement d'atomes froids par laser}
+\begin{itemize}
+\item suivre la présentation du Dangoisse très claire
+\item expliquer le processus 
+\item en pratique on utilise de faisceaux contrapropageants de fréquence légèrement inférieure à la fréquence de résonance de l'atome à ralentir (comme ça on crée une sélection par effet Doppler)
+\end{itemize}
+
+\subsection{Moment cinétique du photon}
+\begin{itemize}
+\item suivre la démonstration du Garing "polarisation d'une onde et spin du photon"
+\item on retrouve ainsi facilement la quantification du moment intrinsèque ayant supposé la quantification de l'énergie
+\item introduire les règles de sélection (Cagnac + Aspect), puis interpréter en terme de conservation du moment cinétique total du système atome+photon 
+\item règles : $\Delta \ell =\pm 1 \qqetqq \Delta m =0, \pm 1$
+\end{itemize}
+
+\section{Dualité onde-corpuscule}
+\subsection{Expériences décisive de quantification de la lumière}
+\begin{itemize}
+\item écrire la fonction de corrélation d'ordre 2 du problème
+\item expliquer qualitativement les choses (sinon c'est trop compliqué)
+\item classique : corrélation supérieure à 1 car s'il y a de la lumière, elle se partage équitablement sur les deux donc lumière sur 1 -> lumière sur 2
+\item quantique : indivisibilité du photon : lumière sur 1 -> rien sur 2 
+\item on ne peut montrer cela que sur une expérience de photons uniques 
+\item c'est ce qui a été fait, et cela confirme de manière certaine l'aspect quantifié du rayonnement
+\end{itemize}
+
+\subsection{Sources de photons uniques}
+\begin{itemize}
+\item expliquer le principe d'une source de photons uniques pouvant être synchronisée sur une horloge externe
+\item selon le temps disponible en fin de présentation, on pourra parler des détails de la manipulation (la création de photons uniques est le point critique de la manipulation) : caractéristique du laser pompe, focalisation sur le centre (technique confocale), détection des centres...
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : rappeler ce qu'on a vu : la lumière est quantifiée. Ces quantas possèdent une impulsion, une énergie et un moment cinétique bien défini.
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. D'où vient le nom capacité thermique?}  
+
+\bk
+\noindent
+\textbf{2. Hypothèses et démonstration du théorème d'équipartition de l'énergie.}  
+ 
+ \bk
+ \noindent
+\textbf{3.Comment passe-t-on de la relation de dispersion des phonons obtenue par diffraction à la densité de modes?}  
+
+\bk 
+ \noindent
+\textbf{4. Pour une molécule homodiatomique, que se passe-t-il? }  
+
+\bk
+\noindent
+\textbf{5. Pour des phonons, $E$ est en $T^4$ et $C\e{V}$ en $T^2$. A quoi cela fait il penser?}  
+
+\bk
+\noindent
+\textbf{6. GPM dans la limite BT (limite classique non valide), que se passe-t-il?}  
+
+\bk
+\noindent
+\textbf{7. Les ddl de translation peuvent ils être quantifiés?}  
+
+\bk
+\noindent
+\textbf{8. pourquoi faut il $3n-6$ coordonnées pour repérer une molécule à $n$ atomes?}  
+
+\bk
+\noindent
+\textbf{9. Qu'est-ce qu'un phonon? Lien et différence avec un photon.}  
+
+\bk
+\noindent
+\textbf{10. Qu'est-ce que l'approximation classique?}  
+
+\end{document}

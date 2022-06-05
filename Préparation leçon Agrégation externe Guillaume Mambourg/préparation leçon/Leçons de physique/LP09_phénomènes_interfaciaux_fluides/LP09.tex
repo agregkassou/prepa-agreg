@@ -1,0 +1,118 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP09 : Phénomènes interfaciaux impliquant des fluides}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item thermodynamique élémentaire (notion de potentiels thermodynamiques)
+\item mécanique des fluides visqueux
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item existence d'une énergie surfacique et de forces de tension associées
+\item origine microscopique du phénomène et ODG
+\item compétition avec les autres forces en volume : gravité, viscosité
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Gouttes, bulles, perles et ondes, De Gennes, Belin (le livre phare de cette leçon!)
+\item[[\,2\!\!]] Hydrodynamique physique, Guyon, Hulin, Petit, EDP Sciences (pour d'éventuels compléments)
+\item[[\,3\!\!]] Cap Prépa physique PC-PC*, Pearson (pour la base) 
+\item[[\,4\!\!]] Thermodynamique, Diu, Hermann (pour la démo de Laplace)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+En hydrodynamique, on s'intéresse souvent à des phénomènes en volume et les interfaces n'apparaissent que dans les conditions limites. Mais dans certains cas, les effets de surface ne sont pas négligeables.
+
+\noindent
+\textbf{manipulation} : verre d'eau à la limite du débordement : la surface se bombe, en contradiction avec la gravité qui impose des surfaces horizontales.
+
+\section{Tension superficielle}
+\subsection{mise en évidence [1]}
+\noindent
+Le De Gennes propose une introduction claire : 
+\begin{itemize}
+\item mise en évidence d'un travail de surface (introduction de l'énergie de surface $\gamma$ comme la variable conjuguée de l'aire en thermodynamique). \textbf{manipulation} : l'expérience de la cordelette qui prend la forme d'un disque pour minimiser sa surface est illustrative
+\item mentionner qu'une vision équivalente est possible en terms de force linéique
+\item préciser unité et ODG pour quelques fluides
+\end{itemize}
+
+\subsection{origine microscopique [1]}
+reprendre la démonstration du de Gennes, et en déduire une interprétation microscopique de l'ODG de $\gamma$.
+
+\begin{remarque}
+\noindent
+Ne pas mettre de flèches pour représenter les forces entre molécules! Sinon, ça laisse entendre que la force résultante est normale à la surface, ce qui est faux. Raisonner en terme d'énergie de liaison est bien plus raisonnable.
+\end{remarque}
+
+
+\subsection{loi de Laplace [4] et [1]}
+\begin{itemize}
+\item Le complément 5.a du Diu est d'une rigueur très satisfaisante. Elle utilise la minimisation de $G$, ce que semble apprécier le jury.
+\item généralisation à une surface quelconque (sans démonstration)
+\item mentionner une conséquence directe : les petites bulles se vident dans les grosses (expliquer avec les mains) -> mûrissement d'Ostwald des mousses (De Gennes)
+\end{itemize}
+
+\subsection{loi de Young-Dupré [1]}
+\begin{itemize}
+\item définir le paramètre d'étalement $S$
+\item discriminer le cas $S>0$ et $S<0$ (avec les sous cas plutôt mouillant plutôt non mouillant) -> faire des dessins de l'étalement
+\item démontrer la loi de Young Dupré à partir de l'équilibre de la ligne triple
+\item introduire la longueur capillaire et l'expliquer en terme compétitif
+\item exercice de l'adhésion capillaire (Young Dupré + Laplace) -> instructif!
+\end{itemize}
+
+
+\section{Compétition tension de surface / gravité}
+\subsection{loi de Jurin [1]}
+il suffit de recopier!
+
+
+\subsection{instabilité Rayleigh-Taylor : position du problème [1]}
+Présenter le problème et le phénomène. Introduire l'idée d'une compétition gravité / tension de surface.
+
+\subsection{mise en évidence de la longueur d'onde de l'instabilité}
+Le de Gennes fait le calcul sous forme intégrale de manière intéressante mais il est préférable de marquer d'abord les deux énergies puis d'en faire la différence (avant et après déformation, sur ce point le de Gennes fait une erreur sans incidence dans l'expression de l'énergie potentielle). On postulera directement une déformation sinusoïdale. Dans l'énergie potentielle, le facteur $\tf{1}{2}$ vient de la position du centre de masse au milieu de la masse liquide!
+
+
+Dire enfin qu'un unique mode est privilégié par des considérations cinétique de croissance, mais ne pas faire les calculs trop laborieux. Montrer sur une expérience (miel par exemple au fond d'un récipient que l'on retourne).
+
+\begin{remarque}
+\noindent
+Dans le de Gennes, le $\kappa$ fait référence à l'inverse de la longueur capillaire.
+\end{remarque}
+
+
+\section{Le gradient de tension de surface comme moteur de la dynamique des fluides [pas de référence]}
+\subsection{position du problème}
+Mettre en place le problème. Expliquer qualitativement que l'évaporation différentielle crée un gradient vertical de tension de surface.
+
+\subsection{condition d'ascension}
+Mettre en équation le problème et, décrire le profil ascensionnel et donner le critère de montée.
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+
+
+\noindent
+En microfluidique, les effets superficiels sont prédominants et constituent alors un domaine d'étude très riche.
+
+\noindent
+Grands enjeux industriels : traitement de surface chez Saint Gobain, tenue des peintures.
+
+
+\end{document}

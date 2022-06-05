@@ -1,0 +1,123 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M33 : régimes transitoires}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item transitoire : outil très puissant pour caractériser un système linéaire (réponse impulsionnelle...)
+\item le temps de réponse est souvent une contrainte qu'il faut contrôler (penser aux capteurs...)
+\end{itemize}
+}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Optics, Sommerfeld, Academic Press
+\item[[\,2\!\!]] Electronique : signaux et systèmes, conversion de puissance, Boussié, Puf
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : définir transitoire : réponse d'un système à une modification des contraintes extérieures, passage d'un régime permanent à un autre
+
+
+\section{Réponse libre d'un système électronique [2]}
+Les réponses d'un système d'ordre 1 sont triviales.
+
+\subsection{Système d'ordre 2 : oscillations de relaxation}
+\begin{itemize}
+\item construire un RLC 
+\item exciter par des créneaux lents
+\item montrer que selon la valeur de $Q$ (à régler par modification de $R$), le temps de réponse varie et on peut atteindre un régime oscillant amorti (on s'intéresse à la réponse en tension (prise aux bornes de la capacité)
+\item on peut évaluer le $Q$ théorique et constater qu'il correspond aux nombres d'oscillations visibles
+\item on peut également mettre en évidence le Q limite d'apparition d'oscillations
+\item enfin, faire le lien entre fréquence de coupure et temps de réponse du filtre
+\item ici, on s'intéresse à la partie transitoire!
+\end{itemize}
+
+\subsection{Analyse spectrale : mise en évidence du lien entre $Q$ et le temps de relaxation}
+\begin{itemize}
+\item on pourra utiliser le GBF en mode sweep
+\item constater l'effet de Q sur le Bode de gain
+\item on peut interpréter en lien avec les oscillations constatées. A la fréquence de coupure, il y a suramplification de ces résonances, c'est pourquoi elles sont prédominantes pendant le transitoire et on obtient des oscillations à cette fréquence.
+\item de même interpréter le temps de réponse avec la fréquence de coupure : plus il y a de fréquences qui passent, plus le système est rapide.
+\end{itemize}
+
+\section{temps de réponse des capteurs}
+\subsection{Inertie thermique d'une thermistance}
+\begin{itemize}
+\item ENSC 356
+\item expérience qualitative uniquement
+\item on utilise le petit système à thermistance que l'on peut plonger dans la pâte thermique près d'une résistance chauffante
+\item l'idée est de voir le temps de réponse de la thermistance selon la qualité du contact : très rapide dans la pâte thermique, assez rapide sous un courant d'eau, lente dans l'air
+\item utiliser une acquisition sur oscilloscope pour observer les temps de décroissance
+\end{itemize}
+
+\subsection{Temps de réponse d'une photodiode}
+\begin{itemize}
+\item Ici, on se place à $R$ constant et on modifie $U\e{pol}$ pour voir son impact sur la capacité de jonction
+\item faire la mesure à la sonde (évite la capa parasite des coax et de l'oscillo)
+\item en revanche la plaquette est reliée par 1m de coaxial soit $100pF$ en parallèle (qu'il faudra soustraire)
+\item ici, on tracera simplement le temps de réponse en fonction de la tension de polarisation, on ne s'intéresse pas particulièrement à la notion de capacité dans le composant (même si c'est évidemment l'idée sous-jacente)
+\end{itemize}
+
+\subsection{Conditionnement du signal : bande passante d'un montage amplificateur à AO}
+\begin{itemize}
+\item l'amplification de signal est un point clé du conditionnement de signal
+\item montrer que le produit gain bande d'un AO est constant (faire pour cela un petit montage amplificateur)
+\item la bande passante donne évidemment une image du temps de réponse d'un amplificateur (évaluer le temps de réponse à un créneau). On montre encore une fois sur un cas pratique le lien entre bande passante et temps de montée.
+\end{itemize}
+
+\section{Temps caractéristique de diffusion du glycérol dans l'eau [1]}
+\begin{itemize}
+\item le Sommerfeld donne l'ensemble de la démonstration ainsi que les résultats dans "production of curved light rays by diffusion"
+\item l'approximation des petits angles est considérée, ce qui n'est pas nécessairement vérifié en pratique. On pourra utiliser plutôt la formule : 
+\centers{$\tan{\alpha}=\f{(n_2-n_1)d}{2\sqrt{\pi Dt}}$}
+\noindent
+avec $D$ le coefficient de diffusion et $d$ la largeur de la cuve
+\item pour la régression, on préfère tracer $1/\tan^2{\alpha}=f(t)$. Ainsi, on s'affranchit du problème de la connaissance d'un instant initial pour la manipulation
+\item en pratique, on utilise la diffusion d'un mélange 50-50 eau-glycérol dans l'eau. la valeur est donc non tabulée. On peut cependant s'assurer que ce n'est pas stupide en regardant dans le Handbook
+\item au niveau expérimental, plusieurs difficultés
+\item remplir la cuve d'eau à moitié
+\item plonger la burette de versement jusqu'au fond de la cuve et verser une bonne quantité du mélange eau-éthanol (et ne surtout pas relever la cuve en fin de versement). Faire également attention de ne pas injecter de bulles d'air...
+\item démarrer le chrono à la fin du versement
+\item attendre 15 minutes avant la première mesure (stabilisation de l'interface)
+\item ne rien heurter pendant la mesure... (sinon convection!)
+\item utiliser une petite diode laser avec agitateur en verre pour étaler le faisceau (pour le réglage initial on cherchera avec seulement le laser à pointer l'interface)
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ces temps de réponses sont à la base de tout ce qu'on fait en optique -> penser au moyennage
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Comment réaliser le mélange eau-glycérol?} les deux produits sont mis en proportions égales et homogénéisés par agitation  
+
+\bk
+\noindent
+\textbf{2. Quel Q mesure on dans l'expérience du diapason?} C'est le facteur de qualité de l'ensemble diapason+caisse  
+ 
+ \bk
+ \noindent
+\textbf{3. De quoi dépend l'exposant de puissance de la formule de la capacité de jonction?} de la géométrie de la jonction PN et de la façon dont est faite la zone de déplétion (abrupte, rampe...)  
+
+\bk 
+ \noindent
+\textbf{4. Pourquoi avoir utilisé une sonde pour la mesure de la capacité de jonction?} Pour limiter au maximum les capacités parasites dues à l'utilisation de coaxiaux  
+
+\end{document}

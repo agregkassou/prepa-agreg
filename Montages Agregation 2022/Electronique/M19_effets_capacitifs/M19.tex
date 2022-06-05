@@ -1,0 +1,95 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M19 : effets capacitifs}
+
+
+\encadreminipage{9cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item insister sur le fait que l'effet capacitif peut être voulu ou parasite 
+\item montrer plusieurs applications pratiques (et parler de celles qui n'ont pas été faites)
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Dictionnaire de physique expérimentale, Tome IV électricité, Lucien Quaranta, Editions Pierron
+\item[[\,2\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,3\!\!]] Optique expérimentale, Sextant, Hermann
+\item[[\,4\!\!]] Physique Tout-en-un PC-PC*, Dunod
+\end{itemize}
+}
+
+\hrulefill
+
+\mk
+\textbf{Expériences introductives}
+Mettre en évidence la possibilité de charger un matériau (faire qu'il existe en sa surface un excès de charge) et montrer l'influence à distance que peut avoir cet excès de charge. On définit alors l'effet capacitif comme les effets associés à l'existence de deux conducteurs chargés en regard (et donc en influence électrostatique mutuelle).
+
+\mk
+\noindent
+-> détection de la charge d'un barreau frotté par une peau de chat à l'aide d'un électroscope.
+
+\hrulefill
+
+\section{Caractérisation d'une capacité [pas de réf]}
+\subsection{Mesure de capacité : intérêt de l'électrode de garde}
+
+\subsection{Condensateur d'Aepinius}
+On vérifie la loi de la capacité d'un condensateur plan plan idéal $C=\tf{\epsilon S}{d}$. Pour ce faire, utilisons le condensateur d'Aepinius avec électrode de garde (montage maison de Jean). On mesurera la capacité au LC-mètre. On pourra par exemple remonter à la constante $\epsilon$, en traçant une droite $C=f(\tf{\epsilon}{d})$. Plusieurs difficultés expérimentales se présentent : 
+\begin{itemize}
+\item les plaques ne sont pas parfaitement parallèles. Risque de fausser les mesures. $d$ se mesure à l'aide du vernier après avoir pris le 0 à l'aide d'une boule de diamètre connue placée \textbf{au centre} des plaques. Ainsi on prend la valeur moyenne.
+\item la capa des fils de mesure n'est pas négligeable. Prendre des fils bananes plutôt. Les effets de capa parasites sont alors négligeables.
+\item l'environnement des plaques (support en regard...) est à l'origine d'une capacité parasite difficile à évaluer. Mais l'électrode de garde évite ces effets parasites
+\end{itemize}
+
+\mk
+Cette expérience faite, montrer au moins qualitativement l'effet d'un diélectrique entre les plaques. Si assez de temps, on peut faire la mesure de $\epsilon\e{r}$
+
+\subsection{Mesures de capacités à l'aide d'un multivibrateur : étalonnage [3]}
+\begin{itemize}
+\item suivre le protocole du Duffait pour mettre en place l'oscillateur
+\item prendre 3 résistances de $10k\Omega$
+\item étalonner le capteur : prendre la fréquence d'oscillation en fonction de la capacité pour plusieurs 
+\end{itemize}
+
+
+\section{Effets capacitifs parasites}
+\subsection{Mesure de la capacité d'un câble coaxial à l'aide du multivibrateur [4]}
+mesurer la capacité à l'aide de notre oscillateur astable de 100 mètres de coaxial. Insister sur les conséquences d'un tel phénomène : capa supplémentaire dans les montages électroniques et effet de retard sur les lignes de transport d'information. 
+
+\subsection{Capacité de la jonction PN d'une photodiode [2] et [3]}
+\begin{itemize}
+\item Le Duffait donne la formule empirique de variation de la capacité de jonction avec la tension de polarisation de la diode. Le Sextant donne de nombreuses indications sur le principe de la manipulation : se reporter au II.2.6 "temps de réponse de la photodiode"
+\item \textbf{attention, dans la formule donnée par le Duffait, il faut remplacer le signe - par un signe +}
+\item on utilise la maquette d'optoélectronique (attention, ne pas utiliser le montage à AO, mais passer directement par la résistance)
+\item il faut utiliser un signal lumineux de faible amplitude de modulation par rapport à la valeur moyenne (c'est important)
+\item la capacité totale est la somme de la capacité de jonction et de la capacité des coaxiaux, la résistance est celle sur laquelle on prend la mesure 
+\item on mesure au voltmètre (pour éviter les problèmes de masse) la tension de polarisation de la diode et on relève le temps de réponse à $63\%$ 
+\item ce temps de réponse vaut $\tau=RC$
+\item il faut être clair sur ce que l'on fait : le temps de réponse est calculé sur les signaux variables uniquement (la modulation autour de la moyenne)
+\end{itemize}
+
+
+
+\section{Applications pratiques de l'effet capacitif}
+
+\subsection{Detection par effet capacitif}
+On montre simplement la variation de la capacité lorsque l'on approche la main du condensateur d'Aepinius (purement qualitatif). C'est le principe des écrans tactiles par effet capacitif.
+
+\subsection{Application au lissage de tension [2]}
+L'idée est de construire un transformateur alternatif/continu. On se limite à un redressement simple alternance sur un signal sinusoïdal généré par un GBF. Montrer sur oscilloscope le spectre du signal de sortie (on obtient une composante continue forte et le taux d'ondulation diminue pour des grandes valeurs de capacités). En terme de mesure, on se limitera à des mesures prises au voltmètre, procédure expliquée dans le Duffait : comparée la valeur moyenne (qui donne le continue) en mode DC à la valeur RMS en mode AC (ainsi on filtre la composante continue)
+
+\subsection{Principe d'un système échantillonneur-bloqueur [2]}
+On réalise à la main un échantillonneur bloqueur. Pour cela on branche un GBF sur une capacité et on place un interrupteur pour une commutation manuelle. La tension aux bornes de la capacité est prise à l'aide d'un suiveur (pour éviter de la décharger). On montre ainsi le principe du système. On illustre alors l'intérêt d'une capacité afin de stocker de l'information. Ce système est à la base de la conversion analogique numérique des oscilloscopes par exemple. En effet, on stocke l'information tension suffisamment longtemps pour que l'électronique puisse en donner une image numérique. Ce taux d'échantillonnage donne la résolution temporelle des oscilloscopes. Remarquons que le temps de charge de la capacité limite intrinsèquement la fréquence d'acquisition. Il faut des capacités faibles pour limiter le temps de charge, mais alors il devient difficile d'utiliser le signal stocké pour en obtenir une image numérique.
+
+\mk
+\noindent
+\textbf{conclusion} : Conclure sur les conséquences visibles des effets capacitifs, qu'ils soient néfastes (photodiode, câbles coaxiaux...) ou utiles (lissage de tension, détecteur de proximité, stockage de l'information).
+
+
+\end{document}

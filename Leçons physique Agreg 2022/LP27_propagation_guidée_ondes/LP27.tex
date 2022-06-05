@@ -1,0 +1,174 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP27 : propagation guidée des ondes (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item optique géométrique
+\item ondes acoustiques
+\item ondes électromagnétiques dans le vide
+\item propagation/reflexion à l'interface entre deux diélectriques
+\item réflexion sur un conducteur
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item les caractéristiques de la propagation guidée : confinement de l'énergie, modes, dispersion
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item on peut envisager d'autres ondes que les OEM
+\item les notions de fréquence de coupure et de mode sont importantes
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Physique MP-PT, Augier, Tec \& Doc 
+\item[[\,2\!\!]] Ondes acoustiques, Chaigne, Editions de l'école Polytechnique
+\item[[\,3\!\!]] Ondes électromagnétiques dans les milieux diélectriques, Garing, Ellipses
+\item[[\,4\!\!]] J'intègre physique MP, Sanz, Dunod
+\item[[\,5\!\!]] Panorama de la physique, Pietryk, Belin
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]} : Reprendre l'introduction du Tec \& Doc chapitre "guides d'ondes".  
+\begin{itemize}
+\item on veut propager de l'information par ondes 
+\item solution simple : propagation libre : forte perte et pollution de l'environnement
+\item nécessité de confiner
+\item définir guide d'onde
+\end{itemize}
+
+
+\section{Guider sans pertes}
+\subsection{Les limites de la ligne bifilaire simple [1]}
+\begin{itemize}
+\item Suivre la question 4 du Tec \& Doc "ligne bifilaire" p495
+\item associer la direction du vecteur de Poynting aux pertes (le vecteur doit être colinéaire à la ligne pour être en condition de pertes nulles)
+\end{itemize}
+
+\subsection{Confinement du champ}
+\subsubsection{métal parfaitement conducteur [1]}
+\begin{itemize}
+\item évaluer l'épaisseur de peau aux fréquences de travail pour le cuivre
+\item conséquences sur les conditions aux limites (nullité du champ électrique transverse)
+\end{itemize}
+
+\subsubsection{solide parfaitement rigide [2]}
+\begin{itemize}
+\item donner rapidement les conséquences
+\item écrire l'équation sur la nullité de la dérivée de la pression sur les parois
+\end{itemize}
+
+\section{Guide d'onde rectangulaire : un modèle simple mais riche}
+\subsection{Modèle et équation de d'Alembert [2]}
+\begin{itemize}
+\item prendre le modèle du guide d'onde rectangulaire (p46)
+\item Propagation guidée mais dans le vide : équation de d'Alembert pour l'OEM et l'onde acoustique
+\item on suppose une équation aux variables séparables
+\item écrire alors les 3 équations satisfaites
+\item jusque là la démarche est parfaitement générale aux deux cas étudiés 
+\end{itemize}
+
+\subsection{Résolution dans le cas d'une onde sonore [2]}
+\begin{itemize}
+\item s'aider des conditions aux limites pour obtenir l'équations d'un mode
+\item dire que l'onde est à la fois une onde stationnaire dans la direction orthogonale et une onde progressive dans la direction libre
+\item écrire la relation de dispersion 
+\item en déduire l'existence d'une fréquence de coupure en fonction du mode excité
+\item discuter de l'existence du mode $(0,0)$ (onde plane) qui assure que toute fréquence se propage (éventuellement dans le fondamental)
+\item faire l'AN et montrer que le domaine sonore ne peut se propager que dans le mode $(0,0)$
+\item il n'y a alors pas dispersion sur le fondamental
+\item mais il y a évidemment dispersion entre les modes
+\end{itemize}
+
+\subsection{Résolution dans le cas d'une onde électromagnétique [4]}
+\begin{itemize}
+\item on fait l'hypothèse d'un mode TE (ça ne prouve pas qu'il n'en existe pas d'autres) et polarisée selon $\vey$ -> mode $TE_{n,0}$
+\item le mode $(0,0)$ ne peut exister (mode de champ identiquement nul) -> il existe donc une pulsation de coupure pour le guide
+\item comme dans le cas acoustique, on s'arrange souvent pour avoir un guide monomode (qui coupe donc tout sauf ce que l'on veut faire passer)
+\item donner la relation de dispersion, évaluer vitesse de phase et de groupe et faire le graphe de dispersion -> ici c'est de la \textbf{dispersion intramodale}.
+\item exprimer le vecteur $\vect{B}$ en fonction de $\vect{E}$ -> il n'est pas transverse! ce qui est normal puisque ce n'est pas une onde plane
+\item on peut faire la même recherche avec une polarisation selon $\vex$ -> mode $TE_{0,m}$
+\item une recherche plus générale conduit à trouver des modes $TE_{n,m}$
+\item dire qu'il existe également des modes TM avec les mêmes caractéristiques (mais il n'existe pas de modes TEM)
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Des considérations énergétiques manquent je pense d'intérêt puisqu'on a considéré un modèle sans perte et on montre... qu'il l'est effectivement... On peut se contenter de constater que les champs ne pouvant pénétrer les conducteurs parfait, l'énergie est confinée. Il n'y a donc pas de pertes par confinement. Quant aux pertes par effet du milieu... ça dépend du modèle!
+\end{remarque}
+
+\subsection{Interprétation en terme de superposition d'ondes planes [4]}
+\begin{itemize}
+\item à faire sur transparent
+\item montrer la décomposition en deux champs
+\item interprétation en terme de réflexion d'une onde sur le plan conducteur
+\item permet de faire la transition avec la suite où on mènera un traitement type géométrique (en oubliant le caractère vectoriel de la lumière)
+\end{itemize}
+
+\section{Fibre optique : guidage dans un milieu diélectrique}
+\subsection{Fibre à saut d'indice [3]}
+\noindent
+Suivre la première partie de l'exo 3.6 du Garing. A faire proprement au tableau. Préciser qu'alors on illustre la \textbf{dispersion intermodale}. On peut par ailleurs dire qu'une résolution plus précise (en terme de champ magnétique) conduirait à une relation de dispersion (il y a donc également dispersion intramodale). Par ailleurs, pour un coeur d'une taille bien choisie, il est possible de rendre la fibre monomode (les modes possibles étant également quantifiés par les conditions aux limites).
+
+\subsection{Fibre à gradient d'indice [3]}
+\noindent
+Suivre la seconde partie de l'exo 3.6 du Garing. A faire sur transparent pour gagner du temps. Insister sur l'avantage d'une dispersion limitée sur le débit possible dans la fibre.
+
+\subsection{Pertes dans les fibres optiques [5]}
+Cette partie est importante pour traiter de l'aspect technologique de l'utilisation des fibres -> plutôt regarder demain le Detwiller d'optique
+\begin{itemize}
+\item jusque là nous avons considéré une propagation sans perte 
+\item on évalue les différentes sources de pertes
+\item donner alors la longueur d'onde usuelle de travail
+\item en pratique, on place des répétiteurs à intervalle régulier pour réamplifier le signal
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : rappeler l'objectif : guider sans perte. Insister sur les points essentiels qui limitent une propagation guidée : dispersion intermodale et intramodale, atténuation par le milieu absorbant, perte de confinement à cause de défauts locaux
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Expliquer l'existence de modes dans une fibre. Quel est le rayon du coeur d'une fibre monomode?}  
+
+\bk
+\noindent
+\textbf{2. Que signifie adaptation d'impédance?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Quels sont les matériaux utilisés pour les fibres optiques?}  
+
+\bk 
+ \noindent
+\textbf{4. Classer les différentes propagations en fonction de la longueur d'onde de l'onde transmise.}  
+
+\bk
+\noindent
+\textbf{5. Quel est le lien entre les parties?}  
+ 
+
+\end{document}

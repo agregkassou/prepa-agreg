@@ -1,0 +1,162 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP39 : confinement de l'électron et quantification de l'énergie (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item caractère ondulatoire de la matière
+\item lien entre spectre et énergie des photons
+\item équation de Schrödinger
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item la quantification vient du confinement de l'onde
+\item ce n'est pas intrinsèquement une propriété quantique, le pas décisif était d'accepter la complémentarité onde-corpuscule
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Mécanique quantique, Basdevant, Editions de l'école Polytechnique
+\item[[\,2\!\!]] Mécanique quantique, Berkeley, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : il ne suffit pas de décrire la matière par une approche ondulatoire pour quantifier quelque chose. En revanche, en confinant cette onde, on ajoute des conditions aux limites et alors là...
+
+
+\section{Fonction d'onde confinée et quantification}
+\subsection{Prendre la théorie ondulatoire au sérieux [2]}
+\begin{itemize}
+\item traiter le cas d'un puis de profondeur infini
+\item résoudre l'équation aux valeurs propres associée et appliquer les conditions limites
+\item on trouve alors facilement un espace discret de solutions (mode propre/énergie propre)
+\item en théorie ondulatoire de la matière, la quantification apparait facilement. Et elle n'est pas différente de celle décrite par Pythagore pour les instruments de musique!
+\end{itemize}
+
+\subsection{Prédiction sur les états liés [2]}
+\begin{itemize}
+\item rappeler succinctement la définition d'un état lié (état qui nous intéresse dans notre problème)
+\item suivre le Berkeley pour un traitement avec les mains de la forme de l'onde adaptée à la forme d'un certain potentiel 
+\item appliquer cette démonstration au cas qui nous intéresse : état lié dans un puits de forme quelconque : elle est ondulatoire dans le puits (concave), puis convexe à l'extérieur 
+\item la solution doit être physique donc normalisable. A l'extérieur du puits, on doit donc avoir des solutions à décroissance exponentielle
+\item ajoutons à cela des conditions de raccordement et on obtient la forme typique des solutions (évidemment des calculs numériques ou analytiques donneraient ces résultats)
+\end{itemize}
+
+
+\subsection{traitement d'un puits de potentiel carré de profondeur finie [1] et [2]}
+\begin{itemize}
+\item motiver l'étude en expliquant dans quel cas on rencontre des puits de potentiel carrés (Basdevant)
+\item utilisons dans un premier temps l'étude précédente. 
+\item on peut supposer que tous les états liés présentent une allure semblable au puits de potentiel infini (on aura des états liés tant que l'énergie du mode sera inférieure à l'énergie potentielle du puits)
+\item on peut continuer à appliquer le constat $n-1$ noeuds pour le mode $n$
+\item avec les conditions de raccordement, on obtient alors une bonne idée de la forme des modes associées à ce puits
+\item mais dans ce cas, un calcul analytique est envisageable
+\item suivre la résolution du Basdevant
+\item poser le système puis constater que l'invariance du potentiel dans le changement $x-> -x$ impose que l'hamiltonien codiagonalise avec cet opérateur (dont les valeurs propres sont des fonctions symétriques ou antisymétriques)
+\item montrer les solutions en énergie à partir d'une résolution graphique (alternance de solutions paires et impaires)
+\item on retrouve bien ce qu'on avait qualitativement prévu
+\end{itemize}
+
+\section{L'atome d'hydrogène}
+\subsection{Bref historique de la construction quantique de l'atome [1]}
+Suivre le chapitre historique du Basdevant partie "le spectre atomique"
+
+\subsection{Où est le puits de potentiel? [1]}
+\begin{itemize}
+\item modèle de l'atome d'hydrogène
+\item écrire l'hamiltonien directement dans le référentiel du centre de masse
+\item on obtient alors un hamiltonien séparable
+\item la partie centre de masse est triviale (onde plane)
+\item on cherche alors à diagonaliser la partie interne 
+\item écrire le laplacien en coordonnées sphériques
+\item attention dans les calculs du Basdevant, il est plus sain de remplacer la masse de l'électron par la masse réduite $\mu$, même si la différence finale est faible
+\item dans une première approche simple on admet par homogénéité : $L^2=\hbar^2$ (on se place dans le cas du fondamental, orbitale $s$)
+\item on met alors en évidence une nouvelle équation aux valeurs propres
+\item on peut alors mettre en évidence un potentiel effectif somme du potentiel d'interaction et d'une barrière centrifuge 
+\item ce potentiel présente donc un minimum, ce qui évite que l'électron chute sur le proton! victoire!
+\end{itemize}
+
+\subsection{Spectre de l'hydrogène [1]}
+\begin{itemize}
+\item par dérivation du potentiel effectif, remonter à la distance typique de l'électron au proton -> on obtient le rayon de Bohr
+\item on peut alors calculer la valeur du potentiel effectif à cet endroit -> on obtient l'énergie d'ionisation dans son état fondamental -> tout ça est très logique
+\item vérifier que l'approximation non relativiste est justifiée (comparée la vitesse que l'on peut construire avec les grandeurs du problème à $c$) -> en profiter pour introduire la constante de structure fine 
+\item donner les énergies propres dans le cas de l'atome d'hydrogène (dégénérées $n^2$ fois)
+\item il est possible de classer ces solutions dégénérées en énergie par des considérations de type angulaires
+\item en effet, les harmoniques sphériques, qui sont les fonctions d'onde solutions du problème doivent être caractérisées par les deux nombres $\ell$ et $m$
+\item pour tout potentiel central, il y a dégénérescence en $m$ de l'énergie, pour tout potentiel en $1/r$ ou $1/r^2$ il y a également dégénérescence suivant $\ell$
+\item parler des règles de sélection (la règle sur $\Delta m$ peut être établie avec les mains à partir de la conservation du moment cinétique, sachant que le spin du photon vaut 1)
+\item \underline{manipulation} : montrer au spectro à fibre le spectre de la lampe à hydrogène : ce sont les raies correspondant à la série de Balmer : raies du visible
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : on a fait que commencer à percevoir la puissance du lien entre confinement et quantification. La portée est évidemment bien plus large. L'une des étapes suivantes possibles serait de mettre deux puits l'un à côté de l'autre. Se mettrait alors en place un phénomène de couplage entre oscillateurs. Et si on en mettait bien plus, on aurait une approche d'une théorie descriptive des métaux et on pourrait mettre en évidence la théorie des bandes...
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. D'où vient le nom capacité thermique?}  
+
+\bk
+\noindent
+\textbf{2. Hypothèses et démonstration du théorème d'équipartition de l'énergie.}  
+ 
+ \bk
+ \noindent
+\textbf{3.Comment passe-t-on de la relation de dispersion des phonons obtenue par diffraction à la densité de modes?}  
+
+\bk 
+ \noindent
+\textbf{4. Pour une molécule homodiatomique, que se passe-t-il? }  
+
+\bk
+\noindent
+\textbf{5. Pour des phonons, $E$ est en $T^4$ et $C\e{V}$ en $T^2$. A quoi cela fait il penser?}  
+
+\bk
+\noindent
+\textbf{6. GPM dans la limite BT (limite classique non valide), que se passe-t-il?}  
+
+\bk
+\noindent
+\textbf{7. Les ddl de translation peuvent ils être quantifiés?}  
+
+\bk
+\noindent
+\textbf{8. pourquoi faut il $3n-6$ coordonnées pour repérer une molécule à $n$ atomes?}  
+
+\bk
+\noindent
+\textbf{9. Qu'est-ce qu'un phonon? Lien et différence avec un photon.}  
+
+\bk
+\noindent
+\textbf{10. Qu'est-ce que l'approximation classique?}  
+
+\end{document}

@@ -1,0 +1,182 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LC29 : hydrométallurgie (CP)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item notions de pyrométallurgie
+\item A/B et Ox/Réd
+\item diagramme E-pH
+\item courbes intensité-potentiel
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item illustrer à l'aide des courbes E-pH et i-E
+\item discuter le principe chimique et ancrer dans le procédé industriel
+\item le choix des électrodes d'électrolyse ne se fait pas au hasard!
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] BUP n°857 "L'hydrométallurgie" (pour le coeur de la leçon)
+\item[[\,2\!\!]] BUP n°770 "Une vie de Zinc" (pour les manips)
+\item[[\,3\!\!]] BUP n°746 "L'or : données industrielles, économiques et géographiques"
+\item[[\,4\!\!]] Hprépa Chimie PC, Durupthy, Hachette (excellent en particulier pour l'électrolyse)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} :
+\begin{itemize}
+\item on veut produire des métaux purs
+\item 2 sources primaires : extraction minière et recyclage
+\item dans les deux cas, il faut des traitements pour obtenir le métal
+\item définir hydrométallurgie : ensemble des procédés d'élaboration des métaux en phase aqueuse à basse température (à opposer à la pyrométallurgie)
+\item on s'intéressera au cas du zinc en citant ponctuellement d'autres cas lorsque ce sera nécessaire
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Dans la leçon, on fera principalement les manipulations (longues) en préparation. On gardera à chaque fois des échantillons témoins de chaque phase pour les tests caractéristiques.
+\end{remarque}
+
+
+\section{Prétraitement : obtention d'une solution aqueuse}
+\subsection{Concentration des minerais [1]}
+\begin{itemize}
+\item élimination de la gangue en grande partie sur place par méthode de concentration
+\item parler en particulier de la flottation (différence de tension superficielle) -> utilisé en particulier pour les minerais sulfurés
+\item c'est pour le moment une simple séparation physique (pas de processus chimiques sur les composés)
+\end{itemize}
+
+\subsection{Passage aux oxydes [1]}
+\begin{itemize}
+\item on passe des sulfures aux oxydes pour faciliter la lixiviation ultérieure
+\item nécessite un chauffage (en partie assuré par l'exothermicité de la réaction) et l'apport d'$O_2$ gazeux
+\item formation d'acide sulfurique grâce à la grande production de $SO_2$
+\end{itemize}
+
+\subsection{Etape de passage en solution : la lixiviation [1] et [2]}
+\subsubsection{Cas du zinc}
+\begin{itemize}
+\item c'est le début des opérations d'hydrométallurgie
+\item mise en solution des oxydes métalliques par action d'une solution acide 
+\item réaction acido-basique avec les ions $H^+$
+\item importance de la sélectivité de la dissolution
+\item après passage en solution acide et filtrage, une première purification a eu lieu : on a éliminé ainsi le reste de la gangue, une partie du fer,  le plomb (ainsi que l'or et l'argent)
+\item faire la manipulation (peut être fait en live) : tester la présence d'ions Fe, Cu et Zn
+\end{itemize}
+
+\subsubsection{Cas de l'or}
+\begin{itemize}
+\item avec l'or les réactions A/B sont inefficaces. Le passage en solution ne peut se faire par une solution acide
+\item dans le cas de l'or, on emploie une réaction de complexation entre l'or et les ions cyanures
+\end{itemize}
+
+\section{Purification}
+\subsection{Elimination du fer : lixiviation neutre [2]}
+\begin{itemize}
+\item oxyder les ions Fe(II) en ions Fe(III)
+\item augmenter le pH de la solution afin de faire précipiter les ions Fe(III) mais pas le Zn(II)
+\item problème! le filtrage ne donne pas de bons résultats : en pratique, il faut utiliser le procédé dit à la "jarosite" où l'on forme de la jarosite (par ajout de sulfate d'ammonium) -> précipité de plus grande taille que les hydroxydes de fer
+\item faire la manipulation (ne pas faire en live!!) et montrer que les ions Fe ont disparu mais qu'il reste encore les ions Cu
+\item méthode de filtration qui a marché pour Greg : ajouter le sulfate d'ammonium puis attendre 10 minutes avant de lancer le chauffage (à faire sur Bunsen, c'est plus rapide), contrôler rapidement le pH (on peut le contrôler plus aisément par ajout de base ou d'acide directement), faire une filtration grossière sur Büchner \textbf{à chaud} sinon la filtration est très difficile. Laisser refroidir et refaire un filtrage sur Buchner à froid pour filtrer les dernières traces de jarosite qui étaient passées à chaud
+\end{itemize}
+
+\subsection{Cémentation [2] et [4]}
+\begin{itemize}
+\item le fer a disparu mais il reste encore plusieurs métaux (ceux qui précipitent pour un pH supérieur à celui du Zn ne peuvent être éliminer par la méthode précédente)
+\item l'idée est d'incorporer de la poudre de Zn induisant une réaction Ox/Réd avec fixation sur le Zn solide des impuretés et passage en solution du Zn solide sous forme de Zn(II)
+\item après filtration, le cément peut être recyclés (on sépare en particulier le Zn des autres métaux)
+\item faire la manipulation (peut être fait en live) et s'assurer par un test de l'absence de Cu en solution
+\end{itemize}
+
+\subsection{La purification dans d'autres hydrométallurgie [1] et [3]}
+\begin{itemize}
+\item reprendre le cas de l'or
+\item cette fois, l'idée est de faire une cémentation sur Zn mais pour récupérer le métal d'intérêt
+\item ensuite, il suffit de repasser en milieu acide pour dissoudre sélectivement Zn et conserver une poudre d'or (procédé Merrill-Crowe)
+\end{itemize}
+
+\section{Obtention du zinc métallique par électrolyse}
+\subsection{Prévisions thermodynamiques [4]}
+\begin{itemize}
+\item identifier les espèces présentes avant l'électrolyse dans la solution
+\item les placer sur un diagramme en potentiel standard (on ne se préoccupera pas des problèmes liés à la concentration)
+\item donner les réactions les plus favorables d'un point de vue thermodynamique
+\end{itemize}
+
+\subsection{Utilisation des courbes intensité-potentiel [4]}
+\begin{itemize}
+\item anode : réaction prévue par la thermo a lieu (seule la cinétique est modifiée par la surtension)
+\item cathode : la surtension cathodique est élevée pour $H_3O^+/H_2$ -> il y a donc réduction de $Zn^{2+}$ pour former $Zn$
+\item choix des électrodes important
+\item ne pas faire l'électrolyse (manque de temps) mais rappeler le principe d'un électrolyseur
+\end{itemize}
+
+\subsection{Nécessité de la cémentation, conditions industrielles [4]}
+\begin{itemize}
+\item reprendre le diagramme intensité-potentiel pour expliquer la nécessité de purifier la solution avant l'électrolyse par cémentation
+\item donner quelques considérations industrielles : tension et courant de fonctionnement, rendement faratique, production d'une usine classique....
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion [1]}
+\begin{itemize}
+\item schéma bilan des opérations hydrométallurgiques : du minerai au métal purifié
+\item parler de la filière recyclage : reprendre l'exemple de l'or et de l'intérêt de recycler les ordinateurs! (garder du temps pour cette conclusion très "éthique et responsable")
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Pourquoi fait-on tout de meme de la pyrométallurgie?}  
+
+\bk
+\noindent
+\textbf{2. Quel est le réducteur en pyrométallurgie?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Quelle est la principale impureté dans les minerais de Zinc?}  
+
+\bk 
+ \noindent
+\textbf{4. Pourquoi l'étape de lixiviation est-elle exothermique?}  
+
+\bk
+\noindent
+\textbf{5. Que devient la silice?}  
+
+\bk
+\noindent
+\textbf{6. Expliquer le test caractéristique du Cu(II) par KI.}  
+
+\bk
+\noindent
+\textbf{7. Quelle est la part de l'hydrométallurgie dans la production mondiale de Zn?}  
+\end{document}

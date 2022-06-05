@@ -1,0 +1,160 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP43 : la molécule, stabilité, énergie (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item notions de mécanique quantique
+\item oscillateur harmonique
+\item chimie des molécules (mésomérie)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item la délocalisation des électrons est à l'origine de la cohésion moléculaire
+\item l'étude exacte est impossible et nécessite des approximations
+\item le mouvement des noyaux explique une partie des propriétés, en particulier spectroscopiques
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item il faut clairement dégager l'origine de la liaison chimique
+\item il faut des ODG et des discussions physiques
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Mécanique quantique : tome 2, Aslangul, De Boeck
+\item[[\,2\!\!]] Mécanique quantique, Feynman, Dunod
+\item[[\,3\!\!]] BUP n°574, "Systèmes à deux états"
+\item[[\,4\!\!]] Chimie organique, Grecias, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]} : Suivre le début du chapitre 28 (Aslangul). 
+\begin{itemize}
+\item molécule = structure complexe
+\item pour noyaux et électrons, énergies du même ODG mais masse différente
+\item par conséquent, on peut supposer que les électrons tournent "rapidement" autour des noyaux qui restent quasi fixes
+\item comparer l'ODG des énergies mises en jeu à la physique nucléaire
+\end{itemize}
+
+
+\section{Quelques échelles d'énergie}
+\subsection{Energie électronique [1]}
+\begin{itemize}
+\item présenter par analyse dimensionnelle sans le facteur numérique
+\item donner ODG
+\item donner la constante de temps associée
+\item c'est l'énergie de première ionisation!
+\end{itemize}
+
+\subsection{Energie de vibration et rotation des noyaux [1]}
+\begin{itemize}
+\item prendre d'emblée l'exemple de la molécule diatomique
+\item présenter le potentiel de vibration et ODG de l'énergie de dissociation
+\item donner l'énergie de vibration, l'ODG et le temps caractéristique associé
+\item conclure sur les énergies caractéristiques : $E\e{el} \gg \e{vib} \gg \e{rot}$
+\end{itemize}
+
+\subsection{Conséquences en spectroscopie [1]}
+\begin{itemize}
+\item c'est aussi la fréquente des émissions/absorptions associées à ces transitions
+\item donner les domaines spectraux associés à chaque type d'énergies
+\item application en analyse (chimie, physique des matériaux...)
+\item dans le cas de la rotation, l'énergie thermique permet de passer d'un état à l'autre -> libre rotation
+\end{itemize}
+
+\section{La molécule la plus simple $H_2^+$ [2] et [3]}
+\subsection{Position du problème}
+\begin{itemize}
+\item approximation de Born-Oppenheimer
+\item donner les états de la base découplée
+\item écrire la matrice des états couplés (couplage par échange d'un électron)
+\item utiliser le BUP pour expliciter le terme de couplage en fonction de la distance
+\item Remarque : ne pas faire la résolution complexes type couplage de deux puits quantique
+\end{itemize}
+
+\subsection{Etats propres et énergie propre [3]}
+\begin{itemize}
+\item ne pas parler LCAO pour le moment
+\item suivre le BUP pour la résolution propre et rapide du système
+\item expliquer en quoi cela constitue un effet tunnel
+\end{itemize}
+
+\subsection{Stabilité de $H_2^+$ : prise en compte des effets coulombiens [2] et [3]}
+\begin{itemize}
+\item Sommer l'énergie de délocalisation et l'énergie coulombienne d'interaction des noyaux
+\item cette somme présente un minimum pour l'état symétrique, qui est donc un état liant
+\item commentaires physiques du BUP
+\item parler de $H_2$ moléculaire (expliquer la symétrisation pour des fermions et les considérations énergétiques associées)
+\end{itemize}
+
+\section{Edifices plus compliqués}
+\subsection{Principe de la théorie LCAO [4]}
+\begin{itemize}
+\item on introduit une théorie afin de traiter du cas général
+\item en fait le cas précédent aurait pu être traité de manière exacte. C'est le seul, il faut donc trouver des solutions!
+\item permet une analyse systématique des constructions moléculaires
+\item donner les principes de la méthode
+\item préciser les approximations
+\end{itemize}
+
+\subsection{D'autres molécules diatomiques [3] et [4]}
+\begin{itemize}
+\item appliquer la théorie LCAO à $He_2$ et expliquer son instabilité
+\item présenter le cas d'une molécule hétéroatomique (genre $Li-H$) et donner la valeur de l'énergie de l'état liant sans démonstration : c'est moins stable qu'une homoatomique, parler du caractère ionique de la liaison
+\item faire le diagramme d'énergie de $O_2$ sans démonstration, expliquer son caractère paramagnétique
+\end{itemize}
+
+\subsection{Cas du benzène [3]}
+\begin{itemize}
+\item présenter le modèle de Kékulé
+\item discuter de ce qu'il n'explique pas
+\item modéliser par un système à deux niveaux couplés
+\item même résolution : forte stabilisation de la molécule
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item \underline{bilan} : stabilisation par partages d'électrons, tient sur le couplage de deux états générant un état de plus basse et un état de plus haute énergie, nécessité de simplifications pour traiter de ces cas toujours non analytiques
+\item \underline{ouverture} : parler de physique nucléaire : exactement le même principe mais d'autres forces bien plus énergétiques assurent la cohésion. Il y a toujours existence de particules médiatrices et l'équilibre s'établit entre interactions fortes et électrostatiques. On passe du domaine de la chimie à celui du nucléaire
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Dans le cas du benzène, comment mesure-on le split (qui est l'énergie de stabilisation) en énergie?}  
+
+\bk
+\noindent
+\textbf{2. Que signifie énergie d'un électron, énergie d'une molécule?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Justifier que les hypothèses pour la molécule $H_2^+$ sont raisonnables. Différence d'énergie entre l'état 1s et 2s de l'hydrogène.}  
+
+\bk 
+ \noindent
+\textbf{4. Quels paramètres dépendent de $R$ dans la méthode LCAO}  
+\end{document}

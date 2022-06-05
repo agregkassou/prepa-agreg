@@ -1,0 +1,245 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M10 : spectroscopie optique}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item principes généraux de la spectroscopie optique et applications
+\item illustrations de différentes techniques
+\item problématique de la résolution spectrale des appareils
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Optique expérimentale, Sextant, Hermann
+\item[[\,2\!\!]] Optique, une approche expérimentale et pratique, Houard, De Boeck
+\item[[\,3\!\!]] Elements de cours et expériences d'optique, Hild, PUM
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : Suivre l'introduction du thème par le Sextant puis énoncer le cadre de l'étude : spectro à fentes puis par méthode interférentielle.
+
+\noindent
+\textbf{manipulation} : montrer un spectre de lumière blanche décomposée par un PVD. Donner le principe!
+
+
+
+\section{Spectroscopie à réseau [1]}
+\subsection{Caractérisation expérimentale du pouvoir de résolution}
+Reprendre la procédure du Hild et du Sextant qui font une étude détaillée
+\begin{itemize}
+\item montage avec PVD
+\item calcul du pouvoir dispersant d'un PVD
+\item influence de la largeur de la fente source (raie = image de la fente source par les lentilles). compromis luminosité / résolution
+\item montrer que la résolution change avec la taille de la fente ou la focale des lentilles
+\item on pourra utiliser le critère de Rayleigh pour mettre en évidence les paramètres expérimentaux nécessaires à la résolution de la raie du mercure
+\item influence de la largeur éclairée (effet de la diffraction classique) -> souvent négligeable)
+\end{itemize}
+
+\subsection{Le réseau comme élément dispersif}
+\begin{itemize}
+\item Introduction du principe de fonctionnement + illustrer l'influence du pas du réseau
+\item recalculer la dispersion angulaire sur le doublet jaune du mercure -> montrer l'intérêt du réseau sur le gain en résolution par fort pouvoir dispersif
+\item faire une mesure précise avec un goniomètre sur ce doublet : permet de montrer sa capacité expérimentale, mais c'est la partie à faire sauter si manque de temps.
+\end{itemize}
+
+\begin{remarque}
+\noindent
+ne pas oublier que la loi de dispersion est en $\sin{\theta}$, ce qui peut introduire des corrections importantes à forte dispersion.
+\end{remarque}
+
+\subsection{Mesure de la constante de Rydberg sur le spectre de l'hydrogène [1]}
+Utiliser le spectro à fibre Avaspec. Il existe une fiche de calibration (on peut espérer une résolution de l'ordre du nanomètre). Utiliser le Basdevant pour regarder l'émission de l'hydrogène : série de Balmer. 4 raies sont dans le visible (en pratique, on en observe uniquement 3), ce qui permet d'obtenir une droite de régression. Traiter proprement les incertitudes. 
+
+\begin{remarque}
+\noindent
+Les précisions du Sextant sont particulièrement utiles . En pratique on observe uniquement trois raies de la série de Balmer (qui en comporte 4). Noter que l'on observe une 4e raie que le Sextant interprète comme la possibilité que la lampe ne soit pas de l'hydrogène pure.
+\end{remarque}
+
+\section{Spectroscopie interférentielle}
+\subsection{mesure relative de fréquence optique entre deux sources}
+\textbf{Attention} : Il n'y a pas de sources sur cette partie! Il faut savoir faire. C'est le montage proposé par Jean pendant l'année
+\begin{itemize}
+\item laser de référence à $\lambda_0$ connue
+\item laser dont on souhaite connaître la longueur d'onde $\lambda$
+\item on réalise un système de comptage des franges défilées pour chacun des lasers (lame semi et deux détecteurs)
+\item chariotage réalisé au moteur
+\item c'est le principe technologique d'un vrai interféromètre (le chariotage est contrôlé optiquement par le défilement du laser de référence, on s'affranchit ainsi des problèmes d'inconstance du défilement)
+\item on peut faire dans ce cas une mesure statistique. On fait par exemple 10 mesures de $\lambda$ en comptant à chaque fois 200 défilements de la référence et on prend moyenne et écart type.
+\item belle mesure métrologique mais il faut s'entraîner à la mettre en place rapidement (assez technique)
+\end{itemize}
+
+\subsection{Illustration de l'importance de la finesse d'un Fabry Perot}
+\subsubsection{Finesse d'un Fabry Perot [2]}
+\begin{itemize}
+\item utiliser un laser épuré (monochromatique, donc les seuls effets de largeur de raie seront dus à la finesse de l'appareil)
+\item enregistrer sur une barrette CCD Caliens une coupe de la figure d'interférence 
+\item évaluer la finesse de la cavité (se placer avec une cavité étendue pour maximiser cette finesse)
+\item comparer à la finesse classique d'un Michelson
+\end{itemize}
+
+\subsubsection{Cavité confocale}
+\begin{itemize}
+\item utiliser la cavité confocale de l'ENSC 
+\item constater 2 à trois modes en utilisant le laser NEC (le plus stable dont on dispose)
+\item l'interprétation est assez simple mais peu documentée! Il faut en particulier se souvenir que pour une cavité imparfaitement alignée (ce qui sera toujours notre cas), la lumière rebouche après un trajet en 8, il faut donc deux aller-retour avant rebouclage, ce qui nous donne l'ISL de la cavité
+\item les branchements ne sont pas tout à fait intuitif, suivre la doc technique
+\end{itemize}
+
+\subsubsection{Résolution du doublet jaune du Sodium}
+\begin{itemize}
+\item probablement pas assez de temps!
+\item utiliser un FP pour résoudre le doublet
+\item on constate que le doublet est résolu (ce ne serait pas le cas avec un Michelson) -> un FP dispose d'une grande finesse car il travaille à ondes multiples
+\item repérer des anti-coïncidences entre les deux raies en chariotant. Entre deux anti-coïncidences successives, la différence de marche a évolué de : 
+\centers{$\Delta \delta=2e=p\lambda_1=(p+1)\lambda_2$}
+\end{itemize}
+
+\noindent
+\textbf{Conclusion} : on pourra parler de la construction du spectro commercial Avaspec que l'on a utilisé (très semblable à notre "spectro en kit"). Préciser le grand avantage en robustesse d'un matériel sans pièces mobiles (par opposition à un monochromateur par exemple)
+
+%\section{spectroscopie interférentielle : magnétomètre stellaire [1] (pour le FP) et [pas de réf.]}
+%
+%\subsection{Interféromètre de Fabry Perot [1]}
+%\begin{itemize}
+%\item présenter rapidement l'appareil
+%\item expliquer son mode de fonctionnement en tant que spectromètre
+%\item intérêt de la grande finesse d'un FP pour des mesures spectroscopiques
+%\end{itemize}
+%
+%
+%\subsection{Mesure du décalage Zeeman}
+%\noindent
+%\underline{Mesures préliminaires} : 
+%\begin{itemize}
+%\item \textbf{Attention, il va falloir mesurer l'espacement entre les lames du FP}
+%\item Pour cela, coller les deux miroirs, mesurer à l'aide d'un pied à coulisse l'offset résultant qu'on retranchera de la distance interlames dans la position de fonctionnement.
+%\end{itemize}
+% 
+% \noindent
+% \underline{Matériel} : 
+%\begin{itemize}
+%\item Lampe à cadmium : à glisser dans l'entrefer d'un électro aimant. 
+%\item Ne pas oublier de mettre une condenseur pour éclairer le plus possible les miroir et avoir le plus d'anneaux possibles (Ne pas utiliser de condenseur en quartz (car biréfringent))
+%\item Camera uEye (gros objectif)
+%\item Mettre absolument des pièces polaire larges sinon le champ n'étant pas homogènes, les franges sont brouillées beaucoup plus rapidement. 
+% \end{itemize}
+%
+%\noindent 
+%\underline{Réglages} : 
+%\begin{itemize}
+%\item Commencer le réglage du parallélisme au laser 
+%\item Rapprocher au maximum les deux lames et procéder au réglage fin avec la lampe à vapeur de Sodium
+%\item Eloigner au maximum les deux miroirs, refaire les réglages fins. 
+%\item passer ensuite avec la camera, optimiser le réglage avec les vis de réglage fin 
+% \end{itemize}
+% 
+% \noindent
+%  \underline{Placement du condenseur et du filtre} : 
+%\begin{itemize}
+%\item Après la lampe, mettre le condenseur puis le filtre
+%\item \textbf{Attention, ne pas mettre le condenseur trop près du Fabry Perot, il faut qu'il soit au moins intégralement arroser}
+%\item Attention, mettre le polariseur après le filtre 
+%\end{itemize}
+%
+%\noindent
+% \underline{Utilisation de la camera} : 
+%\begin{itemize}
+%\item Ne pas trop toucher aux réglages automatique, les paramètres automatiques sont souvent suffisant
+% \end{itemize}
+% 
+% \noindent
+% \underline{Réglage final} : 
+%\begin{itemize}
+%\item Finir avec les vis de réglages fin du Fabry Perot pour chercher la zone la plus nette à la camera.
+%\item Lorsqu'on met le champ magnétique, la netteté devient plus critique, on pourra donc parfaire le réglage à ce moment
+% \end{itemize}
+% 
+% \noindent 
+% \underline{Analyse de l'image} : 
+%\begin{itemize}
+%\item utiliser ImageJ
+%\item Faire une sélection d'un rectangle fin de l'ensemble de raies à analyser
+%\item sélectionner ce rectangle, aller dans analyse, cliquer sur profile, on obtient alors une courbe avec les pics d'intensité au niveau des anneaux, on peut les pointer ensuite et prendre les mesures.
+%\item La fenêtre image, adjust peut améliorer la qualité de l'image à traiter  
+% \end{itemize}
+% 
+% \noindent
+%  \underline{Calcul des rayons} : 
+%\begin{itemize}
+%\item utiliser la formule des rayons du Fabry Perot donnée dans le Sextant 
+%\item Le tout est de se rappeler que sur un même split, on a même ordre d'interférence
+%\item sélectionner ce rectangle, aller dans analyse, cliquer sur "profile", on obtient alors une courbe avec les pics d'intensité au niveau des anneaux, on peut les pointer ensuite et prendre les mesures.
+%\item La fenêtre image, adjust peut améliorer la qualité de l'image à traiter  
+% \end{itemize}
+% 
+%\noindent
+% \underline{Relations physique} : 
+% \begin{itemize}
+% 
+% \item $\Delta M=g\,\mu_B \Delta L$ avec $g=1$ et $\Delta L=0, \pm1$
+% 
+% \item $\Delta E=h \Delta f=B\Delta M=B\mu_B$
+% 
+% \item On a donc $B=\frac{h\Delta f}{\mu_B}$
+% 
+% \item or $f_2-f_1=c\frac{\lambda_1-\lambda_2}{\lambda_0^2}$
+% 
+% \item On a donc un lien entre B et la largeur de la transition :
+% \encadre{$B=\frac{h\,c}{\mu_B}\frac{\Delta \lambda}{\lambda_0^2}$}
+% 
+% \end{itemize}
+% 
+%  \mk
+% \noindent
+% \underline{Points clés de la théorie [attention, partie sans référence!]} : 
+% 
+% \begin{itemize}
+% 
+% \item Différence de marche pour le rayon arrivant avec un angle d'incidence $i_k$
+% 
+% \item L'anneau du centre de la figure est à angle $i$ nul mais à pour ordre d'interférence $k_0-\epsilon$ avec $k_0=\tf{2e}{\lambda}$ et $\epsilon$ l'excédent fractionnaire. Finalement, il vient $k=k_0-\epsilon-p +1$ avec $p$ le numéro du p-ième anneau en partant du centre.
+% 
+% \item évaluation de l'angle $i$ : Soit $f$ la focale de l'objectif de la camera et $G$ son grandissement, avec $b=G\,f$, $r$ le rayon de l'anneau avant la caméra et $R$ le rayon des anneaux à l'écran :  
+% $$\cos{(i)}=\frac{f}{\sqrt{f^2+r^2}}=\frac{1}{\sqrt{1+(\frac{R}{b})^2}}$$ 
+% 
+% \item Pour chaque frange brillante, $\delta=2e\cos{i_k}=k\,\lambda$
+% 
+% \item Finalement en combinant tout ça : 
+% \encadre{$k\,\lambda=\frac{2\,e}{\sqrt{1+(\frac{R}{b})^2}}$}
+%\noindent
+%On prend alors le carré de cette relation pour avoir $R^2$.
+% 
+% \item L'effet Zeeman sur les atomes va scinder chaque raie en trois $\lambda_1$, $\lambda$, $\lambda_2$ (car $\Delta L =0, \pm 1$). Le tout est de se rappeler que l'ordre d'interférence k pour les trois raie issues d'une même raie initial est le même. 
+% 
+% \item Calculer $\frac{R_{\lambda}^2}{R_{\lambda_2}^2-R_{\lambda_1}^2}$, grâce à l'expression de $R^2$ obtenue précédemment. Notre méthode de mesure ne permet pas de mesurer $\lambda_0$ mais par contre, on peut se rappeler que : $\frac{R_{\lambda}^2}{R_{\lambda_2}^2-R_{\lambda_1}^2}=\frac{R_{\lambda_2}^2+R_{\lambda_1}^2}{2\,(R_{\lambda_2}^2-R_{\lambda_1}^2)}$
+% 
+% \item Attention, $\Delta \lambda = \lambda_2-\lambda=\lambda-\lambda_1$ et $\lambda=\frac{\lambda_1+\lambda_2}{2}$
+% 
+% \encadre{$\frac{R_{\lambda}^2}{R_{\lambda_2}^2-R_{\lambda_1}^2}=\frac{\lambda}{4\Delta\,\lambda}-\frac{\lambda^3\,k^2}{(4e)^2\,\Delta\,\lambda}$}
+%
+%\item Se rappeler que $k_0=\frac{2e}{\lambda_0}$ l'ordre au centre est TRES grand devant la différence d'ordre et donc, effectuer un DL de k en fonction de cette grandeur 
+%
+% \item il est pratique de travailler avec $p=k_0-\epsilon-k+1$ remplacer k par $k=\frac{2e}{\lambda}(1-a)$ avec $a=\frac{\lambda}{2e}(p-1+\epsilon)$
+% 
+% \item effectuer le DL dans l'expression précédente obtenir  $$\frac{R_{\lambda}^2}{R_{\lambda_2}^2-R_{\lambda_1}^2}=\frac{\lambda^2}{4e\Delta \lambda}(p-1+\epsilon)$$  
+% 
+% \item Tracer ceci en fonction de p sous igor. On attend donc une droite de pente $\tf{\lambda^2}{4e\Delta \lambda}$
+% 
+% \item La pente nous permet de remonter via $\Delta \lambda$ au champ magnétique. 
+% \end{itemize}
+
+
+
+
+
+
+\end{document}

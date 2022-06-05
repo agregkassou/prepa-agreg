@@ -1,0 +1,651 @@
+\documentclass[a4paper, 11pt, french, twoside]{book}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[tikz]{bclogo}
+\usepackage{afterpage}
+
+\usetikzlibrary{arrows.meta}
+
+\usetikzlibrary{positioning,shadows,backgrounds,shapes.geometric, matrix}
+
+
+\setcounter{tocdepth}{3}
+
+\usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
+\definecolor{mycolor}{rgb}{0.122, 0.435, 0.698}% Rule colour
+\makeatletter
+\newcommand{\mybox}[1]{%
+  \setbox0=\hbox{#1}%
+  \setlength{\@tempdima}{\dimexpr\wd0+13pt}%
+  \begin{tcolorbox}[colframe=mycolor,boxrule=0.5pt,arc=4pt,
+      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=\@tempdima]
+    #1
+  \end{tcolorbox}
+}
+\makeatother
+
+
+\newmdtheoremenv{theo}{THÉORÈME}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+\tcbuselibrary{skins}
+
+\newtcbtheorem[]{mytheo}{THÉORÈME}%
+{colback=blue!2,colframe=blue!28,coltitle=black,fonttitle=\bfseries}{th}
+
+
+\newtcbtheorem[]{mydef}{DÉFINITION}%
+{colback=red!2,colframe=red!28,coltitle=black, fonttitle=\bfseries}{th}
+
+
+\newtcolorbox{mytheor}[2][]{enhanced,skin=enhancedlast jigsaw,
+attach boxed title to top left={xshift=-4mm,yshift=-0.5mm},
+fonttitle=\bfseries\sffamily,varwidth boxed title=0.7\linewidth,
+colbacktitle=blue!45!white,colframe=red!50!black,
+interior style={top color=green!20!white,bottom color=yellow!10!white},
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+underlay boxed title={
+\fill[blue!45!white] (title.north west) -- (title.north east)
+-- +(\tcboxedtitleheight-1mm,-\tcboxedtitleheight+1mm)
+-- ([xshift=4mm,yshift=0.5mm]frame.north east) -- +(0mm,-1mm)
+-- (title.south west) -- cycle;
+\fill[blue!45!white!50!black] ([yshift=-0.5mm]frame.north west)
+-- +(-0.4,0) -- +(0,-0.3) -- cycle;
+\fill[blue!45!white!50!black] ([yshift=-0.5mm]frame.north east)
+-- +(0,-0.3) -- +(0.4,0) -- cycle; },
+title={#2},#1}
+
+%%% Définition rouge?jaune
+
+\newtcolorbox{mydefi}[2][]{enhanced,skin=enhancedlast jigsaw,
+attach boxed title to top left={xshift=-4mm,yshift=-0.5mm},
+fonttitle=\bfseries\sffamily,varwidth boxed title=0.7\linewidth,
+colbacktitle=black,colframe=red!50!black,
+interior style={color=blue!1!white},
+boxed title style={empty,arc=0pt,outer arc=0pt,boxrule=0pt},
+underlay boxed title={
+\fill[red!45!white] (title.north west) -- (title.north east)
+-- +(\tcboxedtitleheight-1mm,-\tcboxedtitleheight+1mm)
+-- ([xshift=4mm,yshift=0.5mm]frame.north east) -- +(0mm,-1mm)
+-- (title.south west) -- cycle;
+\fill[red!45!white!50!black] ([yshift=-0.5mm]frame.north west)
+-- +(-0.4,0) -- +(0,-0.3) -- cycle;
+\fill[red!45!white!50!black] ([yshift=-0.5mm]frame.north east)
+-- +(0,-0.3) -- +(0.4,0) -- cycle; },
+title={#2},#1}
+
+
+
+
+
+\usepackage{cancel}
+
+\usepackage{caption}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\def\Oij{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath}\right)$}
+\def\Oijk{$\left(\text{O}~;~\vect{\imath},~\vect{\jmath},~\vect{k}\right)$}
+\def\Ouv{$\left(\text{O}~;~\vect{u}~;~\vect{v}\right)$}
+\renewcommand{\i}{\text{i}}
+\newcommand{\e}{\text{e}}
+
+
+
+
+
+%%vecteurs
+\newcommand*{\norme}[1]{\left\lVert\overrightarrow{#1}\right\rVert}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+
+
+\usepackage{forest,nicefrac}
+\usetikzlibrary{positioning}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+
+
+%%%% Alogorithme en français
+\usepackage[linesnumbered, french]{algorithm2e}
+
+
+
+
+
+
+
+
+
+
+
+
+\usepackage{forest,nicefrac}
+\usetikzlibrary{positioning}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.12}
+
+
+
+\usepackage{stackengine}
+\usepackage{scalerel}
+
+
+
+
+
+\usepackage[tikz]{bclogo}
+
+\usepackage[charter]{mathdesign}
+
+
+
+\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\locablacksquare}
+
+
+
+
+
+
+\usepackage{tabularx}
+\usepackage{diagbox}
+
+
+
+
+\usepackage{titletoc}
+%% marge
+\usepackage[margin=1.5cm,a4paper]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% packages pour le texte
+\usepackage [frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{eurosym}
+\usepackage{soul}
+\usepackage[normalem]{ulem}
+\usepackage{fancybox}
+\usepackage{boxedminipage}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{varwidth}
+\usepackage[charter]{mathdesign}
+\renewcommand{\thesection}{\arabic{section}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
+\usepackage{epigraph}
+\usepackage{xpatch}
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{calc}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{positioning}
+
+\usepackage{titletoc}
+\usepackage{lipsum}
+
+\usepackage{calc}
+\usepackage[]{titlesec}
+
+
+
+
+
+
+
+
+
+%% packages maths
+\usepackage{amsmath}
+
+
+
+%% tableaux
+\usepackage{array,multirow,makecell}
+\setcellgapes{1pt}
+\makegapedcells
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash }b{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash }b{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash }b{#1}}
+\usepackage{colortbl}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%% ligne horizontale
+
+\usepackage{fancyhdr}
+
+
+
+
+\pagestyle{fancy}
+
+
+
+
+\fancyhead[R]{\bfseries \colorbox{NavyBlue}{\textcolor{white}{\large\thepage}}}
+
+
+\makeatletter
+\def\@startpbox#1{\bgroup
+   \setlength\hsize{#1}\@arrayparboxrestore
+   \everypar{}%
+}
+\makeatother
+
+\usepackage{booktabs}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+%%% numérotation de pages
+
+\usepackage{lastpage}
+%\renewcommand{\headrule}{\color{myblue} \hrule}
+
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\usepackage{array,multirow,makecell}
+\setcellgapes{1pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% plusieurs colonnes
+\usepackage{multicol}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% Exercices
+
+\newcounter{num}
+\newcommand\exo{\stepcounter{num}\noindent{\bf Exercice~\thenum}\kern10pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%packages exercices
+\usepackage{ifthen}
+\newboolean{firstanswerofthechapter}  
+
+\usepackage{xcolor}
+\colorlet{lightcyan}{cyan!40!white}
+
+\usepackage{chngcntr}
+\usepackage{stackengine}
+
+\renewcommand{\arraystretch}{1}
+
+\usepackage[lastexercise,answerdelayed]{exercise}
+%\counterwithin{Exercise}{chapter}
+\counterwithin{Answer}{chapter}
+\renewcounter{Exercise}[section]
+\newcommand{\QuestionNB}{ \bfseries\arabic{Question}.\ }
+\renewcommand{\ExerciseName}{\textbf{Exercice}}
+\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
+   \stackunder[4pt]{\colorbox{blue!15}{\textcolor{black}{\textbf{\large\ExerciseName }}}\begin{tabular}{p{12cm}|p{2.5cm}}\textbf{\ExerciseHeaderTitle}& \textbf{Difficulté } \textcolor{red}{\ExerciseHeaderDifficulty}\end{tabular}}{\textcolor{blue!15}{\rule{\linewidth}{2pt}}}{}\medskip}
+\renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
+    {\bigskip\noindent\textcolor{gray!15}{\textbf{CHAPTER \thechapter}}\newline\newline%
+        \noindent\bfseries\emph{\textcolor{cyan}{\AnswerName\ \ExerciseHeaderNB, page %
+                \pageref{\AnswerRef}}}\smallskip}
+    {\noindent\bfseries\emph{\textcolor{gray}{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
+\setlength{\QuestionIndent}{16pt}
+
+
+
+
+
+
+
+
+\renewcommand{\footrulewidth}{0.4pt}
+
+
+\usepackage{array,multirow,makecell}
+\setcellgapes{1pt}
+
+
+
+%% colorbox
+\usepackage{tcolorbox}
+
+\setenumerate[1]{font=\bfseries \fcolorbox{blue!20}{red!15}, label=\arabic*.}
+
+
+
+
+%\setenumerate[1]{font=\bfseries \fcolorbox{blue!20}{red!15}, label=\arabic*.}
+
+%%% Python
+
+\usepackage{listings}
+
+\lstdefinestyle{Python}{
+    language        = Python,
+    basicstyle      = \ttfamily,
+    keywordstyle    = \color{blue},
+    keywordstyle    = [2] \color{teal}, % just to check that it works
+    stringstyle     = \color{green},
+    commentstyle    = \color{red}\ttfamily
+}
+
+%%% Hyperliens
+\usepackage{hyperref}% gestion des hyperliens
+\usepackage{glossaries}
+
+
+%%% écrire dans la marge
+
+
+
+\usepackage{wrapfig}
+
+\reversemarginpar
+
+
+
+
+
+
+
+%\newmdtheoremenv{theo}{THÉORÈME}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+\tcbuselibrary{skins}
+
+
+
+\definecolor{myblue}{RGB}{0,0,122}
+\definecolor{mycolor}{RGB}{122,122,122}
+
+
+
+
+\usepackage[tikz]{bclogo}
+
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%\usepackage[margin=2.2cm,a4paper]{geometry}
+%\usepackage[explicit]{titlesec}
+\usepackage{titletoc}
+\usepackage{tikz}
+\usetikzlibrary{shapes}
+\usepackage{epigraph}
+\usepackage{xpatch}
+
+\usepackage{lipsum}
+
+
+\usetikzlibrary{decorations.fractals}
+\usepackage{pgfplots}
+
+
+\usetikzlibrary{patterns}
+
+\usetikzlibrary{calc}
+\usepackage{tkz-euclide}
+
+\usetikzlibrary{positioning}
+
+
+%% à savoir
+\usepackage{multido}
+\usepackage{framed}
+%\definecolor{CouleurA}{rgb}{0.5,1, 5}
+\makeatletter
+\newenvironment{savoir}[3][NavyBlue]{%
+% #1 couleur du trait (par défaut CouleurA)
+% #2 largeur du trait
+% #3 distance entre le trait et le texte
+\def\FrameCommand{{\color{NavyBlue}\vrule width 8pt}
+\hspace{12pt}}%
+\MakeFramed {\advance\hsize-\width}}%
+{\endMakeFramed}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% tikz
+\usepackage{tikz,tkz-tab}
+\usepackage{tikz-qtree}
+\usepackage{forest,nicefrac}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.fractals}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+\usepackage{tkz-euclide}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%% packages pour le texte
+\usepackage [frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{eurosym}
+\usepackage{soul}
+\usepackage[normalem]{ulem}
+\usepackage{fancybox}
+\usepackage{boxedminipage}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{moreverb}
+\usepackage{varwidth}
+\usepackage{pifont}
+\usepackage{xcolor}
+\usepackage[charter]{mathdesign}
+\renewcommand{\thesection}{\arabic{section}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usetikzlibrary{shadows.blur}
+
+\usepackage{titletoc}
+\usepackage{calc}
+
+\usepackage[]{titlesec}
+
+\usepackage{tikz}
+\usetikzlibrary{shadows.blur}
+
+
+
+%% dangersign
+\usepackage{stackengine}
+\usepackage{scalerel}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesection}{\Alph{section}}
+\renewcommand{\thesubsection}{\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{{subsection}.\arabic{subsubsection}.}
+
+\begin{document}
+
+\lstset{
+    frame       = single,
+    numbers     = left,
+    showspaces  = false,
+    showstringspaces    = false,
+    captionpos  = t,
+    %caption     = \lstname
+}
+
+\newcommand\dangersign[1][2ex]{%
+  \renewcommand\stacktype{L}%
+  \scaleto{\stackon[1.3pt]{\color{red}$\triangle$}{\tiny\bfseries !}}{#1}%
+}
+
+
+\definecolor{mycolor}{HTML}{008bb2}
+
+\colorlet{chpnumbercolor}{black}
+\makeatletter
+\let\oldl@chapter\l@chapter
+\def\l@chapter#1#2{\oldl@chapter{#1}{\textcolor{chpnumbercolor}{#2}}}
+
+\let\old@dottedcontentsline\@dottedtocline
+\def\@dottedtocline#1#2#3#4#5{%
+\old@dottedcontentsline{#1}{#2}{#3}{#4}{{\textcolor{chpnumbercolor}{#5}}}}
+\makeatother
+
+\titleformat{\chapter}[display]
+  {\normalfont\color{NavyBlue}}
+  {\filleft\Huge\sffamily\bfseries\chaptertitlename\hspace*{2mm}%
+  \begin{tikzpicture}[baseline={([yshift=-.6ex]current bounding box.center)}]
+    \node[fill=NavyBlue,circle,text=white] {\thechapter};
+  \end{tikzpicture}}
+  {1ex}
+  {\titlerule[2pt]\vspace*{2ex}\Huge\bf}
+  []
+
+
+
+%command to print the acutal minitoc
+\newcommand{\printmyminitoc}{%
+    \noindent\hspace{-2cm}%
+    \colorlet{chpnumbercolor}{white}%
+    \begin{tikzpicture}
+    \node[rounded corners,align=left,fill=yourcolor, blur shadow={shadow blur steps=5}, inner sep=5mm]{%
+        \color{white}%
+        \begin{minipage}{8cm}%minipage trick
+        \printcontents[chapters]{}{1}{}
+        \end{minipage}};
+    \end{tikzpicture}}
+\begin{document}
+\partie{\large M35 : moteurs}
+
+
+\encadreminipage{12cm}{
+\textbf{Id�es directrices � faire passer}
+\begin{itemize}
+\item on cherche � faire une caract�risation compl�te
+\item la finalit� c'est d'avoir de la puissance (et de r�duire les pertes)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item s'approcher du r�gime nominal du moteur quand c'est possible, sinon les calculs de rendement sont ridicules
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] notice ENSC287
+\item[[\,2\!\!]] Electronique : signaux et syst�mes, conversion de puissance, Boussi�, Puf (pour une aide sommaire sur les bilans)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : on va �tudier l'ensemble des caract�ristiques d'un moteur �lectrique (MCC). En particulier, on s'int�resse au rendement et on fera une �tude s�par�e des pertes.
+
+
+\section{Caract�risation �lectrom�canique du moteur}
+\subsection{Coefficient de couplage �lectrom�canique}
+\begin{itemize}
+\item relever la tension � vide aux bornes de la g�n�ratrice
+\item dans ce cas, en l'absence de courant, on v�rifie la loi $E=K \Omega$
+\item s'assurer que c'est une droite et donner la valeur du coefficient $K$ (elle sera utile par la suite)
+\end{itemize}
+
+\subsection{R�sistance de l'induit : tension de seuil}
+\begin{itemize}
+\item on se place en configuration bloqu�e (les deux machines aliment�es dans le sens inverse) 
+\item en l'absence de mouvement par blocage, les seules pertes sont dues � l'effet Joule. 
+\item on rel�ve alors la caract�ristique i-U de la machine 
+\item on constate l'existence d'une tension seuil (due au contact des balais) et une r�sistance de bobinage dans les machines $U=U\e{seuil}+ R\e{MCC}I$
+\item on a fait le relev� pour l'une des machines (mesure de la tension aux bornes d'une unique machine)
+\end{itemize}
+
+\section{Etude des pertes}
+\subsection{m�thode d'�valuation des pertes cuivre}
+\begin{itemize}
+\item les pertes cuivre se d�duisent facilement des r�sultats pr�c�dents
+\item on connait la r�sistance des bobinages ainsi que la valeur des courants passant
+\item on peut alors facilement tracer les pertes cuivres en fonction de la charge pour les diff�rentes vitesse de rotation consid�r�es.
+\end{itemize}
+
+\subsection{Evaluation des pertes fer et m�caniques}
+\begin{itemize}
+\item on travaille cette fois-ci � vide
+\item dans ces circonstances, la puissance d'entr�e est due aux pertes fer, m�caniques et joule dans la premi�re machine
+\item en mesurant la puissance et le courant d'entr�e en fonction de la vitesse de rotation, on d�duit facilement la puissance dissip�e par les pertes fer et m�canique
+\item la relation est lin�aire, ce qui justifie une hypoth�se frottement sec 
+\item on en d�duit la valeur du couple sec (attention, ce couple tient compte des pertes fer!)
+\item ces pertes restent ind�pendantes de la charge pour le bilan final
+\item on peut �valuer grossi�rement les pertes m�caniques par mesure du courant d'alimentation au d�marrage. On a en effet �valu� la valeur de $K$ en d�but de montage et on a la relation $C=KI$ qui nous permet de conna�tre le couple au d�marrage connaissant l'intensit� au d�marrage. On obtient alors une valeur du couple uniquement m�canique (mais attention, rien ne dit que le couple statique soit identique au couple dynamique, mais �a donne une id�e)
+\end{itemize}
+
+
+
+
+\section{Etude du rendement en charge}
+\subsection{Position du probl�me, m�thode de mesure}
+\begin{itemize}
+\item on place une charge sur la g�n�ratrice et on va relever le rendement en fonction de la puissance absorb�e par la charge (� faire varier en variant la valeur de la r�sistance de charge) en se pla�ant � \textbf{vitesse de rotation constante}.
+\item on mesure la puissance d'entr�e et de sortie et le courant d'entr�e et de sortie 
+\item faire ce relev� pour deux vitesses de rotation diff�rente (ne pas aller trop bas pour �viter de travailler � trop basse puissance et de subir plus fortement l'erreur des wattm�tres)
+\item tracer le rendement pour une machine. Pour cela on a besoin de la puissance disponible sur l'arbre. Pour ce faire, on soustrait � la puissance d'entr�e les pertes joule, m�canique et fer de la machine 1. (On utilise pour cela la partie II)
+\end{itemize}
+
+\subsection{R�sultat de l'�tude de rendement}
+\begin{itemize}
+\item montrer les r�sultats et commenter
+\item les rendements sont meilleurs � haute vitesse on se rapproche du fonctionnement nominal
+\item le rendement augmente rapidement avec la puissance transf�r�e, atteint un maximum puis chute lentement
+\item nous allons expliquer ces tendances en d�taillant l'�tude des pertes
+\end{itemize}
+
+\subsection{Coh�rence des r�sultats : comparaison avec le rendement obtenu }
+\begin{itemize}
+\item On peut alors tracer sur un m�me graphe, pour les diff�rentes vitesse de rotation, les pertes Joules du moteur et de la g�n�ratrice, les pertes fer et m�caniques puis les pertes totales mesur�es lors de l'�tude du rendement. 
+\item on s'assure alors de la coh�rence globale des r�sultats (que l'on n'a pas oubli� de pertes, que les wattm�tres ne donnent pas des r�sultats absurdes)
+\item enfin, on interpr�te les r�sultats sur le rendement : tr�s faible au d�but � cause des pertes fer et m�canique constantes, d�croissant sur la fin � cause des pertes joule qui augmentent rapidement (non lin�airement)
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : il existe des moteurs thermiques!
+
+ 
+
+\end{document}

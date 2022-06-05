@@ -1,0 +1,194 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP29 : Ondes électromagnétiques dans les milieux conducteurs (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item OEM dans le vide 
+\item équations de Maxwell dans les milieux
+\item modèle de Drude
+\item théorie générale des ondes (vue avec les ondes mécaniques)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item l'effet de peau est un phénomène caractéristique des conducteurs (du milieu donc), non des ondes
+\item intérêt et validité du modèle du conducteur parfait
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item les traitements BF \textbf{et} HF doivent être faits
+\item Les exemples sont importants pour illustrer les conséquences de la relation de dispersion
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Hprépa Ondes 2nd année, Brebec, Hachette (central dans l'étude, on se réfère au "chapitre 7 dispersion absorption et paquet d'onde")
+\item[[\,2\!\!]] Electromagnétisme I, Feynman, Dunod (explication de la pulsation plasma)
+\item[[\,3\!\!]] Chimie physique, Atkins, De Boeck (pour les électrolytes)
+\item[[\,4\!\!]] Magnétisme : statique, induction et milieux, Garing, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+
+
+\section{Modélisation d'un milieu conducteur [1]}
+\subsection{Cadre de l'étude}
+\begin{itemize}
+\item définition milieu conducteur (trois cas : métaux, plasma, électrolyte)
+\item équations de Maxwell dans les conducteurs (non magnétiques, non polarisables)
+\item + équation constitutive -> loi d'Ohm
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Pour le moment, nous ne simplifions pas ces équations.On appliquera ensuite l'ARQS magnétique et on montrera que la densité volumique de charge peut être prise nulle dans un bon conducteur.
+\end{remarque}
+
+
+\subsection{Modèle de Drude [1]}
+\begin{itemize}
+\item reprendre rapidement l'approche du Hprépa dans le modèle de fluide conducteur
+\item justifier que la contribution de $\vect{B}$ est négligeable
+\item établir l'équation du mouvement
+\item en déduire la valeur de la conductivité complexe
+\end{itemize}
+
+\subsection{Application aux trois milieux conducteurs précédents [1] et [3]}
+\begin{itemize}
+\item l'équation de mouvement est valable dans les 3 milieux
+\item donner une interprétation de $\tau$ dans ces 3 milieux et quel est le type d'interaction (Atkins pour l'électrolyte)
+\item donner des ODG de $\tau$ 
+\item montrer que vue l'ODG de $\tau$, la densité volumique de charge peut être considérée nulle pour des fréquences raisonnables.
+\item donner des ODG de la conductivité dans ces milieux
+\end{itemize}
+
+\section{Vers la relation de dispersion [1]}
+\subsection{Equation de propagation}
+\begin{itemize}
+\item établir l'équation de propagation de $\vect{E}$ 
+\item on constate que c'est l'équation de d'Alembert classique mais avec un terme supplémentaire. Ce terme sera à l'origine de la dispersion dans le milieu
+\item choix de base OPPM (par linéarité) + ondes transverses (à démontrer avec les équations de Maxwell)
+\end{itemize}
+
+\subsection{Relation de dispersion [1]}
+\begin{itemize}
+\item donner la relation
+\item elle est non linéaire
+\item définir la permittivité et l'indice complexes
+\item dans la suite, on va s'intéresser à l'étude des différents cas limites
+\end{itemize}
+
+\subsection{Liens relation de dispersion / propriétés de l'onde [pas de réf.]}
+\noindent
+Il faut connaitre cette partie, elle n'est pas présentée de manière synthétique dans un livre
+\begin{itemize}
+\item $k$ dépend de $\omega$ -> dispersif
+\item $\Re(k)$ non nul -> propagation
+\item $\Im(k)$ non nul -> absorbant
+\item $\Re(\sigma)$ non nul -> dissipation
+\end{itemize}
+
+\section{Etude des cas limite}
+\subsection{Cas des basses fréquences ($\omega\tau \ll 1$) : effet de peau}
+\subsubsection{relation de dispersion, épaisseur de peau [1]}
+\begin{itemize}
+\item conséquence de l'approximation -> conductivité réelle
+\item relation de dispersion associée 
+\item écriture de $k$ et introduction de $\delta$
+\item expression des champs dans le cadre OPPM. Interpréter $\delta$
+\item ODG de $\delta$ selon la fréquence pour le cuivre
+\end{itemize}
+
+\subsubsection{Aspect énergétique [1]}
+Calculer la puissance dissipée par effet Joule (que l'on pourra intégrer sur toute l'épaisseur du matériau). Il y a propagation avec dissipation. Montrer que cette valeur est égale au vecteur de Poynting évalué à l'abscisse 0.
+
+\subsubsection{Application aux fils électriques [4]}
+\noindent
+Reprendre le traitement du Garing p177. On ne fera pas de calcul mais on explicitera la démarche. On donnera sans démonstration la valeur de la puissance linéique dissipée dans le conducteur et on en déduira la résistance. Commenter. 
+
+\subsection{Cas des hautes fréquences ($\omega\tau \gg 1$)}
+\subsubsection{pulsation plasma [1] et [2]}
+\begin{itemize}
+\item milieu dans la limite non colisionnelle (cas des plasmas ou des métaux à haute fréquence)
+\item introduire la pulsation plasma
+\item utiliser le Feynman pour le sens physique de cette pulsation (pulsation propre du gaz de porteurs)
+\end{itemize}
+
+\subsubsection{cas $\omega<\omega\e{p}$ et conséquences pratiques [1]}
+\begin{itemize}
+\item relation de dispersion
+\item onde évanescente sans propagation
+\item calculer le vecteur de Poynting. La réflexion est totale
+\item explique la brillance des métaux et la couleur des alcalins (dont $\omega/e{p}$ est dans le visible), mais pas la couleur du cuivre ou de l'or
+\item utilisation en télécoms (communication radio avec réflexion ionosphérique)
+\end{itemize}
+
+\subsubsection{Cas $\omega>\omega\e{p}$ et conséquences pratiques [1]}
+\begin{itemize}
+\item relation de dispersion
+\item zone de transparence (propagation sans atténuation mais dispersive)
+\item évaluer la vitesse de phase
+\item zone de transparence permet de communiquer avec les satellites
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : reprendre l'excellent tableau récapitulatif d'Adrien.
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Le modèle de Drude permet d'expliquer la couleur de certains métaux, mais pas de tous. Expliquer lesquels et pourquoi.}  
+
+\bk
+\noindent
+\textbf{2. Développer l'hypothèse de l'ARQS magnétique. S'assurer qu'elle est valable ici.}  
+ 
+ \bk
+ \noindent
+\textbf{3.Relier la dissipation à une perte par effet Joule. Peut-on parler de courant de Foucault dans le matériau?}  
+
+\bk 
+ \noindent
+\textbf{4. Que représente $v$ dans le modèle de Drude? ODG et comparer à la vitesse des électrons de conduction dans un solide (vitesse de Fermi)}  
+
+\bk
+\noindent
+\textbf{5. Comment peut on expliquer la couleur des métaux si le modèle de Drude est insuffisant?}  
+
+\bk
+\noindent
+\textbf{6. Donner un exemple de miroir dans le domaine IR.}  
+
+\bk
+\noindent
+\textbf{7. Comment distinguer un diélectrique d'un conducteur ?}  
+
+\bk
+\noindent
+\textbf{8. Donner la signification physique de $\tau$ dans le modèle de Drude.}  
+ 
+
+\end{document}

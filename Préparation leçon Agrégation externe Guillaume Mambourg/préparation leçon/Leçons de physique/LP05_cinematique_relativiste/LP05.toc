@@ -1,0 +1,27 @@
+\select@language {french}
+\contentsline {section}{\numberline {I}La confirmation du principe de relativit\'e}{2}
+\contentsline {subsection}{\numberline {1}Principe de relativit\'e au sens de Galil\'ee}{2}
+\contentsline {subsubsection}{\numberline {1.1}Rappel : relativit\'e galil\'eenne}{2}
+\contentsline {subsection}{\numberline {2}Equations de Maxwell et embarras}{2}
+\contentsline {subsection}{\numberline {3}Transformations de Lorentz}{2}
+\contentsline {subsection}{\numberline {4}G\'en\'eralisation des transformations de Lorentz \`a la m\'ecanique}{3}
+\contentsline {subsection}{\numberline {5}Cons\'equence de la constance de $c$ : dilatation du temps et contraction des longueurs}{3}
+\contentsline {subsubsection}{\numberline {5.1}Temps propre - longueur propre}{3}
+\contentsline {subsubsection}{\numberline {5.2}Dilatation du temps}{4}
+\contentsline {subsubsection}{\numberline {5.3}Contraction des longueurs}{5}
+\contentsline {section}{\numberline {II}Notions importantes en relativit\'e restreinte}{6}
+\contentsline {subsection}{\numberline {1}Quelques d\'efinitions}{6}
+\contentsline {subsubsection}{\numberline {1.1}\'ev\'enement}{6}
+\contentsline {subsubsection}{\numberline {1.2}Notion de simultan\'eit\'e}{6}
+\contentsline {subsubsection}{\numberline {1.3}Mesure de longueur - mesure de dur\'ee}{6}
+\contentsline {subsection}{\numberline {2}Invariant relativiste}{6}
+\contentsline {section}{\numberline {III}Cons\'equences}{7}
+\contentsline {subsection}{\numberline {1}Transformation des vitesses}{7}
+\contentsline {subsection}{\numberline {2}Applications directes : De Newton au GPS}{8}
+\contentsline {subsubsection}{\numberline {2.1}Contraction d'Usain Bolt}{8}
+\contentsline {subsubsection}{\numberline {2.2}Dilatation du temps pour l'horloge interne d'un GPS}{8}
+\contentsline {subsection}{\numberline {3}C\^one de lumi\`ere et causalit\'e (pas le temps pendant la le\c con)}{9}
+\contentsline {section}{\numberline {IV}Bibliographie}{9}
+\contentsline {section}{\numberline {V}Commentaires et questions}{9}
+\contentsline {subsection}{\numberline {1}Questions}{9}
+\contentsline {subsection}{\numberline {2}Commentaires}{10}

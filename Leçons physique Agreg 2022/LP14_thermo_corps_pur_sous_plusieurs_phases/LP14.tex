@@ -1,0 +1,213 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP14 : Etude thermodynamique d'un système constitué par un corps pur sous plusieurs phases (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item Potentiels thermodynamiques
+\item fonctions caractéristiques
+\item lecture des diagrammes de phase
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item l'étude des potentiels thermodynamique est centrale
+\item une transition de phase est associée à des discontinuités de grandeurs thermodynamiques
+\item notion de chaleur latente et ODG pour les transitions d'ordre 1
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item L'étude doit être fondée sur l'utilisation des potentiels thermodynamiques. Attention aux leçons de choses sur les transitions bizarres...
+\item Comprendre l'intérêt de l'enthalpie libre
+\item les potentiels thermodynamiques servent à prédire l'état d'équilibre mais aussi les conditions d'évolution du système
+\item des expériences simples et illustratives sont attendues
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Thermodynamique, Diu, Hermann (en particulier pour la partie III)
+\item[[\,2\!\!]] Thermodynamique, Choimet, Précis Bréal (toujours aussi clair)
+\item[[\,3\!\!]] Cap Prépa physique PCSI, Pearson (pour une définition)
+\end{itemize}
+}
+
+\noindent
+\textbf{manipulation} : Avant le début de l'exposé, lancer la manipulation de surfusion de l'eau 
+\mk
+\noindent
+\textbf{Introduction} : 
+
+\noindent
+\textbf{Manipulation} : Isothermes de SF6 (à faire en direct). Illustre les motivations de la leçon (lors d'une compression à $T=C^{ste}$ : compression gaz / équilibre liquide/gaz / compression liquide). On cherche alors à interpréter l'ensemble de ces phénomènes.
+
+\section{Evolution et équilibre d'un corps pur sous deux phases}
+\noindent
+à partir de la page 48
+\subsection{Choix du potentiel thermodynamique [2]}
+\begin{itemize}
+\item on reprend l'exemple d'intro (SF6)
+\item introduire variables internes et paramètres de contrôle du problème
+\item justifier le choix du potentiel thermodynamique adapté ($G$ ici)
+\end{itemize}
+
+\subsection{Condition d'évolution et d'équilibre [2]}
+\begin{itemize}
+\item exprimer alors $G$ (en supposant l'équilibre de $P$ et $T$ effectué)
+\item trouver le sens d'évolution, les conditions d'équilibre (tracer les courbes $G\e{tot}=f(x_1)$
+\item interpréter en terme de compétition énergie/entropie (pas de réf. ?)
+\item application à l'équilibre $L/V$. lien entre variation de $P$ et de $G$ autour de l'équilibre
+\item cas du corps pur sous 3 phases : unicité du couple $(T\e{t},P\e{t})$
+\end{itemize}
+
+\subsection{Enthalpie de changement d'état [3]}
+\begin{itemize}
+\item expérimentalement, on constate qu'il y a échange d'énergie avec l'univers pour modifier $x_1$ 
+\item on note $L_{1\to2}$ cette différence
+\item donner la définition en $h$ puis en $s$ (facile car transition de phase est réversible)
+\item donner des ODG, c'est beaucoup et il faut le dire!!
+\item on peut donner l'intérêt de cette chaleur latente dans un cycle frigorifique par exemple. comparaison du débit de fluide nécessaire avec un sans transition de phase
+\end{itemize}
+
+\section{Interprétation des diagrammes de phase}
+\subsection{Formule de Clapeyron [2]}
+\begin{itemize}
+\item faire la démo
+\item application aux patins à glace, au ski, à l'expérience de regel... (pas de réf.) Dans tous ces cas, on montre que la surpression ne peut pas expliquer la fusion de la glace à par exemple $-10°C$. Cette interprétation est donc erronée
+\end{itemize}
+
+\subsection{Diagramme $(P,T)$ [2]}
+\begin{itemize}
+\item définition du diagramme (on trace les états d'équilibre diphasique)
+\item Construction du diagramme à l'aide de la relation de Clapeyron (pente des droites en particulier)
+\item introduire le point triple et le point critique
+
+\end{itemize}
+
+\subsection{Diagramme $(P,V)$ [1]}
+\begin{itemize}
+\item diagramme $(P,V)$ complet avec les 3 phases
+\item redonner les points particuliers (critique et triple)
+\item citer le théorème des moments (la petite démonstration est dans le Diu clairement)
+\end{itemize}
+
+\section{Transition de phase du premier ordre : l'apport des potentiels thermodynamiques}
+\noindent
+\textbf{Motivation} : interpréter l'expérience de surfusion de l'eau lancée en début d'exposé
+\subsection{Choix et expression du potentiel thermodynamique [1]}
+\begin{itemize}
+\item on a fixé $(P,T)$, on utilise donc $G$
+\item la physique statistique, ou des lois phénoménologiques permettent de proposer une expression de $G$ (avec selon les cas, une expression commune ou une expression différente pour chaque phase)
+\item dans tous les cas, le potentiel $G$ représenté représente un système \textbf{monophasé}
+\end{itemize}
+
+\subsection{Transition du premier ordre, coexistence de deux phases [1]}
+\begin{itemize}
+\item on définit alors clairement une transition du premier ordre : existence d'un couple $(P,T)$ pour lequel il existe deux minimums globaux de même valeur
+\item montrer alors qu'une coexistence entre les deux phases est possible 
+\end{itemize}
+
+\subsection{tracé d'une isotherme [1]}
+\subsubsection{Evolution du potentiel avec $P$, états stables et métastables}
+\begin{itemize}
+\item on montre l'évolution de $G$ avec $P$
+\item on obtient alors la brisure de l'équilibre diphasé en modifiant la pression (mais il existe encore deux minimums : un global et un local)
+\item si on poursuit la variation de pression, il existe une pression $p\e{lim}$ pour laquelle le minimum local disparait. Il n'existe alors plus qu'un minimum global unique
+\item tant qu'il existe un minimum local, des branches métastables peuvent exister
+\end{itemize}
+
+\subsubsection{Tracé de l'isotherme (avec branches de métastabilité)}
+\begin{itemize}
+\item faire alors un transparent (regarder dans la banque) mettant en lien les variations de $G$ à température fixée avec $P$ et le tracé d'une isotherme d'Andrews avec ses branches métastables
+\end{itemize}
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item retour sur les points clés (condition d'équilibre et d'évolution donnée par le potentiel thermodynamique adapté
+\item rappeler les ODG gigantesques des chaleurs latentes de transition de phase
+\item ouverture : existence de transition de phase d'ordre élevée (juste quelques mots sur la classification de Landau à partir de la continuité du paramètre d'ordre. réf. [1])
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. 3 états de l'eau. En existe-il d'autres?}  
+
+\bk
+\noindent
+\textbf{2. $\chi\e{T}\to{\infty}$ et les fluctuations de densité sont-elles liées?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Sur un diagramme $(P,T)$, où a-t-on $\chi\e{T}\to{\infty}$?}  
+
+\bk 
+ \noindent
+\textbf{4. La courbe de sublimation passe-elle par $(0,0)$ dans le diagramme $(P,T)$?}  
+
+\bk
+\noindent
+\textbf{5. Fournit-on un travail lors des changements de phase?}  
+
+\bk
+\noindent
+\textbf{6. Démontrer le théorème des moments chimiques}  
+
+\bk
+\noindent
+\textbf{7. Pourquoi la densité de la glace est-elle plus faible que celle de l'eau?}  
+
+\bk
+\noindent
+\textbf{8. Pourquoi un changement d'état est-il un processus réversible?}  
+
+\bk
+\noindent
+\textbf{9. Pourquoi le volume massique d'une phase condensé est-il inférieur à celui de la phase vapeur?}  
+
+\bk
+\noindent
+\textbf{10. Qu'est-ce qui différencie le solide du liquide alors?}  
+
+\bk
+\noindent
+\textbf{11. Que vaut la chaleur latente de vaporisation de l'eau?}  
+
+\bk
+\noindent
+\textbf{12. Peut-on retrouver théoriquement les isothermes d'Andrews?}  
+
+\bk
+\noindent
+\textbf{13. Exemples de transition du second ordre}  
+
+\bk
+\noindent
+\textbf{14. Evaluer la température à l'intérieure d'un autocuiseur}  
+
+\bk
+\noindent
+\textbf{15. Relation entre $\Delta H\e{fus}$, $\Delta H\e{vap}$ et $\Delta H\e{cond}$}  
+ 
+
+
+
+\end{document}

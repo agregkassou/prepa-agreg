@@ -1,0 +1,128 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP36 : Absorption et émission de la lumière (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item base de mécanique quantique
+\item corps noir
+\item notion de photon
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item c'est un modèle phénolénologique qui est interprété dans un cadre plus général de MQ
+\item permet d'expliquer de nombreux phénomènes et a été à l'origine de la conception des systèmes à émission stimulée
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Physique atomique I, Cagnac, Dunod (attention, il faut la nouvelle édition)
+\item[[\,2\!\!]] Einstein aujourd'hui, co-écrit, EDP Sciences
+\item[[\,3\!\!]] Introduction aux lasers et à l'optique quantique, Aspect, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : présenter ce que l'on va faire : 1) les 3 interactions rayonnement-matière, 2) bilan de ces interactions 3) application à la construction d'un laser
+
+
+\section{Description phénoménologique des interactions lumière-matière}
+\subsection{Absorption [1]}
+\begin{itemize}
+\item p87 du Cagnac
+\item écrire la formule de variation de la population en atome dans le niveau $E_1$ en fonction des paramètres intéressant
+\item traiter le cas monochromatique en introduisant une fonction forme de raie normalisée : cette forme de raie est à relier à la largeur naturelle de raie, mais selon les cas elle peut aussi prendre en compte les sources d'élargissement non intrinsèques. En déduire la forme du coefficient d'Einstein dans ce cas.
+\item faire l'équivalent dans un cas polychromatique en considérant un cas "broad line". En déduire la forme du coefficient d'Einstein dans ce cas.
+\end{itemize}
+
+\subsection{Emission spontanée [1]}
+\begin{itemize}
+\item p93
+\item introduire le concept de désexcitation spontanée
+\item préciser que c'est une vision statistique des choses
+\item introduire le coefficient d'Einstein associé et le relier à un temps de vie
+\item le phénomène est additif s'il y a plusieurs voie possible de désexcitation 
+\end{itemize}
+
+\subsection{Emission stimulée [1]}
+\begin{itemize}
+\item p100
+\item bref historique de l'introduction de l'émission stimulée par Einstein
+\item le symétrique de l'absorption
+\item on peut donc écrire le même genre d'équation et différencier le cas monochromatique et polychromatique "broad line"
+\item
+\end{itemize}
+
+\subsection{Relations entre les probabilités de transitions radiatives [1] et [2]}
+\begin{itemize}
+\item utiliser le Cagnac (p103) pour le hypothèses de l'équilibre thermique et Einstein aujourd'hui pour faire la comparaison (bien plus synthétique et directe)
+\item on compare la densité spectrale (trouvée à l'équilibre de populations) à celle d'un corps noir et on identifie les termes
+\item utiliser le Cagnac pour donner des ODG de toutes les grandeurs précédemment introduites (sans faire référence explicitement à l'expérience de jet atomique du Cagnac)
+\end{itemize}
+
+\section{Equation bilan de l'interaction lumière-matière}
+\subsection{Bilan sur un système à deux niveaux : impossibilité de l'amplification [1]}
+\begin{itemize}
+\item utiliser les pages 106 et 114
+\item donner la population $n_2$ en régime stationnaire dans le cas limite  d'une densité spectrale infinie
+\item évaluer alors la variation de puissance du faisceau sur la traversée de la zone -> on montre facilement que l'amplification est impossible
+\item en revanche, le milieu devient transparent à haute puissance
+\item remarquer que sur la partie "faisceau", on ne considère pas l'émission spontanée. En effet, sa contribution est négligeable par isotropie
+\end{itemize}
+
+\subsection{Conséquences de l'émission stimulée : saturation de l'absorption [3]}
+\begin{itemize}
+\item on a vu qu'un milieu saturé devenait transparent
+\item expliquer le principe de ce que l'on fait et la construction expérimentale
+\item il y aura transparence si la pompe et la sonde excite les mêmes atomes
+\item par ailleurs, comme ils sont contrapropageant, cette condition est vérifiée pour les atomes de vitesse nulle, et alors l'absorption a lieu à leur fréquence propre de résonance
+\item lier la distribution des vitesses à la distribution des pulsations de résonance autour de la pulsation propre -> largeur bien supérieure à la largeur de raie naturelle) -> faire des schémas!
+\item on remonte ainsi à la largeur de raie naturelle (et non celle due à l'effet Doppler) -> c'est une technique de spectroscopie hyperrésolue
+\end{itemize}
+
+\section{Le laser}
+\subsection{Inversion de population [1]}
+\begin{itemize}
+\item on veut une inversion de population pour avoir amplification (cohérente qui plus est)
+\item présenter le principe d'un laser à 4 niveaux sous forme d'un schéma (sans chercher à résoudre)
+\item expliquer comment on a inversion de population par cette méthode
+\item même si on ne résout pas les équations, de toute évidence on a gagné!
+\item attention, si l'émission spontanée n'intervient pas explicitement dans l'équation, elle est présente et elle diminue l'inversion de population, et ce d'autant plus à grande fréquence. C'est pourquoi on a fait des masers avant de faire des lasers!
+\item donner quelques techniques de pompage (sans entrer dans les détails)
+\end{itemize}
+
+\subsection{Comment faire un laser? [3]}
+\begin{itemize}
+\item la description du Aspect est un peu trop complète (mais claire): ne conserver que les grandes lignes
+\item il faut être clair et précis : milieu à gain mais de gain faible, alors il faut reboucler pour faire de nombreux passages dans le milieu amplificateur
+\item cavité (avec faible perte pour sortir un faisceau quand même)
+\item cette cavité donne les modes longitudinaux possibles (séparés de l'ISL)
+\item faire une présentation sous forme de système bouclé avec gain et perte sur un tour
+\item un mode peut exister si pour ce mode, le gain est supérieur aux pertes
+\item \underline{manipulation} : présenter en parallèle sur le laser en kit qu'on fera fonctionner en direct
+\item parler du cas des lasers monomodes, multimodes... on pourra aussi parler de saut entre modes
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ouvrir par exemple sur les lasers impulsionnels (mais sans aller trop loin)
+
+\end{document}

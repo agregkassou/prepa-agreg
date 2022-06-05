@@ -1,0 +1,110 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M04 : capteurs de grandeurs mécaniques}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item diversité des domaines d'application
+\item sensibilité, précision, reproductibilité des mesures sont des grandeurs à vérifier lorsqu'on étudie des capteurs
+\end{itemize}
+}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] notice ENSC 479
+\item[[\,2\!\!]] notice ENSC 482
+\item[[\,3\!\!]] Les capteurs en instrumentation industrielle, Asch, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : il existe une grande diversité de capteurs mécaniques (ici on étudiera vitesse, position et contrainte). On s'intéressera également à des échelles très différentes de mesure (petit déplacement par effet capacitif, grande plage de vitesse pour la mesure par effet Doppler). Dans tous les cas, on s'intéressera à la sensibilité, la précision et la reproductibilité des mesures prises par ces capteurs. 
+
+
+\section{Capteur de position capacitif}
+
+\subsection{Etalonnage du capteur}
+\begin{itemize}
+\item utiliser la maquette de Jean ENSC 479
+\item monter un filtre RLC autour 
+\item l'électrode de garde devra être reliée à la masse commune
+\item on pourra augmenter la capa par une capacité en parallèle afin de limiter la fréquence de résonance
+\item on cherche la résonance en courant (fonction filtre passe bande)
+\item commencer à R grand pour trouver la résonance puis diminuer R pour augmenter la sensibilité
+\item à résonance les signaux sont en phase (aplatissement de l'ellipse en mode XY)
+\item faire la calibration à la vis micrométrique et en déduire la sensibilité
+\item le niveau du  signal de sortie est faible, ce qui est une limitation à la précision
+\end{itemize}
+
+\subsection{circuit d'amplification}
+\begin{itemize}
+\item le niveau de signal est faible en sortie du montage (puisque la résistance est choisie faible pour assurer une bonne sensibilité)
+\item la précision est alors affectée
+\item on ajoute un ampli non inverseur à AO pour éviter ce problème
+\item il faut cependant rester vigilant lors de cet ajout et choisir un gain modéré : en effet il ne faut pas réduire la bande passante de l'AO trop fortement sous peine d'introduire un déphasage sur le signal, ce qui serait catastrophique 
+\item un gain de l'ordre de 10 est raisonnable pour un signal de l'ordre de la dizaine de kHz (produit gain bande de l'AO supérieur au MHz)
+\item évaluer alors la sensibilité du montage
+\item on doit atteindre la sensibilité quasi interférométrique (on a obtenu 500nm de précision sur le condensateur très rapproché)
+\end{itemize}
+
+\section{Mesure de vitesse par effet Doppler}
+\subsection{Mesure de vitesse}
+\begin{itemize}
+\item la méthode Doppler est simple : on utilise le petit générateur d'ultrason et deux récepteurs : l'un capte le signal direct (permet de connaître la fréquence d'émission), l'autre récupère le signal réfléchi (donc ayant subi l'effet Doppler)
+\item ces signaux sont multipliés puis filtrés passe-bas pour récupérer uniquement la partie $\Delta f$.
+\item \textbf{le signal de réception direct doit être décalé pour ne pas capter tout le signal avant qu'il arrive en réflexion sur la plaque!}
+\item \textbf{utiliser impérativement des câbles coaxiaux pour cette manipulation et limiter les bananes pour éviter le bruit}
+\item déplacer à la main une plaque métallique en tentant de conserver la vitesse constante
+\item \textbf{il est nécessaire d'amplifier l'une des voies pour avoir du signal après multiplication, sinon on a que du bruit!!}
+\item faire une acquisition à la fois avec notre système Doppler et avec une webcam
+\item démarrer les deux acquisitions puis commencer la translation
+\item il est important de pouvoir obtenir une base de temps commune (puisque notre vitesse de translation va varier, il faut être capable de regarder à peu près une vitesse instantanée)
+\item traiter les images webcams pour repérer la position en fonction du temps puis dériver pour avoir la vitesse instantanée
+\item sur l'acquisition fréquentielle, c'est plus délicat. On compte quelques pics pour obtenir la fréquence et on fait une vitesse instantanée à cet endroit (ça revient à faire une FFT glissante)
+\end{itemize}
+
+\subsection{Comparaison des résultats}
+\begin{itemize}
+\item on utilise le $\Delta f$ obtenu pour connaître la vitesse Doppler 
+\item à comparer pour quelques points à la vitesse instantanée obtenue par l'acquisition vidéo
+\end{itemize}
+
+\section{Balance à jauge de contrainte}
+\subsection{Présentation du capteur}
+\begin{itemize}
+\item utiliser la maquette ENSC 482 avec la plaquette électrique associée
+\item présenter le principe (expliquer la variation de la résistance avec la déformation)
+\item constater la variation du signal lorsqu'on dépose une masse (travailler en continu pour le moment)
+\item on constate que le signal est fortement bruité et d'amplitude ridicule (l'ampli n'est pas encore utilisé)
+\end{itemize}
+
+\subsection{Conditionnement du capteur}
+\begin{itemize}
+\item on va d'abord utilisé un étage d'amplification (dont on mesure rapidement le gain
+\item pour limiter le bruit (principalement d'origine thermique et donc basse fréquence, de l'ordre du Hz), on met en place une détection synchrone (générateur autour du kHz et filtre coupant à 1Hz
+\end{itemize}
+
+\subsection{Mesures}
+\begin{itemize}
+\item étalonner le capteur (avec des masses connues)
+\item avant chaque mesure, il est préférable de refaire le zéro (il peut y avoir une légère dérive thermique)
+\item soigner les incertitudes, on s'attend à une réponse linéaire
+\item fitter par une droite puis mesurer une masse inconnue (vérifier que l'on retombe sur les barres d'erreur)
+\item attention aux erreurs venant de l'accrochage de la masse (positionner le fil toujours de la même manière et surtout la poser délicatement!!)
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+ Citer d'autres capteurs de position par exemple : télémétrie laser pour les grandes distances, interférométrie optique pour les courtes distances
+
+
+\end{document}

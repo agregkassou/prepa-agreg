@@ -1,0 +1,126 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M21 : production et conversion d'énergie électrique}
+
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item deux moyens de produire de l'énergie électrique : mécanique et photonique
+\item la conversion de puissance est importante sur un plan pratique
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] notice ENSC 265 (banc moteur)
+\item[[\,2\!\!]] BUP n°901, "de la cellule photovoltaïque au panneau solaire"
+\item[[\,3\!\!]] BUP n°715, "transformateur monophasé"
+\item[[\,4\!\!]] Electronique : signaux et systèmes, conversion de puissance, Boussié, Puf (pour quelques informations utiles sur les bilans)
+\item[[\,4\!\!]] Précis Bréal d'électrotechnique, Brenders, Bréal
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : importance de la conversion dans l'"économie mondiale" -> place de l'électricité
+
+
+\section{Conversion mécanique-électrique : la génératrice synchrone}
+\subsection{Rendement en charge de la GS}
+\begin{itemize}
+\item utiliser le banc ENSC 265 : la MCC simule la puissance motrice sur l'arbre moteur (on se fiche de sa caractérisation) tandis que la GS simule une génératrice courante de centrale électrique (aux dimensions près...)
+\item la notice explique les branchements et donne les pertes fer et méca de la MCC avant couplage
+\item il convient aussi de mesurer la résistance de l'induit de la MCC. Pour cela, bloquer l'arbre en rotation à l'aide d'une tige puis mettre du courant. Ainsi, le système est une résistance pure en continue : on trouve une résistance de l'ordre du Ohm. Une mesure à l'ohmmètre est une mauvaise idée!
+\item on a ainsi toutes les pertes de la partie MCC qu'il faudra soustraire
+\item ensuite on se place à courant d'inducteur fixé et vitesse de rotation fixée et on mesure la puissance en entrée sortie de la machine
+\item on obtient alors le rendement après avoir retiré les pertes de la partie MCC à la puissance d'entrée totale (puissance dispo sur l'arbre pour la GS)
+\item ce rendement est tracé en fonction de la puissance de sortie (à modifier avec la valeur de la charge)
+\item la puissance perdue dans l'inducteur par effet joule est importante. Cependant, il parait plus raisonnable de la considérer à part et de ne pas l'inclure dans le rendement
+\end{itemize}
+
+\subsection{Mise en évidence des pertes}
+\subsubsection{Perte cuivre}
+\begin{itemize}
+\item cela correspond aux pertes dans l'inducteur + en charge aux pertes dans l'induit (elles dépendent alors du courant appelé)
+\item on se contentera de mesurer les résistances de ces parties et d'évaluer alors la valeur de ces pertes
+\end{itemize}
+
+\subsubsection{Perte mécanique}
+\begin{itemize}
+\item on coupe l'alimentation de l'inducteur
+\item on relève alors la puissance appelé sur la MCC en fonction de la vitesse de rotation
+\item on soustrait à cela les pertes de la MCC
+\item il reste alors uniquement les pertes mécaniques de la GS 
+\item on obtient donc les pertes mécaniques dans la GS en fonction de la vitesse de rotation
+\end{itemize}
+
+\subsubsection{Perte fer}
+\begin{itemize}
+\item cette fois, on alimente l'inducteur
+\item on refait la même caractérisation que précédemment (en l'absence de charge)
+\item cette fois les pertes sur la GS sont la somme des pertes mécaniques et fer
+\item par soustraction, on a donc uniquement les pertes fer
+\end{itemize}
+
+\begin{remarque}
+Noter que les pertes fer et mécaniques sont indépendantes de la charge et du courant appelés sur l'induit, d'où l'intérêt de cette çaractérisation
+
+
+Les incertitudes sont élevées et il ne faut pas surinterpréter ces résultats. En particulier, il semble que les Wmètres présentent des erreurs systématiques de calibre. Par ailleurs, les mesures de rendement sont toujours délicates, principalement lorsque le rendement est bon. En effet, on fait des mesures de haute puissance (donc à forte incertitude) alors que seule la différence (faible à haut rendement) nous intéresse...
+\end{remarque}
+
+\section{Conversion photonique-électrique : la cellule solaire}
+\subsection{Caractéristiques U-I en fonction de l'éclairement [2]}
+\begin{itemize}
+\item Si on souhaite un rendement à calibration absolue, on pourra évaluer au luxmètre la puissance optique reçue par le panneau (avec toutes les précautions que cela comporte...)
+\item éclairer le panneau avec une lampe blanche QI
+\item placer un \textbf{anticalorique} et moduler le flux par polariseur/analyseur croisés (puissance transmise à évaluer par loi de Malus)
+\item tracer alors le 3e cadran de la caractéristique U-I pour différentes valeurs du flux en modifiant la résistance
+\item expliquer que l'on travaille dans le 3e cadran d'une photodiode (partie génératrice électrique)
+\item expliquer le principe de la maximisation de la puissance par modification de la charge
+\end{itemize}
+
+\subsection{Rendement de la cellule : importance de l'adaptation d'impédance [2]}
+\begin{itemize}
+\item on trace cette fois le rendement $\eta$ (relatif ou absolu selon le choix d'utiliser le luxmètre) en fonction de $R\e{charge}$
+\item constater qu'il y a un maximum (qui varie légèrement en fonction de l'intensité de l'éclairement)
+\item en déduire l'importance de l'adaptation d'impédance pour ce genre de système
+\item expliquer rapidement le principe d'un panneau solaire réel : mise en série/parallèle de plusieurs cellules pour obtenir la tension et le courant souhaité
+\end{itemize}
+
+
+\section{Conversion électrique-électrique : le transformateur}
+\subsection{Intérêt de la haute tension pour le transport électrique}
+\begin{itemize}
+\item autotransformateur avec wattmètre, résistance en série de $30 \Omega$ pour modéliser les pertes en lignes, résistance de charge de $50 \Omega$. Placer un wattmètre sur la résistance de charge. Faire débiter par exemple 50W dans la charge et regarder alors la puissance sur l'autotransformateur
+\item placer alors deux transformateurs sur la ligne pour surélever la tension au bornes de la résistance de ligne. Constater alors la puissance appelée sur l'autotransformateur pour une puissance de 50W sur la charge! C'est beaucoup mieux, malgré des transformateurs avec un mauvais rendement
+\item l'explication est aisée : on utilise un rapport de transformation tel que $m=e_2/e_1=220/6=37$, la résistance de ligne ramenée est alors divisée par $m^2$. Le pont diviseur est alors tel que 
+\centers{$U\e{charge}=U\e{alim} \cdot \f{R\e{charge}}{R\e{charge}+R\e{ligne}} \simeq U\e{alim} $}
+Les pertes en lignes sont alors devenues négligeables
+\end{itemize}
+
+\subsection{Rendement du transformateur}
+\begin{itemize}
+\item on mène l'étude sommaire du rendement en charge (s'arranger pour obtenir une charge permettant d'avoir sur le secondaire 6V et l'intensité nominale de fonctionnement, valeur des fusibles) : constater que le rendement est bon, même pour un mauvais transformateur. En pratique, sur de gros transformateurs, il est quasi unitaire.
+\item on ne cherchera pas à séparer les pertes
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ouvrir sur le hacheur par exemple.
+
+\end{document}

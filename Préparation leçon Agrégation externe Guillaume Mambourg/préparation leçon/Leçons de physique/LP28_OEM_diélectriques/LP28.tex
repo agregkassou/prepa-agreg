@@ -1,0 +1,180 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP28 : Ondes électromagnétiques dans les diélectriques (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item OEM dans le vide
+\item polarisation électrique, milieu diélectrique LHI
+\item équations de Maxwell dans les diélectriques
+\item oscillateur harmonique forcé
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item réponse linéaire et modèle microscopique (cadre d'une théorie simple)
+\item nécessité de relation constitutive en plus des équations de Maxwell (la physique est là)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item jouer sur les prérequis pour que le début ne traine pas en longueur
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Hprépa Ondes 2nd année, Brébec, hachette
+\item[[\,2\!\!]] Electromagnétisme, Perez, Masson
+\item[[\,3\!\!]] Ondes électromagnétiques dans les milieux diélectriques, Garing, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+\noindent
+\underline{manipulation} : expérience introductive du chap 28 du Perez "dispersion ,absorption". On montre l'absorption par une solution de $KMnO_4$. Et le prisme montre l'effet de la dispersion!
+
+
+\section{Propagation d'une OEM dans un DLHI}
+\subsection{Equations de Maxwell dans un diélectrique [1]}
+\begin{itemize}
+\item préciser qu'on considère un milieu non magnétique, isolant et non chargé en volume
+\item donner alors les équations de Maxwell dans le milieu
+\item rappeler la relation $\vect{D}=\epsilon_0 \vect{E} + \vect{P}$
+\item il ne s'agit pas de démontrer ces formules, déjà vue dans un cours d'électromagnétisme
+\end{itemize}
+
+\subsection{DLHI : relation constitutive du milieu [1]}
+\begin{itemize}
+\item donner la relation constitutive générale (tensorielle) pour un milieu linéaire
+\item simplifier cette relation dans le cadre d'un DLHI (là encore on redonne simplement les hypothèses et conséquences, mais on ne cherchera pas à les démontrer)
+\item donner alors la relation constitutive pour un DLHI et les équations de Maxwell "simplifiées"
+\end{itemize}
+
+\subsection{Equation de propagation, relation de dispersion [1]}
+\begin{itemize}
+\item donner l'équation de propagation des champs 
+\item faire le lien avec la propagation dans le vide (d'alembertien) : $\epsilon_r$ est complexe et varie avec $\omega$. On peut donc s'attendre à un milieu dispersif
+\item équation toujours linéaire, on peut donc choisir la base des OPPM pour la résolution
+\item donner la relation de dispersion
+\item préciser la structure du champ EM
+\end{itemize}
+
+\section{Modèle microscopique}
+\subsection{Modèle de la charge élastiquement liée [1]}
+\begin{itemize}
+\item insister sur le fait que c'est un modèle classique. C'est donc un modèle quasi phénoménologique, il fonctionne car on adapte les constantes aux valeurs expérimentales.
+\item écrire le PFD et obtenir la susceptibilité électrique : modèle type passe bas d'ordre 2
+\item séparer partie réelle et partie imaginaire
+\item tracer les graphes représentatifs. 
+\item dire que la zone autour de la pulsation de coupure est très particulière, on reviendra dessus.
+\end{itemize}
+
+\subsection{Différents types de polarisation [1]}
+\begin{itemize}
+\item on fait la liste des charges pouvant être déplacées par l'action de l'onde EM (électrons, noyaux, ions)
+\item ces charges ont des charges et des masses très différentes. 
+\item pour chacun de ces cas, on peut reprendre notre modèle précédent en adaptant la pulsation propre et le facteur de qualité à chacun des cas.
+\item notons que même chaque électron de l'atome a une pulsation propre différente dépendant de son entourage électronique
+\item on peut alors écrire la polarisabilité élémentaire pour chaque charge
+\end{itemize}
+
+\subsection{Polarisation totale du milieu [1] et [3]}
+\begin{itemize}
+\item en considérant l'indépendance de chaque oscillateur, on peut alors écrire la susceptibilité totale du matériau
+\item écrire l'expression
+\item tracer les graphes représentatifs globaux sur tout le spectre, expliquer la polarisation d'orientation (bien expliquée dans le Garing, eco 3.10 "chauffage par micro-ondes")
+\item donner des ODG de ces pulsations et des facteurs de qualité (utiliser la partie "ordres de grandeur" du Hprépa pour cela! prendre comme eux le cas de l'eau)
+\end{itemize}
+
+\section{Dispersion et absorption [1]}
+\subsection{Indice du milieu}
+\begin{itemize}
+\item introduire la permittivité diélectrique en fonction de la susceptibilité
+\item introduire l'indice $n$ complexe
+\item indiquer la signification de la partie réelle et imaginaire de $n$
+\item présenter un graphe de l'indice réel et imaginaire en fonction de la pulsation
+\end{itemize}
+
+\subsection{ Zone de transparence [1]}
+\begin{itemize}
+\item l'indice est réel : propagation sans absorption
+\item écrire l'expression de la permittivité (en négligeant le terme d'amortissement, effectivement négligeable puisqu'on est loin de la résonance)
+\item démontrer la formule de Cauchy
+\item \underline{manipulation} : utiliser un prisme pour mettre en évidence cette formule de dispersion dite "normale"
+\end{itemize}
+
+\subsection{Zone d'absorption [1]}
+\subsubsection{dispersion "anormale"}
+\begin{itemize}
+\item insister qu'on est dans une zone de dispersion négative
+\item la vitesse de groupe peut alors être supérieure à $c$. ça n'a plus de signification physique tellement la dispersion est forte dans cette partie
+\item en effet la vitesse de groupe peut s'interpréter comme la vitesse de propagation de l'énergie s'il est légitime de faire un DL sur la largeur du paquet d'onde (donc sur un paquet de faible étendue spectrale)
+\end{itemize}
+
+\subsubsection{absorption}
+\begin{itemize}
+\item phénomène beaucoup plus intéressant dans ce domaine spectral : l'absorption
+\item prendre les exemples classiques du Hprépa : verre pour lunettes de soleil, eau dans les micro-ondes, effet de serre causé par l'élévation de la concentration atmosphérique de $CO_2$
+\item on peut aussi parler du chauffage micro-ondes dans les tokamaks...
+\end{itemize}
+
+\bk
+\noindent
+\textbf{Conclusion}
+
+
+\begin{itemize}
+\item \underline{bilan} : un modèle microscopique (ou une expérience!) permet de connaitre l'indice complexe d'un milieu en fonction de l'onde le traversant. Il est alors possible de prévoir dans quelle mesure une onde sera transmise ou absorbée par le milieu
+\item \underline{ouverture} : le comportement d'une onde à l'interface entre deux diélectriques est un phénomène intéressant que l'on n'a pas abordé. Il est par exemple possible, en utilisant les équations de continuité de démontrer la formule de Snell-Descarte (on peut le proposer en exercice pour le prochain cours!)
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Donner des exemples de polarisation ioniques.}  
+
+\bk
+\noindent
+\textbf{2. ODG de fréquence pour des micro-ondes. Quelle est l'absorption sollicitée?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Lien angle de déviation et indice optique pour un prisme.}  
+
+\bk 
+ \noindent
+\textbf{4. Pour une susceptibilité imaginaire pure, il y a-t-il absorption et dispersion?}  
+
+\bk
+\noindent
+\textbf{5. Pourquoi un déphasage entre la polarisation et le champ électrique rend possible un transfert d'énergie sous forme Joule. Ecrire la densité de courant lié en fonction de la polarisation.}  
+
+\bk
+\noindent
+\textbf{6. Quels arguments physique permettent d'utiliser une description harmonique dans le modèle de l'électron élastiquement lié?}  
+
+\bk
+\noindent
+\textbf{7. Origine physique de la force d'amortissement.}  
+
+\bk
+\noindent
+\textbf{8. Quelle expérience d'absorption pourrait-on faire?}  
+
+\end{document}

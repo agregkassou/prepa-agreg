@@ -1,0 +1,158 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP40 : effet tunnel (L3)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item base de mécanique quantique (équation de Schrödinger, marche de potentiel)
+\item physique statistique (distribution de Fermi)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item l'effet tunnel marche vraiment : il y a des applications concrètes
+\item c'est une conséquence directe de l'aspect ondulatoire de la matière
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Les nouvelles microscopies, Aigouy, Belin (pour toute la leçon)
+\item[[\,2\!\!]] Mécanique quantique, Berkeley (radioactivité $\alpha$)
+\item[[\,3\!\!]] Mécanique quantique, Basdevant, Editions de l'école Polytechnique
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : présenter succinctement le cas classique d'une barrière de potentiel : ça passe ou ça ne passe pas!
+
+\underline{manipulation} : mise en évidence d'une onde évanescente à l'aide des prismes de parafine et des ondes centimétriques
+
+
+\section{Transmission par effet tunnel [1]}
+\subsection{Position du problème}
+\begin{itemize}
+\item on se place dans la limite d'une marche de potentiel carré
+\item donner l'équations de Schrödinger et les solutions respectives dans chacune des régions de l'espace
+\item rappeler la notion d'onde évanescente
+\item expliciter les relations de continuité pour une discontinuité finie de potentiel -> la solution est $C^1$
+\item définir le vecteur densité de courant et l'expliciter dans le cas d'une onde plane
+\end{itemize}
+
+\subsection{Calcul du coefficient de transmission : puits carré}
+\begin{itemize}
+\item poser alors le système à résoudre
+\item donner la solution (sans démonstration) du coefficient associée à l'onde transmise et le simplifier dans la condition limite qui nous intéresse ici
+\item en déduire alors le coefficient de transmission de l'onde par la barrière
+\item donner des ODG pour un électron franchissant la barrière tunnel typiquement et pour un homme tentant de franchir une porte (on se limitera au calcul du facteur exponentiel)
+\end{itemize}
+
+\subsection{Cas d'un potentiel de forme quelconque : l'approximation logarithmique BKW}
+\begin{itemize}
+\item on peut décomposer un potentiel quelconque en une somme éventuellement continue de potentiels carrés qui épousent la forme du potentiel
+\item limiter le facteur de transmission au facteur exponentiel (approximation logarithmique)
+\item la transmission totale est le produit des transmissions, soit la somme sous forme logarithmique
+\item c'est donc une intégrale à la limite continue
+\end{itemize}
+
+\section{Le microscope à effet tunnel (STM) [1]}
+\subsection{Position du problème : approximation de puits carré}
+\begin{itemize}
+\item principe de base : pointe conductrice "volant" à la surface d'un échantillon conducteur
+\item on s'intéresse au courant électronique entre la pointe et l'échantillon, sachant que l'énergie des électrons est inférieure à la barrière de potentiel entre les deux métaux (le passage se fait donc par effet tunnel)
+\item modélisation du problème : potentiel carré, distribution de Fermi prise à température nulle, métaux identiques (même niveau de Fermi et même travail de sortie)
+\item après ajout d'une ddp, les deux niveaux de Fermi sont décalés de la quantité $eV\e{t}$
+\item on considère que tous les électrons susceptibles de participer à la conduction sont à l'énergie de Fermi (la différence d'énergie due à la ddp est supposée faible devant l'énergie de Fermi)
+\end{itemize}
+
+\subsection{grandeurs caractéristiques de fonctionnement}
+\begin{itemize}
+\item on peut d'abord évaluer la proportionnalité du courant avec la distance (grâce au modèle précédent)
+\item on constate une sensibilité très élevée à la distance, ce qui est bon signe pour avoir une bonne résolution
+\item on peut alors évaluer la résolution orthogonale et tangentielle
+\item la résolution orthogonale est de l'ordre de l'angstrom
+\item pour la résolution tangentielle, il faut poursuivre le raisonnement en considérant une pointe terminale sphérique
+\item on peut alors évaluer facilement sur quelle couronne autour de la pointe le courant est non négligeable
+\item pour une pointe de taille atomique, la résolution est extraordinaire!
+\item les courants sont de l'ordre du nanoampère 
+\item insister sur la nature des signaux vus par le STM : suivre le plan du Aigouy à ce sujet pour montrer que le courant local est proportionnel à la densité locale d'état au voisinage de l'énergie de Fermi, cette densité étant image de la répartition électronique à la surface de la matière 
+\end{itemize}
+
+\subsection{Schéma de principe d'un STM}
+\begin{itemize}
+\item donner le schéma de principe du STM, insister sur la qualité des composants devant le constitué
+\item parler des deux modes de balayage possibles et de leurs avantages respectifs
+\end{itemize}
+
+\section{Radioactivité $\alpha$ [2]}
+\subsection{Position du problème}
+\begin{itemize}
+\item Le Berkeley est absolument parfait pour cette partie... il suffit de le suivre!
+\item constat : deux choses surprenantes dans la radioactivité $\alpha$ : durée de vie radioactive très longue et fortement dispersée suivant les atomes pères
+\item par ailleurs on a constaté que l'énergie de la particule $\alpha$ libérée était corrélée à la durée de vie radioactive -> on cherche alors à comprendre cette corrélation par un modèle simple
+\item d'abord on modélise grossièrement le potentiel et on donne un ODG de l'énergie des $\alpha$ libérés
+\item on montre alors que la libération nécessité de franchir une barrière de potentiel par effet tunnel
+\item on cherche alors à évaluer le coefficient de transmission 
+\end{itemize}
+
+\subsection{Utilisation de l'approximation BKW pour évaluer la durée de vie radioactive}
+\begin{itemize}
+\item ici, on a un potentiel de forme complexe, on utilise donc l'approximation BKW pour le calcul
+\item suivre les calculs du Berkeley en sautant beaucoup d'étapes
+\item écrire alors le résultat en fonction de l'énergie de la particule uniquement
+\item on évalue alors le temps de vie en faisant la considération simple que la particule passe la barrière au bout de $n$ tentatives avec $nT=1$
+\item de même évaluer le temps d'un aller retour dans la zone de confinement
+\item on en déduit finalement une expression du temps de vie radioactif en fonction de l'énergie de la particule libérée
+\end{itemize}
+
+\subsection{Comparaison aux résultats expérimentaux}
+\begin{itemize}
+\item présenter un graphique de la comparaison entre théorie et résultats expérimentaux
+\item la tendance est bonne même si la représentation est imparfaite : vue la simplicité du modèle c'est déjà une grande victoire
+\item le modèle fut d'abord donné par Gamov en 1928
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : processus purement quantique
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Choix du signe de la phase de la fonction d'onde?} Il n'y a pas de choix possible, il est imposé par l'équation de Schrödinger, attention donc à la convention  
+
+\bk
+\noindent
+\textbf{2. Comment utiliser la réflexion totale frustrée en optique?} microscopie en champ proche  
+ 
+ \bk
+ \noindent
+\textbf{3. pour la radioactivité $\alpha$, faut il connaitre le potentiel dans le noyau?} Non l'important est la largeur de la barrière tunnel à franchir  
+
+\bk 
+ \noindent
+\textbf{4. la particule $\alpha$ est elle relativiste?} Non, il suffit de comparer son énergie cinétique à son énergie de masse  
+
+
+\end{document}

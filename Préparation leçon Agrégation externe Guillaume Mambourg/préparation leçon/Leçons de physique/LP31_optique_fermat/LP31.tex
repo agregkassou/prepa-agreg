@@ -1,0 +1,147 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP31 : présentation de l'optique géométrique à l'aide du principe de Fermat (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item optique géométrique vue au lycée
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item le principe de Fermat est un principe variationnel (mais ne pas le dire)
+\item il contient toute l'optique géométrique
+\end{itemize}
+}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] optique géométrique, BFR, Dunod
+\item[[\,2\!\!]] Optique géométrique, Becherrawy, De Boeck
+\item[[\,3\!\!]] Ondes électromagnétiques dans les milieux diélectriques, Garing, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [2]} : Introduction historique en s'aidant du Becherrawy p7. Bref historique de l'optique. Rappeler le développement quasi parallèle de l'optique géométrique et ondulatoire. définir l'optique géométrique.
+
+
+\section{Le principe de Fermat}
+\subsection{Cadre de l'optique géométrique : définitions [2]}
+\begin{itemize}
+\item rayon lumineux : ligne suivant laquelle l'énergie lumineuse se propage (c'est une abstraction géométrique)
+\item on ne se préoccupe pas des phénomènes de diffraction ou d'interférences
+\item l'étude se veut purement géométrique et l'ensemble des lois sont basées sur un principe : le principe de moindre temps
+\end{itemize}
+
+\subsection{Chemin optique [2]}
+\begin{itemize}
+\item chemin optique : distance parcourue par la lumière \textbf{dans le vide} pendant le temps effectif de la propagation
+\item l'écrire sous forme intégrale en introduisant l'indice de réfraction dépendant évidemment de la position
+\item définir surface d'onde (attention, définition d'OPG : surface d'équin chemin optique par rapport à la source)
+\end{itemize}
+
+\subsection{Enoncé du principe de Fermat [2]}
+\begin{itemize}
+\item donner l'énoncé précis du principe : chemin stationnaire
+\item l'exprimer sous forme de différentielle de paramètres définis
+\item il est important d'en donner une représentation graphique
+\item préciser que ce n'est pas toujours un minimum (il faut donc se méfier de l'énoncé "principe de moindre temps")
+\end{itemize}
+
+\section{Démonstration des lois de l'optique géométrique à l'aide du principe de Fermat}
+\subsection{Propagation rectiligne et retour inverse [2]}
+\begin{itemize}
+\item puisque l'indice est homogène, l'extremum de chemin optique est simplement l'extremum de longueur parcourue -> cet extremum est un minimum et c'est la ligne droite!
+\item par ailleurs, le principe de retour inverse est évident! La stationnarité d'un chemin ne dépend pas de son sens de parcours (il y a égalité des intégrales)
+\end{itemize}
+
+\subsection{lois de Snell-Descartes [1]}
+Cette partie est mieux détaillée dans le BFR
+\subsubsection{Un résultat utile}
+faire la petite démonstration du BFR, utile pour la suite, donnant la variation du chemin optique en fonction du déplacement d'un point de passage du rayon. Attention, la démonstration n'est pas très parlante. Je préfère écrire explicitement la norme à partir des vecteurs. La norme du vecteur $\vect{A'B'}$ est à calculer après avoir décomposé ce vecteur comme  $\vect{A'B'}=\vect{AB}+\dd\vect{B}-\dd\vect{A}$
+
+\subsubsection{lois de la réflexion}
+Appliquer la formule précédente à ce cas particulier et retrouver les lois de la réflexion.
+
+\subsubsection{lois de la réfraction}
+Appliquer la formule précédente à ce cas particulier et retrouver les lois de la réfraction.
+
+\subsection{Théorème de Malus [1]}
+Reprendre la démonstration du BFR (qui utilise le "résultat utile" trouvé précédemment)
+
+
+\subsection{Equation des rayons lumineux [1]}
+\begin{itemize}
+\item reprendre la démonstration claire du Becherrawy, en passant d'abord par une succession de lames d'indices différents, puis en passant à la limite continue
+\item il calcule ensuite la pente locale 
+\end{itemize}
+
+\section{Applications}
+\subsection{Mirages [2]}
+\begin{itemize}
+\item expliquer les mirages à l'aide de la formule trouvée précédemment
+\item on ne cherchera pas à faire de calcul (il faudrait trouver une expression de l'indice en fonction de l'altitude), mais à expliquer les différents cas de figure.
+\item pour ce faire, on se limitera à l'expression différentielle (pente du rayon par rapport au sol)
+\item on constate que dans certaines conditions, le rayon peut carrément rebrousser (mirage oasis ou on voit le ciel au niveau de la Terre...)
+\item noter qu'à l'inverse, un sol froid produit un mirage supérieur où les objets semblent être dans le ciel.
+\item en fait, un mirage c'est simplement le cerveau qui est persuadé que la lumière se propage en ligne droite, et donc qui place l'objet dans le prolongement droit du faisceau...
+\end{itemize}
+
+\subsection{Fibres optiques [3]}
+\subsubsection{fibre à saut d'indice}
+\begin{itemize}
+\item on s'intéresse uniquement à la partie OPG de la propagation
+\item utiliser Snell Descartes pour expliquer la propagation par réflexion 
+\item évaluer la dispersion intermodale (qui est liée à l'angle maximal de la fibre : ouverture numérique)
+\end{itemize}
+
+\subsubsection{éviter la dispersion par des fibres à gradient d'indice}
+\begin{itemize}
+\item faire au tableau la partie résolution de l'équation puis passer sur transparent
+\item suivre le calcul du Garing jusqu'à l'évaluation du temps de propagation
+\item conclure sur l'avantage des fibres à gradient d'indice.
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : Ouvrir sur les limites de l'OPG. Nécessité de l'optique ondulatoire pour traiter de nombreux phénomènes. Plus tard, l'avénement de la mécanique quantique remettra en cause le caractère mécanique des particules matérielles. Ainsi, bien loin du débat de savoir si la lumière est une onde ou une particule, nous savons maintenant que la lumière, comme la matière ont un caractère ambivalent, à la fois onde et particule. 
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. L'indice optique est il une mesure absolue ou relative?} En tout état de cause, elle est relative. Seul le rapport de deux indices est caractérisante expérimentalement. Cependant, par convention, l'indice du vide est pris égal à 1, et tout indice mesuré par rapport à cette référence sera dit absolu.  
+
+\bk
+\noindent
+\textbf{2. Pourquoi une lentille convergente pour la lumière est elle divergente pour les ondes sonores?} Car le rapport des indices est inversé entre les deux cas. Un milieu dense possède un fort indice optique mais un faible "indice sonore" (le son se propage plus vite dans les milieux denses)  
+ 
+ \bk
+ \noindent
+\textbf{3. ODG de taille de la section d'une fibre optique. Atténuation.} coeur : $10 \mu m$, gaine $100 \mu m$, protection $250 \mu m$. Atténuation 0.1dB/km
+
+\bk 
+ \noindent
+\textbf{4. Pour la démonstration de Snell-Descartes, quels sont les chemins alternatifs considérés?} Ceux possibles par déplacement du point d'impact sur le dioptre. Les milieux sont homogènes, donc la propagation se doit d'y être rectiligne.  
+
+\bk
+\noindent
+\textbf{5. Exemple où le chemin optique est maximum? où il est constant?} Le chemin est maximum pour un miroir sphérique, constant pour un miroir elliptique.
+
+\end{document}

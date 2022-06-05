@@ -1,0 +1,133 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M26 : mesures de longueurs}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Thermodynamique, Diu, Hermann
+\item[[\,2\!\!]] Physique statistique, Diu, Hermann
+\item[[\,3\!\!]] Thermodynamique PC-PSI, Choimet, Précis Bréal
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+
+
+\section{Mesure de longues distances : télémétrie laser}
+\subsection{Principe de la mesure}
+\begin{itemize}
+\item diode laser pulsée ENSC009
+\item il n'y a pas vraiment de référence, on pourra regarder le BUP 570 (donne quelques indications sur le principe appliqué au cas de la mesure Terre-Lune)
+\item on fait un montage à lame semi : permet d'observer le signal direct et de retour -> on s'affranchit alors des temps de réponse des détecteurs
+\item soigner l'alignement et mettre une lentille de courte focale avant photodiode pour faire reconvertir le faisceau
+\end{itemize}
+
+\subsection{Résultats de la mesure}
+\begin{itemize}
+\item mesure par temps de vol (on peut prendre l'indice de l'air égal à l'unité à notre niveau de précision
+\item prendre la mesure de temps à mi-hauteur du pic (permet d'être plus précis qu'en prenant le maximum en résolution temporelle, puisque c'est le point d'inflexion). La dispersion est négligeable sur la propagation
+\item comparer la mesure par temps de vol à la lecture directe sur les graduations du banc (soigner les incertitudes)
+\end{itemize}
+
+\subsection{Intérêt et limite}
+\begin{itemize}
+\item l'incertitude ne dépend pas de la longueur mesurée (elle est donc particulièrement intéressante pour de longues distances)
+\item Mais il faut connaître la nature du milieu traversé pour remonter à $c$. Par ailleurs, le milieu doit être peu dispersif et transparent!
+\end{itemize}
+
+\section{Mesure précise de courtes distances}
+\subsection{Méthode interférométrique de mesure d'épaisseur d'une lame}
+\begin{itemize}
+\item régler le Michelson en lame d'air (lampe Na puis QI)
+\item si difficulté avec lampe QI, mettre en sortie fente et PVD -> on obtient un spectre canelé et chercher à faire grossir les cannelures 
+\item lame de verre sur la moitié du champ visuel et chariotage jusqu'à obtention de la figure d'interférence de nouveau (on remonte à l'indice du verre ou à l'épaisseur de la lame
+\item on peut aussi constater les écarts à la planéité car les franges perdent leur caractère rectiligne
+\end{itemize}
+
+\subsection{Mesure de position par capteur capacitif}
+\begin{itemize}
+\item utiliser la maquette de Jean ENSC 479
+\item monter un filtre RLC autour 
+\item l'électrode de garde devra être reliée à la masse commune
+\item on pourra augmenter la capa par une capacité en parallèle afin de limiter la fréquence de résonance
+\item on cherche la résonance en courant (fonction filtre passe bande)
+\item commencer à R grand pour trouver la résonance puis diminuer R pour augmenter la sensibilité
+\item selon le temps, on peut adapter un montage ampli non inverseur (mais prendre garde à rester largement dans la bande passante pour ne pas ajouter un déphasage intempestif!)
+\item à résonance les signaux sont en phase (aplatissement de l'ellipse en mode XY)
+\item faire la calibration à la vis micrométrique et en déduire la sensibilité
+\item on doit atteindre la sensibilité quasi interférométrique (on a obtenu 500nm de précision sur le condensateur très rapproché)
+\end{itemize}
+
+\section{Sonder la matière : diffraction de rayons X}
+\subsection{Principe}
+\begin{itemize}
+\item ENSC 445 tube de diffraction
+\end{itemize}
+
+\subsection{Résultats}
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+
+
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Durée de l'impulsion émise par la diode laser. Quel est le type de diode?}  
+
+\bk
+\noindent
+\textbf{2. Que veut dire l'indication sur la photodiode $f<3 \U{MHz}$?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Quelle est la nature du signal de sortie de la photodiode?}  
+
+\bk 
+ \noindent
+\textbf{4. Pourquoi ne pas directement prendre la différence de temps de vol entre le signal de la diode pulsé et celui reçu par la photodiode?}  
+
+\bk
+\noindent
+\textbf{5. Comment sont réalisés les étapes de gravure et de lecture sur un CD?}  
+
+\bk
+\noindent
+\textbf{6. Considérer l'indice de l'air unitaire pose il problème? }  
+
+\end{document}

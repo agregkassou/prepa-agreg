@@ -1,0 +1,165 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP15 : Etude statistique d'un système en contact avec un thermostat : probabilité canonique (L3)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item ensemble microcanonique et résultats associés
+\item thermodynamique élémentaire (fonction d'état, propriétés du GP...)
+\item passage somme intégrale à la limite continue
+\item potentiel thermodynamique
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item l'ensemble microcanonique, bien que fondamental n'a pas d'usage pratique. Il faut donc développer des ensembles plus réalistes, dont l'ensemble canonique
+\item l'énergie libre, qui devient le potentiel adapté doit être discuté : compétition entropie/énergie
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item avant toute chose il faut définir le cadre statistique de l'étude ainsi que les variables pertinentes associées (paramètres extérieurs et variables internes)
+\item le modèle d'Ising n'est pas un passage obligé
+\item parler de la compétition énergie/entropie dans l'expression de $F$
+\item donner la valeur de $k\e{B}$ et son unité. méthode de mesure
+\item bien savoir ce que signifie "être en contact avec un thermostat"
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Physique statistique, Diu, Hermann (contient toute la leçon!)
+\item[[\,2\!\!]] La physique statistique en exercices, Krivine, Vuibert (bon exercice)
+\item[[\,3\!\!]] Physique statistique et illustration en physique du solide, Hermann, Editions Polytechnique (calcul du GP)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]}
+S'inspirer de l'intro du chapitre 3 du Diu : dire que l'on connait maintenant la statistique des systèmes isolés (ensemble microcanonique) et que l'on va étendre nos connaissances à un autre type de système : les systèmes en contact avec un thermostat, pour lesquels les transferts thermiques sont libres. Propriété fondamentale : l'énergie n'est alors plus constante. Elle passe donc de paramètre extérieur à variable interne.
+
+\section{Système en contact avec un thermostat}
+\subsection{Notion de thermostat [1]}
+\noindent 
+p255
+\begin{itemize}
+\item préciser la notion
+\item en tirer les conséquences : écrire le DL1 de l'entropie du thermostat en fonction de l'énergie, utile pour la suite
+\end{itemize}
+
+\subsection{Température canonique d'un système, comparaison avec la situation microcanonique [1]}
+\noindent
+p257
+
+
+\subsection{exemples de systèmes décrits dans l'ensemble canonique [pas de réf.]}
+\begin{itemize}
+\item thermomètre mis au contact d'un système
+\item glaçon dans une piscine / glaçon dans un verre d'eau. La piscine est un bon thermostat mais pas le verre d'eau!
+\end{itemize}
+
+\section{Distribution canonique des états microscopiques}
+\subsection{Loi de probabilité canonique [1]}
+\noindent
+p257
+\begin{itemize}
+\item faire la démonstration à partir de la loi de probabilité microcanonique appliquée au système $\{S+Thermostat\}$
+\item le préfacteur de normalisation est la fonction de partition canonique $Z$
+\item les microétats ne sont plus équiprobables. Toutes les énergies sont a priori représentées mais avec une probabilité différente. 
+\item noter que la probabilité que le système présente un état d'énergie dépend de la compétition entre la dégénérescence (qui croit avec l'énergie, on l'explicitera par la suite) et le facteur exponentiel qui privilégie les états de faible énergie
+\item préciser $k\e{B}$ (unité et valeur) et donner un ODG de $kT$ à l'ambiante. 
+\end{itemize}
+
+
+\subsection{Distribution statistique de l'énergie [1]}
+\noindent
+p262
+\begin{itemize}
+\item donner la loi de probabilité en énergie en introduisant clairement le facteur de dégénérescence. On en donnera des expressions dans la partie III
+\item donner la définition de $\moyenne{E}$ et $\Delta E^2$ (parler des fluctuations! c'est l'apport de la physique statistique à la thermodynamique) puis leur expression en fonction de $Z$ (donné p269)
+\item passage à la limite continue (donner les conditions de passage, le Diu le fait clairement)
+\end{itemize}
+
+\subsection{Théorème d'équipartition de l'énergie [1]}
+\noindent
+p305
+\begin{itemize}
+\item Donner l'énoncé précis sans démonstration
+\item Faire la discussion physique du Diu (énergie cinétique de translation, de rotation, énergie potentielle harmonique)
+\end{itemize}
+
+\subsection{Mesure de $k\e{B}$ [2]}
+\noindent
+Exercice p35, correction p185. Exercice court et instructif. On utilise le théorème qu'on vient de citer sur un système classique (macroscopique), qui thermalise facilement avec son enceinte
+
+\section{L'énergie libre}
+\subsection{Définitions [1]}
+\noindent
+p268
+\begin{itemize}
+\item revenir sur $Z$ (son unique dépendance en $T$) et définir alors $F$ (donner l'unité de $F$)
+\item donner la relation $F=E-TS$ (sans démo)
+\item l'énergie libre, qui constitue le potentiel thermodynamique adapté à un système thermostaté, est minimale à l'équilibre. $E$ et $S$ étant des fonctions croissantes de l'énergie, on comprend qu'il existe une énergie pour laquelle $F$ est minimale. Le transfert thermique avec le thermostat est alors nulle, l'équilibre thermodynamique est atteint. Cet équilibre nait donc de la compétition entre énergie et entropie : \textbf{le système cherche à maximiser son entropie tout en minimisant son énergie}. [pas de référence]
+\item définir $P$ à partir de $F$.
+\end{itemize}
+
+\subsection{Equation d'état des gaz parfait à partir de la physique statistique [3]}
+\noindent
+p293
+\begin{itemize}
+\item Calculer dans le cas du GP : $Z \rightarrow F \rightarrow P$. On retrouve alors la loi des GP. \textbf{Il est important de ne pas prendre le Diu qui fait un traitement quantique...}
+\item utiliser le théorème d'équipartition pour obtenir $U$ et $C\e{V}$
+\end{itemize}
+
+\subsection{Etude d'un système à deux niveaux : fibre élastique sous tension [2]}
+\noindent
+exercice p40 et correction p197. Exercice simple et appliqué de systèmes à deux niveaux classiques. Modèle simple de physique statistique d'élasticité des fibres (selon le temps restant, on pourra développer plus ou moins l'exercice)
+
+\mk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item Faire le bilan des points clés
+\item ouvrir sur l'équivalence des ensembles statistiques à la limite thermodynamique (lorsque les fluctuations deviennent négligeables)
+\end{itemize}
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. $S=k \ln{\Omega}$ est elle vérifiée en canonique ?}  
+
+\bk
+\noindent
+\textbf{2. Quelles conditions faut-il vérifier pour passer de sommes discrètes à intégrations continue ?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Quand la description canonique et microcanonique est-elle équivalente ?}  
+
+\bk 
+ \noindent
+\textbf{4. Définition et condition de validité de l'approximation de Maxwell-Boltzmann}  
+
+\bk
+\noindent
+\textbf{5. Quand peut-on traiter un système quantique de manière classique ?}  
+
+\bk
+\noindent
+\textbf{6. Donner une interprétation statistique du travail et de la chaleur} 
+
+
+\end{document}

@@ -1,0 +1,557 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=latex 2011.7.3)  8 JUN 2014 17:49
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**M09.tex
+(./M09.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2009-06-19, ngerman-x-2009-06-19, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, galician, german, ngerman, swissgerman, monogreek, greek, hungarian,
+ icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, or
+iya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji,
+ lao, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, pol
+ish, portuguese, romanian, russian, sanskrit, serbian, serbianc, slovak, sloven
+ian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded
+.
+(./modele.sty (/usr/local/texlive/2011/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/frenchb.ldf
+Language: frenchb 2009/03/16 v2.3d French support from the babel system
+
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+Package babel Info: Making : an active character on input line 120.
+Package babel Info: Making ; an active character on input line 121.
+Package babel Info: Making ! an active character on input line 122.
+Package babel Info: Making ? an active character on input line 123.
+\FB@Mht=\dimen104
+\std@mcc=\count88
+\dec@mcc=\count89
+\parindentFFN=\dimen105
+
+*************************************
+* Local config file frenchb.cfg used
+*
+(/usr/local/texlive/2011/texmf-dist/tex/generic/babel/frenchb.cfg)))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/vmargin/vmargin.sty
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
+
+Package: vmargin 2004/07/15 V2.5 set document margins (VK)
+\PaperWidth=\dimen106
+\PaperHeight=\dimen107
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count90
+\calc@Bcount=\count91
+\calc@Adimen=\dimen108
+\calc@Bdimen=\dimen109
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count92
+\calc@Cskip=\skip54
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box26
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2004/02/20 v4.1e the supertabular environment
+\c@tracingst=\count93
+\ST@wd=\dimen110
+\ST@rightskip=\skip55
+\ST@leftskip=\skip56
+\ST@parfillskip=\skip57
+\ST@pageleft=\dimen111
+\ST@headht=\dimen112
+\ST@tailht=\dimen113
+\ST@pagesofar=\dimen114
+\ST@pboxht=\dimen115
+\ST@lineht=\dimen116
+\ST@stretchht=\dimen117
+\ST@prevht=\dimen118
+\ST@toadd=\dimen119
+\ST@dimen=\dimen120
+\ST@pbox=\box27
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip58
+\LTright=\skip59
+\LTpre=\skip60
+\LTpost=\skip61
+\LTchunksize=\count94
+\LTcapwidth=\dimen121
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count95
+\LT@rows=\count96
+\c@LT@tables=\count97
+\c@LT@chunks=\count98
+\LT@p@ftn=\toks17
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
+\c@tracingmulticols=\count99
+\mult@box=\box32
+\multicol@leftmargin=\dimen122
+\c@unbalance=\count100
+\c@collectmore=\count101
+\doublecol@number=\count102
+\multicoltolerance=\count103
+\multicolpretolerance=\count104
+\full@width=\dimen123
+\page@free=\dimen124
+\premulticols=\dimen125
+\postmulticols=\dimen126
+\multicolsep=\skip62
+\multicolbaselineskip=\skip63
+\partial@page=\box33
+\last@line=\box34
+\mult@rightbox=\box35
+\mult@grightbox=\box36
+\mult@gfirstbox=\box37
+\mult@firstbox=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\@tempa=\box54
+\@tempa=\box55
+\c@columnbadness=\count105
+\c@finalcolumnbadness=\count106
+\last@try=\dimen127
+\multicolovershoot=\dimen128
+\multicolundershoot=\dimen129
+\mult@nat@firstbox=\box56
+\colbreak@box=\box57
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen130
+\WF@size=\dimen131
+\c@WF@wrappedlines=\count107
+\WF@box=\box58
+\WF@everypar=\toks18
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/fancybox/fancybox.sty
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box59
+\shadowsize=\dimen132
+\@Sbox=\box60
+\do@VerbBox=\toks19
+\the@fancyput=\toks20
+\this@fancyput=\toks21
+\EndVerbatimTokens=\toks22
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read1
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen133
+\Gin@req@width=\dimen134
+)
+\c@r@tfl@t=\count108
+\rotFPtop=\skip64
+\rotFPbot=\skip65
+\rot@float@box=\box61
+\rot@mess@toks=\toks23
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2006/05/08 v1.12 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip66
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks24
+\ex@=\dimen135
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen136
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count109
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count110
+\leftroot@=\count111
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count112
+\DOTSCASE@=\count113
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box62
+\strutbox@=\box63
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
+\dotsspace@=\muskip10
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
+\tag@help=\toks25
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
+\andhelp@=\toks26
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks27
+\multlinegap=\skip67
+\multlinetaggap=\skip68
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks29
+\verbatim@line=\toks30
+\verbatim@in@stream=\read2
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen144
+\extrarowheight=\dimen145
+\NC@list=\toks31
+\extratabsurround=\skip69
+\backup@length=\skip70
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/curves/curves.sty
+Package: curves 2009/08/31 1.53 Curves for LaTeX picture environment
+\;sc=\count121
+\;scp=\count122
+\;t=\count123
+\;cc=\count124
+\;cnd=\count125
+\;mcnd=\count126
+\;np=\count127
+\;overhang=\count128
+\;pbs=\count129
+\;pns=\count130
+\;psc=\count131
+\;rc=\count132
+\;rtc=\count133
+\;tc=\count134
+\csdiameter=\skip71
+\curvelength=\skip72
+\overhang=\skip73
+\;x=\skip74
+\;dx=\skip75
+\;ddx=\skip76
+\;y=\skip77
+\;dy=\skip78
+\;ddy=\skip79
+\;pl=\skip80
+\;ucd=\skip81
+\;csbox=\box64
+\;pt=\box65
+\;strline=\toks32
+\m;ssingcoord=\toks33
+\;negdash=\toks34
+\;oddcoord=\toks35
+\;wc=\count135
+\;X=\skip82
+\;Y=\skip83
+)
+(/usr/local/texlive/2011/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count136
+\d@lta=\count137
+\@delta=\dimen146
+\@@delta=\dimen147
+\@gridcnt=\count138
+\@joinkind=\count139
+\@dotgap=\dimen148
+\@ddotgap=\dimen149
+\@x@diff=\count140
+\@y@diff=\count141
+\x@diff=\dimen150
+\y@diff=\dimen151
+\@dotbox=\box66
+\num@segments=\count142
+\num@segmentsi=\count143
+\@datafile=\read3
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/eepic/eepic.sty
+Extension to Epic and LaTeX. Version 1.1e - Released Dec 21, 1999
+\@gphlinewidth=\count144
+\@eepictcnt=\count145
+\@tempdimc=\dimen152
+\maxovaldiam=\dimen153
+\@filltype=\box67
+) (/usr/local/texlive/2011/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen154
+\epsfysize=\dimen155
+)
+\c@nombreDeCorriges=\count146
+\c@ifnote=\count147
+\c@IfAlignementEnonces=\count148
+\c@Corrige=\count149
+\c@Equation=\count150
+\c@numerocorrige=\count151
+\c@decalagegris=\count152
+\barreHorizontaleVarTitre=\skip84
+\PartieWidth=\skip85
+\souspartiewidth=\skip86
+\c@lareponse=\count153
+\c@corrigeMoinsUn=\count154
+\positionVerticaleDuRectangle=\skip87
+\positionHorizontaleDuRectangle=\skip88
+\longueurDuRectangle=\skip89
+\Sujet=\skip90
+\Resume=\skip91
+\Enonces=\skip92
+\Corriges=\skip93
+\tdmEntreLesColonnes=\skip94
+\tdmspace=\skip95
+\tdmintraspace=\skip96
+\tdmEspaceAvantTitreConcours=\skip97
+\tdmEspaceApresTitreConcours=\skip98
+\TitreCouche=\skip99
+\tailleminsommairecroise=\skip100
+\taillemaxsommairecroise=\skip101
+\intervallesommairecroise=\skip102
+\hauteursommairecroise=\skip103
+\grandehauteursommairecroise=\skip104
+\longueursommairecroise=\skip105
+\alignelength=\skip106
+\longueurindentation=\skip107
+\c@Note=\count155
+\c@notesimple=\count156
+\c@notemark=\count157
+\c@notemarkref=\count158
+\c@notetext=\count159
+\c@notetextref=\count160
+\c@cinquantaine=\count161
+\c@centaine=\count162
+\bk@bxb=\box68
+\bk@bxa=\box69
+\bk@lcnt=\count163
+\strutdepth=\skip108
+\c@Centers=\count164
+\c@vcenterstest=\count165
+\leftlength=\skip109
+\rightlength=\skip110
+\vcentersskip=\skip111
+\calculskip=\skip112
+\boite=\box70
+\bracketlength=\skip113
+\longueurarcdecercle=\skip114
+\pmlength=\skip115
+LaTeX Font Info:    Try loading font information for U+msa on input line 3319.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3319.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 3319.
+
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+\pmsmalllength=\skip116
+\pmgraslength=\skip117
+\pmgrassmalllength=\skip118
+\restsubwidth=\skip119
+\restsubheight=\skip120
+\restsubmoreheight=\skip121
+LaTeX Font Info:    Redeclaring symbol font `rsfs' on input line 3996.
+LaTeX Font Info:    Overwriting symbol font `rsfs' in version `normal'
+(Font)                  U/rsfs/m/n --> U/rsfs/m/n on input line 3996.
+LaTeX Font Info:    Overwriting symbol font `rsfs' in version `bold'
+(Font)                  U/rsfs/m/n --> U/rsfs/m/n on input line 3996.
+\moreinterligne=\skip122
+\letterarrowvskip=\skip123
+\vectlength=\skip124
+\vectheight=\skip125
+\boxlength=\skip126
+\smoreinterligne=\skip127
+\sletterarrowvskip=\skip128
+\svectlength=\skip129
+\svectheight=\skip130
+\sboxlength=\skip131
+\sebtemp=\skip132
+\boxrulewidth=\skip133
+\boxrulesep=\skip134
+\gauchelong=\skip135
+\gauchelongadd=\skip136
+\droitelong=\skip137
+\colonnealong=\skip138
+\colonneblong=\skip139
+\colonneclong=\skip140
+\maxhaut=\skip141
+\maxbas=\skip142
+) (./M09.aux)
+\openout1 = `M09.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Info: Redefining \degres on input line 5.
+LaTeX Info: Redefining \dots on input line 5.
+LaTeX Info: Redefining \up on input line 5.
+
+[1
+
+] [2] (./M09.aux) ) 
+Here is how much of TeX's memory you used:
+ 4965 strings out of 493634
+ 56770 string characters out of 3143401
+ 139740 words of memory out of 3000000
+ 8155 multiletter control sequences out of 15000+200000
+ 21109 words of font info for 64 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 34i,11n,43p,282b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on M09.dvi (2 pages, 6800 bytes).

@@ -1,0 +1,158 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP04 : lois de conservation en dynamique des systèmes (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item mécanique du point
+\item mécanique du solide
+\item principe des bilans
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item bien choisir le système isolé d'étude
+\item les lois de conservation permettent de résoudre des problèmes même en présence de forces inconnues
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item Il faut insister sur un message : on peut parfois résoudre certains problèmes sans connaître certaines forces
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Mécanique 2e année, Gié, Tec \& Doc (pour la structure de la leçon)
+\item[[\,2\!\!]] Mécanique 1ere année, Brasselet, Puf (pour les collisions entre autres choses)
+\item[[\,3\!\!]] J'intègre 1ere année, Sanz, Dunod (pour les forces centrales)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]} : reprendre l'introduction excellente du Gié
+\begin{itemize}
+\item on connait la conservation de la masse ou de la charge
+\item il existe aussi des grandeurs conservées en mécanique
+\item introduit avec la mécanique newtonienne, elles sont en fait bien plus larges
+\item valable pour des points matériels, des solides, des systèmes de solides, ou encore des milieux continus
+\end{itemize}
+
+\section{Les lois de conservation [1]}
+
+\subsection{lois d'évolution des grandeurs mécaniques}
+\begin{itemize}
+\item  s'inspirer largement du Gié
+\item rappeler les trois lois d'évolution associées à l'énergie mécanique, au moment cinétique et à l'impulsion
+\item c'est de ces théorèmes que l'on construit les lois de conservation
+\item noter l'analogie avec l'électromagnétisme par exemple : une grandeur varie sous l'influence d'un terme source
+\end{itemize}
+
+\subsection{Conservation de la quantité de mouvement}
+\begin{itemize}
+\item définir système isolé (redonner la définition très générale de système)
+\item donner alors la loi de conservation
+\item conséquence fondamentale (l'impulsion de l'univers se conserve) et conséquence approximative (puisqu'un système n'est jamais isolé, mais l'est dans une "bonne approximation")
+\item conséquence : la Terre subit un mouvement de recul lorsqu'un coureur démarre. Il faut alors considérer le rapport des masses!
+\item traiter du cas du système ouvert fusée : propulsion par éjection de matière (fait dans le Gié)
+\end{itemize}
+
+
+\subsection{Conservation du moment cinétique}
+\begin{itemize}
+\item moment cinétique conservé si le moment des forces extérieures est nul
+\item cette conservation est exploitée pour construire un gyroscope
+\item expliquer très rapidement le principe : pourquoi l'axe de rotation reste fixe quelque soit le mouvement du châssis -> intérêt en guidage
+\end{itemize}
+
+\subsection{Conservation de l'énergie mécanique}
+\begin{itemize}
+\item différence fondamentale avec les deux lois précédentes : il faut également que la puissance des actions intérieures soit nulle!
+\item prendre un système de deux solides en contact avec frottement
+\item montrer que l'impulsion totale est conservée dans le réf galiléen mais pas l'énergie totale (dissipée par frottement)
+\end{itemize}
+
+\section{Mouvement dans un champ à force centrale [3]}
+\subsection{Position du problème }
+\begin{itemize}
+\item poser les notations
+\item définir force centrale conservative (qui dérive d'un potentiel)
+\item donner des exemples de forces centrales conservatives (gravité, ressort, électrostatique)
+\item donner les potentiels associés
+\end{itemize}
+
+\subsection{Conservation de la quantité de mouvement}
+\begin{itemize}
+\item repartir du TMC 
+\item prouver que l'on a alors conservation du moment cinétique
+\item valeur en coordonnées polaires
+\item en déduire la planéité de la trajectoire et la loi des aires
+\end{itemize}
+
+\subsection{Conservation de l'énergie}
+\begin{itemize}
+\item la force étant conservative et le système isolé, l'énergie se conserve
+\item introduire la notion d'énergie potentielle effective
+\item analyse graphique des trajectoires : état de diffusion, état lié, trajectoire circulaire
+\end{itemize}
+
+\section{Collisions [2]}
+\subsection{position du problème}
+\begin{itemize}
+\item on se limite à une étude classique du chocs entre deux points matériels (surtout ne pas faire de relativité ici)
+\item expliquer le grand intérêt des lois de conservation dans ce cas. Ici, il n'est pas possible de connaitre les équations du mouvement pendant le choc
+\item on utilise donc les lois de conservation pour lier l'état après choc à l'état avant choc
+\item choc = force infinie et durée de contact nulle
+\end{itemize}
+
+\subsection{lois de conservation lors d'un choc}
+\begin{itemize}
+\item conservation de l'impulsion
+\item observation de l'énergie sous la condition d'un choc élastique (préciser que les forces extérieures n'ont pas le temps de travailler pendant le choc). En revanche, les forces intérieures sont très importantes. 
+\item parler aussi de la conservation de l'énergie cinétique, puisque l'énergie potentielle est automatiquement conservée (la définition d'un choc est que les particules se voient uniquement sur une plage finie de l'espace)
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion [1]} : revenir sur le statut particulier de l'énergie dans les lois de conservation. En fait, l'énergie microscopique totale est bien conservée. En fait la thermodynamique explique ce "paradoxe" macroscopique en introduisant une énergie interne. L'énergie mécanique totale est donc la somme de l'énergie mécanique macroscopique et de l'énergie interne (de nature microscopique)
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. D'où vient l'énergie de couplage pour deux pendules? Comment l'obtient-on?}  
+
+\bk
+\noindent
+\textbf{2. Que cherchait Rutherford lorsqu'il a monté son expérience?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Réecrire les théorèmes précédents dans le cas de systèmes ouverts.}  
+
+\bk 
+ \noindent
+\textbf{4. Théorème de Noether.} Associer une propriété d'invariance à toute constante du mouvement :
+\begin{itemize}
+\item conservation de l'impulsion = homogénéité de l'espace
+\item conservation du moment cinétique = isotropie de l'espace
+\item conservation de l'énergie = homogénéité du temps
+\end{itemize}
+
+\end{document}

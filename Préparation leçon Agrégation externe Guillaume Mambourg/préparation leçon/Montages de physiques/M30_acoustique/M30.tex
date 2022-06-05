@@ -1,0 +1,121 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M30 : acoustique}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item c'est une onde! avec tout ce que cela comporte...
+\item s'intéresser aux conditions aux limites
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Sismologie, Montagner, Hachette (pour la vitesse de propagation)
+\item[[\,2\!\!]] livre de spé pour les généralités
+\item[[\,3\!\!]] Ondes acoustiques, Chaigne, Editions de l'Ecole Polytechnique (excellente référence théorique)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : \underline{manipulation} : expérience de la bougie agitée par un HP en basse fréquence. L'onde sonore se propage et est matérielle.
+
+
+\section{Mode de propagation d'une onde}
+\subsection{Vitesse de propagation libre du son dans l'air : vérification du modèle adiabatique}
+\begin{itemize}
+\item kit Moduson ENSC 431
+\item on connait la fréquence à l'oscillo. Il suffit alors de connaître le nombre de périodes que l'on voit lorsqu'on se déplace d'une distance connue pour remonter à la vitesse
+\item comparer à la valeur donnée par le modèle isotherme et le modèle adiabatique : le modèle adiabatique est bien meilleur!
+\end{itemize}
+
+\subsection{Vitesse de propagation dans l'eau}
+\begin{itemize}
+\item faire de même dans l'eau avec le kit ENSC 410.
+\item  cette fois, on connait la distance entre les émetteurs et le temps de propagation d'un pulse -> on a ainsi la vitesse de propagation dans le milieu
+\end{itemize}
+
+\subsection{Modes de propagation dans le duralumin (solide) [1]}
+\begin{itemize}
+\item ENSC 410 (la fiche est très complète, il suffit de la suivre)
+\item dans ce montage, on fera une évaluation rapide des vitesses longitudinales et transversales par mesure des angles limite de réfraction
+\item utiliser les expressions données dans le Montagner pp 55-56 : relie vitesse de propagation et coefficients de Lamé puis module d'Young et coefficients de Lamé. Il faut uniquement connaître la masse volumique du matériau
+\end{itemize}
+
+\section{Influence des conditions aux limites}
+\subsection{Reflexion-transmission à l'interface entre deux milieux}
+\begin{itemize}
+\item utilisation du tube de Kundt
+\item on s'intéresse aux conséquences de la condition limite imposée
+\item le HP est supposé tout absorbé (on ne forme pas vraiment une cavité résonante), puisqu'on impose une unique condition limite de réflexion
+\item on se place tout de même à une fréquence résonante pour la pseudo-cavité
+\item on est dans le mode (0,0), comme toujours en acoustique
+\item par conséquent, la vitesse de propagation du son est sensiblement égale à la vitesse dans la vide : le vérifier en évaluant la distance inter-noeud
+\item ensuite, on s'intéresse au taux d'ondes stationnaires, TOS, qui nous donne la valeur de l'impédance terminale
+\item biblio à trouver!
+\end{itemize}
+
+\subsection{Modes de vibration d'une corde : fondamental et harmoniques}
+\begin{itemize}
+\item \textbf{attention, ne pas oublier de faire partir le matériel à l'agrég!}
+\item exciter une corde de piano par pincement (donner un triangle de position initiale)
+\item acquisition au micro et TF
+\item montrer que l'on obtient le fondamental puis les harmoniques
+\item on peut intégrer ce spectre sur Igor : on obtient alors facilement l'"aire" sous chaque pic et donc la puissance spectrale. On constate comme attendu dans la théorie une décroissance en $1/n^2$
+\item il faut rester assez qualitatif tout de même
+\end{itemize}
+
+
+\section{Interférences temporelles : battements}
+\begin{itemize}
+\item montrer la transmission de l'énergie d'une onde sonore sur un autre exemple : prendre deux diapasons accordés, en exciter un, puis l'éteindre. Constater alors que le second résonne (il est entré en résonance par le transfert énergétique du premier)
+\item refaire la même manipulation avec deux diapasons désaccordés : ça ne marche plus
+\item maintenant exciter les deux diapasons simultanément (et avec une impulsion de puissance comparable) et acquérir le signal à l'oscilloscope
+\item constater sur le signal en temporel l'effet de battements
+\item faire le spectre par TF et expliquer les deux pics : excitation des deux fréquences de résonance
+\item on retrouve bien les propriétés interférentielles temporelles propres à des ondes 
+\end{itemize}
+
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Le temps de propagation dans les coax ne fausse il pas la mesure de la célérité dans l'eau?} Non, vu le rapport entre la vitesse du son et des OEM.  
+
+\bk
+\noindent
+\textbf{2. Et le temps de réponse des capteurs récepteurs?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Le duralumin utilisé est il monocristallin?} non  
+
+\bk 
+ \noindent
+\textbf{4. Sur quel interface y-a-t-il réflexion totale?} Sur l'interface eau/duralumin. L'indice acoustique du duralumin est supérieur.
+
+\bk
+\noindent
+\textbf{5. Quelle fréquence mesure on lorsque l'on fait battre deux diapasons?}  
+
+
+\end{document}

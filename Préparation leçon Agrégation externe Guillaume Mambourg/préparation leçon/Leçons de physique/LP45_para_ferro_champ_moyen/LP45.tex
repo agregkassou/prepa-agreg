@@ -1,0 +1,190 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP45 : Paramagnétisme, ferromagnétisme, approximation de champ moyen (L3)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item électromagnétisme dans la matière
+\item ensemble canonique (facteur de Boltzmann, fonction de partition)
+\item mécanique quantique (principe de Pauli, fermion/boson)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item origines physiques microscopiques à établir
+\item complexité du phénomène et nécessité d'une modélisation
+\item bien expliquer la théorie de champ moyen (hypothèses et conséquences)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item L'influence de $T$ sur les propriétés magnétiques est au coeur de la leçon
+\item Le moment magnétique, son image semi-classique et son ODG (magnéton de Bohr) doivent être maitrisées.
+\item il faut savoir démontrer l'ODG de l'aimantation maximale d'un aimant.
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Physique statistique, Diu, Hermann
+\item[[\,2\!\!]] Magnétisme : fondements, Trémolet de Lacheisserie, EDP Sciences
+\item[[\,3\!\!]] Physique des solides, Ashcroft, EDP Sciences
+\item[[\,4\!\!]] Electromagnétisme II, Feynman, Dunod
+\item[[\,5\!\!]] Electromagnétisme IV, BFR, Dunod (juste pour un ODG...)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+
+\noindent 
+\underline{manipulation} : Placer trois barreaux (bismuth, aluminium, fer) dans l'entrefer d'un électroaimant créant un gradient de champ magnétique. Parler alors du diamagnétisme. On évacue ainsi le problème dès l'intro. (s'assurer que cette manip est disponible avec notre matériel)
+
+
+\section{Description microscopique de la matière}
+\subsection{Provenance microscopique de l'aimantation [2]}
+\subsubsection{Une approche classique [2]}
+S'inspirer du Trémolet mais principalement le faire soi-même. On mène la démonstration simple dans le cas d'un électron en mouvement circulaire autour du noyau.On obtient alors le rapport gyromagnétique classique. Pour aller plus loin, il faut quantifier!
+
+\subsubsection{Quantification et facteur de Landé [2]}
+\begin{itemize}
+\item parler de l'étape de quantification du moment orbital et introduire le magnéton de Bohr
+\item dire qu'il y a aussi une contribution de spin : introduire le facteur de Landé
+\item enfin il faut considérer le moment total des électrons d'une couche
+\item la MQ dit qu'il existe encore une relation linéaire entre moment cinétique total et moment magnétique total. La correction numérique étant contenue dans le rapport gyromagnétique.
+\item dans toute la suite, on se limitera au cas d'un spin 1/2 sans contribution orbitale. On suppose alors que le rapport gyromagnétique vaut 2
+\end{itemize}
+
+\subsection{Quels matériaux sont paramagnétiques? [3]}
+\begin{itemize}
+\item faire l'étude de 3 cas : il faut des électrons non appariés!
+\item montrer que $O_2$ est paramagnétique
+\item montrer que le bismuth l'est également mais pas sous forme condensée puisque c'est la couche la plus externe qui est partiellement remplie et elle est en fait remplie par les liaisons dans le cristal
+\item par contre pour le fer, c'est une couche d qui est partiellement remplie. il est paramagnétique. 
+\end{itemize}
+%
+%\subsection{Calcul du facteur de Landé [2]}
+%Présenter la formule de calcul du facteur de landé (dans les hypothèses du théorème de Wigner-Eckart) et calculer dans le cas du fer (en utilisant les données précédemment établies de J,L et S)
+
+\section{Paramagnétisme}
+\subsection{Modèle descriptif : écriture du hamiltonien [1]}
+\noindent
+Reprendre la formulation de Diu
+\begin{itemize}
+\item hypothèses : N atomes sans interaction aux noeuds d'un réseau à l'équilibre à $T$. En l'absence de champ, tous les atomes sont dans leur état fondamental
+\item écrire l'hamiltonien pour l'état d'un spin (puisque l'indépendance permet de séparer le problème)
+\end{itemize}
+
+\subsection{Calcul de l'aimantation [1]}
+\begin{itemize}
+\item on se place dans le cas particulier simple $J=\tf{1}{2}$
+\item évaluer la fonction de partition à une particule
+\item donner alors l'aimantation (mais de manière intuitive, ne pas suivre le Diu en passant par $F$) et en utilisant plutôt une écriture quantique de la moyenne. Expliquer que les moyennes selon x et y sont nulles car il y a équiprobabilité (on pourra dans chaque cas calculer cette probabilité)
+\end{itemize}
+
+\subsection{Loi de Curie, analyse [1] et [5]}
+\begin{itemize}
+\item calculer la limite haut et bas champ 
+\item en déduire l'existence d'une saturation (+ ODG de la valeur de l'aimantation à saturation et champ à appliquer pour saturer à l'ambiante, donné dans le BFR) et la présence d'un régime linéaire à bas champ -> c'est la loi de Curie pour la susceptibilité (difficilement exploitable pusiqu'on s'est limité à $J=1/2$...). Mais en fait théorie et expérience sont en excellents accords dans les cas $J=S$. Sinon c'est plus compliqué...
+\end{itemize}
+
+\section{Ferromagnétisme}
+\subsection{Ajout d'une interaction d'origine quantique [1]}
+\begin{itemize}
+\item écrire le nouvel hamiltonien et préciser le signe de $J$ et l'hypothèse d'interaction de premiers voisins
+\item développer l'origine physique du ferromagnétisme (impossibilité d'une explication d'interaction magnétique. Explication purement quantique du type : fonction d'onde spatiale antisymétrique minimise l'énergie coulombienne d'interaction et est donc favorable)
+\end{itemize}
+
+\subsection{Approximation de champ moyen : hypothèses et résultats}
+Suivre en tout point le Diu p453-454. On isole l'hamiltonien d'un spin et on prend pour chaque spin voisin une orientation en lien avec l'aimantation moyenne de l'échantillon. On obtient alors un champ magnétique effectif. On obtient alors une équation autocohérente pour l'aimantation qu'on va résoudre graphiquement. Donner ODG de l'aimantation à saturation pour les ferro (valeur très élevée)
+
+\subsection{Résultats}
+\subsubsection{Résolution graphique}
+\begin{itemize}
+\item propriétés du système en champ nulle : mise en évidence d'une température critique (en deçà de laquelle le matériau est para)
+\item \underline{manipulation} : observation de la désaimantation d'un clou chauffé. Il existe une température pour laquelle le caractère ferro (ici qui se traduit par une très forte susceptibilité magnétique) est perdue à haute température. donner des ODG de température critique p446 pour différents matériaux.
+\item traiter le cas d'un champ magnétique extérieur non nul.
+\item tracer $M(B=0)=f(T)$ obtenue dans l'approximation de champ moyen
+\item tracer $M=f(B)$ dans le cadre de ce modèle. (p448 du Diu)
+\item pour de nombreux ferromagnétiques, l'aimantation à champ nulle est proche de l'aimantation à saturation. Si bien que le domaine de saturation est atteint pour des champs raisonnables aux températures usuelles dans le cas des ferromagnétiques.
+\end{itemize}
+
+\subsubsection{Confrontation à l'expérience [4]}
+\noindent
+Suivre le chapitre 37.3 du Feynman
+\begin{itemize}
+\item la théorie microscopique prévoit une aimantation spontanée à champ nul. Or un bout de fer n'est pas aimanté spontanément.
+\item \underline{manipulation} : monter la manipulation domaines de Weiss macroscopique sur l'échantillon prévu à cet effet (microscope + caméra)
+
+\noindent
+->compétition entre énergie d'interaction et minimisation de l'énergie magnétique : naissance de domaine de Weiss séparé par des parois (Dans ces domaines, l'aimantation vaut l'aimantation à champ nulle à la température donnée). Le champ extérieur résultant est nul.
+\item explication de l'hystérésis par des phénomènes dissipatifs lors du déplacement des parois de Bloch dans un cycle d'aimantation
+\item on peut alors distinguer les matériaux durs (très dissipatif, gel de l'orientation) et doux (faible dissipation, parois de Bloch mobiles, le matériaux conserve peu la mémoire de son aimantation précédente).
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item bilan des points clés : rappeler les grandes caractéristiques des différents milieux magnétiques (dia/para/ferro): caractéristiques microscopiques, susceptibilité, saturation
+\item ouverture : nombreux domaines d'application du ferromagnétisme
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. La formule de calcul du facteur de Landé est-elle universelle? Quelles sont les hypothèses?}  
+
+\bk
+\noindent
+\textbf{2. Comment déterminer expérimentalement le facteur de Landé d'un atome particulier?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Valeur de la susceptibilité magnétique pour dia/para/ferro}  
+
+\bk 
+ \noindent
+\textbf{4. Comment atteindre le domaine de saturation d'un matériau paramagnétique?}  
+
+\bk
+\noindent
+\textbf{5. Quelle valeur de champ magnétique peut-on atteindre avec aimant, bobines, supra?}  
+
+\bk
+\noindent
+\textbf{6. Expliquer avec les mains la fonction de partition.}  
+
+\bk
+\noindent
+\textbf{7. D'où vient la formule $\vect{M}=I\vect{S}$?}  
+
+\bk
+\noindent
+\textbf{8. Explique le diamagnétisme. Vision classique/semi-classique.}  
+
+\bk
+\noindent
+\textbf{9. Qu'est-ce qu'un phonon? Lien et différence avec un photon.}  
+
+\bk
+\noindent
+\textbf{10. Qu'est-ce que l'approximation classique?}  
+
+\end{document}

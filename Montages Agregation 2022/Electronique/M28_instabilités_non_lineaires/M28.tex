@@ -1,0 +1,99 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M28 : instabilités et phénomènes non linéaires}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Gouttes, bulles, perles et ondes, De Gennes, Belin
+\item[[\,2\!\!]] Hydrodynamique physique, Guyon, EDP sciences
+\item[[\,3\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,4\!\!]] Mécanique 1 1ere année, Faroux \& Renault, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : Le but est de montrer que l'idée (chère au physicien) de linéariser pour simplifier trouve parfois ses limites, même pour des systèmes très simples. On cherchera à mettre en évidence l'apparition de ces non linéarités ainsi que leurs conséquences. L'expérience se prête particulièrement à ce domaine où une démarche analytique achoppe souvent.
+
+
+\section{Etude non linéaire du pendule pesant [4]}
+\subsection{Présentation du problème}
+\begin{itemize}
+\item la période dépend de l'amplitude des oscillations
+\item on s'intéresse à cette dépendance. 
+\item méthode : faire un lancer à très grande amplitude et une acquisition Pasco puis une exportation Igor
+\item relever alors sur cette acquisition la période en fonction de l'amplitude (les frottements assurent la décroissance de l'amplitude, mais comme ils sont faibles, on peut sur de faibles plages, considérer l'amplitude conservée)
+\end{itemize}
+
+\subsection{Mise en évidence du non isochronisme des oscillations}
+\begin{itemize}
+\item on trace alors un diagramme fréquence en fonction de l'amplitude
+\item comparer aux valeurs théoriques : on trace plusieurs ordres de développement de la formule 
+\centers{$T=4\sqrt{\f{l}{g}}\pac{\f{\pi}{2}+\f{\pi}{8}\sin^2{\f{\theta_0}{2}}}$}
+\item cette formule se retrouve par exemple dans le FR de mécanique 1ere année
+\item on constate qu'il faut des ordres de développement de plus en plus élevés pour expliquer les valeurs obtenues
+\end{itemize}
+
+\section{Le bifurcateur mécanique}
+\subsection{Instabilité de Rayleigh Plateau : minimisation de l'énergie totale [1]}
+\begin{itemize}
+\item manipulation proposée dans le De Gennes
+\item utiliser un fil de nylon et faire l'humidifier par un mélange glycérol/eau coloré
+\item observer la naissance d'instabilité 
+\item ne pas chercher à remonter à la longueur d'onde caractéristique (le phénomène est relativement rapide et en fait, on n'observe pas le mode qui se forme le plus rapidement mais celui qui est le plus stable!) -> il n'empêche, on a montré un joli phénomène d'instabilité
+\end{itemize}
+
+\subsection{Mise en évidence d'un seuil d'instabilité : le bifurcateur [2]}
+\begin{itemize}
+\item Le Guyon p108 traite très bien le problème (partie théorique brève et explication physique avec lien avec des transitions de phase plus utiles!)
+\item l'équilibre des forces tangentielles donne : $mg \sin{\theta}=m \Omega^2 R \sin{\theta}\cos{\theta}$
+\item ainsi pour $\Omega<\Omega\e{c}=\sqrt{g/R}$, une solution stable $\theta=0$
+\item pour $\Omega>\Omega\e{c}$, deux solutions stables $\theta=\pm \theta\e{e}=\arccos{(g/\Omega^2R)}$ (et une instable $\theta=0$)
+\item on en fait la vérification expérimentale en traçant le diagramme de bifurcation du système
+\item pour cela, relever la fréquence de rotation (laser/photodiode coupé par le cerceau, en faisant attention au fait qu'alors la fréquence lue à l'oscillo est double de la fréquence de rotation!) et l'angle que fait la bille par rapport à la verticale
+\item pour la mesure d'angle utiliser un stroboscope réglé à la fréquence lue à l'oscilloscope (permet d'"arrêter" visuellement le cerceau
+\item montrer le diagramme de bifurcation
+\item on peut vérifier que la valeur de $\Omega\e{c}$ coïncide avec la théorie puis tracer $\cos{theta}=f(1/\Omega^2)$ et s'assurer que l'on obtient une droite
+\end{itemize}
+
+\section{Saturation sur un système divergent : oscillateur à résistance négative [3]}
+\subsection{Présentation du circuit-portrait de phase}
+\begin{itemize}
+\item on exploite ici un type particulier d'oscillateurs de Van Der Pol
+\item donner les deux régimes de fonctionnement de la résistance négative : linéaire et saturé 
+\item mettre en évidence la condition de démarrage des oscillations
+\end{itemize}
+
+\subsection{Influence de la tension de polarisation de l'AO sur l'attracteur}
+\begin{itemize}
+\item remarquer que l'allure du cycle limite ne dépend que des paramètres de l'oscillateurs (pas des conditions initiales)
+\item montrer qu'à gain élevé on a toujours un cycle mais de plus en plus déformé -> on s'écarte du critère de Barkhausen (faire le lien entre visualisation temporelle et cycle dans l'espace des phases)
+\end{itemize}
+
+\subsection{Enrichissement spectral par l'effet non linéaire de la saturation}
+\begin{itemize}
+\item le mouvement est périodique donc l'étude spectrale est riche
+\item remarquer que le signal s'enrichit en harmonique (on s'écarte de la sinusoïde) à mesure que le gain augmente
+\end{itemize}
+
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Quelle est la différence entre erreur et incertitude?} Les erreurs peuvent disparaître (due à l'expérimentateur), tandis que les incertitudes sont intrinsèques aux conditions expérimentales.  
+
+\bk
+\noindent
+\textbf{2. Est-il légitime d'assimiler la bille à un point dans le bifurcateur?} Non. Ceci dit, on s'intéresse à un régime établi où la bille ne roule plus. Dans ce cas, les deux démarches sont équivalentes.  
+
+\end{document}

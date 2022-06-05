@@ -1,0 +1,142 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP24 : ondes progressives, ondes stationnaires (L2)}
+
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item mécanique
+\item électrocinétique
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item généralité des phénomènes ondulatoires en physique
+\item rôle des conditions aux limites sur la forme de la solution
+\item équation linéaire autorise la décomposition sur une base de notre choix
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] J'intègre, PC-PC*, Dunod (référence pour la leçon)
+\item[[\,2\!\!]] Cap Prépa, PC-PC*, Pearson
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+Intuiter la notion d'onde à partir d'une longue corde que l'on dispose dans la salle et que l'on agite à un bout. Définir alors une onde.
+
+\section{Equation de propagation unidimensionnelle}
+\subsection{Corde vibrante [1]}
+\begin{itemize}
+\item c'est l'exemple le plus parlant. On en profitera pour présenter en même temps la corde de Melde
+\item bien poser le modèle et les hypothèses simplificatrices Dunod fait bien les choses)
+\item procéder à la mise en équation et obtenir l'équation de d'Alembert
+\end{itemize}
+
+
+\subsection{Commentaire du résultat précédent [1]}
+\noindent
+L'exemple précédent permet de montrer tous les concepts fondamentaux utiles dans la suite. Passer du temps pour les expliciter.
+\begin{itemize}
+\item grandeurs couplées reliées par des équations différentielles (fait dans le Dunod plus loin -> grandeurs couplées). Mettre en évidence une grandeur type force et une type vitesse. Expliquer que c'est un couplage entre ces grandeurs qui est à l'origine de la propagation
+\item obtention d'une même équation de d'Alembert pour les deux grandeurs
+\item apparition d'une vitesse caractéristique dans l'équation
+\item l'équation est \textbf{linéaire}
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Il existe des ondes 3D et vectorielles mais ça n'enrichit pas la physique du problème. Souligner simplement que les effets de diffraction ne sont pas contenus en 1D.
+\end{remarque}
+
+\subsection{Analogie à d'autres domaines [1] et [2]}
+La partie est délicate, les analogies ne sont pas faites dans les livres... Il faut établir le tableau soi même. Mais cette partie est cruciale. 
+\begin{itemize}
+\item tableau d'analogie contenant les deux grandeurs couplées, expression de la vitesse
+\item montrer pour corde vibrante, câble coaxial, milieu cristallin, onde sonore dans les fluides
+\end{itemize}
+
+
+\section{Solutions libres de l'équation de d'Alembert}
+
+\subsection{Ondes progressives [1]}
+\noindent
+\textbf{On admet} que toute solution générale du d'Alembertien s'écrit sous la forme : 
+\centers{$s(x,t)=f(x-ct)+g(x+ct)$}
+\begin{itemize}
+\item donner une interprétation physique d'une onde progressive (\textbf{chercher une simulation illustrative})
+\item $c$ apparaît alors intuitivement comme la vitesse de propagation de la perturbation
+\end{itemize}
+
+
+\subsection{OPPH [1]}
+\begin{itemize}
+\item description (écrire l'équation, définir le sens de propagation)
+\item double périodicité spatiale et temporelle
+\item OPPH solution du d'Alembertien si on satisfait une relation, c'est la relation de dispersion!
+\item introduire la notion d'impédance
+\item insister : avec des OPPh, tous les calculs sont simples car les dérivées deviennent de simples multiplications
+\item \textbf{MAIS} OPPH n'est pas physique -> onde non limitée spatialement
+\end{itemize}
+
+\subsection{Le d'Alembertien est linéaire [2]}
+Le Cap Prépa en fait une meilleure présentation mais ça reste vague au niveau prépa
+
+\begin{itemize}
+\item OPPH est une base des fonctions (série puis transformation de Fourier)
+\item par linéarité du d'Alembertien, toute combinaison linéaire de solutions de ce dernier est aussi solution. La décomposition est donc admissible
+\item Par conséquent, il suffit de connaître la réponse du système à toute OPPH pour connaître sa réponse à une excitation quelconque
+\end{itemize}
+
+\subsection{Aspect énergétique [1]}
+\noindent
+Le faire sur le çable coaxial permet de changer un peu de système et est beaucoup plus facile. C'est fait dans le Dunod partie énergétique en remarque à chaque fois du développement sur la corde vibrante. Présenter rapidement le système, la modélisation et les résultats sur transparent pour savoir de quoi on parle.
+\begin{itemize}
+\item calculer l'énergie emmagasinée dans l'élément $\dx$
+\item évaluer $P(x)$ et $P(x+\dx)$
+\item s'assurer qu'il y a effectivement conservation de l'énergie au bilan (système non dissipatif)
+\item pour simplifier les calculs, on raisonne avec des OPPH et en moyenne
+\end{itemize}
+
+\section{Ondes stationnaires}
+
+\subsection{Introduction des ondes stationnaires [1]}
+\begin{itemize}
+\item relation trio pour montrer que 2 OPPH contrapropagentes donnent une OS, produit d'une fonction temps par une fonction espace.
+\item la perturbation ne se propage plus
+\item montrer que les équations reliant les deux grandeurs imposent que les deux grandeurs couplées sont en quadrature et qu'alors le vecteur produit (qui est l'énergie) ne se propage plus. Il n'y a plus de flux d'énergie donc plus d'onde
+\item forme une nouvelle base de travail sur laquelle on peut décomposer n'importe quelle onde
+\item montrer que réciproquement toute OPPH s'écrit à partir de deux OS -> équivalence des deux descriptions
+\end{itemize}
+
+\subsection{OPPH ou OS, comment choisir? [1]}
+Les deux descriptions sont équivalentes mais pour une cavité on préfère une OS plus simple mathématiquement. -> facilité d'introduire des CL.
+
+\subsection{Corde vibrante [1]}
+\begin{itemize}
+\item tout illustrer expérimentalement
+\item prendre une OS quelconque (phase et $k$ à déterminer avec les CI)
+\item quantification : seuls certains modes sont possibles
+\item introduire la notion de ventre et de noeud
+\end{itemize}
+
+\bk
+\noindent
+\textbf{Conclusion}
+\noindent
+affirmer la grande généralité de l'approche pour traiter différents phénomènes
+
+\noindent
+Ouvrir sur les milieux dispersifs. Tout n'est pas régi par un d'Alembertien. Equation tenant compte des pertes et de la dispersion du milieu -> physique plus riche (chapitre 16 dispersion du Dunod)
+
+\end{document}

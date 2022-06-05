@@ -1,0 +1,154 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M34 : phénomènes de transport}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item plusieurs modes de transport
+\item plusieurs choses à transporter
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Dictionnaire de physique expérimentale : tome II la thermodynamique, Quaranta, Pierron
+\item[[\,2\!\!]] Optics, Sommerfeld, Academic Press
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : définition du transport, diversité des phénomènes
+
+
+\section{Diffusion de matière}
+\subsection{Aspect microscopique : mise en évidence du mouvement brownien}
+\begin{itemize}
+\item utiliser la cuve adaptée (injection de fumée, visualisation par un peigne laser qui éclaire orthogonalement à la direction d'observation)
+\item utiliser le microscope des domaines de Weiss ainsi que la flexcam adaptée
+\item on se contentera de constater qualitativement le mouvement erratiques des particules de fumée sans chercher à quantifier leur mouvement
+\item cette expérience permet de donner une vision microscopique du phénomène de diffusion, la manipulation suivante permettant d'être quantitatif en mesurant le taux de diffusion grâce à une manipulation macroscopique 
+\end{itemize}
+
+\subsection{Mesure optique de la diffusivité du glycérol dans l'eau [2]}
+\begin{itemize}
+\item le Sommerfeld donne l'ensemble de la démonstration ainsi que les résultats dans "production of curved light rays by diffusion"
+\item l'approximation des petits angles est considérée, ce qui n'est pas nécessairement vérifié en pratique. On pourra utiliser plutôt la formule : 
+\centers{$\tan{\alpha}=\f{(n_2-n_1)d}{2\sqrt{\pi Dt}}$}
+\noindent
+avec $D$ le coefficient de diffusion et $d$ la largeur de la cuve
+\item pour la régression, on préfère tracer $1/\tan^2{\alpha}=f(t)$. Ainsi, on s'affranchit du problème de la connaissance d'un instant initial pour la manipulation
+\item en pratique, on utilise la diffusion d'un mélange 50-50 eau-glycérol dans l'eau. la valeur est donc non tabulée. On peut cependant s'assurer que ce n'est pas stupide en regardant dans le Handbook
+\item au niveau expérimental, plusieurs difficultés
+\item remplir la cuve d'eau à moitié
+\item plonger la burette de versement jusqu'au fond de la cuve et verser une bonne quantité du mélange eau-éthanol (et ne surtout pas relever la cuve en fin de versement). Faire également attention de ne pas injecter de bulles d'air...
+\item démarrer le chrono à la fin du versement
+\item attendre 15 minutes avant la première mesure (stabilisation de l'interface)
+\item ne rien heurter pendant la mesure... (sinon convection!)
+\item utiliser une petite diode laser avec agitateur en verre pour étaler le faisceau (pour le réglage initial on cherchera avec seulement le laser à pointer l'interface)
+\end{itemize}
+
+\section{Conductivité électrique}
+\begin{itemize}
+\item utiliser un montage à 4 fils : prise de tension sur le matériau d'intérêt (les fils de prise de tension étant traversés par aucun courant) -> on s'affranchit alors de la résistance des fils et de la connectique
+\item on relève alors la caractéristique courant/tension (pour éventuellement plusieurs distances entre électrodes)
+\item on remonte alors à la résistance puis à la conductivité du matériau connaissant sa section
+\item on trouve des valeurs inférieures à celle de l'aluminium (métal impur et ayant subi de l'écrouissage)
+\item on préfère l'aluminium au cuivre car alors les tensions mesurables sont plus importantes, ce qui réduira l'erreur!
+\end{itemize}
+
+\section{Phénomènes de transport d'énergie thermique}
+\subsection{Etude de la barre calorifugée [1]}
+\subsubsection{Conduction thermique en régime stationnaire}
+\begin{itemize}
+\item on s'aide du Quaranta de thermo p60, même si la manipulation ne ressemble pas tout à fait.
+\item ENSC 449
+\item on travaille à flux thermique imposé (par la source de chaleur environ 30W)
+\item dans la théorie 1D (donc sans perte), et en régime stationnaire, l'équation de la chaleur se limite à une équation de Laplace et il vient
+\centers{$\theta(x)=ax+b \qqetqq j\e{th}=-\lambda \ddf{T}{x}=-\lambda a$}
+\end{itemize}
+
+\subsubsection{Résultats : interprétation et limites}
+\begin{itemize}
+\item la puissance joule est mesurée précisément (c'est la puissance électrique injectée). Il suffit alors de diviser par la section pour avoir le flux surfacique d'énergie
+\item ainsi, connaissant $a$ et $j\e{th}$, on remonte à la conductivité
+\item la manipulation donne le bon ordre de grandeur mais inutile de la pousser trop loin. La régression est relativement linéaire (mais pas tout à fait), ce qui permet de justifier un modèle sans perte (s'il y avait des pertes, elles dépendraient de la température locale et la courbe serait convexe). En fait la majorité des pertes ont lieu en entrée. Le $j\e{th}$ injecté est largement surestimé (une partie de la puissance ne part pas dans la barre). Il pourrait être intéressant de tenter de parfaire l'isolation de cette partie (coton + aluminium)
+\end{itemize}
+
+
+\subsection{étude de la convection thermique}
+\begin{itemize}
+\item rester qualitatif
+\item utiliser le tube en O avec chauffage par l'un des côtés
+\item constater l'ascension du liquide (paillettes de $KMnO_4$) au niveau dh chauffage
+\item il y a transport de chaleur par convection (mouvement global du fluide)
+\end{itemize}
+
+\subsection{Thermalisation par transport conducto-convectif}
+\begin{itemize}
+\item expérience qualitative uniquement
+\item on utilise le petit système à thermistance que l'on peut plonger dans la pâte thermique près d'une résistance chauffante
+\item l'idée est de voir le temps de réponse de la thermistance selon la qualité du contact : très rapide dans la pâte thermique, assez rapide sous un courant d'eau, lente dans l'air
+\item utiliser une acquisition sur oscilloscope pour observer les temps de décroissance
+\item on illustre un problème rencontré en thermométrie!
+\end{itemize}
+
+\section{Diffusion de quantité de mouvement : mesure de la viscosité dynamique du glycérol par chute de billes [2]}
+L'expérience est simple mais on cherche à mener une expérience de métrologie. Il faut donc soigner l'étude statistique et l'influence possible de paramètres perturbateurs.  On fait la mesure avec du glycérol mais on ne cherchera pas à faire un lien avec une valeur tabulée (trop de paramètres non contrôlés dans la qualité du glycérol). On fait notre propre mesure.
+
+\noindent
+\textbf{Méthode de mesure}
+\begin{itemize}
+\item on fait 10 à 20 lancers indépendant avec différentes billes (potentiellement de différents diamètres) et on calcule pour chaque lancers la viscosité obtenue. On calcule alors la moyenne et l'écart type sur cette série statistique. Il est important de faire ainsi (avec plusieurs billes) pour s'affranchir de la forte dispersion sur le rayon des billes (et leur sphéricité)
+\item on remontera à la viscosité du glycérol en supposant connu sa masse volumique (elle varie peu en fonction des caractéristiques)
+\item insister sur le fait qu'on atteint le régime limite rapidement : calculer le temps d'établissement de ce régime $\tau$ puis le produit $v\e{lim} \tau$ fournit la distance avant que le régime soit établi
+\item montrer que la force de Stokes s'applique (régime de faible vitesse). Calculer le $Re$ de l'écoulement. Pour cela, il suffit d'évaluer la vitesse limite atteinte.
+\item montrer que les effets de bord sont négligeables dans le traitement du problème (effet des parois et du fond). La discussion est faite dans le Guyon. Il faut l'avoir en tête. C'est le phénomène probablement le moins négligeable.
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ouvrir sur les effets croisés (Peltier Seebeck)
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Tous les corps se dilatent-ils par échauffement?} Non certains polymères en solution se rétractent.  
+
+\bk
+\noindent
+\textbf{2. Pour les métaux, expliquer le lien entre conduction thermique et électrique.} Dans le cas des métaux, les deux conduction sont corrélées (puisqu'elles sont assurées par les électrons). -> loi de Wiederman et Franz
+ 
+ \bk
+ \noindent
+\textbf{3. Comment évaluer la masse volumique des billes de verres utilisées pour la manipulation?} Les peser et les plonger dans l'eau, regarder le volume...  
+
+\bk 
+ \noindent
+\textbf{4. La viscosité du glycérol dépend elle beaucoup de T?} Oui!  
+
+\bk
+\noindent
+\textbf{5. Différence entre convection et conduction.} Déplacement macroscopique de matière ou non.   
+
+
+\end{document}

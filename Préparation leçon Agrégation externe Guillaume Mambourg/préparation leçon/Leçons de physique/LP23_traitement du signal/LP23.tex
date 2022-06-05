@@ -1,0 +1,123 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP23 : traitement analogique du signal électrique, étude spectrale}
+
+\encadreminipage{9cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item électrocinétique
+\item représentation complexe d'un signal harmonique
+\item notion d'impédance complexe
+\item fonction de transfert
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item équivalence des représentations temps-fréquence
+\item possibilité de modifier de façon simple et ajustable le contenu fréquentiel d'un signal
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Tout-en-un physique PCSI, Dunod
+\item[[\,2\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,3\!\!]] Tout-en-un physique MP, Dunod
+\end{itemize}
+}
+
+\section{Différents types de signaux}
+\subsection{signal harmonique [1]}
+représentation complexe et propriété vis à vis de la dérivation/intégration
+
+
+exemple d'impédance complexe (calcul dans le cas d'un condensateur). 
+
+
+Si le circuit est linéaire, entrée et sortie ont même fréquence.
+
+
+\subsection{signal périodique [1]}
+Principe du développement en série de Fourier (cas complexe directement en lien avec la partie précédente). Insister alors sur 
+\begin{itemize}
+\item équivalence des représentations temps/fréquence (pas de perte d'information)
+\item pour un circuit linéaire, chaque composante fréquentielle est indépendante. On se ramène alors au cas précédent d'un traitement harmonique.
+\end{itemize}
+
+
+Montrer à l'oscilloscope la FFT de signaux (sinusoïde, triangle, créneau...). Le calcul des coefficients de Fourier est HP et de peu d'intérêt physique.
+
+\subsection{signal quelconque : généralisation [3]}
+Introduction de la transformée de Fourier. Un signal quelconque peut être représenté par un continuum d'harmoniques. Souligner que : 
+\begin{itemize}
+\item l'on peut ainsi traiter dans le domaine fréquentiel la réponse d'un système linéaire à des signaux non périodiques (impulsion, échelon...)
+\item le signal radio (porteur d'information) n'est pas périodique. Il rentre donc dans ce cadre, même s'il occupe une bande spectrale limitée.
+\end{itemize}
+
+
+
+\section{Filtrage linéaire}
+
+\subsection{système linéaire invariant dans le temps [1]}
+définition
+
+
+rappel sur la fonction de transfert
+
+\subsection{exemple du filtre RC : cas simple traité complètement [1]}
+Souligner deux manières d'obtenir la FT : 
+\begin{itemize}
+\item pont diviseur en impédance complexe
+\item équa diff dans le domaine temporel + écriture complexe car circuit linéaire
+\end{itemize}
+
+
+diagramme de Bode (gain/phase). Définition, calcul propre, tracé asymptotique, tracé réel. Expliquer ensuite l'influence du filtrage RC sur le spectre.
+
+\begin{remarque}
+\noindent
+si assez de temps on peut montrer à l'oscillo le comportement intégrateur du filtre dans le domaine HF
+\end{remarque}
+
+\subsection{différents types de filtres [1]}
+ordre d'un filtre + introduction des 4 types de filtres et leur \textbf{intérêt respectif}. Montrer simplement les diagrammes de Bode (gain et phase) et les commenter.
+
+Mentionner l'existence de résonance pour les ordre 2 mais ne pas les traiter en détail. 
+
+\section{Opération non linéaire, translation de fréquence : exemple de la modulation d'amplitude}
+
+\subsection{principe et intérêt [2]}
+\textbf{définition} : signal modulant / porteuse / signal modulé. Insister sur la nécessité d'abandonner la représentation complexe en non linéaire. 
+
+\textbf{intérêt} : utiliser en transmission radio : utiliser une large bande fréquentielle et se placer dans de bonnes conditions de propagation (milieu peu dispersif et peu absorbant en HF) 
+
+\subsection{multiplication de signaux [2]}
+calcul pour deux sinusoïdes multipliées
+
+
+application directe au cas de la translation d'un continuum de fréquence autour d'une porteuse (multiplication d'un continuum par une sinusoïde). Conservation du contenu spectral mais translaté.
+
+
+C'est de la modulation de fréquence -> émetteur radio
+
+\subsection{démodulation par détection synchrone [2]}
+remultiplication par porteuse + filtrage passe bas (comment choisir le filtre ?). Démodulation et obtention du signal initial
+
+
+mentionner le problème technique d'avoir la porteuse pour démoduler le signal. Il existe d'autres techniques de démodulation (démodulation par détection d'enveloppe).
+
+\textbf{Conclusion}
+Intérêt pratique des manipulations d'un spectre : translation de fréquence (principalement en radio) et filtrage (conservation d'une partie du spectre, enlever le bruit ou une composante 50Hz)
+
+
+Généralisation du filtrage à d'autres domaines de la physique : propagation d'ondes dans les milieux à absorption différentielle avec la fréquence... 
+
+
+
+\end{document}

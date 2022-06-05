@@ -1,0 +1,199 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP25 : ondes acoustiques (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item mécanique des fluides
+\item thermodynamique
+\item physique des ondes (équation de d'Alembert et solutions OPPM dans le cas de la corde de Melde)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item les ondes acoustiques sont des ondes! leur étude fait donc partie d'un vaste domaine très général en physique
+\item ODG associées (il faut en donner beaucoup!)
+\item insister sur la notion d'impédance acoustique (formule, ODG dans différents milieux...)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item il faut ici au moins aborder la propagation dans les solides. Le titre de la leçon a changé!
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Ondes mécaniques et diffusion, Garing, Ellipses
+\item[[\,2\!\!]] Tec \& Doc PC-PC*, Olivier (livre dé référence)
+\item[[\,3\!\!]] Hprépa Ondes 2nd année, Hachette (un calcul plus simple)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+
+
+\noindent
+\underline{manipulation} : Clap avec les mains. On entend quelque chose à distance. Il y a donc quelque chose qui se propage sans propagation macroscopique de matière : on retrouve les caractéristiques d'une onde.
+
+
+On a vu le formalisme général de la mécanique ondulatoire dans le cas de la corde de Melde. Partant de ces résultats, on va tenter de comprendre la propagation des ondes acoustiques.
+
+
+\section{Propagation d'une onde acoustique}
+\subsection{L'approximation acoustique}
+\subsubsection{hypothèses [2]}
+\begin{itemize}
+\item approximation acoustique : DL à l'ordre 1 des grandeurs
+\item adiabaticité
+\end{itemize}
+
+\subsubsection{linéarisation des équations [2] et [3]}
+\begin{itemize}
+\item linéariser l'équation de conservation et l'équation d'Euler (on précisera que le terme de pesanteur est compensé par un gradient statique de pression)
+\item donner l'équation d'évolution thermodynamique à partir de $\chi\e{S}$ (mieux fait dans le Hprépa!)
+\end{itemize}
+
+\subsection{Propagation dans les solides [1]}
+\begin{itemize}
+\item utilisé le modèle simplifié du Garing
+\item se limiter à des ondes longitudinales (mentionner l'existence possibles d'ondes transverses)
+\item on fait l'approximation d'un milieu continu
+\item l'objectif est d'obtenir l'expression de $c$ pour un solide en fonction de son module d'Young
+\end{itemize}
+
+\subsection{Propagation de l'onde}
+\subsubsection{célérité [2]}
+\begin{itemize}
+\item reconnaître une équation de d'Alembert! $c$ est donc la célérité de l'onde
+\item faire l'analogie entre fluide et solide pour l'expression de $c$ (bien fait dans le Tec \& Doc)
+\item donner l'expression de $c$ pour un GP
+\item ODG pour gaz/liquide/solide
+\end{itemize}
+
+\subsubsection{structure [2]}
+\begin{itemize}
+\item équation linéaire -> OPPM est une famille de solutions
+\item donner la relation de dispersion (pas de dispersion!)
+\item structure des ondes -> longitudinales
+\item donner la relation entre $p$ et $v$ dans le cadre d'une OPPM
+\end{itemize}
+
+\section{Aspect énergétique}
+\subsection{Impédance acoustique [2]}
+\begin{itemize}
+\item définition générale de l'impédance, expression dans le cas d'une onde acoustique
+\item expression et ODG pour différents milieux
+\item noter que c'est l'impédance pour une OPP! Cette relation n'a pas de sens pour une onde en générale (sauf si le milieu est non dispersif comme ici...)
+\end{itemize}
+
+\subsection{Bilan d'énergie [2]}
+\begin{itemize}
+\item reprendre l'analyse bien menée du Tec \& Doc
+\item donner l'expression de $\vect{\Pi}$ (en écrivant rapidement l'expression de la puissance échangée sur une surface élémentaire)
+\item utiliser les 2 équations couplées pour obtenir le bilan d'énergie
+\item identifier l'énergie volumique et interpréter (terme cinétique et potentiel)
+\end{itemize}
+
+\subsection{Intensité sonore [2] et [3]}
+\begin{itemize}
+\item définir l'intensité en dB
+\item préciser l'intérêt d'utiliser une échelle log
+\item donner ODG (seuil d'audibilité / de douleur)
+\end{itemize}
+
+\subsection{Justification des hypothèses de l'approximation [2]}
+\begin{itemize}
+\item calculer $\vect{\Pi}$ dans le cas d'une OPPM
+\item on vérifie alors la validité des 3 hypothèses du modèle (y compris pour des ondes sonores très puissantes) de l'approximation acoustique
+\item on laisse de côté l'hypothèse adiabatique un peu longue à vérifier (mais maitriser pour les questions...)
+\end{itemize}
+
+\section{Reflexion et transmission à une interface : adaptation d'impédance}
+\subsection{Coefficient de réflexion et de transmission en puissance}
+\noindent
+exo 2.9 du Garing
+\begin{itemize}
+\item établir l'expression des coefficients de réflexion et de transmission en pression 
+\item obtenir alors les coefficients en puissance
+\end{itemize}
+
+\subsection{Adaptation d'impédance : application à l'échographie}
+\noindent
+exo 2.12 du Garing
+\begin{itemize}
+\item modèle type Fabry-Pérot pour modéliser l'effet d'un double changement d'impédance
+\item faire l'AN dans le cas d'une couche d'air -> ça marche alors très mal!
+\item faire de nouveau l'AN avec une couche de glycérine entre les deux. C'est beaucoup mieux!
+\item on comprend l'importance de l'adaptation d'impédance pour l'échographie par exemple
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Se souvenir que l'impédance du muscle vaut un dixième de l'impédance de l'aluminium!
+\end{remarque}
+
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item \underline{bilan} : revenir sur les grandeurs que l'on a vu. Elles sont très générales en théorie des ondes. On constate par ailleurs que, comme souvent en physique, des phénomènes d'une nature très différente peuvent être traités par analogie simplement parce que leur modèle descriptif conduit aux mêmes équations.
+\item \underline{ouverture} : expliquer le principe de l'échographie : imagerie par détection de l'écho de l'onde ultrasonore au changement de milieu (changement d'impédance)
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Pourquoi est-il nécessaire d'utiliser une dérivée particulaire dans l'équation d'Euler?}  
+
+\bk
+\noindent
+\textbf{2. Justifier les autres hypothèses du modèle : adiabaticité, poids négligé, viscosité.}  
+ 
+ \bk
+ \noindent
+\textbf{3. Discuter l'analogie entre les expressions de la célérité dans les fluides et dans les solides.}  
+
+\bk 
+ \noindent
+\textbf{4. Adaptation d'impédance. Fonctionnement d'un casque anti-bruit. Pourquoi quand deux personnes parlent sous l'eau elles ne s'entendent pas?}  
+
+\bk
+\noindent
+\textbf{5. Quand choisir la base des ondes stationnaires, des ondes progressives?}  
+
+\bk
+\noindent
+\textbf{6. Diffraction des ondes sonores. Pourquoi les HP des salles de concert ne sont pas disposés les uns contre les autres?}  
+
+\bk
+\noindent
+\textbf{7. Une onde acoustique est-elle polarisée?}  
+
+\bk
+\noindent
+\textbf{8. Analogie sur les grandeurs couplées : élec, méca, acoustique.}  
+
+\bk
+\noindent
+\textbf{9. En quoi $\chi\e{S}$ et l'inductance linéique sont liés?}  
+
+\bk
+\noindent
+\textbf{10. Existe-il des ondes sonores transverses?}  
+
+\end{document}

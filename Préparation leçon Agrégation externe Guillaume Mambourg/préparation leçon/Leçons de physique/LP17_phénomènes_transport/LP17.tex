@@ -1,0 +1,175 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP17 : phénomènes de transport (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item thermodynamique de 1ere année
+\item équation locale de conservation
+\item principe d'Huygens-Fresnel
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item permet de compléter la thermodynamique
+\item phénomènes diffusifs : analogies, croissance en $\sqrt{t}$, origine microscopique
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item faire un exemple instationnaire
+\item ne pas parler de la conduction des électrons mais être prêt à répondre aux questions
+\item il faut traiter de la marche aléatoire
+\item faire de nombreuses analogies Fick/Fourier
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Précis Thermodynamique PC-PSI, Choimet, Bréal
+\item[[\,2\!\!]] La physique statistique en exercices, Krivine, Vuibert
+\item[[\,3\!\!]] Ondes mécaniques et diffusion, Garing, Ellipses
+\item[[\,4\!\!]] La physique par la pratique, Portelli, H\&K (juste pour la petite remarque sur les dinosaures)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]} : 
+\begin{itemize}
+\item on a vu les états d'équilibre thermodynamique
+\item on s'intéresse maintenant aux phénomènes hors équilibre entre ces états
+\item on pourra donc prédire les caractéristiques de la dynamique des systèmes thermodynamiques
+\item dans la suite, on se limitera à l'étude des phénomènes de diffusion de particules
+\end{itemize}
+
+
+\section{Modélisation du problème}
+\subsection{Equilibre thermodynamique local [1]}
+\begin{itemize}
+\item suivre le Choimet p87
+\item définir
+\item permet de définir localement les grandeurs thermodynamiques
+\end{itemize}
+
+\subsection{Vecteur densité de courant et équation de conservation [1]}
+\begin{itemize}
+\item rappel : vecteur densité de courant
+\item écrire l'équation de conservation de la matière (sans démonstration)
+\item commentaires physiques
+\item possibilité d'un terme source
+\end{itemize}
+
+\subsection{Loi de Fick [1]}
+\begin{itemize}
+\item l'expliquer physiquement
+\item insister sur le fait que c'est une loi empirique
+\item valable dans un domaine restreint car linéaire
+\item donner ODG de $D$
+\end{itemize}
+
+\section{Equation de la diffusion}
+\subsection{Dérivation de l'équation de la diffusion [1]}
+\begin{itemize}
+\item dériver l'équation de la diffusion
+\item commentaires : équation linéaire, couple les variations spatiales et temporelles, non invariant dans la transformation $t \rightarrow -t$ (irréversibilité)
+\item échelle de temps et de longueur des phénomènes de diffusion
+\end{itemize}
+
+\subsection{Lien avec l'étude d'une marche aléatoire [2] et [3]}
+\begin{itemize}
+\item eco 5.11 p228 du Garing pour faire le lien entre marche au hasard d'une particule et équation de diffusion
+\item suivre l'exercice 8.2 p72 du Krivine pour appliquer le théorème de la limite central à la distribution de variables indépendantes
+\item on obtient alors la distribution de probabilité
+\item faire remarquer que cette distribution est valable au temps long (après un grand nombre de chocs)
+\end{itemize}
+
+\subsection{Analogie entre les phénomènes de diffusion [1]}
+\begin{itemize}
+\item tableau d'analogie pour diffusion de particules, de chaleur et de quantité de mouvement
+\item ODG des paramètres introduits dans chaque cas
+\item spécifier le cas de la conduction thermique qui est particulier. En effet, il n'existe pas de relation simple entre le potentiel $V$ et la densité de charge $\rho$ (car c'est une relation non locale)
+\end{itemize}
+
+\section{Notre problème résolu [à savoir]}
+\subsection{Solution du problème initial [à savoir]}
+\begin{itemize}
+\item Soient $N$ particules à la position initiale $x=0$
+\item dans ce cas la densité particulaire à tout instant s'écrit : $n(x,t)=N p(x,t)$
+\item on obtient donc la solution de notre problème sans résoudre explicitement l'équation de la diffusion
+\item \textbf{l'approximation est valable en toute rigueur à $t$ grand, comme on l'a vu. En fait l'hypothèse ergodique assure que le résultat reste valable au temps court pour une grande assemblée de particules. La forme de la solution est ainsi justifiée à tout instant.}
+\end{itemize}
+
+\subsection{Généralisation [à savoir]}
+\begin{itemize}
+\item écriture de l'équation d'évolution à partir d'un volume infinitésimal contenant une densité locale initiale de particules
+\item rappeler le principe de Huygens Fresnel en rappelant qu'on somme sur toutes les sources émettant une onde sphérique
+\item ici le principe est le même : chaque "source" initiale évolue 
+\item l'évolution globale étant le produit de convolution de la distribution initiale avec la fonction de Green de notre problème (ici l'évolution gaussienne)
+\end{itemize}
+
+\subsection{Onde thermique [3] [4]}
+\begin{itemize}
+\item permet de présenter le traitement d'un régime dépendant du temps
+\item suivre le traitement du Garing eco 5.1 
+\item faire l'analogie avec le phénomène d'effet de peau
+\item donner l'épaisseur de peau du problème : ODG et facteur d'influence
+\item expliquer comment les gros dinosaures pouvait maintenir leur température la nuit sans régulation! (idée du Portelli!)
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ouvrir sur un autre mode très important de transport : la convection! Introduire l'idée : la grandeur est transportée par déplacement macroscopique de matière qui entraine de l'énergie thermique, de la quantité de mouvement ou encore des particules. Distinguer convection naturelle et forcée.
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. En quoi le second principe de la thermodynamique impose l'égalité des températures finales?}  
+
+\bk
+\noindent
+\textbf{2. Quelles sont les deux longueurs caractéristiques pour la diffusion dans un solide?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Quelles conditions pour que l'équilibre thermodynamique local soit valide?}  
+
+\bk 
+ \noindent
+\textbf{4. Comment définir la pression d'un sous système?}  
+
+\bk
+\noindent
+\textbf{5. Résistance thermique. Quelles sont les conditions d'application de cette formule?}  
+
+\bk
+\noindent
+\textbf{6. Dans l'équation de diffusion, il peut apparaitre un terme de création. Que vaut-il dans le cas d'une réaction chimique ou nucléaire? Le premier principe est-il toujours respecté?}  
+
+\bk
+\noindent
+\textbf{7. Donner des méthodes pour mesurer la conductivité thermique.}  
+
+\bk
+\noindent
+\textbf{8. Les phénomènes montrés sont ils tous liés à des marches aléatoires? Et la conduction électrique?}  
+
+\bk
+\noindent
+\textbf{9. Lois reliant énergie et température pour la convection et le rayonnement.}   
+
+\end{document}

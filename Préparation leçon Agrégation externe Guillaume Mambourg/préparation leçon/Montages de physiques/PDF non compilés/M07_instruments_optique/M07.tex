@@ -1,0 +1,150 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M07 : Instruments d'optique}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item caractéristiques des instruments d'optique
+\item compromis luminosité/contraste à optimiser selon les cas
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Eléments de cours et expériences d'optique, Hild, PUM (excellent pour guider toutes les manipulations)
+\item[[\,2\!\!]] Optique expérimentale, Sextant, Hermann (permet de répondre plus précisément à certaines questions délicates)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : on s'intéresse ici à l'ensemble des contraintes propres aux instruments d'optique. Il convient de les repérer dans un premier temps puis de voir dans quelles mesures on peut les corriger ou au moins optimiser le réglage en fonction de ce que l'on veut faire.
+
+
+\section{Les aberrations [1]}
+\subsection{Aberration chromatique}
+\begin{itemize}
+\item utiliser la lentille spéciale aberration chromatique -> en cachant le centre, on observe uniquement les rayons non paraxiaux et le phénomène est plus visible (même si le phénomène existe également pour les rayons paraxiaux)
+\item éclairage focalisé sur un diaphragme source
+\item on repère principalement le bleu, le jaune et le rouge (deux couleurs extrêmes du visible)
+\item translater l'écran pour montrer les différentes positions de focalisation du diaphragme source selon les couleurs
+\item ne pas aller plus loin dans la manipulation, il faut rester qualitatif (et ne probablement utiliser de filtre interférentiel, ce n'est pas forcément plus visible)
+\item l'utilisation d'un doublet permet de corriger fortement ce problème (garder en question!)
+\end{itemize}
+
+\subsection{Aberrations géométriques}
+\begin{itemize}
+\item utiliser une large lentille (non doublet) et la faire travailler hors des conditions de Gauss
+\item on peut utiliser un spot laser et un réseau (80 traits/mm) pour faire sur la lentille un pinceau de faisceaux
+\item constater par déplacement d'un écran que la focalisation n'est jamais parfaite  : mettre en évidence nappe tangentielle et sagittale
+\item on peut utiliser un petit générateur de fumée ou de la poussière de craie par exemple pour visualiser les trajets optiques
+\item montrer mais sans mesure l'aberration géométrique transverse et longitudinale
+\item parler de la règle des 4P et la montrer expérimentalement
+\end{itemize}
+
+\subsection{Distorsion}
+\begin{itemize}
+\item on cherche à images une grille mais à travers un fort diaphragme
+\item \textbf{ne pas oublier de placer un dépoli pour avoir toutes les directions d'éclairement sur l'objet}
+\item obtenu en diaphragmant fortement l'image obtenu, utiliser une lentille de grande taille
+\item montrer les deux distorsions possibles selon la position du diaphragme avant ou après la lentille imageante (barillet ou coussinet)
+\item expliquer que pour un fort diaphragme, la lumière loin de l'axe optique passe uniquement par les bords de la lentille qui ne focalise pas au même endroit d'où les distorsions : en fait les points sont tous stigmatiques, mais la lentille est bien sûr toujours astigmatique!
+\end{itemize}
+
+\section{Etude d'un instrument subjectif : la lunette astronomique [1] et [2]}
+Reprendre le plan d'étude du Hild, le Sextant permet de faire des compléments intéressants.
+
+\subsection{Construction d'une lunette : mesure du grossissement}
+\begin{itemize}
+\item expliquer la construction d'une lunette astronomique (fabrication de l'objet à l'infini et de l'oeil également)
+\item pour l'éclairage de l'objet on prendra encore un dépoli 
+\item évaluer le grossissement de l'oeil seul
+\item faire varier la focale $f_2$ de l'une des lentilles de la lunette (en l'occurrence l'oculaire et évaluer le grossissement associé dans chaque cas) 
+\item on pourra tracer le grossissement en fonction de $1/f_2^2$
+\item on doit obtenir une droite de pente la focale de l'objectif
+\item \textbf{attention : cette mesure est très sensible au réglage de l'objet à l'infini, il faudra donc faire très bien le réglage par autocollimation de la lentille qui fait l'objet à l'infini}
+\end{itemize}
+
+\subsection{Diaphragme d'ouverture : régler la luminosité, faire travailler les lentille dans des conditions stigmatiques}
+\begin{itemize}
+\item l'éclairage se fait en focalisant le filament sur un petit diaphragme avant le système de projection à l'infini de l'objet
+\item placer un diaphragme au niveau de l'objectif et mesurer la puissance lumineuse en sortie de l'instrument optique en fonction de la surface du diaphragme d'ouverture
+\item s'assurer que la photodiode ne sature pas et que le diaphragme d'ouverture est effectivement le diaphragme limitant du système imageant
+\item \textbf{attention : la manipulation marche bien uniquement si la photodiode est placée à la pupille de sortie de l'appareil}
+\item repérer la pupille de sortie
+\end{itemize}
+
+\subsection{diaphragme de champ, verre de champs	}
+\begin{itemize}
+\item identifier le diaphragme de champ
+\item montrer qu'effectivement il réduit le champ sans modifier la luminosité
+\item montrer également que le bord de l'image est mal éclairé
+\item ajouter un verre de champ (de focale adaptée
+\end{itemize}
+
+\section{Etude d'un instrument objectif : l'objectif photographique [1] et [2]}
+\subsection{Mesure de la distance focale de l'objectif}
+\begin{itemize}
+\item faire l'étude de la focale d'un objectif commercial inconnu (placer dans une certaine position)
+\item suivre à cette fin la technique du Hild
+\item attention, un téléobjectif n'est évidemment pas une lentille mince!
+\item la technique la plus simple est d'imager un diaphragme source à l'infini 
+\item diaphragmer en entrée (prendre garde à ce que l'appareil ne diaphragme pas la lumière)
+\item repérer le point de focalisation puis translater jusqu'à obtenir une taille de faisceau égale à la taille du diaphragme d'entrée du téléobjectif 
+\item cette distance est la focale!
+\item on parle de technique par repérage du plan anti-principal!
+\end{itemize}
+
+\subsection{ouverture numérique et profondeur de champ}
+\begin{itemize}
+\item pour plus de commodité, on fabrique artificiellement un objectif avec une unique lentille
+\item on dégrade évidemment la compacité mais en prenant une focale bien plus grande, on obtient une image de plus grande taille facilement observable
+\item le jeu est de mesurer la profondeur de champ (zone de netteté autour du point focal de l'objet imagé) en fonction de la taille du diaphragme
+\item la régression marche relativement bien à condition d'être soigneux 
+\item choisir une taille de lentille qui permet d'obtenir une image assez grosse et choisir un objet très net à la base
+\item une bonne démarche expérimentale consiste à repérer le point de fin de contraste puis à ouvrir légèrement le diaphragme pour s'assurer qu'effectivement le diaphragme se dégrade fortement -> sinon refaire!
+\end{itemize}
+
+\bk
+\noindent
+\textbf{Conclusion} : si aucun instrument d'optique ne peut être parfait, on est parvenu à optimiser le montage instrumental afin qu'il ne présente pas visuellement de défaut. Rappelons que le stigmatisme approché est défini par le pouvoir de résolution du capteur (que ça soit l'oeil ou une barrette CCD)! Remarquons que les télescopes poursuivent principalement une course à la luminosité avec des miroirs toujours plus grand, tandis que la microscopie s'intéresse plus à la résolution. Il existe d'ailleurs de nombreuses techniques d'hyperrésolution, la limitation de ces appareils étant devenue la diffraction introduite par l'échantillon lui-même. Mais c'est une autre histoire!
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Pourquoi cacher le centre de la lentille pour les aberrations chromatiques? Elles ont pourtant lieu partout!}  
+
+\bk
+\noindent
+\textbf{2. Quel est l'intérêt d'utiliser un objet diffusant pour l'observation?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Commenter le compromis entre profondeur de champ et luminosité.}  
+
+\bk 
+ \noindent
+\textbf{4. Pourquoi un objet diffusant limite-t-il la profondeur de champ? }  
+
+\bk
+\noindent
+\textbf{5. Pourquoi est il toujours bon de chercher à travailler dans les conditions de Gauss?}  
+
+\end{document}

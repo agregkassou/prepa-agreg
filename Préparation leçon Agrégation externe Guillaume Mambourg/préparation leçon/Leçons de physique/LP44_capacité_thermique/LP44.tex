@@ -1,0 +1,212 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP44 : Capacité thermique, description, interprétation microscopique (L3)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item ensemble canonique (GP, théorème d'équipartition)
+\item capacité thermique en thermodynamique
+\item oscillateur harmonique quantique
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item Donner les caractéristiques de $C\e{V}$ comme conséquence des principes : extensive, positive.
+\item Décrire la démarche de construction du modèle microscopique.
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item Il faut faire une étude thermodynamique introduisant $C\e{V}$, mais très rapidement (sous forme de rappel).
+\item La première partie doit montrer les résultats sur des propriétés macroscopiques. Montrer des courbes (en ayant introduit les techniques de mesure!). Permet de motiver l'étude que l'on mène. 
+\item Même si la leçon est calculatoire, il ne faut pas perdre le sens physique.
+\item Donner beaucoup d'ODG (et comparer les valeurs expérimentales à celles fournies par les modèles microscopiques)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Thermodynamique, Diu, Hermann
+\item[[\,2\!\!]] Physique statistique, Diu, Hermann
+\item[[\,3\!\!]] Thermodynamique PC-PSI, Choimet, Précis Bréal
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : La thermodynamique et la physique statistique ont permis une large compréhension des phénomènes dans les systèmes à grand nombre de particules. Mais si la vitesse ou la position d'une particule sont des grandeurs faciles à mesurer, l'entropie ou l'énergie interne d'un corps n'est pas directement accessible. C'est pourquoi il est important, pour être prédictif (et confronter les modèles à la réalité), d'obtenir des grandeurs expérimentalement mesurables à partir de la thermodynamique. Les capacités thermiques font parties de ces grandeurs accessibles à l'expérience. C'est en cela qu'elles revêtent un intérêt particulier.
+
+\section{Première approche}
+\subsection{Chaleur reçue par un système, capacité thermique et propriétés [3]}
+\noindent
+Reprendre l'introduction des coefficients calorimétriques du Choimet (clair et efficace)
+\begin{itemize}
+\item introduction à partir de la différentielle de $S$
+\item expliquer que dans une transformation réversible, il est possible d'exprimer la chaleur échangée lors de la transformation directement à l'aide de ces coefficients. -> c'est en cela que l'appellation coefficients calorimétriques est adaptée
+\item on peut parler de coefficients calorimétriques généralisés (Diu de thermo). Mais cela n'aura pas d'intérêt dans le cadre de cette étude. Dans la suite, on ne s'intéresse qu'à $C/e{V}$ et $C\e{P}$.
+\item parler des propriétés : extensivité, positivité
+\item donner la relation de Mayer dans le cas général (fait intervenir des coefficients thermoélastiques qu'il faut également mesurer)
+\end{itemize}
+
+\subsection{Méthode de mesure de la capacité thermique et résultats expérimentaux}
+\subsubsection{Méthode de mesure [1]}
+Présenter la méthode de mesure de Joule (fournir du travail à un système adiabatique à pression constante). On mesure alors facilement la valeur de $C\e{P}$ du système.
+
+\subsubsection{Capacité thermique des gaz}
+\begin{itemize}
+\item présenter un transparent (fond APH) montrant les principales caractéristiques
+\item mise en évidence des paliers, de la limite à température nulle
+\item le but sera d'expliquer ces phénomènes
+\end{itemize}
+
+\subsubsection{Capacité thermique des solides}
+\begin{itemize}
+\item présenter un transparent (fond APH) montrant les principales caractéristiques
+\item mise en évidence du palier HT et de la limite BT
+\item le but sera d'expliquer ces phénomènes
+\end{itemize}
+
+\subsection{Approche statistique dans l'ensemble canonique [2]}
+\begin{itemize}
+\item pour un système non isolé, l'énergie devient une variable interne qui s'adapte aux paramètres extérieurs. Sa valeur moyenne (ainsi que ses fluctuations, négligeables à la limite thermodynamique) est fonction en particulier de $T$. Par conséquent, la capacité thermique des matériaux peut également présenter une dépendance en $T$, c'est ce que nous verrons par nos modèles. [pas de réf.]
+\item rappeler l'équivalence entre $E$ et $U$
+\item citer le théorème d'équipartition de l'énergie (et son champ d'application : la physique classique!)
+\end{itemize}
+
+\section{Capacité thermique des gaz}
+Complément III.B du Diu. Même pour la partie GPM, on utilisera l'étude du GP diatomique (tout sera juste plus simple)
+\subsection{Gaz parfait monoatomique [2]}
+\begin{itemize}
+\item décrire les hypothèses de travail (sans interaction, limite thermo, approximation de MB valide)
+\item expliciter l'hamiltonien du système 
+\item appliquer le théorème d'équipartition
+\item conclure
+\end{itemize}
+
+\subsection{Gaz parfait diatomique [2]}
+\begin{itemize}
+\item décrire les hypothèses de travail (sans interaction, limite thermo, approximation de MB valide)
+\item expliciter l'hamiltonien du système (hamiltonien de translation + hamiltonien de structure interne)
+\item décomposer l'hamiltonien de structure interne (électronique, rotation, vibration)
+\item électronique : transition entre niveau observable que à très haute température -> toujours gelé ; au contraire la transition de structure fine est à BT et pour des températures usuelles pour lesquelles elles ont lieu (métaux en phase gaz) -> facteur de dégénérescence et non un degré de liberté
+\item vibrationnel : expliquer l'origine, donner la température de gel du ddl, dire que ça contribue à 2 ddl (car c'est un OH 1d), donner des ODG
+\item rotationnel : écrire l'hamiltonien pour une molécule linéaire en fonction de son moment cinétique de rotation, le quantifier pour obtenir la température de gel de la rotation, contribue encore à 2ddl (deux rotations indépendantes), donner des ODG
+\item appliquer alors le théorème d'équipartition en fonction du nombre de ddl non gelés.
+\item conclure, revenir sur la forme de la courbe présentée dans la partie I.
+\end{itemize}
+
+\begin{remarque}
+Bien qu'on utilise des raisonnements quantiques pour trouver les températures de gel, on applique ensuite le théorème d'équipartition. En fait les ddl internes sont purement quantiques. Cependant, loin de la limite de gel, l'effet de quantification devient négligeable et l'approximation classique redevient valable. 
+
+A basse température, les effets quantiques vont dominer et les expressions précédentes ne sont plus valables. Pour un gaz de fermions dégénérés, on montre en physique statistique quantique que $C\e{V}$ est linéaire en $T$. Ces effets quantiques à BT vont être explicités dans la partie III dans le cas des solides.
+\end{remarque}
+
+
+\section{Capacité thermique des solides}
+\noindent
+Complément III.E du Diu.
+\subsection{Traitement classique : loi de Dulong et Petit [2]}
+\begin{itemize}
+\item décrire les hypothèses de travail (sans interaction, limite thermo, OH classique)
+\item expliciter l'hamiltonien du système 
+\item appliquer le théorème d'équipartition
+\item conclure, on retrouve la loi de Dulong et Petit
+\end{itemize}
+
+\subsection{Traitement quantique à la limite basse température}
+A basse température cependant, la loi de Dulong et Petit est violée expérimentalement. Il n'est en fait plus possible à basse température de négliger les effets quantiques qui deviennent alors prédominant.
+
+\subsubsection{Le modèle d'Einstein [2]}
+Sur ce point, on s'inspire du Diu mais on ne le suit pas. On suppose connue la distribution de Fermi-Dirac
+\begin{itemize}
+\item expliciter les hypothèses de travail (même que précédemment mais avec quantification des énergies accessibles aux oscillateurs)
+\item écrire $\moyenne{E}=3N \cdot \hbar \omega\e{E} \cdot \paa{f(\hbar \omega\e{E})+\tf{1}{2}}$ avec $f$ la distribution de Fermi
+\item définir la température d'Einstein et donner des valeurs
+\item conclure, donner les limites HT et BT. On n'obtient pas le bon comportement BT. 
+\item on cherche alors à affiner le modèle, en sachant que l'approximation d'indépendance des oscillateurs ne peut être valide dans un solide. Les interactions y sont trop fortes.
+\end{itemize}
+
+\subsubsection{Le modèle de Debye [2]}
+\noindent
+Cette partie est à traiter de manière variable selon le temps qu'il reste. Il faut au moins donner les grandes idées, mais les calculs peuvent être présentés sur transparent (il faut les prévoir en préparation). Par ailleurs, la présentation du Diu est lourde et délicate à mettre en oeuvre. Il faut bien maitriser.
+\mk
+
+\begin{itemize}
+\item écriture du nouvel hamiltonien de couplage ("modes normaux d'un cristal à 3d" du Diu). Le développement harmonique fait alors intervenir des termes quadratiques "diagonaux" et "couplés". 
+\item Cette matrice est symétrique réelle. Elle est donc diagonalisable. Dans la suite on se placera dans cette base de 3N modes normaux. On se ramène alors à un système de 3N oscillateurs indépendant mais de pulsations toutes différentes.
+\item on a $\moyenne{E}=\Sum{\lambda}{}\Sum{\vect{k}}{} \hbar \omega_{\lambda,\vect{k}} \cdot f(\hbar \omega_{\lambda,\vect{k}})$ avec $f$ la distribution de Fermi, $\lambda$ la polarisation du mode de vibration et $\vect{k}$ le vecteur d'onde du mode.
+\item soit à la limite continue : $\moyenne{E}=\Int{0}{\omega\e{D}} \rho(\omega) \dd \omega f(\omega)$
+\item utilisation d'une relation de dispersion simple (modèle de Debye) : une pour les modes normaux, une pour les modes longitudinaux
+\item on calcule la densité de mode en $k$ dans le cas de la quantification des modes par une boite (le solide), puis on utilise la relation de dispersion pour avoir la densité de mode 
+\item lors du passage au continu, la polarisation a disparue. on en tient compte dans la densité de mode, qui est la somme des modes normaux et longitudinaux.
+\item on détermine alors la pulsation et la température de Debye. 
+\item on obtient finalement $C\e{V}$.
+\item donner des valeurs de la température de Debye
+\item calcul de la limite HT et BT. Marche bien mais mal entre les deux. Discussions physiques (modèle fonctionnent à BT car contribution des modes normaux de haute énergie devient négligeable, et à HT car de nombreux modes contribuent si bien que l'approximation classique redevient valable).
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item bilan des modèles obtenus : plutôt bons et prédictifs
+\item ouverture : notion de phonons : différence et similitude avec les photons (Diu de phy. stat.)
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. D'où vient le nom capacité thermique?}  
+
+\bk
+\noindent
+\textbf{2. Hypothèses et démonstration du théorème d'équipartition de l'énergie.}  
+ 
+ \bk
+ \noindent
+\textbf{3.Comment passe-t-on de la relation de dispersion des phonons obtenue par diffraction à la densité de modes?}  
+
+\bk 
+ \noindent
+\textbf{4. Pour une molécule homodiatomique, que se passe-t-il? }  
+
+\bk
+\noindent
+\textbf{5. Pour des phonons, $E$ est en $T^4$ et $C\e{V}$ en $T^2$. A quoi cela fait il penser?}  
+
+\bk
+\noindent
+\textbf{6. GPM dans la limite BT (limite classique non valide), que se passe-t-il?}  
+
+\bk
+\noindent
+\textbf{7. Les ddl de translation peuvent ils être quantifiés?}  
+
+\bk
+\noindent
+\textbf{8. pourquoi faut il $3n-6$ coordonnées pour repérer une molécule à $n$ atomes?}  
+
+\bk
+\noindent
+\textbf{9. Qu'est-ce qu'un phonon? Lien et différence avec un photon.}  
+
+\bk
+\noindent
+\textbf{10. Qu'est-ce que l'approximation classique?}  
+
+\end{document}

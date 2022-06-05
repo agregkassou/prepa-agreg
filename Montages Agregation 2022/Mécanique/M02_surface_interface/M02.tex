@@ -1,0 +1,129 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M02 : surfaces et interfaces}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item il existe en physique de nombreux phénomènes localisés en surface
+\item ne pas rester qualitatif, il faut absolument être quantitatif sur certaines manipulations
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item la tension de surface n'est pas le seul phénomène de surface, pour autant elle doit continuer à conserver une place de premier ordre dans le montage
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Dictionnaire de physique expérimentale : mécanique, Quaranta, Pierron
+\item[[\,2\!\!]] Mécanique 2eme année, Gié, Tec \& Doc
+\item[[\,3\!\!]] Gouttes, bulles, perles et ondes, De Gennes, Ellipses
+\item[[\,4\!\!]] BUP n°831 "transition de courants volumiques/surfaciques dans un câble coaxial"
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : la physique prend souvent en compte des phénomènes ayant lieu en volume. Cependant, dans certains cas, ces aspects sont non négligeables, voire prédominants. L'étude portera sur trois domaines : les frottements solides, la tension de surface et l'effet de peau dans les conducteurs
+
+\section{Surface de contact entre solides}
+\subsection{Mesure du coefficient de frottement statique}
+\begin{itemize}
+\item ENSC 483
+\item suivre la manipulation du Quaranta
+\item faire une droite de régression en prenant des mesures de décollage pour plusieurs masses de lestage du chariot
+\item faire simple sur les incertitudes
+\item on peut traiter sommairement le cas d'un changement de matériau (rester qualitatif)
+\item \underline{difficultés expérimentales} : forte dépendance à l'état de surface, tenir le chariot lors de l'ajout de masse pour que la vitesse de dépôt de la masse n'entraîne pas son mouvement
+\end{itemize}
+
+\subsection{Mesure du coefficient de frottement dynamique}
+\begin{itemize}
+\item ENSC 483
+\item suivre la méthode de mesure du coefficient de frottement dynamique proposée par le Gié
+\item \textbf{attention, cette démonstration se trouve dans la partie "aspects énergétiques" du Gié}
+\item idée de la démonstration (pas évidente) : appliquer le TEC à la masse qui glisse et à celle qui chute. Point clé : la vitesse d'impact de la masse en chute est égale à la vitesse de la masse glissante lorsqu'elle passe du régime tracté au régime libre
+\end{itemize}
+
+\section{Phénomènes de tension de surface}
+\subsection{Tension de surface}
+\begin{itemize}
+\item l'idée est de montrer l'effet de la compétition des forces
+\item mise en évidence : cuillère d'eau bombée, on ajoute goutte de tension-actifs, elle s'effondre -> abaissement de sa tension de surface
+\item mesure d'une tension de surface à l'aide de la balance d'arrachement (ENSC 469)
+\item faire la calibration en préparation
+\item mesurer la tension de surface de l'alcool à $95 \%$, reproduire 5 fois la mesure afin de faire un traitement statistique (si le temps le permet)
+\item faire une mesure pour évaluer la tension de surface de l'eau (à titre de comparaison avec l'alcool)
+\item Attention : la tension de surface peut changer radicalement si la surface n'est pas propre (être très vigilant)
+\end{itemize}
+
+\subsection{Loi de Laplace et mouillage}
+\begin{itemize}
+\item expérience des deux bulles -> permet de faire le lien entre tension de surface et surpression dans une bulle (loi de Laplace)
+\item observer l'étalement de gouttes sur différentes surfaces 
+\item attention, c'est une expérience délicate, il faut rester qualitatif!
+\end{itemize}
+
+\subsection{Loi de Jurin}
+\begin{itemize}
+\item on a vu deux effets de la tension de surface : le mouillage et les variations de la pression pour une interface non plane
+\item la combinaison de ces deux phénomènes conduit à la loi de Jurin : ascension du liquide le long des surfaces mouillantes
+\item on fait la manipulation de la cuve cunéiforme (ENSC 421) sur laquelle on fait une acquisition vidéo
+\item après traitement de l'image on peut donc interpoler cette courbe et remonter avec précision à la tension de surface par exemple
+\item cela donne évidemment une meilleure précision que les tubes capillaires
+\end{itemize}
+
+\section{Phénomène de surface en électromagnétisme : effet de peau dans un conducteur}
+\begin{itemize}
+\item utiliser un rhéostat de puissance et construire un montage à AO de mesure d'impédance inconnue
+\item faire varier la fréquence d'excitation par GBF (sans monter trop haut pour ne pas voir apparaitre d'effet capacitif)
+\item tracer alors la résistance (à ces fréquences, le déphasage doit être quasi nul et donc l'impédance purement réelle) en fonction de la fréquence
+\item on met en évidence l'augmentation de la résistance avec la fréquence c'est l'effet de peau (probablement ne pas chercher à fitter en revanche)
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item il existe des phénomènes de surface dans de nombreux domaines de la physique
+\item en particulier, dans la physique de faible échelle, le volume diminuant en loi d'échelle plus vite que la surface, les phénomènes de surface peuvent devenir largement prédominant -> cas de la microfluidique par exemple
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Expliquer le principe de fonctionnement de la balance d'arrachement. Pourquoi choisit-on de repérer ces points pour estimer la tension de surface?}  
+
+\bk
+\noindent
+\textbf{2. Comment varie la tension de surface avec la présence d'impuretés?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Expliquer le principe de calcul du coefficient de frottement dynamique.}  
+
+\bk 
+ \noindent
+\textbf{4. Commenter la loi de Jurin. Quelles sont les forces en compétition?}  
+
+\bk
+\noindent
+\textbf{5. Interpréter la forme du profil dans la cuve cunéiforme avec l'expression de la loi de Jurin.}  
+
+
+\end{document}

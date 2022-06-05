@@ -1,0 +1,134 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP18 : Flux conductif, convectif, radiatif, bilans thermiques (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item thermodynamique de L1
+\item diffusion (équilibre thermodynamique local, loi de Fourier, équation de diffusion)
+\item mécanique des fluides (couche limite)
+\item corps noir
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item dans certains problèmes, il faut une approche globale considérant tous les phénomènes
+\item le bilan thermique est le point de convergence : les flux étant les échanges avec l'extérieur
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Thermodynamique, Maître, 
+\item[[\,2\!\!]] Précis thermodynamique PC-PSI, Choimet, Bréal
+\item[[\,2\!\!]] Transferts thermiques, Taine, 
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+\begin{itemize}
+\item on a étudié indépendamment le rayonnement et la diffusion dans des leçons précédentes
+\item cette leçon va permettre d'introduire la notion de convection et surtout de voir des situations ou plusieurs de ces phénomènes interviennent simultanément
+\item la notion de bilan thermique permettra une approche synthétique
+\end{itemize}
+
+
+\section{Les trois modes de transfert thermiques}
+\subsection{Notion de bilan thermique}
+\begin{itemize}
+\item partir du premier principe
+\item écrire $Q$ en fonction de $\vect{j}\e{th}$
+\item préciser les travaux reçus en particulier le terme source (on insistera sur leur différentes natures : chimique, nucléaire...)
+\item intégrer pour obtenir un bilan global
+\item donner le cas stationnaire
+\end{itemize}
+
+\subsection{La conduction [2]}
+\subsubsection{Rappels}
+\begin{itemize}
+\item vecteur densité de courant
+\item équation de conservation
+\item loi de Fourier
+\item équation de la chaleur
+\item insister sur les ODG de $D$
+\item temps et distances caractéristiques de diffusion / ODG associés
+\end{itemize}
+
+\subsubsection{Notion de résistance thermique}
+\begin{itemize}
+\item on se place en régime permanent : $\Delta T=0$
+\item faire la démonstration dans le cadre de la conduction à travers un mur
+\item exprimer $R\e{th}$
+\item faire l'analogie électrique
+\item vérifier la loi d'additivité série (plusieurs murs collés)
+\item donner sans démonstration la loi d'additivité parallèle (mur et fenêtre)
+\end{itemize}
+
+\subsection{La convection}
+\subsubsection{Définition [3]}
+\begin{itemize}
+\item définir convection
+\item distinguer convection naturelle et forcée 
+\item \underline{manipulation} : tube en O chauffé à la base (convection naturelle) et agitation d'une tasse (convection forcée)
+\item en toute généralité, c'est un problème complexe d'hydrodynamique : il faut introduire les flux d'énergie et de matière et étudier le couplage entre les deux
+\item on va donc simplifier le problème!
+\end{itemize}
+
+\subsubsection{Transfert conducto-convectif [1]}
+\begin{itemize}
+\item suivre la démarche du maître p67
+\item expliquer le modèle de la couche limite
+\item calculer la valeur de la couche limite en fonction des paramètres du fluide
+\item ODG de $h$
+\end{itemize}
+
+\subsection{Le rayonnement [1]}
+\subsubsection{Rappels}
+\begin{itemize}
+\item rester très simple et donner uniquement les lois qui nous serviront
+\item rappeler la définition d'un corps noir idéal
+\item donner la loi de Stefan
+\item discuter succinctement de corps colorés : ne pas entrer dans les détails mais dire juste "le verre est absorbant dans l'IR et laisse passer le visible"
+\end{itemize}
+
+\subsubsection{Bilan thermique sur l'exemple de l'effet de serre}
+\begin{itemize}
+\item reprendre le Maître p119
+\item faire toute la démarche
+\item permet de faire mûrir les fraises puisque au bilan elles reçoivent l'équivalent du double de flux solaire
+\item l'atmosphère terrestre a les mêmes propriétés : d'où l'accroissement des températures du globe
+\end{itemize}
+
+\section{Illustration du couplage entre les modes de transfert}
+\subsection{Position du problème [1]}
+\begin{itemize}
+\item on considère une ailette de refroidissement
+\item bilan en l'absence d'ailette
+\item \textbf{ajouter le rayonnement (non considéré dans le problème)}. L'expression peut être linéarisée autour de la température moyenne car la différence entre les deux températures est faible. Finalement on obtient un $h$ effectif modifié par le terme de rayonnement
+\item on ajoute une ailette
+\item présenter les simplifications associées
+\item bien indiquer les trois types de transfert mis en jeu dans le problème
+\end{itemize}
+
+\subsection{Résolution [1]}
+\begin{itemize}
+\item bilan thermique sur une tranche de l'ailette (toujours avec un $h$ effectif)
+\item en déduire $T(z)$
+\item conditions limites à expliciter
+\item aller vite sur le calcul un peu lourd
+\item courbe de température en fonction de $L$
+\item calcul d'efficacité $\eta$ et limite ailette longue
+\item interpréter tous les coefficients qui apparaissent dans $\eta$
+\item un bon refroidissement nécessite : grande surface de contact avec le fluide, convection forcée, ailettes peintes en noir
+\end{itemize}
+
+
+\end{document}

@@ -1,0 +1,96 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M11 : Emission et absorption de la lumière}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item sources de différentes nature
+\item le laser fait partie de ce montage!
+\end{itemize}
+}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Optique expérimentale, Sextant, Hermann
+\item[[\,2\!\!]] Eléments de cours et expériences d'optique, Hild, PUM 
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : présenter le plan du montage : I) sources, II) absorption et rémission, III) laser
+
+
+\section{Emission lumineuse}
+\subsection{lampe QI}
+\begin{itemize}
+\item utiliser une projection par système optique PVD, fentes et lentilles
+\item soigner l'alignement et les focalisations
+\item projeter sur un écran (manipulation purement qualitative)
+\item constater que un spectre continu (typique d'une source proche d'un corps noir) 
+\item constater que le spectre change avec la tension d'alimentation (et donc la température du filament)
+\item on illustre ainsi les principales caractéristiques des sources à spectres continues
+\end{itemize}
+
+\subsection{lampe spectrale (spectre de raies) : comparaison de la série du mercure et de la lumière des néons}
+\begin{itemize}
+\item utiliser le spectro fibré Avaspec
+\item faire le spectre d'une lampe Hg et d'un néon (de la salle de classe)
+\item constater que l'on retrouve les raies du Hg : en fait un néon est une lampe à mercure dont le verre est recouvert de particules fluorescentes qui permettent d'élargir le spectre dans le visible pour obtenir une lumière blanche
+\end{itemize}
+
+
+\section{Absorption lumineuse et fluorescence}
+\subsection{Spectre d'absorption et de fluorescence de la rhodamine}
+\begin{itemize}
+\item éclairer en lumière blanche une cuve de volume suffisant avec un faisceau de lumière blanche bien focalisé sur la cuve)
+\item faire le spectre de transmission ainsi que celui d'émission (par fluorescence) en plaçant la fibre du spectro sur la trajectoire du faisceau ou orthogonalement
+\end{itemize}
+
+\subsection{Loi de Beer Lambert}
+\begin{itemize}
+\item diode laser verte dans cuve assez longue
+\item acquisition par Webcam et traitement sous imageJ
+\item constater l'absorption sur le trajet du faisceau (puisque la lumière reçue par fluorescence est proportionnelle à la lumière arrivant sur la zone)
+\item traiter l'image : nuance de gris puis récupérer l'intensité en fonction de la distance
+\item vérifier une loi de décroissance exponentielle (Beer Lambert)
+\item on peut alors remonter au coefficient d'absorption de la rhodamine pour cette longueur d'onde (et connaissant la concentration de la solution)
+\end{itemize}
+
+
+\section{Emission stimulée de lumière : le laser}
+\subsection{Etude du démarrage d'une diode laser}
+\begin{itemize}
+\item ENSC O54 diode laser avec alimentation
+\item suivre la notice pour comprendre le branchement 
+\item utiliser un GBF en externe délivrant une tension continue réglable pour modifier la puissance optique en sortie
+\item mesurer $U$,$i$ et $P\e{opt}$ simultanément
+\item tracer $P\e{opt}=f(P\e{elec})$
+\item constater l'existence d'un seuil qui correspond au seuil d'émission laser
+\item mise en évidence d'une tension limite de polarisation qui induit un régime laser
+\item on peut également calculer le rendement de la diode laser
+\end{itemize}
+
+\subsection{Cavité confocale : modes d'un laser}
+\begin{itemize}
+\item utiliser la cavité confocale de l'ENSC 
+\item constater 2 à trois modes en utilisant le laser NEC (le plus stable dont on dispose)
+\item l'interprétation est assez simple mais peu documentée! Il faut en particulier se souvenir que pour une cavité imparfaitement alignée (ce qui sera toujours notre cas), la lumière rebouche après un trajet en 8, il faut donc deux aller-retour avant rebouclage, ce qui nous donne l'ISL de la cavité
+\item les branchements ne sont pas tout à fait intuitif, suivre la doc technique
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : on peut élargir sur l'étude de spectres plus riches : Soleil : corps noir avec raies d'absorption dues aux gaz stellaires, à l'atmosphère terrestre... On peut donc en déduire de nombreuses informations : température de surface (corps noir), gaz en présence et densités respectives...
+
+
+\end{document}

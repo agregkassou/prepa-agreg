@@ -1,0 +1,129 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LC10 : dosage par étalonnage (Lycée)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item notion de concentration
+\item technique de dilution
+\item principe de la conductimétrie
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item montrer que l'on peut faire de l'analyse chimique non destructif pour l'échantillon
+\item c'est une solution particulièrement rapide, pratique et peu onéreuse lorsqu'il s'agit de contrôle fréquent (contrôle qualité de l'eau, de l'agroalimentaire...)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Physique-chimie STL-STI2D 1ere, Nathan
+\item[[\,2\!\!]] 100 manipulations de chimie générale et analytique, Mesplède, Bréal
+\item[[\,3\!\!]] Expériences de la famille Red/Ox et A/B, Cachau, De Boeck (les chapitres préliminaires de rappel sont excellents, principalement pour présenter les techniques expérimentales)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+\begin{itemize}
+\item introduire rapidement la définition d'un dosage
+\item définir un "dosage par étalonnage" : dosage non destructif pour l'échantillon car sans réaction chimique
+\item \textbf{manipulation} : le fil conducteur de la première partie sera le dosage de l'iode contenue dans la Bétadine commerciale. Préparer une échelle de teinte de solutions d'iode et on compare la Bétadine à cette échelle de teinte. On obtient alors une estimation grossière de la concentration en iode. Protocole de la référence [1].
+\end{itemize}
+
+
+\section{Dosage par spectroscopie UV-visible : principe du dosage par étalonnage}
+\noindent
+\textbf{motivation} : on cherche à obtenir une évaluation plus précise de la concentration, en suivant la même technique que celle donnée en introduction. L'idée étant que si une solution apparait colorée, c'est qu'elle absorbe une partie du spectre visible. Nous verrons que, sous certaines hypothèses, l'intensité de cette absorption est directement proportionnelle à la concentration de l'espèce absorbante.
+\subsection{Une grandeur utile : l'absorbance [3]}
+Faire sur transparent : schéma de principe du montage de spectro, définition de l'absorbance. Reste à savoir comment varie l'absorbance... Il faut le faire intuiter tranquillement aux élèves (niveau lycée)
+
+\subsection{Variation des paramètres, loi de Beer-Lambert [3]}
+\begin{itemize}
+\item variation avec la longueur de la cuve (logique!)
+\item variation avec la concentration (vue sur l'échelle de teinte)
+\item variation avec les espèces (mettre deux composés dans deux tubes à essais : c'est pas la même couleur!)
+\item variation avec la couleur d'onde (ben oui, si on a des couleurs, c'est parce que pour une espèce donnée, l'absorption varie avec $\lambda$). On fera le spectre d'absorption d'une des solutions d'iode déjà préparée.
+\item donner alors la loi de Beer-Lambert
+\end{itemize}
+
+\subsection{Dosage de la Bétadine commerciale [2]}
+\noindent
+On se réfère à la manipulation 33 du Mesplède
+\begin{itemize}
+\item montrer l'appareil en vrai, comment il marche et ce qu'il faut faire pour bien travailler! (faire le blanc avec le solvant, se mettre au maximum d'absorption de l'espèce (meilleure sensibilité et moindre variabilité à une variation de $\lambda$ puisqu'on est à un maximum). 
+\item Tracer la droite d'étalonnage à partir des solutions de l'échelle de teinte : $A=f(c)$. Montrer qu'à forte concentration on perd la linéarité mais que sinon c'est bien linéaire. Donner le coefficient directeur de la droite (avec une incertitude). Cette dépendance linéaire est cruciale, c'est elle qui nous permet une évaluation précise de la concentration et pas uniquement un encadrement entre les deux solutions de l'échelle de teinte les plus proches. 
+\item en déduire alors la concentration de la solution de Bétadine.
+\end{itemize}
+
+\section{Méthode conductimétrique : les clés d'un bon dosage}
+\subsection{Rappel : méthode conductimétrique [3]}
+Se servir des pages d'intro pour rappeler rapidement la loi de Kholhrausch et le montage expérimental
+
+\subsection{objectif du dosage [2]}
+On suit la manipulation 25 du Mesplède où l'on dose la quantité de $NaCl$ ($Na^+ + Cl^-$ en solution) contenue dans un sérum physiologique (doit être bien calibré pour éviter des problèmes de pression osmotique lors de l'injection dans le corps humain)
+
+\subsection{échelle de concentration, droite d'étalonnage [3]}
+Comme dans le cas précédent, on trace une droite d'étalonnage à partir de l'échelle de concentration établie à partir de mesures sur des solutions de concentration connue. On s'assure de l'existence d'un domaine linéaire. On détermine le coefficient directeur et l'on peut s'assurer de la validité du modèle en regardant le coefficient de corrélation $R^2$.
+
+\subsection{Prise du point de mesure, évaluation des incertitudes}
+Souligner l'importance (éventuelle) de la dilution de la solution à tester pour rester dans le domaine linéaire. Prendre le point de mesure. Evaluer les incertitudes : 
+\begin{itemize}
+\item incertitudes sur la pente de la droite : donnée par Igor lors de la régression
+\item incertitude sur le point de mesure prend en compte deux facteurs : dilution (erreur de lecture sur verrerie) et erreur de conversion conductimétrie/concentration (due à l'erreur sur la pente précédente) -> on peut alors évaluer l'incertitude sur la mesure.
+\end{itemize}
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item bilan : dosage rapide, pratique et peu onéreux lorsqu'il s'agit de contrôle fréquent (contrôle qualité de l'eau, de l'agroalimentaire...). Une fois l'étalonnage effectué, on peut très facilement faire de nombreux contrôles
+\item ouverture : existence d'un autre grand type de dosage : les dosages par titrage ou cette fois une réaction chimique est utilisée pour évaluer la concentration d'une solution inconnue.
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Décrire la mise en oeuvre de l'échelle de teinte.}  
+
+\bk
+\noindent
+\textbf{2. Utilise-t-on toujours des cuves en plastique? Quel autre type de cuves?}  
+ 
+ \bk
+ \noindent
+\textbf{3.rappeler les étapes d'une dilution (propre!)}  
+
+\bk 
+ \noindent
+\textbf{4. De quoi est faite une cellule conductimétrique?}  
+
+\bk
+\noindent
+\textbf{5. Description du spectrophotomètre.}  
+
+\bk
+\noindent
+\textbf{6. Pourquoi $I^-_3$ est colorée? Pourquoi les complexes sont colorés?}  
+
+\end{document}

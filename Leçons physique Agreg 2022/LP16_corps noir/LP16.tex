@@ -1,0 +1,182 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP16 : Rayonnement d'équilibre thermique : corps noir (L3)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item électromagnétisme
+\item thermodynamique
+\item physique statistique quantique (statistique de Bose)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item existence d'un équilibre entre matière et rayonnement 
+\item un corps noir est un modèle d'émetteur : ni nécessaire ni suffisant pour avoir équilibre matière/rayonnement (qui est un postulat du modèle!)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item lors d'un bilan, les flux doivent être clairement établis
+\item évoquer des éléments historiques (c'est la naissance de la MQ quand même!)
+\item faire des AN (ne doit pas rester purement théorique)
+\item expliquer le processus par lequel les photons thermalisent
+\item la manip lampe QI avec PVD est appréciée
+\item ne pas faire rayonnement cosmologique ni bilan thermique de la Terre
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Tec \& Doc, MP-PT (donne les idées générales mais non utilisé dans la leçon)
+\item[[\,2\!\!]] Cours de physique statistique de l'école Polytechnique, Balian, Editions de l'école Polytechnique (parfait pour cette leçon)
+\item[[\,3\!\!]] Mécanique quantique I, Aslangul, De Boeck (pour des compléments)
+\item[[\,4\!\!]] Physique statistique, Diu (sur un point, plus clair)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : Concept de transfert thermique d'origine radiative : le Soleil qui chauffe la Terre... Dans la suite, on s'intéressera particulièrement au transfert radiatif de sources chauffées.
+\textbf{manipulation} : lampe blanche focalisée sur un thermomètre. Ca chauffe à distance
+
+
+\section{Rayonnement d'équilibre thermique}
+\subsection{Faits expérimentaux et nature physique du rayonnement [3]}
+\noindent
+p81-85 Attention, Aslangul est clair mais les informations sont distillées. Il faut savoir exactement où et quoi chercher. 
+\begin{itemize}
+\item faits : 1) les corps chauffés émettent un rayonnement. 2) Le spectre émis est continu et sa fréquence se décale vers le bleu pour les corps chaud. 3) Définir alors rayonnement thermique
+\item nature physique : expliquer la nature de ce rayonnement (émission par les dipôles accélérés aléatoirement). Importance du caractère statistique du gaz qui thermalise avec le thermostat \textbf{et} le rayonnement. Finalement, on obtient un rayonnement à l'équilibre thermodynamique. Bien insister sur l'importance de la matière dans la thermalisation! Mais il faut de la matière diluée et à interaction non spécifique. 
+\end{itemize}
+
+\subsection{Le corps noir [3]}
+\noindent
+p85-86
+\begin{itemize}
+\item définition et réalisation expérimentale
+\item donner quelques spectres de corps noirs pour différentes températures
+\item propriétés remarquables : universalité du spectre (ne dépend que de $T$) et loi de déplacement de Wien
+\item \underline{manipulation} : lampe blanche QI avec PVD. Changer la tension d'alimentation change la position du maximum d'émission (visible qualitativement) 
+\end{itemize}
+
+\subsection{Loi de Wien - Loi de Stefan [3] et [2]}
+\noindent
+p89-93
+\begin{itemize}
+\item définir rapidement la luminance (énergie rayonnée par unité de surface et par unité d'angle solide) et donner l'expression (sans démo) $L=\tf{c}{4\pi} \cdot u$ (petit commentaire : se retrouve par conservation et isotropie du rayonnement facilement)
+\item donner alors l'expression du pouvoir émissif en fonction de $u$
+\item donner la loi \textbf{phénoménologique} de Stefan et de donner la valeur (empirique) de la constante de Stefan $\sigma$
+\item faire l'exo 12a du Balian : température des planètes. Bilan radiatif rapide. Parler de l'inexactitude de considérer qu'une planète est un corps noir (en particulier en présence d'une atmosphère)
+\end{itemize}
+
+
+\section{Vers la loi de Planck}
+\subsection{Formule de Rayleigh-Jeans [3] et [4]}
+\noindent 
+Utiliser principalement l'Aslangul
+\begin{itemize}
+\item donner le cadre théorique de l'étude : corps noir modèle. Boîte cubique de longueur $L$
+\item on suppose des parois parfaitement réfléchissante : on obtient alors des conditions aux limites strictes simples -> quantification de $\vect{k}$
+\item \underline{étape 1} : on mène alors le calcul de la densité d'état : nombre de mode de vecteur d'onde $\vect{k}$. L'isotropie simplifie le travail. Il suffit de considérer la norme de $\vect{k}$. Le volume élémentaire étant le volume du mode fondamental de la cavité. Cette démonstration est plus simple dans le Diu (en 2 lignes clair) si besoin.
+\item \underline{étape 2} : application du théorème d'équipartition de l'énergie à chaque mode du champ. 1 mode est considéré être un OH classique unidimensionnel donc d'énergie $kT$.
+\item on obtient alors une densité spectrale d'énergie
+\end{itemize}
+
+
+\subsection{Accord au spectre réel : le problème de la catastrophe ultraviolette}
+\begin{itemize}
+\item remontrer un spectre réel
+\item l'accord basse fréquence est très bon
+\item mais ensuite, plus aucun accord
+\item pire encore, l'intégration est divergente! La contribution des modes hautes fréquences n'est pas tuée. C'est la catastrophe UV
+\end{itemize}
+
+\subsection{loi de Planck [3]}
+\noindent
+La démo d'Aslangul est excellente. Il faut la suivre!
+\begin{itemize}
+\item Planck rejette l'étape 2 du calcul précédent (l'énergie doit dépendre de la fréquence pour éviter la divergence)
+\item il faut violer le théorème d'équipartition. L'idée de Planck est d'interdire une variation continue de l'énergie de l'oscillateur. Pour cela, il va quantifier l'énergie. C'est le pas décisif
+\item Ensuite, il mène un calcul classique de physique statistique en utilisant une distribution de Boltzmann avec une sommation discrète.
+\item on obtient alors la loi de Planck
+\item préciser que sans surprise (maintenant), on obtient la loi que l'on obtiendrait à partir d'une statistique de Bose (valable pour des photons)
+\item accord avec les résultats expérimentaux : limite HT et BT en accord avec les limites expérimentales + par intégration sur le spectre, on retrouve la loi de Stefan et la valeur du coefficient $\sigma$ (la catastrophe UV a donc disparue)
+\item ajouter enfin qu'un calcul exactement identique dans le cas d'un solide a permis à Einstein de corriger au premier ordre la loi de Dulong et Petit à basse température (en introduisant le concept de quanta de vibration, les phonons)
+\end{itemize}
+
+\section{Applications}
+\subsection{Rendement d'une lampe à incandescence (intérêt historique) [2]}
+Faire l'exercice 12c du Balian sur l'intérêt d'utiliser des lampes à haute température. Rappeler qu'initialement Planck travaillait à améliorer le rendement des lampes à incandescence!
+
+\subsection{Equilibre thermique du vase Dewar [2]}
+Faire l'exercice 12b du Balian. Il faut absolument savoir retrouvé le coefficient $\tf{(1-R)}{(1+R)}$. La démonstration se fait par analogie directe avec celle du Fabry-Perot. La puissance qui a effectivement traversée la paroi est la somme \centers{P\e{perdue}=$\Sum{n=0}{\infty} PR^{2n} (1-R)^2=P\f{1-R}{1+R} $}
+
+
+\noindent
+\textbf{Conclusion} : 
+\begin{itemize}
+\item bilan des éléments clés : définition du corps noir, forme et propriétés de son spectre, nécessité de la quantification pour une explication convaincante
+\item ouverture sur le pas décisif franchis par Planck pour la physique du XXe siècle. Rappeler à quel point la mécanique quantique a été fructueuse aussi bien dans le domaine théorique que dans le domaine des applications pratiques.
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Qu'est-ce qu'un flux ?}  
+
+\bk
+\noindent
+\textbf{2. Pourquoi est-ce important que le rayonnement du corps noir soit isotrope ? Quel principe fondamental serait violé sinon?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Dans quel ordre chronologique sont apparues les lois ?}  
+
+\bk 
+ \noindent
+\textbf{4. Le Soleil est-il à l'équilibre thermique ?}  
+
+\bk
+\noindent
+\textbf{5. En quoi les étoiles sont elles de bons corps noirs?}  
+
+\bk
+\noindent
+\textbf{6. $\mu=0$ pour les photons. Est-ce aussi vrai hors équilibre ?} 
+
+\bk
+\noindent
+\textbf{7. Montrer la loi de Stefan. Quel est le lien avec la pression de radiation ?} 
+
+\bk
+\noindent
+\textbf{8. Quelles approximations permettent d'arriver à la loi de Planck?} 
+
+\bk
+\noindent
+\textbf{9. Que signifie rayonnement à la température $T$?} 
+
+\bk
+\noindent
+\textbf{10. Cycle de Rankine, cycle de Hirn?} 
+
+\bk
+\noindent
+\textbf{11. Diffusion de particules, diffusion thermiques et viscosité sont ils associés à des marches aléatoires?} 
+
+
+\end{document}

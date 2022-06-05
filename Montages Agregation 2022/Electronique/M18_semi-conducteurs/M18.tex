@@ -1,0 +1,120 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M18 : matériaux semi-conducteurs}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item effet du dopage
+\item évolution des paramètres avec la température
+\item applications en électronique, intérêt de la jonction
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Expériences d'électronique, Duffait, Bréal
+\item[[\,2\!\!]] Optique expérimentale, Sextant, Hermann
+\item[[\,3\!\!]] Les semi-conducteurs, Ngô, Dunod (pour Alizée)
+\item[[\,4\!\!]]Physique des semi-conducteurs et des composants électroniques, Mathieu, Masson (pour Alizée)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : expliquer brièvement ce qu'est un SC. Donner des ordres de grandeur pour situer le problème par rapport aux métaux. 
+
+\mk
+\noindent
+I) dégager les caractéristiques fondamentales
+
+\noindent
+II) exemples d'application des SC
+
+\section{Propriétés d'un matériau semi-conducteur}
+\subsection{Germanium intrinsèque}
+\begin{itemize}
+\item on mesure la résistivité de la plaquette de Ge non dopé
+\item pour cela relever en fonction de la température tension et courant aux bornes de la plaque (on ne s'intéresse pas à l'effet magnétorésistif, donc on se place à champ B nul!)
+\item on vérifie alors le modèle théorique d'évolution de la résistivité en fonction de $T$ 
+\centers{$\rho=T^\tf{3}{2} \ex{\tf{E\e{g}}{2kT}}$}
+\item on suppose que le facteur en puissance est à évolution négligeable devant l'exponentiel
+\item on trace $\ln{(\rho)}=f(T)$ et on fait un ajustement linéaire
+\item on peut alors remonter à la valeur du gap du semi conducteur (valeur à vérifier dans le Handbook)
+\item il y a une erreur non négligeable : rien ne prouve que le thermocouple est bien étalonné. Ca semble par conséquent normal...
+\end{itemize}
+
+\subsection{Germanium dopé p}
+\subsubsection{Mise en évidence de l'effet Hall}
+\begin{itemize}
+\item on se place à champ B non nul constant, on se place à la température ambiante
+\item on relève alors la tension de Hall ainsi que la tension directe en fonction de l'intensité
+\item la tension directe permet alors de remonter à la valeur de la résistivité
+\item en supposant le régime purement intrinsèque (uniquement des trous donc), on remonte à la densité de trous ainsi qu'à leur mobilité
+\item il n'y a malheureusement pas moyen de connaître le taux de dopage de notre plaquette (s'assurer seulement que ce n'est pas stupide!)
+\end{itemize}
+
+\subsubsection{Effet de la température sur la résistivité et la tension de Hall}
+\begin{itemize}
+\item on se place à $B$ et $i$ fixé
+\item on relève alors en fonction de la température la valeur de la tension de Hall et de la tension directe
+\item tracer alors la valeur de la tension de Hall et de la résistivité
+\item la tension de Hall doit devenir négative, signe que à haute température on passe dans un régime de conduction intrinsèque (les électrons possédant une mobilité supérieure
+\item \textbf{attention, on ne peut pas réajuster pendant les mesures notre potentiomètre pour faire le zéro. Malheureusement il y a de la dérive avec la température}. Pour avoir un ordre de grandeur, on regardera donc la dérive accumulée sur toute la période de mesure et on la soustraira de manière graduelle sur notre prise de mesure
+\end{itemize}
+
+\section{Applications}
+\subsection{Caractérisation courant-tension d'une diode, effet de la température [1]}
+\begin{itemize}
+\item maintenant on fait une jonction entre 2 semi-conducteurs
+\item tracer à l'aide d'un montage volt-ampèremétrique la caractéristiques courant-tension 
+\item chauffer le composant : constater que la tension seuil de la diode est translatée : mesurer la sensibilité et constater la linéarité -> application comme capteur de température!
+\item expliquer cette translation (le Duffait donne la formule de l'intensité fonction de $U$ et $T$)
+\end{itemize}
+
+\subsection{Caractérisation spectrale d'une LED [1]}
+\begin{itemize}
+\item relever au spectro à fibre le maximum associé à chaque LED (on fait un relevé pour rouge, vert et bleu)
+\item calculer alors le gap associé (le Duffait donne les alliages probablement utilisés pour chaque longueur d'onde)
+\item expliquer rapidement pourquoi le spectre est relativement large
+\end{itemize}
+
+\subsection{Mesure du temps de réponse d'une photodiode : mise en évidence d'un effet capacitif à la jonction [1] et [2]}
+\begin{itemize}
+\item Le Sextant donne de nombreuses indications sur le principe de la manipulation : se reporter au II.2.6 "temps de réponse de la photodiode"
+\item Le Duffait donne la formule empirique de variation de la capacité de jonction avec la tension de polarisation de la diode. 
+\item \textbf{attention, dans la formule donnée par le Duffait, il faut remplacer le signe - par un signe +} (en fait c'est dans la partie diode du Duffait!)
+\item on utilise la maquette d'optoélectronique (attention, ne pas utiliser le montage à AO, mais passer directement par la résistance)
+\item il faut utiliser un signal lumineux de faible amplitude de modulation par rapport à la valeur moyenne (c'est important)
+\item la capacité totale est la somme de la capacité de jonction et de la capacité des coaxiaux, la résistance est celle sur laquelle on prend la mesure 
+\item on mesure au voltmètre (pour éviter les problèmes de masse) la tension de polarisation de la diode et on relève le temps de réponse à $63\%$ 
+\item ce temps de réponse vaut $\tau=RC$
+\item il faut être clair sur ce que l'on fait : le temps de réponse est calculé sur les signaux variables uniquement (la modulation autour de la moyenne)
+\item conclure : il faut faire un compromis entre rapidité et sensibilité de la photodiode selon les montages, en effet diminuer la tension de polarisation diminue également le signal!
+\end{itemize}
+
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item \underline{bilan} : principales caractéristiques des semi-conducteurs, dopage, nombreuses applications pratiques sous forme de jonctions
+\item \underline{ouverture} : ouvrir sur les transistors
+\end{itemize}
+
+
+\end{document}

@@ -1,0 +1,190 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP38 : Aspect ondulatoire de la matière. Notion de fonction d'onde (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item physique ondulatoire
+\item aspect corpusculaire du rayonnement
+\item notion de transformation de Fourier
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item dualité onde-corpuscule
+\item approche probabiliste de la mécanique quantique
+\item la mécanique classique est étendue mais pas remplacée (comme en relativité)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Mécanique quantique, Basdevant, Editions de l'école Polytechnique (fondamental pour toute la leçon)
+\item[[\,2\!\!]] Mécanique quantique tome I, Cohen, Hermann (peu utile)
+\item[[\,3\!\!]] Mécanique quantique : cours et exercices corrigés, Texier, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [1]} : introduction du chapitre 2 du Basdevant : en particulier reprendre la partie "les étapes de la théorie"
+
+
+\section{Aspect ondulatoire de la matière}
+\subsection{L'intuition de De Broglie [2]}
+\begin{itemize}
+\item émission lumineuse par les atomes se fait sur des raies spectrales discrète : incite à proposer une quantification
+\item la réponse de Bohr est de faire une quantification à marche forcée : il quantifie le produit impulsion position, mais sans le justifier
+\item De Broglie avance alors une vision ondulatoire des corpuscules
+\item il introduit (dans une formulation relativiste) la relation sur le quadrivecteur : $P=\hbar K$
+\item la quantification s'assimile alors à un mode propre d'une onde dans une cavité
+\item donner des ODG de longueur d'onde de De Breuil pour un grain de poussière et un électron thermique (complément $A\e{I}$ du Cohen) -> permet de savoir quand la quantique doit être appliquée
+\end{itemize}
+
+\subsection{L'expérience de Davisson et Germer [1]}
+\begin{itemize}
+\item confirmation expérimentale du caractère ondulatoire
+\item la diffraction de X sur un cristal était connue
+\item comparer le $\lambda$ des X envoyés à celui calculé par de Breuil pour des électrons accélérés
+\item \underline{manipulation} : diffraction sur poudre (à expliquer par diffraction de Bragg) et expliquer l'expérience historique de Davisson et Germer : confirmation éclatante de la validité du modèle
+\end{itemize}
+
+\subsection{Interférence des ondes de matière [1]}
+\begin{itemize}
+\item rappeler les caractéristiques d'une diffraction classique par fentes d'Young et définir l'interfrange en fonction de $\lambda$
+\item lâché sur fentes d'Young d'un nuage d'atomes de néon -> il y a interférences!!!!
+\item observation : 1 point = 1 impact
+\item l'interfrange obtenu correspond bien à celui attendu par la théorie de de Broglie
+\item l'expérience peut être faite avec d'autres objets encore plus massifs
+\item ce qui est d'habitude un corpuscule localisé semble pouvoir interférer sur des échelles bien plus grandes
+\item remarquer la chose étonnante : interférences mais figure présentant une granularité (chaque impact est ponctuel)...
+\end{itemize}
+
+\section{Vers la description quantique de la matière}
+\subsection{Dualité onde-corpuscule : interprétation probabiliste [1]}
+\begin{itemize}
+\item Donner l'ensemble des observations relatives à ce type d'expériences (en particulier les manipulations menées avec une particule à la fois)
+\item on montre un phénomène purement probabiliste
+\item tout se passe comme si la particule était passée par les deux fentes pour interférer avec elle-même -> nul besoin d'avoir un ensemble de particules pour former une onde de matière
+\item une fois le caractère ondulatoire accepté, le phénomène d'interférence devient trivial -> mais alors pourquoi voit-on des impacts localisés?
+\end{itemize}
+
+\subsection{la fonction d'onde [1]}
+\subsubsection{définition}
+\begin{itemize}
+\item rappeler le cas classique : particule parfaitement localisée (son état est connu si l'on connait position et impulsion)
+\item en quantique, c'est la fonction d'onde qui décrit entièrement l'état (spatial) de la particule
+\item donner les caractéristiques de cette fonction
+\end{itemize}
+
+\subsubsection{mesure}
+\begin{itemize}
+\item caractériser l'opération de mesure
+\item revenir sur le cas d'étude de diffraction : interpréter la localisation lors de la mesure
+\item définir la moyenne et l'écart type associée à la mesure pour une fonction d'onde donnée
+\item insiter sur l'aspect stochastique de la mesure
+\end{itemize}
+
+\subsection{les ondes libres de De Broglie [1]}
+\begin{itemize}
+\item puisque l'on a supposé que l'on pouvait donner un caractère ondulatoire au corpuscule (sous forme de la fonction d'onde $\psi$), on peut supposer que des particules libres seront représentées par des ondes libres
+\item il suffit alors d'appliquer les relations de de Broglie pour obtenir la forme attendue
+\end{itemize}
+
+\subsection{principe de superposition [1]}
+\begin{itemize}
+\item reprendre le cas d'étude pour poursuivre l'interprétation : interférence par superposition des ondes venant de chacune des fentes
+\item énoncer le principe général de superposition
+\item supposer sans démonstration que les ondes de Broglie forment une base de l'espace des fonctions d'onde (analogie avec les OEM)
+\end{itemize}
+
+\section{Dynamique de la fonction d'onde}
+\subsection{Equation d'évolution : l'équation de Schrödinger [1]}
+\subsubsection{dans le vide}
+\begin{itemize}
+\item à dériver des ondes de Broglie
+\item par linéarité, cette équation décrit également l'évolution temporelle de toute onde (puisque les ondes planes forment une base)
+\end{itemize}
+
+\subsubsection{en présence d'un potentiel}
+\begin{itemize}
+\item à donner sans démonstration
+\item dire que c'est l'expérience qui vérifie sa validité
+\end{itemize}
+
+\subsection{Deux modes d'évolution complémentaires [3]}
+\begin{itemize}
+\item la fonction d'onde évolue selon l'équation de Schrödinger ou par l'effet d'une mesure
+\item deux modes très différents : l'un semble déterministe tandis que l'opération de mesure est intrinsèquement statistique
+\item mais alors peut-on parler d'état de la particule avant la mesure?
+\end{itemize}
+
+\subsection{Notion de paquets d'onde [1]}
+\begin{itemize}
+\item rappeler l'impossibilité physique d'une onde plane (énergie infinie)
+\item écrire une onde quelconque comme somme continue d'ondes planes (notion de TF apparait)
+\item on a alors introduit la fonction d'onde en représentation $p$
+\item ces deux représentations sont équivalentes
+\item donner les caractéristiques de la représentation $p$ : moyenne, écart type
+\item l'équation de Schrödinger permet de connaître l'évolution du paquet d'onde par linéarité
+\end{itemize}
+
+\subsection{Relation d'Heisenberg en impulsion-position [2] et [3]}
+\begin{itemize}
+\item intuiter la relation par relation classique sur les TF $\Delta x \simeq 1/\Delta k\e{x}$
+\item donner la relation d'Heisenberg
+\item attention, cette relation se démontre en théorie ondulatoire (relation de TF), ce n'est donc pas un principe!
+\item le Basdevant fait des calculs intéressant d'ODG
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : revenir sur les différences essentielles par rapport à la mécanique classique apportées par la notion de fonction d'onde
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Quand faut il utiliser la MQ?} Quand la longueur est inférieure à la longueur d'onde de De Broglie  
+
+\bk
+\noindent
+\textbf{2. Analogie avec l'optique de ce changement de régime?} l'OPG est la limite à longueur d'onde nulle de l'optique ondulatoire  
+ 
+ \bk
+ \noindent
+\textbf{3. Quantique macroscopique?} Supraconductivité, condensât de Bose, superfluidité, conduction des électrons dans les solides...  
+
+\bk 
+ \noindent
+\textbf{4. En combien de temps la MQ s'est construite?} De Planck à De Breuil, à eine 30 ans, il faut insister dessus!  
+
+\bk
+\noindent
+\textbf{5. Equation de dispersion des ondes de Broglie?} Lier l'impulsion et l'énergie pour une particule non relativiste permet de conclure (elle serait différente dans le cadre relativiste : il faudrait alors différencier la relation pour les photons de celle pour les particules massives)  
+
+\bk
+\noindent
+\textbf{6. Validité de la relation de Broglie en relativité?} Oui! Elle a été proposée sous forme d'une relation entre quadri-vecteurs.  
+\end{document}

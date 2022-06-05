@@ -1,0 +1,146 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP22 : rétroaction et oscillations (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item étude fréquentielle des systèmes (transformée de Laplace, schéma blocs...)
+\item outils graphiques (diagrammes de Bode et de Nyquist)
+\item étude d'un système en chaîne directe
+\item amplificateur opérationnel et électronique élémentaire
+\item principe de fonctionnement d'un laser
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item objectif du bouclage : contrôle du point de fonctionnement
+\item existence de deux classes de systèmes bouclés (selon la stabilité)
+\item modélisation basée sur la linéarité
+\item existence d'un compromis entre précision et rapidité (et éventuellement stabilité)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item être cohérent sur les conventions de signe appliquées
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Electronique 2e année, Gervais, Vuibert (
+\item[[\,2\!\!]] Précis électronique, Brenders, Bréal
+\item[[\,3\!\!]] Hprépa électronique 2e année, Brebec, Hachette
+\item[[\,4\!\!]] BUP n°794, "Cavité acoustique, Laser et système bouclé"
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : revenir sur le cadre de l'étude : système linéaire continu et invariant. On va voir l'intérêt que l'on peut tirer de la mesure de la sortie d'un système. On étudiera deux types de systèmes bouclés : les systèmes asservis et les oscillateurs à réaction. S'ils sont très différents dans leur but, ils partagent la même structure.
+
+
+\section{Modélisation d'un système bouclé}
+\subsection{Objectif du bouclage [1] et à savoir}
+\begin{itemize}
+\item traiter toute la partie I autour de l'exemple d'un système de régulation de température 
+\item souligner les inconvénients de la boucle ouverte
+\item objectif : adapter la commande selon le différentiel entre consigne et sortie
+\item principe général, liste des éléments clés (comparateur, correcteur, actionneur, capteur...)
+\end{itemize}
+
+\subsection{Présentation d'un système bouclé [1]}
+\begin{itemize}
+\item l'étude est menée dans le domaine fréquentiel à l'aide des transformées de Laplace
+\item construire le schéma blocs du système précédent
+\item définir FTBO et FTBF
+\item démontrer l'expression de la FTBF
+\item introduire les outils d'étude : Bode et Nyquist (expliquer particulièrement la lecture d'un diagramme de Nyquist, pas sa construction qui est trop complexe à la main)
+\end{itemize}
+
+\subsection{Condition de stabilité, marges de stabilité [1]}
+\begin{itemize}
+\item critère mathématique de stabilité (expliquer rapidement avec les mains la raison de ce critère)
+\item énoncer le critère du revers sur le diagramme de Nyquist (\textbf{double attention!} : le critère porte sur la FTBO pour étudier la FTBF \textbf{ET} la FTBO doit être stable avant tout)
+\item donner le critère équivalent sur Bode
+\item définir marge de gain et de phase 
+\item tracé alors sur Bode uniquement
+\item influence du gain sur la stabilité (translation verticale du diagramme de gain!)
+\end{itemize}
+
+\section{Systèmes asservis}
+\subsection{Application à un exemple simple : amplificateur non inverseur [2]}
+\begin{itemize}
+\item câbler la manipulation d'un montage à ampli op non inverseur et montrer sur oscilloscope entrée et sortie
+\item schéma électronique
+\item identifier comparateur, ampli, chaîne de retour
+\item schéma bloc associé
+\item fonction de transfert associée
+\end{itemize}
+
+\subsection{Caractéristiques et conséquences du bouclage [1] et [2]}
+\begin{itemize}
+\item erreur statique : définir, calcul dans ce cas (attention, ici le retour est non unitaire!), calculer la valeur théorique de l'erreur dans ce cas -> négligeable
+\item définir et identifier dans ce cas le temps de réponse à $5\%$, le mesurer expérimentalement -> effet de la contre-réaction sur le temps de réponse
+\item produit gain bande passante constant
+\item compromis précision-rapidité sur le choix du gain
+\item ici le système est toujours stable (1er ordre), mais une augmentation du gain réduit la marge de stabilité
+\end{itemize}
+
+\section{Oscillateurs à rétroaction}
+\subsection{Mise à profit de l'instabilité : critère de Barkhausen [2]}
+\begin{itemize}
+\item structure sous forme de schéma blocs
+\item condition d'instabilité : existence de racine de $1-A(p)B(p)$ à partie réelle positive
+\item étude du cas limite : fonctionnement en régime harmonique (condition de rebouclage ou le signal après un tour est égal à l'entrée) -> critère de Barkhausen : $A(p)B(p)$ de module 1 et d'argument nul
+\item en pratique, partie réelle positive assure la divergence, non linéarité assure que les divergences soient stoppées
+\end{itemize}
+
+\subsection{Effet Larsen acoustique [4]}
+\begin{itemize}
+\item montrer la manipulation
+\item expliciter le système et modéliser sous forme de schéma blocs
+\item écrire explicitement le terme $\underline{\beta}$ (contenant le terme de déphasage du à la propagation)
+\item donner la condition d'oscillation à partir d'une petite perturbation extérieure à l'aide du critère de Barkhausen
+\item déterminer les fréquences pouvant exister à partir de la condition de bouclage en phase (étant donnée la propagation sur la distance enceinte micro)
+\item montrer expérimentalement le lien fréquence / taille de la cavité
+\end{itemize}
+
+\subsection{Application au laser [3] et [4]}
+\begin{itemize}
+\item schéma de principe (utiliser un laser à 3 miroirs pour plus de facilité, analogie plus directe)
+\item modélisation en terme de schéma blocs
+\item là encore modéliser $\underline{\beta}$ comme perte et déphasage sur un tour de cavité
+\item cette fois milieu ampli = gain + passe bande (utiliser le Hprépa pour des informations sur un passe bande)
+\item expliquer alors les fréquences pouvant exister -> laser monomode ou multimode
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : 
+\begin{itemize}
+\item \underline{bilan} : existence de deux grandes classes de systèmes bouclés, l'un exploitant la stabilité pour avoir une consigne dépendant de la sortie, l'autre exploitant l'instabilité pour obtenir un régime oscillant.
+\item \underline{ouverture} : insister sur la grande importance de l'asservissement et sur les nombreuses applications dans tous les domaines
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Source de démarrage des oscillations?}  
+
+
+\end{document}

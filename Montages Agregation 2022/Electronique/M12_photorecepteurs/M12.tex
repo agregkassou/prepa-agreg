@@ -1,0 +1,107 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M12 : photorecepteurs}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item différents systèmes adaptés chacun à un type de mesures
+\item discuter la précision, la sensibilité du détecteur...
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Optique, Sextant, Hermann (pour tout le montage)
+\item[[\,2\!\!]] Capteurs industriels, Asch (si besoin de complément pointus, pour le pyromètre entre autre)
+\end{itemize}
+}
+
+
+
+\section{Caractérisation statique de la photodiode}
+\subsection{Caractéristique U-I d'une photodiode en fonction de l'éclairement}
+\begin{itemize}
+\item travailler à l'aide d'une source de laser (monochromatique et puissant!)
+\item faire varier le flux à l'aide de polariseur/analyseur croisés (loi de Malus)
+\item mesurer la puissance optique du faisceau au puissance-mètre (permet d'avoir une sensibilité absolue!)
+\item montrer les caractéristiques U-I obtenues et expliquer les différents régimes (photodiode, photopile
+\end{itemize}
+
+\subsection{Sensibilité de la photodiode dans le rouge}
+\begin{itemize}
+\item tracer $i=f(I\e{lumineux})$ -> évaluer alors la sensibilité et le rendement quantique dans le rouge (puisqu'on a l'intensité du faisceau)
+\item si temps : exporter quelques caractéristiques et expliquer l'intérêt pour la sensibilité d'augmenter $U\e{pol}$ et de diminuer la pente de la caractéristique de la résistance en $1/R$
+\end{itemize}
+
+\subsection{Sensibilité spectrale de la photodiode}
+\begin{itemize}
+\item expliquer succinctement le principe d'un pyromètre -> permet d'avoir une réponse plate assurée car c'est un capteur thermique
+\item l'expérience est expliquée dans le Sextant Mais :
+\item \textbf{utiliser le monochromateur avec filtre rouge, sinon il y a recouvrement du spectre entre le bleu et l'IR que l'on veut mesurer}
+\item \textbf{ne pas utiliser de chopper! sinon le temps de montée est incomplet. Puisqu'on n'a pas de détection synchrone, il suffit de chopper à la main}
+\item relever alors le spectre de l'ensemble \{lampe+monochromateur\} noté $\phi\e{appareil}$
+\item relever la caractéristique de la photodiode en traçant sa réponse en fonction de la longueur d'onde notée $\phi\e{photo}$
+\item la réponse spectrale réelle de la photodiode est alors $\phi=\tf{\phi\e{photo}}{\phi\e{appareil}}$
+\item la mesure est relative, mais puisqu'on dispose de la sensibilité dans le rouge, il est possible d'avoir une sensibilité spectrale absolue
+\item tracer la dérivée pour avoir facilement le point d'inflexion
+\item le point d'inflexion correspond à l'énergie du gap du SC de la photodiode
+\end{itemize}
+
+\section{Caractérisation dynamique de la photodiode}
+\subsection{Mesure du temps de réponse}
+\begin{itemize}
+\item Ici, on se place à $R$ constant et on modifie $U\e{pol}$ pour voir son impact sur la capacité de jonction
+\item faire la mesure à la sonde (évite la capa parasite des coax et de l'oscillo)
+\item en revanche la plaquette est reliée par 1m de coaxial soit $100pF$ en parallèle (qu'il faudra soustraire)
+\item ici, on tracera simplement le temps de réponse en fonction de la tension de polarisation, on ne s'intéresse pas particulièrement à la notion de capacité dans le composant (même si c'est évidemment l'idée sous-jacente)
+\end{itemize}
+
+\subsection{Compromis sensibilité / temps de réponse}
+\begin{itemize}
+\item on constate clairement que si $U\e{pol}$ ou $R$ augmentent, la sensibilité augmente et le temps de réponse diminue
+\item et réciproquement...
+\item il y a donc un compromis à faire entre sensibilité et temps de réponse en jouant sur la tension de polarisation et la valeur de la résistance
+\end{itemize}
+
+\section{Photomultiplicateur}
+\subsection{Mise en évidence du bruit d'obscurité}
+\begin{itemize}
+\item en gardant fermé le cache du photomultiplicateur, on met en évidence un bruit spontané due à l'émission d'électrons par effet thermique (qui sont ensuite multipliés)
+\item on peut évaluer le nombre moyens d'événements par unité de temps
+\end{itemize}
+
+\subsection{Evaluation du nombre de photons détectés}
+\begin{itemize}
+\item Reprendre le même laser rouge (dont on a évalué la puissance optique)
+\item déterminer alors le nombre moyen d'événements par unité de temps et le comparer à celui dans l'obscurité
+\item en comparant à la puissance optique incidente, on peut en déduire la sensibilité de ce capteur (avec ici, le nombre d'événements détectés sur le nombre d'événements "photons arrivé sur le détecteur")
+\item attention, ici il est impossible de discriminer un photon d'une émission thermique d'électron
+\end{itemize}
+
+\begin{remarque}
+\noindent
+En pratique, les PM sont par exemples utilisés sur les détecteurs de muons (après des scintillateurs). Dans ce cas, on met deux scintillateurs+PM à la suite et on regarde les événements corrélés entre les deux. Ainsi, seuls les événements corrélés sont des détection de photons à coup sûr (on s'affranchit alors du bruit thermique)
+\end{remarque}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : insister sur la grande différence entre les détecteurs dont la sensibilité varie avec la longueur d'onde (seuil et maximum) et ceux à réponse plate (type pyroélectrique)
+
+
+
+\end{document}

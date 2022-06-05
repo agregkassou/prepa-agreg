@@ -1,0 +1,163 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M32 : couplage d'oscillateurs}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] BUP n°894 "Etude théorique et expérimentale de pendules pesant couplés : modes normaux de vibration"
+\item[[\,2\!\!]] Magnétisme : statique, induction et milieux, Garing, Ellipses
+\item[[\,3\!\!]] Mécanique, Perez, Masson
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : Ouvrir avec les deux diapasons sur une planche à roulette. La planche constitue un couplage entre les deux. Ils ne sont plus indépendant. On pourra déjà constater plusieurs choses : transfert d'énergie entre les deux diapasons, couplage bien plus fort lorsqu'ils ont même fréquence propre, mode symétrique et antisymétrique...
+
+
+\section{Pendules couplés [1]}
+\textbf{Il est nécessaire d'équilibrer la barre du pendule à vide (avant l'ajout de la masse pesante) par ajout de masselottes en position haute. L'équilibrage est assuré lorsque la barre tient en position horizontale.} Cette étape permet de faciliter les calculs par la suite puisque l'on pourra considérer un "véritable" pendule pesant.
+
+\subsection{Mesure de $J$ et de $C$}
+\subsubsection{mesure de $J$}
+\begin{itemize}
+\item pour cette partie, le Perez chapitre 27 permet d'introduire quelques notions utiles. En pratique les calculs sont très simples (TMC sur chacun des pendules), une bibliographie n'est donc pas utile.
+\item Pasco permet de faire des acquisitions pour ce montage
+\item après équilibrage du pendule, ajouter une masse connue à une distance connue
+\item pour mesurer $J$ on découple les deux pendules
+\item on mesure alors la période d'oscillations libres $T_0$ (dans cette étude, rester aux petits angles pour ne pas rencontrer de problèmes!)
+\item \leftcenters{La théorie donne}{$J=\f{mgLT_0^2}{4\pi^2}$}
+\end{itemize}
+
+\subsubsection{mesure de $C$}
+\begin{itemize}
+\item cette fois, on met le couplage et on bloque en rotation l'un des deux pendules
+\item mesurer alors la nouvelle pulsation d'oscillations $\omega$
+\item dans ce cas, on ajoute seulement un couple supplémentaire, si bien que $C$ s'écrit 
+\centers{$C=J(\omega^2-\omega_0^2)$}
+\noindent
+avec $\omega_0=\tf{2\pi}{T_0}$
+\end{itemize}
+
+\subsection{Modes propres de vibration}
+\subsubsection{mode symétrique}
+\begin{itemize}
+\item lâcher les deux pendules selon le mode symétrique
+\item constater qu'il vient $T\e{S}=T_0$
+\item interpréter physiquement : couple du fil de torsion assurant le couplage toujours nul
+\end{itemize}
+
+\subsubsection{mode antisymétrique}
+\begin{itemize}
+\item lâcher dans le mode antisymétrique
+\item vérifier que la pulsation du mode s'écrit $\omega\e{A}=\sqrt{2\omega^2-\omega_0^2}$
+\item on constate qu'aux frottements près, il n'y a pas d'évolution de ces états : ce sont des modes propres!
+\end{itemize}
+
+\subsection{Battements}
+\begin{itemize}
+\item \textbf{attention, c'est important ici : il faut s'assurer qu'il ne demeure pas d'offset sur le signal. S'il y en a un, il faut IMPERATIVEMENT l'enlever manuellement sous Igor!}
+\item cette fois, faire un lâcher par un décalage angulaire d'un unique pendule
+\item on se place alors en condition de battement
+\item mise en évidence de deux périodes 
+\centers{$\omega\e{B}=\f{\omega\e{A}-\omega\e{S}}{2} \qqetqq \omega\e{P}=\f{\omega\e{A}+\omega\e{S}}{2}$}
+\item faire la TF de ce signal : on constate deux pics qui correspondent aux deux modes propres
+\item une oscillation libre du système se décompose sur la base propre
+\end{itemize}
+
+\subsection{Etude énergétique}
+\begin{itemize}
+\item l'énergie totale du système s'écrit 
+\centers{$E_m=E_{m1}+E_{m2}+E\e{coup}$}
+\noindent
+avec $E_{m1,2}=E_{c1,2}+E_{p1,2}=1/2 J \dot{\theta}_{1,2}^2 + 1/2 mg\ell \theta_{1,2}^2$ 
+\mk
+\noindent
+et l'énergie de couplage $E\e{coup}=1/2 C (\theta_1-\theta_2)^2$
+\item constater que l'énergie de couplage est en fait négligeable par rapport aux autres formes
+\item tracer sur le même graphique $E_m$, $E_{m1}$ et $E_{m2}$
+\item constater que l'énergie totale se conserve (aux pertes près, qui d'ailleurs sont des pertes par frottement secs principalement puisque la décroissance est linéaire) et que l'énergie mécanique est transférée périodiquement entre les deux pendules
+\end{itemize}
+
+\section{Analogie électromécanique}
+\subsection{Couplage de deux LC par inductance mutuelle [2]}
+\subsubsection{Mesure de $M$ au LC-mètre}
+\begin{itemize}
+\item Pour comparer par la suite aux modèles théoriques, il convient de mesurer $M$ par une méthode simple
+\item on choisit de faire un relevé directement au LC-mètre
+\item mesure directe en branchant les bobines dans le même sens ou en opposition. On relève alors $2(L+M)$ et $2(l-M)$.
+\item il est alors facile de remonter à $M$
+\item considérer deux conditions de couplage (deux distances entre les bobines)
+\item ne pas utiliser de noyau de fer, sinon on change aussi $L$...
+\end{itemize}
+
+\subsubsection{détermination de la fréquence propre des oscillateurs non couplés}
+\begin{itemize}
+\item il est plus sur de placer un suiveur en sortie du GBF pour ne pas voir ses effets résistifs
+\item pour que le couplage soit optimal, choisir des composants identiques (même fréquence de résonance
+\item relever alors la valeur de la fréquence de résonance $\omega_0$. 
+\item on regarde la résonance en tension aux bornes du condensateur du LC. \end{itemize}
+
+\subsubsection{fréquences de résonance après couplage inductif}
+\begin{itemize}
+\item pour mettre en évidence le mode symétrique et antisymétrique, on va faire une alimentation avec des créneaux de charge du condensateur (se placer à fréquence très faible (dizaine de Hz)
+\item pour rester en analogie avec les pendules couplés, on excite les modes symétriques et antisymétriques (pour ce faire, il faut construire un ampli inverseur de gain unitaire)
+\item enfin, il est recommandé d'ajouter deux montages à résistance négative
+\item ça fait donc un montage à 4 AO : prendre un TL084 pour simplifier le montage
+\item on observe alors de belles oscillations de relaxation en régime libre (les résistances négatives permettent de tuer la résistance de la bobine entre autre)
+\item les relaxations sont longues (grâce à la compensation des résistances négatives)
+\item on obtient alors de beaux pics en FFT
+\end{itemize}
+
+\subsection{Etude de la ligne à retard : chaîne d'oscillateurs couplés : N oscillateurs -> N modes [3]}
+\begin{itemize}
+\item utiliser la maquette ENSC 340 que l'on alimente avec GBF et \textbf{suiveur}
+\item mesurer la fréquence propre de résonance (un unique LC)
+\item montrer en wobulation que plus on branche de LC, plus on a de pics de résonance distincts! 1 oscillateur = 1 résonance
+\item le Perez donne la formule reliant fréquence de résonance et nombre d'oscillateurs
+\item déplacer notre sonde de mesure en différents points pour essayer de récupérer tous les pics (plus ou moins visibles selon les positions)
+\item ne pas travailler avec tous les oscillateurs si on ne parvient pas à voir tous les pics associés
+\end{itemize}
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Peut-on parler de mode propre dans le cadre d'oscillations non linéaires?}  
+
+\bk
+\noindent
+\textbf{2. En wobulation, doit on se préoccuper de la vitesse de la wobulation?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Les résonances sur la ligne à retard sont elles toutes observables partout?}  
+
+\bk 
+ \noindent
+\textbf{4. Comment expliquer que la loi théorique sur les fréquences ne soit pas respectée? Quelle est l'influence de la résistance sur une fréquence d'oscillation?}  
+
+
+\end{document}

@@ -1,0 +1,115 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M20 : ondes, propagation et conditions aux limites}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] BUP n°574 "Les lignes, réponse à une question sur les fils de Lécher" (donne des éléments de réflexion sur le coaxial)
+\item[[\,2\!\!]] livre de spé pour avoir les informations théoriques utiles
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : définir succinctement la notion d'onde et les phénomènes qui vont nous intéresser
+
+
+\section{Etude des ondes progressives}
+\subsection{Décroissance en $1/r$ du rayonnement}
+\begin{itemize}
+\item kit Moduson ENSC 431
+\item translater le récepteur sur le rail (voir plus loin tant qu'on a du signal) 
+\item constater que le signal décroit en $1/r$ et commenter la conservation de l'énergie rayonnée (le capteur mesure une grandeur proportionnelle à la racine de l'énergie)
+\end{itemize}
+
+\subsection{diagramme de rayonnement}
+\begin{itemize}
+\item kit Moduson ENSC 431
+\item cette fois, utiliser le rail en arc de cercle et établir le diagramme de rayonnement
+\end{itemize}
+
+\subsection{Vitesse de propagation libre du son dans l'air et l'eau}
+\begin{itemize}
+\item kit Moduson ENSC 431
+\item on connait la fréquence à l'oscillo. Il suffit alors de connaître le nombre de périodes que l'on voit lorsqu'on se déplace d'une distance connue pour remonter à la vitesse
+\item comparer à la valeur donnée par le modèle isotherme et le modèle adiabatique : le modèle adiabatique est bien meilleur!
+\item faire de même dans l'eau avec le kit ENSC 410 : cette fois, on connait la distance entre les émetteurs et le temps de propagation d'un pulse -> on a ainsi la vitesse de propagation dans le milieu
+\end{itemize}
+
+\section{Conditions aux limites [1]}
+\subsection{Condition de transmission entre deux milieux, onde évanescente}
+\begin{itemize}
+\item ENSC 442 ondes centimétriques
+\item montrer l'angle de réfraction limite à l'aide d'un bloc de parafine
+\item une fois l'extinction réalisée, placer un second bloc de paraffine à la suite pour recapter l'onde évanescente (il y a décroissance exponentielle avec la distance mais il faut rester qualitatif ici)
+\end{itemize}
+
+\subsection{Vitesse de propagation et mise en évidence de la dispersion dans un câble coaxial}
+\begin{itemize}
+\item \textbf{conseil de Jean : placer le té de dérivation à la sortie du GBF. Ne pas se préoccuper des réflexions multiples qui sont probablement difficilement interprétables.}
+\item envoyer une impulsion dans un câble coaxial de 100m avec une impédance terminale connue (nulle ou infinie typiquement)
+\item on récupère l'impulsion après 200m de parcours. En considérant le temps de propagation, on remonte à une mesure de vitesse que l'on comparera à la valeur expérimentale pour un câble d'impédance caractéristique $50\Omega$
+\end{itemize}
+
+\subsection{Reflexion, transmission, adaptation d'impédance}
+\begin{itemize}
+\item mettre en évidence ce que l'on observe pour une impédance terminale nulle ou infinie
+\item placer en sortie du coaxial une boite à décades de résistance (c'est l'impédance de réflexion)
+\item on trace alors cette amplitude en fonction de $R$ et on fit par la fonction de réflexion sur impédance terminale
+\end{itemize}
+
+\section{Ondes stationnaires dans un coaxial [1]}
+\subsection{Position du problème}
+\begin{itemize}
+\item expliquer le principe : on impose (en wobulation) une excitation de fréquence fixée 
+\item l'impédance terminale crée une condition limite pour la cavité tandis que l'autre condition limite est imposée par le GBF qui impose localement la tension
+\item on place le point de mesure à 100m de l'impédance terminale
+\item on aura une amplitude maximale au point de mesure s'il correspond à un ventre de tension -> c'est notre condition de résonance
+\end{itemize}
+
+\subsection{Fréquence de résonance en $Z=0$ et $Z=\infty$}
+\begin{itemize}
+\item $Z=0$ impose un noeud de tension, ainsi le premier mode sera tel que $\lambda/4=100m$
+\item $Z=\infty$ impose un ventre de tension, ainsi le premier mode sera tel que $\lambda/2=100m$
+\end{itemize}
+
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Fonctionnement des émetteurs moduson} Petite cale piézo, attention changer la fréquence influe sur l'amplitude.
+
+\bk
+\noindent
+\textbf{2. Interpréter le diagramme de rayonnement. Lien avec la diffraction de Franhofer? Différence avec un dipôle rayonnant?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Pour l'émetteur proche du récepteur, on voit des modes. Expliquer} Dans ces configurations, on forme une cavité qui résonne pour certaines longueurs de cavité.  
+
+
+\end{document}

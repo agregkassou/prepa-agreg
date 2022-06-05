@@ -1,0 +1,165 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP26 : propagation dans un milieu dispersif (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item équation de d'Alembert et conditions de propagation associées (le modèle de propagation non dispersif est donc connu)
+\item électromagnétisme (équations de Maxwell, notion de plasma)
+\item mécanique quantique (notion de spin)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item La notion de paquet d'onde doit être introduite comme réponse au caractère non physique d'une OPPM
+\item Les conséquences de la dispersion doivent être soulignées.
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item Réfléchir à la notion de vitesse de groupe et à son utilisation. Il faut être clair sur ce qu'elle représente
+\item utiliser la petite animation qui permet d'illustrer $v_{\phi}$ et $v\e{g}$ (quelle est cette animation???)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] J'intègre PSI, Sanz, Dunod
+\item[[\,2\!\!]] Ondes mécaniques et diffusion, Garing, Ellipses
+\item[[\,3\!\!]] Physique des électrons dans les solides, Alloul, Editions de l'école Polytechnique
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+
+\noindent
+\underline{manipulation} : dispersion dans un câble coaxial de 100m. Montrer le phénomène de dispersion (étalement du paquet d'onde et atténuation (mais difficile à juger vu qu'il y a étalement)). Mais attention, la leçon ne doit pas porter sur la propagation guidée, même si ici c'est un moyen simple de mise en évidence.
+
+
+\section{Propagation d'une onde électromagnétique dans un plasma}
+\subsection{Modélisation [1]}
+\begin{itemize}
+\item définir un plasma
+\item introduire l'onde EM (une OPPM des deux champs)
+\item PFD à un électron + hypothèses simplificatrices
+\item on obtient l'équivalent de la loi d'Ohm pour les plasmas
+\item définir la pulsation plasma, dont on comprendra par la suite la signification
+\end{itemize}
+
+\begin{remarque}
+ne pas faire la modélisation de type hydrodynamique un peu plus difficile à mettre en oeuvre. Celle-là convient parfaitement.
+
+
+faire les remarques du "J'intègre" : conductivité imaginaire du plasma, conséquence d'avoir négligé le mouvement des centres cationiques
+\end{remarque}
+
+\subsection{Equation de propagation et relation de dispersion [1]}
+\begin{itemize}
+\item établir l'équation de propagation 
+\item mettre en évidence la présence d'un terme supplémentaire à l'équation de d'Alembert qui sera à l'origine de la dispersion
+\item établir la relation de dispersion
+\item introduire l'indice complexe du milieu
+\end{itemize}
+
+\subsection{Etude de cas [1]}
+\begin{itemize}
+\item différencier les cas selon la valeur de pulsation par rapport à la pulsation plasma (onde se propageant dans un milieu dispersif (on définira la vitesse de groupe et de phase, ou onde évanescente (on définira la profondeur de pénétration))
+\item considération énergétique : on calculera en particulier la valeur moyenne du vecteur de Poynting dans les deux cas (nul dans le cas onde évanescente, constant dans le cas propagatif, caractéristique d'un milieu transparent donc) 
+\item calculer la pulsation plasma dans le cas de l'ionosphère : parler alors des communications radio par réflexion sur l'ionosphère et des communications avec les satellites
+\end{itemize}
+
+\section{Propagation d'un paquet d'onde}
+\subsection{Notion de paquet d'onde}
+\begin{itemize}
+\item caractère non physique de l'onde plane, il faut une modélisation meilleure
+\item cependant on sait résoudre pour des ondes planes. on cherche donc à construire une fonction quelconque à partir d'une somme (éventuellement infinie d'ondes planes)
+\item construction à partir d'un battement à deux ondes sans trop détailler
+\item définir ensuite un paquet d'onde. établir une relation entre largeur temporelle et spectrale. montrer qu'alors on confine le signal dans le temps, on gagne en sens physique!
+\item construire un paquet d'onde carré avec une intégrale. être pédestre. Somme discrète sur plein d'ondes puis passage à l'intégrale
+\end{itemize}
+
+\subsection{Vitesse de groupe}
+\begin{itemize}
+\item introduire la vitesse de groupe à partir du modèle à deux ondes de pulsation proche
+\item en donner le sens physique dans ce cas
+\item faire le DL à l'ordre 1 proposé par le "J'intègre" mais en prenant une distribution spectrale carrée. attention calcul un peu délicat mais qui explique bien la signification de la vitesse de groupe et la raison de la déformation du paquet d'onde
+\end{itemize}
+
+\subsection{Etalement du paquet d'onde}
+\begin{itemize}
+\item poursuivre le DL à l'ordre 2 sans détailler les calculs
+\item on comprend alors qu'il y a dispersion, c'est-à-dire étalement du paquet d'onde puisque les fréquences se propagent à des fréquences différentes.
+\item donner des images, essayer de trouver la simulation qui propose cela, ou montrer l'expérience avec le coaxial
+\item limite de validité des résultats : les DL doivent rester valables, donc pour des paquets d'onde de faible étendue spectrale.
+\end{itemize}
+
+\section{Conséquences de la dispersion}
+\subsection{Câble coaxial avec pertes : retour sur l'expérience introductive [1]}
+\begin{itemize}
+\item donner l'équation d'onde et la relation de dispersion associée 
+\item donner sans démonstration la valeur de $k'$ et $k"$
+\item on comprend alors que l'onde soit déformée (étalement du paquet d'onde initial) et atténuée. 
+\end{itemize}
+
+\subsection{Ondes de spins}
+\subsubsection{Modélisation [2]}
+\begin{itemize}
+\item on se réfère à l'exo 3.8 du Garing
+\item présenter le modèle et écrire l'expression du couple ressenti par le spin de rang $n$
+\item appliquer le TMC au spin de rang $n$
+\item obtenir l'équation typique d'une chaîne d'oscillateurs
+\end{itemize}
+
+\subsubsection{Relation de dispersion [2]}
+\begin{itemize}
+\item proposer une solution de type ondulatoire, mais en prenant garde au fait qu'on reste discretisé (en particulier, donner les conséquences sur les valeurs possibles du vecteur d'onde)
+\item en déduire la relation de dispersion 
+\item commenter : toujours non linéaire, existence d'une pulsation de coupure
+\item faire un schéma de la tête de l'onde de spins : rotation autour de l'axe de rotation à la pulsation $\omega$
+\end{itemize}
+
+\subsubsection{Mesure expérimentale de la relation de dispersion [3]}
+\noindent
+traité p324 (détection expérimentale des magnons)
+Le principe est d'effectuer de la diffusion inélastique de neutrons qui excitent des modes de magnons. L'énergie et le vecteur d'onde du neutron peuvent être mesurées. Par conservation de l'énergie et de l'impulsion, on en déduit alors la relation de dispersion des magnons dans la matière magnétique. (comment savoir qu'on excite des magnons et pas autre chose?)
+
+\bk
+\noindent
+\textbf{Conclusion} :
+\begin{itemize}
+\item \underline{bilan} : l'étude est très riche tant les domaines de la physique concernés par les ondes sont nombreux. On pourra utiliser les concepts introduits dans de nombreux phénomènes. On verra par exemple que les OEM dans la matière se propagent en suivant des relations de dispersion dont l'étude est d'un grand intérêt aussi bien fondamental que technologique (effet de peau dans les conducteurs, miroirs métalliques, effet miroir de l'ionosphère pour les ondes centimétriques...)
+\item \underline{ouverture} : utilisation des ondes de spin pour remplacer l'électronique. 
+\end{itemize}
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Proposer un modèle simple de chaînes d'oscillateurs donnant une relation de dispersion semblable à celle obtenue dans les plasmas.}  
+
+\bk
+\noindent
+\textbf{2. Longueur de cohérence d'un laser He-Ne. A quels phénomènes est due la largeur de la raie laser? Donner la relation entre largeur temporelle et fréquentielle d'une source.}  
+ 
+ \bk
+ \noindent
+\textbf{3. Les milieux sont-ils toujours atténuateurs?}  
+
+\bk 
+ \noindent
+\textbf{4. Une onde évanescente transporte-elle de l'énergie?}  
+
+\end{document}

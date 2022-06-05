@@ -1,0 +1,130 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP08 : modèle de l'écoulement parfait d'un fluide}
+
+\encadreminipage{9cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item cinématique des fluides
+\item équation de Navier-Stokes
+\item notion de viscosité
+\item nombre de Reynolds
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item un problème d'hydrodynamique est simplifiable (et doit l'être!)
+\item la viscosité s'exerce dans des domaines limités
+\item en conséquence, beaucoup de situations pratiques sont assimilables à des écoulements parfaits
+\end{itemize}
+}
+
+\encadreminipage{9cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Tout-en-un physique PC-PC*, Dunod
+\item[[\,2\!\!]] Hydrodynamique physique, Guyon, Hulin, Petit, EDP Sciences
+\item[[\,3\!\!]]Cap Prépa physique PC-PC*, Pearson 
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+Equation de NS est non analytique (c'est le problème mathématique du millénaire pour le Clay Mathematical Institute). L'objectif est donc de trouver des cas où des simplifications sont possibles pour rendre le problème soluble.
+
+\section{Ecoulement parfait : conditions et conséquences}
+\subsection{Condition [3]}
+\noindent
+\textbf{Condition stricte} : fluide parfait est un fluide rigoureusement sans viscosité (He 4 superfluide sous 2K). C'est sans intérêt pratique car trop rare
+
+\noindent
+\textbf{Condition approchée} : écoulement est parfait si les phénomènes dissipatifs (chaleur, quantité de mouvement, particules) peuvent être négligés, en particulier ceux en lien avec la viscosité (quantité de mouvement donc).
+
+
+\subsection{Equation d'Euler, conséquence [3]}
+Dans NS, le terme de viscosité peut alors être négligés devant \textbf{tous} les autres termes. C'est l'équation d'Euler.
+
+\begin{remarque}
+\noindent
+L'équation d'Euler était connue avant NS. C'est le PFD appliqué à une particule fluide (système fermé). On ne savait pas encore exprimer les phénomènes diffusifs.
+\end{remarque}
+
+\noindent
+Cette condition implique en particulier que :
+\centers{$\f{\text{terme de convection}}{\text{terme de viscosité}}=Re\gg 1$}
+
+\noindent
+$Re$ est donc un critère permettant d'assurer que le terme de viscosité est bien négligeable dans l'écoulement mais ne permet pas d'assurer que l'écoulement est parfait. Pour $Re\gg 1$, l'écoulement devient turbulent et le modèle que l'on développe ne s'appliquera plus. 
+
+
+Donner des ordres de grandeur de $Re$ (bille dans du miel et nageur dans l'eau). Dans le cas du nageur, l'écoulement est en effet parfait à une distance qui est typiquement la taille caractéristique de l'objet utilisée pour le calcul de $Re$. Mais à la surface, les effets de la viscosité ne sont plus négligeables.
+
+
+\subsection{Condition aux limites [3]}
+Pour être résolu, le problème nécessite l'utilisation de conditions aux limites. Dans le cas de parois solides en contact avec le fluide, il y a deux contraintes. La première est la non pénétrabilité du fluide qui impose que la vitesse normale est nulle. La seconde porte sur la vitesse tangentielle. Dans un fluide réel non pathologique, la viscosité n'est pas strictement nul. Pour que la contrainte imposée par le cisaillement du fluide au niveau de la paroi ne diverge pas, on impose la nullité de la vitesse tangentielle à la paroi. Par conséquent, l'effet de la viscosité ne peut être négligée dans cette zone. Il existe donc une zone où la viscosité est à prendre en compte proche des parois, c'est la couche limite. Dans cette zone, les gradients de vitesse sont forts. C'est la raison pour laquelle la viscosité n'est plus négligeable.
+
+\begin{remarque}
+\noindent
+Dans cette zone, les effets de la viscosité rendent les calculs compliqués et hors du cadre de ce cours.
+\end{remarque}
+
+En revanche, on mène le calcul de l'épaisseur $\delta$ de cette couche limite en imposant qu'à la distance $\delta$, la convection et la diffusion sont des contributions égales.
+
+
+\section{Relation de Bernoulli}
+
+\subsection{Bilan}
+\begin{itemize}
+\item équation d'Euler + CI + CL donne 3 équations scalaires
+\item on a 5 inconnues scalaires ($\vect{v}$, $P$, $\rho$). Il faut donc ajouter 2 équations : conservation de la masse + équation thermodynamique souvent
+\item à ce stade, l'équation d'Euler est encore non linéaire donc non soluble analytiquement -> il faut aller plus loin dans les simplifications.
+\end{itemize}
+
+\subsection{relations de Bernoulli, bien fait dans [1]}
+\begin{itemize}
+\item traiter uniquement le cas permanent (suffisant pour les applications ensuite)
+\item reprendre la démo du j'Intègre HPPI puis HPPII (+forces en volumes conservatives)
+\end{itemize}
+
+\begin{remarque}
+\begin{itemize}
+\item incompressible + permanent implique homogène donc cette condition n'est pas nécessaire
+\item faire l'interprétation énergétique proposée chapitre 12 (bilans macroscopiques). La faire proprement et rapidement pour arriver au résultat. 
+\end{itemize}
+\end{remarque}
+
+\subsection{Conditions d'application [2]}
+Revenir sur les conditions d'applications des conditions précédentes. En particulier la condition d'incompressibilité n'est pas évidente. En relation avec le critère de Mach. Très bien fait dans le Guyon p 140. Difficilement vérifiable pour les gaz. Le dire!
+
+\section{Applications}
+
+\subsection{tube de Pitot [1] et [2]}
+clairement exposé dans les livres (il faut simplement expliquer clairement pourquoi la pression mesurée dans la couche limite est identique à celle hors de cette couche).
+
+\subsection{Effet Venturi [1] et [2]}
+Clairement exposé dans les livres
+
+
+\noindent
+\textbf{manipulation} : adapter un manomètre sur une trompe à eau de chimie
+
+
+\subsection{Cavitation}
+Ne se trouve pas dans les livres. On peut chercher facilement la vitesse de rotation maximale d'une hélice de diamètre 1m avant qu'il n'y ait cavitation (rechercher à quel moment la chute de pression atteint la pression de vapeur saturante).
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\noindent
+Ouvrir au delà des écoulements stationnaires. Introduire la notion de turbulence. Illustrer sur des clichés à différents $Re$ sur le sillage derrière un obstacle cylindrique.
+-> \textbf{besoin d'un transparent}.
+
+
+
+\end{document}

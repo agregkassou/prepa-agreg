@@ -1,0 +1,238 @@
+\input{modele.sty}
+\usepackage{floatrow}
+\versionAuteur
+
+\begin{document}
+
+\partie{\large Montage de physique 15 : Production et mesure de champ magnétique}
+
+
+\section{Mise en évidence de l'existence d'un champ magnétique}
+\subsection{Nature vectorielle du champ magnétique}
+Déposer sur un vidéoprojecteur un aimant. Diseperser de la limaille de fer. 
+Mettre en évidence la direction et la force du champ magnétique. 
+Se placer en un point M et tracer le vecteur de direction du champ en ce point.
+Mesurer la norme du champ au teslamètre et mettre en évidence le facteur $\cos{\theta}$ introduit par l'orientation de la sonde.
+
+\noindent
+\hrulefill
+\begin{itemize}
+\item vidéoprojecteur
+\item aimant
+\item champ de boussole ou limaille de fer
+\item teslamètre à effet Hall
+\end{itemize}
+\hrulefill
+
+\subsection{Mesure du champ magnétique terrestre : boussole des tangentes }
+
+
+\subsection{Champ induit par des courants}
+
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=7cm]{image/bobine.eps}}
+\end{center}
+\caption{Prise de mesure de champ magnétique au coeur de la bobine}
+\end{figure}
+
+La circulation de courant est à l'origine d'un champ magnétique. Dans une bobine supposée infinie, ce champ est homogène mais de faible valeur. On mesure au teslamètre ce champ au coeur de la bobine (utiliser la sonde axiale).
+
+\noindent
+\hrulefill
+\begin{itemize}
+\item teslamètre à effet Hall axial
+\item bobine 500 spires, 2A max
+\item source de courant réglable 0-2A
+\item fils blindés
+\end{itemize}
+\hrulefill
+
+\section{Production de champ magnétique}
+\subsection{Production de champ tournant}
+
+Un champ magnétique tournant est généré par trois bobines placées sur un cercle à un angle géométrique $\tf{2\pi}{3}$ l'une de l'autre. Elles sont alimentées par un générateur triphasé. 
+La cage d'écureuil placée au centre est mise en rotation. On met en évidence le fonctionnement d'un moteur asynchrone (quelques explications succintes sur le phénomène : induction, force de Laplace, couple...). 
+Pour s'assurer que l'on observe effectivement un champ magnétique tournant, on remplace le rotor par une sonde à effet Hall aux bornes d'un oscilloscope. On visualise alors l'effet de la dépendance du flux à l'angle que fait le champ avec la sonde (déjà exhibé dans la manip précédente). 
+
+\noindent
+\hrulefill
+\begin{itemize}
+\item teslamètre à effet Hall ajustable sur un oscilloscope [ENSC 471]
+\item oscilloscope avec connexion VGA
+\item 3 bobine 500 spires, 2A max
+\item source de courant triphasée 
+\item fils blindés
+\item cage d'écureuil sur socle
+\end{itemize}
+\hrulefill
+
+\begin{remarque}
+L'oscilloscope est synchronisé directement sur le 50Hz du secteur pour plus de simplicité.
+
+Il n'est pas exclu qu'il soit impossible d'avoir accès à une alimentation triphasée le jour de l'agrégation. Cette manipulation n'est par conséquent peut être pas reproductible. 
+\end{remarque}
+
+
+\begin{center}
+	\begin{figure}[h!]            
+\begin{floatrow}[2]         
+ \ffigbox[][][c]
+       {\includegraphics[height=7cm]{image/moteur.eps}}{\caption{Montage moteur asynchrone}}
+   \ffigbox[][][c]
+       {\includegraphics[height=7cm]{image/triphase.eps}}{\caption{Alimentation triphasée}}
+\end{floatrow}
+\end{figure}
+\end{center}
+
+\subsection{Production d'un champ magnétique intense}
+\subsubsection{Modèle de l'électromaimant}
+
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=7cm]{image/caracterisation_elec.eps}}
+\end{center}
+\caption{Dispositif expérimental pour la mesure des caractéristiques de l'électroaimant.}
+\end{figure}
+
+Une modélisation succincte est présentée. Les hypothèses simplificatrices de l'électroaimant idéal sont présentées et l'équation liant le champ magnétique aux autres paramètres est indiquée dans le cas du matériau saturé et non saturé.
+
+\noindent
+\hrulefill
+\begin{itemize}
+\item teslamètre à effet Hall transverse sur pied
+\item électroaimant et son autotransformateur (ajustement en courant, entrefer, et choix des pièces polaires) [ENSC 472]
+\item multimètre
+\end{itemize}
+\hrulefill
+
+\subsubsection{Mesure de $e=f(\tf{1}{B})$}
+La mesure est effectuée au courant nominal $I=2A$. La mesure est ici encore effectuée grâce à la sonde à effet Hall. Si la position de la sonde n'est pas critique pour un entrefer assez large (champ homogène), son orientation l'est beaucoup plus !
+La tendance est linéaire. 
+
+
+\subsubsection{Mesure de $B=f(I)$}
+La mesure est cette fois effectuée pour un entrefer de $0.7cm$. 
+Deux pentes se dégagent clairement, mettant en évidence un début de saturation du matériau. Cependant, il n'est pas évident de conclure que la saturation est tout à fait atteinte. En pratique, la capacité du matériau à s'aimanter décroit continûment lorsque l'on augmente le champ d'excitation, mais l'on ne passe pas brutalement de $\mu\e{r} \mu_0$ à $\mu_0$ (matériau saturé).
+
+
+\section{Mesures de champ magnétique}
+\subsection{Sonde à effet Hall}
+
+\subsubsection{Principe}
+Le phénomène Hall est introduit ainsi que son application à la mesure du champ magnétique. En particulier, l'équation reliant tension de Hall et champ magnétique : 
+\centers{$\abs{U\e{Hall}}=\f{I}{nb\, q\e{e}} \abs{B}$}
+\noindent
+avec $n$ la densité de porteurs, $b$ la largeur de la plaque entre les deux points d'injection du courant et $q\e{e}$ la charge élementaire.
+
+\noindent
+\hrulefill
+\begin{itemize}
+\item teslamètre à effet Hall transverse sur pied
+\item électroaimant et son autotransformateur (ajustement en courant, entrefer, et choix des pièces polaires) \![ENSC~472]
+\item ampèremètre (courant d'alimentation des bobinages électro aimant)
+\item multimètre de précision [ENSC 175] mesure de la tension de Hall sur la maquette
+\item maquette effet Hall [ENSC 272] ou [ENSC 477]
+\end{itemize}
+\hrulefill
+
+\subsubsection{Prise de mesures}
+
+\begin{center}
+	\begin{figure}[h!]            
+\begin{floatrow}[2]         
+ \ffigbox[][][c]
+       {\includegraphics[height=7cm]{image/hall.eps}}{\caption{Montage due latérale}}
+   \ffigbox[][][c]
+       {\includegraphics[height=7cm]{image/hall2.eps}}{\caption{montage vue de dessus}}
+\end{floatrow}
+\end{figure}
+\end{center}
+
+Une courbe d'étalonnage est d'abord effectuée en mesurant $B$ (avec une sonde à effet Hall) et $E\e{Hall}$ sur la maquette. Le relevé a fait apparaître un défaut de linéarité et nous avons choisi de faire une interpolation par un ordre 2 afin d'avoir un résultat fonctionnel pour faire une sonde avec.
+Dans un second temps, un champ magnétique est mesuré grâce à la maquette.
+
+\subsection{Fluxmètre}
+\subsubsection{Montage}
+
+\begin{center}
+	\begin{figure}[h!]            
+       {\includegraphics[height=7cm]{image/schema.eps}}{\caption{Schéma de principe du fluxmètre}}
+       \end{figure}
+\end{center}
+
+
+\begin{center}
+	\begin{figure}[h!]  
+       {\includegraphics[height=7cm]{image/oscillo.eps}}{\caption{Type de signal obtenu à l'oscilloscope}}
+\end{figure}
+\end{center}
+Malgré son apparente facilité, ce montage n'est absolument pas évident en pratique. Il faut l'avoir fait avant l'agrég ou ne surtout pas le présenter ! Nous avons choisi de le présenter parce que cette manip semble avoir été appréciée par le jury les années précédentes. L'idée est d'intégrer le flux traversant un ensemble de spires pour en déduire le champ magnétique d'un aimant par exemple.
+
+\centers{$\abs{v\e{in}}=N \ddt{\abs{\phi}}$}
+\leftencadre{Soit, après intégration}{$\abs{v\e{out}}=\f{N}{RC}(\phi\e{final}-\phi\e{initial})$}
+
+\noindent
+\hrulefill
+\begin{itemize}
+\item teslamètre à effet Hall transverse sur pied
+\item électroaimant et son autotransformateur (ajustement en courant, entrefer, et choix des pièces polaires) [ENSC 472]
+\item amplificateur opérationnel avec système de compensation des courants de polarisation
+\item boîte à décade de résistance
+\item boîte à décade de capacité
+\item oscilloscope
+\item fluxmètre (montage maison) [ENSC 373]
+\end{itemize}
+\hrulefill
+
+\subsubsection{Mesures}
+
+\begin{itemize}
+\item Minimisation des courants de polarisation :
+Des plaquettes précablées disposent d'un AO avec potentiomètre. Faire alors un montage intégrateur classique. S'il est très mal ajusté, la sortie sera instantanément en saturation. Il faut alors chercher à quitter la saturation. Il faut tourner le potentiomètre d'ajustement jusque'à sortir de la saturation. Mais attention, il faut régulièrement repasser par une fermeture de l'interrupteur pour vider le condensateur qui s'est chargée. Lorsque ce premier réglage est obtenu, une lente dérive est encore observable dès que l'on ouvre l'interrupteur. Il convient alors de l'annuler autant que faire se peut. Le réglage est alors terminé.
+\item On peut alors utiliser le montage pour mesurer par exemple le champ magnétique de l'aimant. On travaille sur une base de temps assez longue (quelques secondes) et on fait l'acquisition en mode SINGLE de plusieurs aller retour autour de l'aimant (selon les cas, le déclenchement se fait par l'utilisation de FORCE TRIGGER ou par déclenchement sur un front imposé par un premier aller retour de l'aimant).
+\item Plusieurs constatations expérimentales permettent de s'assurer du bien fondé de la méthode. On constate entre autre que la variation de tension constatée sur un aller retour de l'aimant est indépendante de la vitesse à laquelle on déplace l'aimant.
+\item Par ailleurs, on constate que la valeur du champ magnétique exhibée est indépendante de la valeur de $R$ choisie (sur une plage raisonnable). Il y a donc une bonne reproductibilité qui assure que la méthode est un moyen de mesure sûr (même si en l'état nous n'avons pas vérifié qu'il n'y avait pas d'erreur systématique).
+\end{itemize}
+
+\mk
+\noindent
+En pratiques, les composants ont été pris à la valeur suivante : 
+\begin{itemize}
+\item $R=80-2000 \U{\Omega}$
+\item $R=10 \U{k\Omega}$ (permet de limiter les courants de polarisation en équilibrant les impédances des deux entrées
+\item $C=10 \U{\mu F}$
+\end{itemize}
+
+
+
+\section{Bibliographie}
+\begin{itemize}
+\item Magnétisme : statique, induction et milieux, Christian Garing, Ellipses.
+\item Dictionnaire de physique expérimentale, Tome IV l'électricité, Jean-Marie Donnini \& Lucien Quaranta, Pierron.
+\item Le cours de physique de Feynman, Electromagnétisme 1, Richard Feynman, Dunod.
+\end{itemize}
+
+
+
+\section{Questions}
+\begin{itemize}
+\item Lors de l'étalonnage de la sonde maquette de l'effet Hall, la courbe d'étalonnage est translatée. Pourquoi? Le réglage du zéro (tension nulle à $B$ nulle) n'a pas été faite avant la manipulation en exposé.
+\item Manière de mesurer $B$ à distance ? Mesurer le champ magnétique autour du Soleil. Spectroscopie par effet Zeeman.
+
+\end{itemize}
+
+\section{Commentaires et remarques}
+\begin{itemize}
+\item terminer avec 5 minutes d'avance et passage rapide sur certains points de l'expérience. 
+\item Introduire le champ magnétique terrestre. Cette partie a manqué dans le montage. En faire une mesure serait pertinente. En particulier parce que c'est une mesure de champ faible. Introduire la méthode de boussole des tangentes.
+\item Il convient de faire un calcul d'incertitude complet (au moins un) durant le montage. Mais il est important de le faire au bon endroit. Dans la plupart des calculs, un terme d'incertitude est largement dominant et la formule de propagation des incertitudes est alors superflue (et montre un manque de discernement). 
+\item Laisser plus de côté la partie théorique et appuyer la partie mesure expérimentale. Expliquer le principe n'est pas nécessaire. Éviter de présenter les résultats avant de faire les mesures. Il est plus intéressant de faire les tracés puis les constatations dans un second temps. Ce n'est qu'alors qu'on cherche éventuellement à valider des modèles théoriques. 
+\item Si le temps le permet, ne pas hésiter à faire une série de mesures dès que le point est décalé. Permet au jury de s'assurer des capacités expérimentales du candidat en situation. 
+\end{itemize}
+
+
+
+
+
+\end{document}

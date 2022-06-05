@@ -1,0 +1,174 @@
+\input{modele.sty}
+\usepackage{floatrow}
+\versionAuteur
+
+\begin{document}
+
+\partie{\large Montage 24 : Acquistion, analyse et traitement de signaux}
+
+\noindent
+\hrulefill
+
+\mk
+\noindent
+\textbf{Liste de matériels}
+\begin{itemize}
+\item 2 oscilloscope Agilent DSO série 6000 [ENSC 109] 
+\item oscilloscope DSO-X 3014A [ENSC 390]
+\item 5 GBF Agilent 33220A [ENSC 154]
+\item diapason 440Hz sur caisse de résonance
+\item microphone ATM 61 [ENSC 424]
+\item amplificateur à gain ajustable [ENSC 300.9]
+\item 2 maquette multiplieur suivi d'un étage de filtrage passe bas RC 
+\item maquette sommateur inverseur (utilisé pour additionné un bruit au signal)
+\end{itemize}
+\hrulefill
+
+
+\section{Acquisition d'un signal à l'oscilloscope : effet de la quantification}
+\subsection{Echantillonnage en tension du signal}
+\noindent
+On se propose ici de montrer que l'oscilloscope numérise le signal en tension sur 8 bits. Pour cela on relie l'oscilloscope à un GBF puis :
+\begin{itemize}
+\item Colorier l'écran de l'oscillo à l'aide d'un bruit blanc
+\item Noter l'échelle verticale d'acquisition (ex. 1V/div)
+\item faire un stop
+\item waveform -> display -> décocher "vector"
+\item zoomer sur l'échelle verticale jusqu'à voir apparaître des lignes verticales distinctes : on obtient nos pas de quantification en tension
+\item on remonte alors au nombre de pas de quantification et on s'assure que les 8 carreaux de l'échelle sont effectivement quantifiés sur 256 niveaux 
+\end{itemize}
+
+
+\subsection{De l'importance de l'échantillonnage en tension dans l'interprétation des signaux}
+Si cet effet de quantification passe souvent inaperçu, il est important de prendre conscience de son potentiel impact dans le traitement ultérieur du signal. Pour se convaincre de l'importance de cette quantification, on mène l'expérience suivante :
+\begin{itemize}
+\item on fait l'acquisition d'un bruit blanc à l'oscilloscope
+\item le signal est exporté sur Igor (via la macro adaptée d'acquisition)
+\item on fait alors un histogramme sur le signal brut (wave CH1 a priori) avec 512 intervalles 
+\end{itemize}
+
+\mk 
+Un phénomène amusant est alors mis en évidence : les tensions se répartissent suivant une distribution gaussienne centrée en 0, mais un intervalle sur deux ne contient aucune valeur. Une interprétation hâtive conduirait à penser que le bruit présente cet étrange comportement. Ce n'est bien évidemment pas le cas. Le bruit se distribue continûment. Mais la quantification se fait sur 256 niveaux discrets (le signal de bruit prend nécessairement l'une de ces valeurs) alors que l'histogramme est proposé avec le double d'intervalles (un intervalle sur deux est donc nécessairement vide puisqu'aucun niveau ne correspond à ces intervalles). De manière générale (et il faut le préciser pendant l'exposé), l'histogramme doit être fait avec un nombre entier de pas de quantification de l'oscilloscope (sinon certains intervalles de l'histogramme contiendront plus de pas de quantification que d'autres et ça n'aura plus aucun sens).
+
+
+
+\subsection{Echantillonnage temporel}
+Dans cette partie, l'objectif est de mettre en évidence que le signal est aussi échantillonné en temps. En particulier, nous chercherons à exhiber deux régimes de quantification : 
+\begin{itemize}
+\item Pour visualiser le pas de temps, il n'y a pas de méthodes miracles (parce qu'une fonction n'admet qu'un point par antécédent...). On prend donc un signal nul au GBF. On se place en mode sans "vector" et on visualise les points (difficile à voir si on n'est pas proche). On se propose alors de montrer les deux limites de quantification
+\item \textbf{limite en fréquence d'acquisition} : On se place sur la base de temps minimale (5 ns/div). On mesure alors le pas de quantification. On obtient alors la fréquence maximale d'échantillonnage $f\e{c}^{max} \simeq 1.9 \U{GSa.s^{-1}}$. Ce qui nous donne $94$ points acquis... On est bien loin des capacités mémoire de l'appareil!
+\item \textbf{limite en profondeur mémoire} : Cette fois, utiliser une longue base de temps (500 ms/div suffira). On mesure alors le pas de quantification en temps. Sachant que l'on a fait une acquisition sur 5s, on obtient une acquisition de $3.4M$ points. On est proche des limites de l'appareil. Cette fois, on est limité par la capacité mémoire.
+\item On en profite pour mettre en évidence le sous échantillonnage fait pour la FFT sur l'oscilloscope. Constater qu'il prend au plus 1000 points pour faire la FFT. Soit sur l'acquisition précédente, u temps d'acquisition de 5s et une fréquence d'échantillonnage de $f\e{e}=200Hz$. Rappelons que le critère de Shannon impose $f\e{e}>2 f\e{max}^{signal}$.
+
+\end{itemize}
+
+
+\section{Analyse de la réponse impulsionnelle d'un diapason : passage dans le domaine spectral}
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=7cm]{image/im1.eps}}
+\end{center}
+\caption{schéma de principe de l'expérience}
+\end{figure}
+
+On analyse la réponse impulsionnelle du diapason sur sa caisse de résonance. Par conséquent, 
+\centers{$TF\paa{\text{signal}(t)}=\text{fonction de transfert}$}
+
+
+L'acquisition du signal se fait grâce au microphone et à l'ampli à gain ajustable [ENSC 300.9]. Nous avons remarqué que la qualité du signal était meilleure avec cet étage d'amplification, même s'il n'apparaît pas d'une nécessité absolue en soi.
+
+\noindent
+\leftencadre{Paramètres attendus :}{$f_0=440 Hz \qquad Q\simeq 5000 \qqetqq \Delta f=0.09 Hz$}
+
+
+\subsection{Utilisation de la fonction FFT de l'oscilloscope}
+Effectuons l'acquisition en respectant le critère de Shannon. La FFT de l'oscilloscope utilise 1000 points. Par conséquent, pour respecter le critère de Shannon, il est nécessaire d'utiliser une fréquence d'acquisition de l'ordre du kHz, soit un temps d'acquisition de 1s. La résolution spectrale est donc de 1Hz, bien supérieure au $\Delta f$ attendu. Il n'est donc pas possible de résoudre notre pic.
+
+\subsection{Application de la translation de fréquence : respect du critère de Shannon}
+On multiplie le signal micro par celui d'un GBF fournissant une sinusoïde à $f\e{GBF}=430 Hz$ (par exemple). Le signal est donc autour de la fréquence translatée $f\e{t}=10Hz$. Le respect du critère de Shannon impose alors une acquisition à $f\e{e}=40Hz$ (pour être large). On peut alors faire l'acquisition sur un temps long de $25s$. La résolution spectrale est dans ce cas de $\tf{1}{25}=0.04Hz$. Dans ce cas, on doit pouvoir résoudre notre pic directement avec le mode FFT de l'oscilloscope (et les 1000 points d'acquisition).
+
+\begin{remarque}
+Faire une remarque sur l'importance du fenêtrage! Quel mode choisir pour avoir la bonne résolution du pic spectralement entre autre.
+
+\end{remarque}
+
+\subsection{Translation mentale de fréquence : application du sous échantillonnage}
+On travaille en sous échantillonnage en utilisant un critère de Shannon moins limitant. Cette fois, on ne se préoccupe plus de la fréquence maximale du signal mais de l'encombrement spectral du signal $\Delta f\e{encombrement}$ qui est ici égale à quelques largeurs du pic de résonance du diapason. Le critère de Shannon est alors : 
+\centers{$\Delta f\e{encombrement}<2 f\e{e}$}
+
+
+\subsection{Utilisation de toute la profondeur mémoire : FFT sous Igor}
+Il est aussi possible d'utiliser toute la profondeur mémoire de l'oscilloscope et donc les 4M points de l'acquisition pour faire la FFT. Pour ce faire, il faut faire un traitement informatique sous Igor du signal que l'on a acquis. Dans ce cas, le critère de Shannon n'est absolument plus critique. Prenons $f\e{e}=4kHz$ (pour être large par rapport à Shannon). Avec 4M de points, il est alors possible de faire une acquisition sur 1000s... Limitons nous à 50s d'acquisition. On obtient alors une bonne résolution de notre pic puisqu'on obtient une résolution spectrale de $0.02Hz$ (sans avoir utilisée une technique lourde de translation de fréquence).
+
+\begin{remarque}
+\noindent
+Afin de gagner du temps, utiliser pour ce traitement la même acquisition que celle faite avec translation de fréquence. Il suffit pour cela de faire une acquisition simultanée sur deux voies de l'oscilloscope avec sur une voie le signal direct et sur l'autre le signal translaté.
+\end{remarque}
+
+\section{Traitement d'un signal bruité par détection synchrone}
+Dans de nombreux domaines de la physique, le signal brut est fortement bruité. Cependant, si un signal contient une information spectrale (c'est à dire, si sa densité spectrale contient des pics de nature informative de niveau supérieur au bruit), des méthodes de traitement ont été développées. Il s'agit entre autre des méthodes de détection synchrone. 
+
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=9cm]{image/im2.eps}}
+\end{center}
+\caption{Schéma de principe de la manipulation}
+\end{figure}
+
+\subsection{Principe et application en traitement du signal bruité : conditionnement du capteur de contrainte}
+\subsubsection{Présentation du capteur}
+\begin{itemize}
+\item utiliser la maquette ENSC 482 avec la plaquette électrique associée
+\item présenter le principe (expliquer la variation de la résistance avec la déformation)
+\item constater la variation du signal lorsqu'on dépose une masse (travailler en continu pour le moment)
+\item on constate que le signal est fortement bruité et d'amplitude ridicule (l'ampli n'est pas encore utilisé)
+\end{itemize}
+
+\subsubsection{Conditionnement du capteur}
+\begin{itemize}
+\item on va d'abord utilisé un étage d'amplification (dont on mesure rapidement le gain
+\item pour limiter le bruit (principalement d'origine thermique et donc basse fréquence, de l'ordre du Hz), on met en place une détection synchrone (générateur autour du kHz et filtre coupant à 1Hz
+\item dans ce montage, il faut évidemment se concentrer sur cette partie! puisqu'ici on s'intéresse au traitement du signal.
+\end{itemize}
+
+\subsubsection{Mesures}
+\begin{itemize}
+\item étalonner le capteur (avec des masses connues)
+\item avant chaque mesure, il est préférable de refaire le zéro (il peut y avoir une légère dérive thermique)
+\item soigner les incertitudes, on s'attend à une réponse linéaire
+\item fitter par une droite puis mesurer une masse inconnue (vérifier que l'on retombe sur les barres d'erreur)
+\item attention aux erreurs venant de l'accrochage de la masse (positionner le fil toujours de la même manière et surtout la poser délicatement!!)
+\end{itemize}
+
+
+\noindent
+\hrulefill
+
+\mk
+\noindent
+\textbf{Bibliographie}
+\begin{itemize}
+\item Expériences d'électronique, Duffait, Bréal (détection synchrone)
+\item Pour le reste, peu de bibliographie adaptée. Pas d'autres choix donc que d'arriver en sachant quoi faire.
+\end{itemize}
+\hrulefill
+
+
+\noindent
+\textbf{Questions et commentaires}
+\begin{itemize}
+\item Pour ne pas avoir d'effet du pas de quantification de l'oscillo en tension, on prend pour les traitements ultérieurs (histogramme dans l'exemple) un \textbf{multiple entier} du pas de quantification de l'oscillo
+\item Le GBF est numérique. Il génère donc des signaux quantifiés également. Cependant le GBF code sur 14 bits, on peut donc considérer le signal continue au regard de la quantification introduite par l'oscillo
+\item La profondeur mémoire est modifiée en fonction du nombre de voie allumée (j'ai l'impression que ce n'est pas le cas de tous les appareils à vérifier donc!). De manière générale, il ne faut donc pas laisser allumée une voie qui n'a pas d'entrée sur un oscille.
+\item Deux fréquences d'échantillonnage sont indiquées par l'oscillo. Dans le menu MAIN DELAY, on voit en bas à droite la fréquence d'acquisition. Dans le menu MATH, c'est la fréquence de sous échantillonnage utilisée pour l'analyse FFT (en temps réel) qui est indiquée. 
+\item La fréquence max d'acquisition est due principalement au temps de charge de la capacité servant à faire la mesure. En pratique la prise de mesure se fait par mesure de la tension aux bornes de ces capacités. C'est la principale limitation. On pourrait aussi citer des limitations en lien avec le temps d'écriture dans la mémoire (mais c'est négligeable d'après JBD)
+\item Ne pas faire n'importe quoi comme moi pour mesurer la largeur à mi hauteur du pic de résonance! On travaille en dB, on peut donc par exemple prendre la largeur à $G\e{max}-3dB$. Ainsi c'est reproductible. La précision est des plus importantes ici car c'est une manip de métrologie. Il faut donc essayer de soigner les incertitudes. Et comme on a deux méthodes pour trouver le facteur de qualité du diapason , il faut les comparer! 
+\item je n'ai pas parlé de la technique de sous échantillonnage visant à utiliser le repliement spectral pour résoudre des raies non résolues. Cette fois, le respect de critère de Shannon ne se fait plus sur la fréquence maximale du signal mais sur son encombrement spectral. Dans le cas traité ici, l'encombrement spectral du diapason est de l'ordre du Hertz, on peut donc drastiquement diminuer la fréquence d'échantillonnage (d'un facteur 400 environ). Dans cette méthode d'analyse, la fréquence centrale du pic sera l'excédent fractionnaire $r=440Hz-n \, f\e{e}$. 
+\item La dernière manipulation n'a pas été bien présentée par manque de temps. JBD propose de la remplacer par la technique de sous échantillonnage. Néanmoins, elle avait le mérite de présenter une méthode très utilisée de traitement du signal, ce qui est intéressant vu que le reste du montage ne parle pas franchement de traitement. A vous de voir donc. 
+\item Si la dernière manip est présentée, il faut l'avoir bien préparée avant. Autant le reste du montage est facile, autant cette manip ne s'improvise pas. Il faudrait sûrement aussi trouver une manière plus qualitative de la présenter pour ne pas se noyer dans des détails compliqués
+\item faire remarquer que toutes ces manies peuvent être faites avec des oscille basiques et un peu de matériel électronique. C'est donc intéressant pour travailler dans un lycée! 
+
+\end{itemize}
+
+
+\end{document}

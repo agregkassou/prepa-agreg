@@ -1,0 +1,174 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP42 : oscillateurs à deux degrés de liberté en mécanique classique et quantique (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item mécanique classique (oscillateur harmonique)
+\item mécanique quantique (équation de Schrödinger, résolution matricielle, effet tunnel)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item l'analogie formelle est évidente
+\item insister sur les différences et les analogies existantes sur les hypothèses de départ et les résultats
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Réflexion sur la notion de ddl}
+\begin{itemize}
+\item degré de liberté : variable qu'il faut se donner pour définir l'état d'un système (il y a autant de ddl pour le système que de variables nécessaires)
+\item considérons la direction $x$ de l'espace : en classique, il y a seulement un ddl à associés $x$ ($p\e{x}$ est la variable conjuguée). Chacun de ces ddl prend un continuum de valeurs possibles (non quantification)
+\item en quantique c'est différent. Pour la direction $x$, on a une infinité de ddl quantifiés pour la grandeur $x$ (et pour la grandeur $p\e{x}$). Cela est du au fait que l'on peut avoir une superposition d'état quantique. Chaque variable donne une image de la probabilité de trouver la particule dans cet état
+\item par exemple pour un spin 1/2, on a deux ddl pour la direction de projection z (puisqu'un état peut être combinaison de ces deux états propres)
+\item à chacun de ces ddl est associé un mode propre. Lorsque ces ddl sont couplés, les modes propres le sont également et on obtient de nouvelles fréquences propres (mais le nombre total de modes propres est inchangé)
+\item pour ce qui concerne les milieux continus (une corde), on a autant de ddl que d'éléments infinitésimaux considérés, soit presque une infinité. Ensuite, les conditions au limite restreignent les modes possibles. 
+\end{itemize}
+}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] BUP n°574, "systèmes à deux états" (parfait pour cette leçon, à suivre)
+\item[[\,2\!\!]] Mécanique quantique, Basdevant, Editions de l'école Polytechnique
+\item[[\,3\!\!]] Mécanique des fluides et ondes mécaniques, Faroux Renault, Dunod
+\end{itemize}
+}
+
+\begin{remarque}
+\noindent
+De manière générale, il faut prendre du recul sur la biblio pour faire cette leçon. Elle n'est pas très difficile, mais elle doit être faite par soi même pour conserver une écriture cohérente tout au long de la leçon
+\end{remarque}
+
+\noindent
+\textbf{Introduction}
+
+
+\section{Présentation des problèmes et résolution}
+\subsection{Oscillateurs harmoniques couplés en classique : présentation matricielle [1] et [3]}
+\begin{itemize}
+\item suivre la présentation du FR, mais faire plutôt la présentation sur des pendules couplés (ainsi on peut utiliser le système de démonstration pendant la leçon)
+\item présenter le modèle mécanique, mettre en équation
+\item en donner une écriture matricielle 
+\item se rapprocher le plus possible de l'écriture quantique du problème de manière générale (il faut faire sentir l'analogie)
+\end{itemize}
+
+\subsection{Système quantique à deux états : modélisation de la molécule $H_2^+$ [1]}
+\begin{itemize}
+\item suivre en tout point le BUP qui est génial!
+\item présenter le système : deux centres attracteurs fixes distants de R et un électron 
+\item ici, on ne s'intéresse pas aux calculs de passage d'une barrière de potentiel ... de toute façon, la géométrie du problème rendrait le problème trop compliqué et ce n'est pas le sujet
+\item l'idée est ici de poser les choses. Si les particules ne se voient pas (infiniment éloignées), l'électron est localisée sur l'une d'elle dans un état d'énergie fondamental 
+\item on ne considérera que deux états de la base découplée (électron sur 1 ou électron sur 2) -> écrire alors l'équation de Schrödinger
+\item pour des distances finies entre les centres, il y a possibilité pour l'électron de passer d'un centre à l'autre par effet tunnel c'est à dire même si son énergie cinétique ne lui permet pas de se trouver ici classiquement)
+\item ce passage par effet tunnel s'interprète par l'ajout d'un couplage entre les deux équations différentielles. L'évolution de la probabilité d'être dans l'état 1 dépend maintenant de l'état 2. C'est ça le couplage
+\item une fois le système écrit, on passe sous forme matricielle
+\item jusqu'à maintenant l'analogie formelle est complète
+\end{itemize}
+
+\subsection{Résolution par diagonalisation matricielle [pas de réf]}
+\begin{itemize}
+\item la matrice est symétrique réelle
+\item elle est donc diagonalisable et se diagonalise facilement
+\item donner valeur propre et état propre dans chacun des deux cas (classique et quantique)
+\item principe de superposition pour équations linéaires : toute solution s'écrit sous forme d'une combinaison linéaire : on écrit alors une solution générale 
+\item les conditions initiales permettent alors de conclure sur la forme de la solution au cours du temps
+\end{itemize}
+
+\section{Interprétation dans le cadre de la physique classique}
+\subsection{Modes propres}
+\begin{itemize}
+\item écrire explicitement les deux modes propres (avec leur évolution temporelle associée à la résolution de l'équation et leur valeur dans la base non diagonale de départ) et les pulsations qui leur sont associées
+\item exprimer les CI nécessaires à l'obtention de ces modes : il faut que l'un des coefficients de la solution générale écrite dans le base diagonale soit nul à l'instant initial
+\item expliciter la notion de modes propres : si le système est dans l'un de ces modes il y reste. Les oscillations de chacun des pendules sont stationnaires dans le temps.
+\item interpréter les pulsations par l'action du ressort de couplage (inchangée pour le mode symétrique, supérieure pour le mode antisymétrique)
+\end{itemize}
+
+\subsection{Solution dépendant des CI : battements entre modes}
+\begin{itemize}
+\item pour des CI quelconques, le mouvement de l'oscillateur s'écrit comme une combinaison linéaire des deux modes propres de vibration. L'équation générale se trouve donc à partir des CL
+\item se placer dans le cas particulier de CI avec un pendule translaté et l'autre laissé à 0
+\item donner la solution dans ce cas, en calculant explicitement la valeur des coefficients de la solution générale dans la base diagonale
+\item donner le graphe représentatif + démonstration sur système réel
+\item mouvement d'oscillations rapides modulées par une oscillation lente (on parle de battements)
+\end{itemize}
+
+\subsection{transfert énergétique entre les oscillateurs}
+\begin{itemize}
+\item écrire l'énergie totale du système en séparant clairement toutes les contributions 
+\item montrer que l'énergie se transfère d'un pendule à l'autre au cours du temps
+\item ne pas le présenter expérimentalement, c'est trop long à faire...
+\end{itemize}
+
+\section{Interprétation dans le cadre de la physique quantique}
+\subsection{Etats propres [1]}
+\begin{itemize}
+\item dans le cas classique, on interprétait le mode propre comme un certain mode de vibration des deux oscillateurs
+\item représenter dans notre cas chacun des états propres
+\item représenter aussi le module carré associé qui correspond à la probabilité de présence (sens physique supérieur) -> cette probabilité de présence ne varie pas au cours du temps d'ailleurs!
+\item énergie associée à chacun des modes 
+\end{itemize}
+
+\subsection{Oscillations de probabilité [1]}
+\begin{itemize}
+\item considérons qu'à l'instant t=0 la particule a été mesurée dans la position gauche
+\item exactement comme dans le cas précédent, la solution va donc être combinaison linéaire des deux états propres
+\item on peut alors évaluer la probabilité de trouver la particule dans l'un des deux états en fonction du temps
+\item on constate qu'elle passe périodiquement d'un état à l'autre
+\end{itemize}
+
+\subsection{stabilité des molécules : force du couplage [1]}
+\begin{itemize}
+\item le couplage a donc introduit un split en énergie entre les niveaux
+\item l'électron se place alors dans ce niveau minimal -> c'est le principe d'une liaison (stabilisation de la molécule par partage d'un électron)
+\item ici, la force du couplage n'est pas imposée par une condition extérieure. la molécule va s'équilibrer d'elle même
+\item écrire un hamiltonien modifié ou les termes diagonaux sont modifiés par l'approche des deux protons
+\item la molécule va se stabiliser autour du minimum d'énergie de son état lié (symétrique) : on a donc compétition entre l'abaissement d'énergie qui augmente avec la force du couplage et l'augmentation de l'énergie due à la répulsion des protons.
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : résumer l'étude précédente sous la forme d'un tableau soulignant les analogies et différences entre les deux systèmes. Pas évident à faire, il faut reprendre tous les éléments de la leçon.
+
+Noter pour conclure que l'on aurait également pu faire l'étude en régime forcé. Mais les calculs auraient été plus délicats, sans pour autant enrichir la physique du problème en ce qui nous concerne.
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Pourquoi écrire -A dans le terme de couplage.} Car alors, $E_0-A$ est bien l'énergie minimale (état fondamental)  
+
+\bk
+\noindent
+\textbf{2. Est-on en couplage faible ou en couplage fort? dans quel cas est-ce important?} Couplage faible ici. Si on s'intéressait aux oscillations de Rabi (régime forcé), cela permettrait de faire des simplifications utiles.  
+ 
+ \bk
+ \noindent
+\textbf{3. Exemples dans lequel de longues chaines d'oscillateurs sont étudiés. Qu'est ce que ça change?} On pourrait penser à un cristal. La dégénérescence est de plus en plus forte jusqu'à former un continuum  
+
+\bk 
+ \noindent
+\textbf{4. L'énergie du fondamental est il nul dans un puis carré?} Non c'est exclu pour satisfaire les relations d'Heisenberg. 
+\end{document}

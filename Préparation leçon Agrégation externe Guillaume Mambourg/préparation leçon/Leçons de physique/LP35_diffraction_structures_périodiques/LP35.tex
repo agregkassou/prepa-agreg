@@ -1,0 +1,133 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large L35 : diffraction par des structures périodiques dans différents domaines de la physique}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item diffraction de Fraunhofer
+\item acoustique
+\item cristallographie
+\item notion élémentaire de mécanique quantique
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item le phénomène est propre aux ondes en général, c'est indépendant de leur nature
+\item identifier et illustrer facteur de forme et de structure
+\item ne pas faire la leçon en TF, même s'il faut garder l'idée en tête
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Ondes mécaniques et diffusion, Garing, Ellipses
+\item[[\,2\!\!]] Optique, Sextant, Hermann
+\item[[\,3\!\!]] Cap Prépa physique PC-PC*, Pearson 
+\item[[\,4\!\!]] physique des électrons dans les solides, Alloul, Ecoles Polytechnique
+\item[[\,5\!\!]] physique des solides, Ashcroft, EDP Sciences
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+On a vu la diffraction par une fente, puis la figure associée à deux fentes ; maintenant on met N objets identiques et on regarde ce qu'il se passe.
+
+\section{Réseau plan en optique}
+\subsection{Position du problème [3]}
+\begin{itemize}
+\item définition d'un réseau -> N motifs répétés à 1D ici (le cas 2D n'apporte pas de richesse)
+\item condition d'éclairement et d'observation -> à l'infini
+\item les fentes sont supposées infiniment fines. pas d'effet du motif
+\item ODG pas du réseau, longueur d'onde. Nature des ondes.
+\end{itemize}
+
+
+\subsection{Calcul de l'intensité diffractée [2] et [3]}
+\begin{itemize}
+\item étude géométrique de la différence de marche entre deux sources puis condition d'interférence constructive -> formule des réseaux donnant la position des maximums
+\item mener le calcul d'éclairement du Cap prépa avec somme discrète
+\item commenter la formule obtenue : largeur des pics en fonction de $N$
+\item montrer qualitativement l'influence du motif (dire sans justification que les effets se multiplient, c'est inclus dans la somme faite directement sur les amplitudes de chaque motif) -> introduire alors facteur de forme et de structure. S'aider du Sextant pour les schémas
+\end{itemize}
+
+\begin{remarque}
+Faire le calcul montrant la limite en épaisseur d'un réseau pour qu'il puisse être considéré 1D. Condition : diffraction n'a pas le "temps" d'avoir de l'effet sur l'épaisseur du réseau
+
+\mk
+Ne pas utiliser Huygens-Fresnel ici. On part directement d'une somme discrète sur l'éclairement associé à chaque motif.
+\end{remarque}
+
+
+\subsection{Application : spectroscopie [3]}
+\begin{itemize}
+\item formule des réseaux, ODG pour des réseaux classiques
+\item pouvoir de résolution, critère de Rayleigh (sans justification)
+\item le faire expérimentalement si assez de temps
+\end{itemize}
+
+
+\section{Ondes mécaniques : technologie de l'échographie}
+
+\subsection{Principe de l'échographie [1]}
+\begin{itemize}
+\item principe de fonctionnement (ondes acoustiques), donner des ODG
+\item pour un transducteur unique, l'effet de la "diffraction" donne une très mauvaise directivité
+\end{itemize}
+
+\begin{remarque}
+\noindent
+Insister sur le fait que ce n'est pas de la diffraction au sens strict, mais un effet de la taille du transducteur. Cependant l'analogie est parfaite.
+\end{remarque}
+
+\subsection{Réseau de transducteurs en phase [1]}
+Réutiliser les calculs de la section précédente (problème identique). Montrer qu'alors la directivité est fortement améliorée -> amélioration de la résolution et de la puissance locale
+
+
+\subsection{Balayage par déphasage [3]}
+très bien fait dans le Garing, il suffit de reprendre cela
+
+\begin{remarque}
+\noindent
+On peut citer certains réseaux d'antennes terrestres utilisant le même principe.
+\end{remarque}
+
+
+\section{Etude des cristaux par diffraction}
+
+\subsection{Position du problème}
+\begin{itemize}
+\item rappel de cristallographie : introduire la notion de plans réticulaires
+\item ODG : pourquoi faut il utiliser des X
+\item nouvelle difficulté : réseau 3D -> les conditions d'interférence constructives sont beaucoup plus strictes.
+\end{itemize}
+
+\subsection{Manipulation de diffraction sur poudres}
+\begin{itemize}
+\item faire la manipulation (documentation associée)
+\item indiquer le protocole, le dispositif
+\item donner les résultats bruts
+\item ne pas interpréter
+\end{itemize}
+
+\subsection{Condition de Bragg}
+\begin{itemize}
+\item les introduire
+\item commenter le résultat de l'expérience armé de cet outil (on travaille sur poudre donc toutes les familles de plans sont sollicitées)
+\item 2 anneaux pour deux familles de plans réticulaires. Les autres familles ont des distances trop faibles, si bien que l'angle de diffraction est trop élevé pour être détecté.
+\item si assez de temps on peut remonter au paramètre de maille
+\end{itemize}
+
+\bk
+\noindent
+\textbf{conclusion}
+Parler des interférences par un film (savon, Fabry-Pérot, filtre interférentiel...). Montrer rapidement que c'est équivalent aux considérations précédentes, en introduisant le concept de sources virtuelles après $N$ réflexions...
+
+
+\end{document}

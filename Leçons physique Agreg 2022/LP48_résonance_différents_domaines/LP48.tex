@@ -1,0 +1,172 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP48 : Phénomènes de résonances dans différents domaines de la physique (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item système mécanique masse-ressort amorti et oscillateurs couplés (établissement des équations du mouvement)
+\item cavité Fabry Pérot 
+\item principes généraux sur le laser
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item généralité du phénomène de résonance dans de nombreux domaines
+\item importance du facteur de qualité dans le phénomène
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Réflexion sur la notion de ddl}
+\begin{itemize}
+\item degré de liberté : variable qu'il faut se donner pour définir l'état d'un système (il y a autant de ddl pour le système que de variables nécessaires)
+\item considérons la direction $x$ de l'espace : en classique, il y a seulement un ddl à associés $x$ ($p\e{x}$ est la variable conjuguée). Chacun de ces ddl prend un continuum de valeurs possibles (non quantification)
+\item en quantique c'est différent. Pour la direction $x$, on a une infinité de ddl quantifiés pour la grandeur $x$ (et pour la grandeur $p\e{x}$). Cela est du au fait que l'on peut avoir une superposition d'état quantique. Chaque variable donne une image de la probabilité de trouver la particule dans cet état
+\item par exemple pour un spin 1/2, on a deux ddl pour la direction de projection z (puisqu'un état peut être combinaison de ces deux états propres)
+\item à chacun de ces ddl est associé un mode propre. Lorsque ces ddl sont couplés, les modes propres le sont également et on obtient de nouvelles fréquences propres (mais le nombre total de modes propres est inchangé)
+\item pour ce qui concerne les milieux continus (une corde), on a autant de ddl que d'éléments infinitésimaux considérés, soit presque une infinité. Ensuite, les conditions au limite restreignent les modes possibles. 
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Hprépa Mécanique I, Brebec, Hachette
+\item[[\,2\!\!]] Mécanique des fluides et ondes mécaniques 2e année, Faroux Renault, Dunod
+\item[[\,3\!\!]] Les lasers, Dangoisse, Dunod
+\item[[\,4\!\!]] Lasers, Cagnac, EDP sciences
+\item[[\,5\!\!]] Mécanique quantique, Basdevant, Editions de l'école Polytechnique
+\item[[\,6\!\!]] Optique, une approche expérimentale et pratique, Houard, De Boeck
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : 
+
+
+
+\noindent
+\underline{manipulation} : pendules de différentes longueurs tous suspendus à une même corde. Expérience simple permettant d'insister déjà sur les caractéristiques d'une résonance. 
+
+\mk
+\noindent
+Insister sur ces points (points centraux d'après Jean) : 
+\begin{itemize}
+\item pour observer une résonance, il faut un oscillateur. Si on l'excite à sa fréquence de résonance, il y a une forte réponse et un fort transfert d'énergie 
+\item l'énergie emmagasinée est limitée par le couplage avec l'extérieur (pertes) -> abaissement des pics de résonance
+\item il faut marteler ces points tout au long de la leçon
+\end{itemize}
+
+
+
+\section{Résonance dans le domaine mécanique}
+\subsection{système masse-ressort amorti [1]}
+\begin{itemize}
+\item objectif : fixer les idées majeures de la leçon sur un exemple trivial pour s'y référer par la suite
+\item donner l'équation différentielle sans démonstration
+\item étude en régime sinusoïdal forcé (système linéaire donc cette étude suffit!)
+\item montrer la résonance en position (gain/phase)
+\item montrer la résonance en vitesse (gain/phase)
+\item montrer alors la résonance en énergie (somme quadratique des deux...)
+\item montrer les graphes de réponses 
+\item montrer qu'il y a divergence en l'absence d'amortissement
+\item différencier pulsation propre $\omega_0$ et pulsation de résonance qui ne s'identifie pas à $\omega_0$ s'il y a amortissement
+\item faire le parallèle avec nos constations et l'expérience introductive
+\end{itemize}
+
+\subsection{Oscillateurs harmoniques couplés [2]}
+\begin{itemize}
+\item utiliser p133 du Faroux-Renault
+\item traiter le cas général de deux oscillateurs couplés de caractéristiques différentes
+\item montrer l'existence d'une antirésonance pour le système subissant l'excitation
+\item expliquer l'exploitation de cette antirésonance pour des systèmes parasismiques (par exemple sur la tour Taipei 101) : on place une masse libre d'osciller en haut de la tour, les caractéristiques de celle-ci étant bien choisies pour que la tour soit en anti résonance pour la fréquence classique d'un séisme.
+\end{itemize}
+
+\subsection{Analogie électromécanique [1]}
+\begin{itemize}
+\item suivre le cheminement du Hprépa p130
+\item présenter comparativement l'équa diff du RLC et du système masse-ressort amorti
+\item en déduire les analogies, les expliciter physiquement
+\item tableau récapitulatif
+\item insister sur l'intérêt pratique de ces analogies 
+\end{itemize}
+
+\section{Le laser}
+Dans la seconde partie, on s'intéresse au fonctionnement d'un maser puis d'un laser. On mettra en évidence une résonance dans le phénomène d'amplification (en lien avec les transitions atomiques) ainsi qu'une résonance dans le domaine optique, telle qu'elle advient lorsqu'une onde est confinée dans une cavité.
+
+\subsection{Maser à ammoniac [4] et [5]}
+\begin{itemize}
+\item utiliser le Basdevant pour toute la présentation du problème (mais pas pour les calculs)
+\item expliquer avec un schéma clair le fonctionnement d'un maser (sélection des atomes excités, passage dans une cavité hyperfréquence, amplification à résonance
+\item présenter le modèle quantique : molécule d'ammoniac à deux niveaux (état gauche/droite avec couplage conduisant à deux états propres symétriques/antisymétriques d'énergies différentes), couplage avec un champ électrique à une fréquence $\omega$
+\item passer rapidement sur la résolution, donner simplement les grandes idées sur transparent (hamiltonien dépendant du temps -> nécessité d'une résolution complète de l'équation, changement de variable, approximation séculaire (à quasi résonance)
+\item pour la résolution le Basdevant n'est pas clair (je ne comprend pas son changement de variable), \textbf{il faut absolument utiliser le Cagnac beaucoup plus clair}. Faire alors attention au changement de notation entre les deux livres
+\item on trouve des oscillations de Rabi : montrer les oscillations et la variation de l'amplitude de transition avec la fréquence (ODG de la largeur de raie)
+\item expliquer alors l'émission stimulée et le principe du maser à ammoniac
+\end{itemize}
+
+\subsection{Maser à 3 niveaux et milieu à gain d'un laser [3] et [4]} 
+\begin{itemize}
+\item Cagnac p161 : introduire la possibilité de faire un maser à 3 niveaux (plus compact et simple de réalisation que le système de tri atomique) -> l'important est d'avoir une inversion de population
+\item expliquer que dans un milieu amplificateur de laser c'est bien plus compliqué : utiliser "forme de raie" p91 du Dangoisse et donner un ODG de la largeur de raie effective dans le cas d'un laser
+\item expliquer que ces problèmes n'existent pas dans le cas du maser (en particulier l'émission spontanée se fait sur un temps de 1 mois, sa contribution est donc tout à fait négligeable!)
+\end{itemize}
+
+\subsection{Cavité Fabry-Pérot [5] et [6]}
+\begin{itemize}
+\item utiliser le Houard pour avoir une démonstration simple de la fonction de transfert d'une cavité FP
+\item expliciter alors la finesse et la calculer dans le cas d'un laser 
+\item utiliser l'excellent graphique p273 chapitre "fréquence de l'oscillation" du Cagnac. Il compare pour le maser et le laser les résonances atomiques et de cavité.
+Donner des ODG dans les deux cas. Expliquer l'effet multitude dans le cas du laser
+\item expliquer pourquoi dans le cas du maser la taille de la cavité doit être adaptée : l'ODG de la longueur d'onde est de l'ordre de la taille de la cavité (centimétrique)
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : 
+\begin{itemize}
+\item \underline{bilan} : en remettre une couche sur les éléments clés de la résonance. 
+\item \underline{ouverture} : faire un point sur la différence fondamentale entre des oscillateurs et une cavité (chaine infinie d'oscillateurs \textbf{mais} avec sélection des modes permis par les conditions aux limites)
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Le facteur de qualité influence-t-il sur la hauteur de la résonance?}  
+
+\bk
+\noindent
+\textbf{2. Au voisinage de la résonance, à quelle forme la courbe peut-elle être approximée?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Donner des ODG de $Q$ dans différents domaines de la physique.}  
+
+\bk 
+ \noindent
+\textbf{4. Quelle est la différence entre le masse-ressort et la corde de Melde ou la cavité FP?}  
+
+\bk
+\noindent
+\textbf{5. Donner des exemples de phénomènes de résonance au quotidien.}  
+
+\bk
+\noindent
+\textbf{6. Donner des exemples de milieu amplificateur laser.}  
+
+
+\end{document}

@@ -1,0 +1,212 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP20 : induction électromagnétique (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item équations de Maxwell
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item loi de Lenz
+\item vaste domaine d'application
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item définir soigneusement les orientations et les conventions de signe
+\item les applications doivent occuper une large place
+\item il n'est pas nécessaire de traiter en détail les deux inductions, mais montrer leur équivalence
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Hprépa électromagnétisme 2e année, Brebec, Hachette
+\item[[\,2\!\!]] Physique PC-PC*, Olivier, Tec \& Doc
+\item[[\,3\!\!]] Magnétisme : statique, induction et milieux, Garing, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+
+\begin{remarque}
+\noindent
+La présentation de l'induction implique un choix méthodologique. La théorie étant phénoménologique, il faut partir ou des équations de Maxwell, ou de la loi de Faraday. Si historiquement la loi de Faraday a été proposée en premier, on choisit ici de partir des équations de Maxwell dans leur forme générale pour plus de rigueur.
+\end{remarque}
+
+
+\section{Cadre de l'étude}
+\subsection{Motivation [1]}
+\begin{itemize}
+\item l'objectif est de motiver l'étude par une série d'expériences introductives du phénomène
+\item \underline{manipulation n°1} : aimant fixe, bobine mobile
+\item \underline{manipulation n°2} : aimant mobile, bobine fixe
+\item bien poser chaque manipulation (ce qui est fixe, ce qui bouge...)
+\item discuter le résultat + nommer induction de Lorentz, de Neumann
+\item on constate que l'effet est équivalent. C'est d'ailleurs nécessaire puisque les lois de la physique doivent être invariante par changement de référentiel galiléen, le mouvement n'a de sens que relativement donc! L'un des buts de cette leçon est de mettre en évidence cette équivalence
+\item \underline{manipulation n°3} : balancier dans l'entrefer d'un aimant : on constate un freinage
+\item énoncer la loi de Lenz, puis l'utiliser pour interpréter l'expérience n°3
+\end{itemize}
+
+\subsection{Champ électromoteur et force électromotrice [2]}
+\begin{itemize}
+\item définir le champ électromoteur $\vect{E}\e{m}$ : "c'est, dans un référentiel, la composante de $\vect{E}$ qui n'est pas conservative (qui ne dérive pas d'un potentiel)
+\item apparition de courants induit associés -> loi d'Ohm locale généralisée
+\item fem d'induction : sur un circuit \textbf{filiforme}, obtenir la loi d'Ohm en dégageant la fem d'induction
+\item elle est non nulle sur un contour fermée car non conservative!
+\end{itemize}
+
+\subsection{Equations locales de l'électromagnétisme dans l'ARQS magnétique [2]}
+\begin{itemize}
+\item définir l'ARQS et son critère de validité + ODG dans des cas classiques (pour montrer que ce n'est pas critique)
+\item montrer la négligeabilité du courant de déplacement et donner les équations de Maxwell
+\end{itemize}
+
+\section{Phénomènes d'induction}
+\subsection{Induction de Neumann [1]}
+\begin{itemize}
+\item cadre de l'étude, position du problème
+\item équation de Maxwell-Faraday
+\item introduire le potentiel vecteur
+\item on a alors l'expression $\vect{E}=-\grad{V}-\Dpt{\vect{A}}$
+\item identifier $\vect{E}\e{m}=-\Dpt{\vect{A}}$
+\item calcul de la fem associée sur un contour fermé : loi de Faraday
+\item calcul de la fem $e$ pour un exemple standard. Donner ODG permet de montrer que l'effet n'est pas négligeable!
+\item interpréter plus finement l'expérience de la chute de l'aimant dans tube cuivre (expérience n°3), sans faire de calcul 
+\end{itemize}
+
+\subsection{induction de Lorentz [2]}
+\begin{itemize}
+\item cadre de l'étude, position du problème
+\item objectif : obtenir $\vect{E}\e{m}$, partie non conservative du champ électrique dans le référentiel du conducteur en mouvement dans $B$ permanent
+\item force de Lorentz invariante par changement de référentiel galiléen (pourquoi??)
+\item obtenir alors $\vect{E}\e{m}$
+\item dire un mot sur les limites du modèle : en fait il faudrait un traitement relativiste du problème. L'électromagnétisme ne peut s'interpréter dans une théorie galiléenne
+\item loi de Faraday (sans démonstration, en cas de questions, la démo est p178 du Hprépa)
+\end{itemize}
+
+\subsection{Equivalence et cas général [1]}
+\begin{itemize}
+\item reprendre l'explication p180 du Hprépa, en étant clair sur le message à faire passer
+\item de toute évidence la variation de flux est la même dans les deux cas
+\item la fem donnée par Neumann est identique à celle donnée par celle de Lorentz
+\item les lois trouvées sont en accord avec le résultat expérimental
+\item dire que dans un cas général, il faut additionner les deux champ électromoteurs (pas de réf.)
+\end{itemize}
+
+\section{Conséquences et applications}
+\subsection{Conséquence macroscopique : auto-induction et inductance mutuelle [2]}
+\subsubsection{Inductance propre}
+ \begin{itemize}
+\item reprendre l'explication du Olivier
+\item variation de $i$ -> variation du flux
+\item ce rapport est linéaire par Biot-Savart -> $\phi=Li$
+\item donner les propriétés essentielles (dépendance à la géométrie de la bobine)
+\item en déduire la loi électrocinétique du dipôle
+\end{itemize}
+
+\subsubsection{Inductance mutuelle}
+ \begin{itemize}
+ \item \underline{manipulation} : montrer l'effet du couplage : bobines couplées : on alimente l'une, on constate l'apparition d'une tension aux bornes de l'autre
+\item reprendre l'explication du Olivier
+\item schéma de situation
+\item variation de $i_1$ -> variation de flux dans la seconde bobine
+\item toujours linéaire par Biot et Savart
+\item donner les propriétés essentielles (entre autre $M_{1\rightarrow2}=M_{2\rightarrow1}$)
+\item introduit un couplage entre les circuits électriques
+\item en déduire la loi électrocinétique faisant apparaître un couplage
+\end{itemize}
+
+\subsection{Effet de peau [3]}
+\begin{itemize}
+\item utiliser le problème 5.8 du Garing p177 (fait dans le cas d'un conducteur cylindrique. même si les calculs sont plus délicats, le contenu physique est bien plus intéressant, et ce qui nous intéresse c'est plutôt les ODG ici)
+\item présenter la situation
+\item donner une expression de la conductivité complexe
+\item avant tout calcul expliquer le phénomène avec les mains (loi de Lenz!)
+\item équations de Maxwell avec les approximations utiles
+\item donner l'équation de propagation du champ : c'est une équation de diffusion!
+\item donner l'idée de la résolution en coordonnées cylindriques : donner l'équation et la solution
+\item identifier l'épaisseur de peau et expliquer ce qu'elle représente : profondeur de pénétration du champ
+\item donner des ODG
+\item conclure : l'induction interdit la pénétration des OEM dans les conducteurs
+\item donner l'expression de la résistance résultante et expliquer le problème que cela pose pour la transmission haute fréquence
+\end{itemize}
+
+\subsection{Induction et effet Joule}
+\begin{itemize}
+\item on cherche à interpréter quantitativement ce que l'on a observé en introduction
+\item application 7 p223 du Hprépa
+\item suivre la démarche (traiter rapidement avec transparent)
+\item expliquer le chauffage par induction (plaque chauffante mais aussi technique industrielle de soudure
+\item freinage de certain poids lourds
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : 
+\begin{itemize}
+\item \underline{bilan} : rappeler la chaine d'idée : champ $B$ variable -> fem d'induction -> courant induit dans un conducteur -> champ $B$
+\item \underline{ouverture} : parler des applications pour les moteurs (mais cela fait l'objet d'une leçon à part entière). donner le principe de fonctionnement
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Qu'est-ce que l'ARQS électrique? Cas classique d'application.}  
+
+\bk
+\noindent
+\textbf{2. La loi d'Ohm généralisée est elle valable dans tout référentiel?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Les formules utilisées pour la transformation des champs sont elles toujours valables? Pourquoi la force de Lorentz est invariante par changement de référentiel galiléen?}  
+
+\bk 
+ \noindent
+\textbf{4. Quelle est la formule générale de l'inductance propre?}  
+
+\bk
+\noindent
+\textbf{5. Dans quel cas l'écriture $j=I/S$ est elle valable?}  
+
+\bk
+\noindent
+\textbf{6. Lien entre potentiel retardé et courant de déplacement négligé.}  
+
+\bk
+\noindent
+\textbf{7. Comment optimiser le chauffage par induction?}  
+
+\bk
+\noindent
+\textbf{8. Donner une signification physique de l'ARQS.}  
+
+\bk
+\noindent
+\textbf{9. Existe-il des frottements dans le rail de Laplace?}  
+
+\bk
+\noindent
+\textbf{10. Dessiner les lignes de champ magnétique d'un aimant.}  
+
+\end{document}

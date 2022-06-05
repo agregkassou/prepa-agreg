@@ -1,0 +1,159 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M01 : dynamique newtonienne}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item la mécanique s'applique à de nombreux domaines et est prédictive
+\item travailler dans plusieurs référentiels
+\item mécanique du point et du solide
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item ne pas mettre systématiquement la faute sur les frottements lorsque les mesures sont éloignées de la théorie. On peut faire des mesures précises en mécanique!
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Dictionnaire de physique expérimentale : tome I mécanique, Quaranta, Pierron
+\item[[\,2\!\!]] Mécanique PSI, Brasselet, PUF
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : on va vérifier expérimentalement un certain nombre de lois concernant la mécanique du point et du solide.
+
+
+\section{Dynamique du point matériel}
+\subsection{Dynamique en référentiel galiléen : vérification du principe fondamental de la dynamique pour un point matériel}
+\begin{itemize}
+\item ENSC 400
+\item la manipulation marche sans difficulté
+\item prendre garde à la position des axes (le fil à plomb permet de connaître la direction de la verticale)
+\item on peut alors s'assurer que la vitesse selon l'horizontale est conservée (et égale à la chute de la bille guidée par la gouttière) et que la vitesse verticale évolue à l'accélération de la pesanteur
+\end{itemize}
+
+\subsection{Mise en évidence des forces d'entraînement en référentiel non galiléen}
+\begin{itemize}
+\item ENSC 401
+\item l'idée est jolie : on remonte à une mesure de la force d'entraînement dans un référentiel non galiléen mais elle ne marche pas très bien
+\item avant mesure, il est nécessaire d'étalonner le ressort (allongement par ajout de masses)
+\item si on veut obtenir la vitesse de rotation du plateau, une méthode par laser/photodiode est indispensable. Mais à vrai dire, à la précision que l'on est, les données constructeurs sont suffisantes.
+\item une fois cela fait, on relève l'allongement du ressort en fonction de la vitesse de rotation pour les deux solides de masses différentes dont on dispose
+\item l'équilibre des forces donne l'expression : $\abs{kx}=m\Omega^2\abs{l_0+x}$
+ avec $l_0$ la distance solide/centre du plateau avant début de la rotation
+ \item tracer alors $x/(l_0+x)=f(\Omega^2)$
+ \item on constate que c'est une droite, mais le coefficient directeur n'est pas très satisfaisant 
+ \item faire attention à placer le fil sur la poulie de guidage pour éviter d'éventuels frottements 
+\end{itemize}
+
+\subsection{Conservation de l'impulsion lors d'un choc}
+\begin{itemize}
+\item la manipulation marche bien
+\item on vérifie la conservation de l'impulsion selon les deux directions de l'espace choisies 
+\item les fluctuations dues à l'imprécision de pointée est tout de même importante : c'est visuellement plus démonstratif de représenter les impulsions de chacun des deux solides et de constater que leur somme se conserve (avec un échange clair lors du choc)
+\end{itemize}
+
+\section{Transfert et conservation de l'énergie mécanique : pendules couplés}
+\textbf{Il est nécessaire d'équilibrer la barre du pendule à vide (avant l'ajout de la masse pesante) par ajout de masselottes en position haute. L'équilibrage est assuré lorsque la barre tient en position horizontale.} Cette étape permet de faciliter les calculs par la suite puisque l'on pourra considérer un "véritable" pendule pesant.
+
+\subsection{Mesure de $J$ et de $C$}
+Ces mesures peuvent être effectuées rapidement en préparation. Elles ne constituent pas ici la clé du montage, mais une mesure nécessaire afin de tracer à la fin l'énergie.
+\subsubsection{mesure de $J$}
+\begin{itemize}
+\item pour cette partie, le Perez chapitre 27 permet d'introduire quelques notions utiles. En pratique les calculs sont très simples (TMC sur chacun des pendules), une bibliographie n'est donc pas utile.
+\item Pasco permet de faire des acquisitions pour ce montage
+\item après équilibrage du pendule, ajouter une masse connue à une distance connue
+\item pour mesurer $J$ on découple les deux pendules
+\item on mesure alors la période d'oscillations libres $T_0$ (dans cette étude, rester aux petits angles pour ne pas rencontrer de problèmes!)
+\item \leftcenters{La théorie donne}{$J=\f{mgLT_0^2}{4\pi^2}$}
+\end{itemize}
+
+\subsubsection{mesure de $C$}
+\begin{itemize}
+\item cette fois, on met le couplage et on bloque en rotation l'un des deux pendules
+\item mesurer alors la nouvelle pulsation d'oscillations $\omega$
+\item dans ce cas, on ajoute seulement un couple supplémentaire, si bien que $C$ s'écrit 
+\centers{$C=J(\omega^2-\omega_0^2)$}
+\noindent
+avec $\omega_0=\tf{2\pi}{T_0}$
+\end{itemize}
+
+\subsection{Battements}
+\begin{itemize}
+\item on ne s'intéresse pas particulièrement à l'existence de modes propres. On dira qu'ils existent et que lorsque les conditions initiales sont telles que $\theta_1=0$ et $\theta_2\ne 0$
+\item \textbf{attention, c'est important ici : il faut s'assurer qu'il ne demeure pas d'offset sur le signal. S'il y en a un, il faut IMPERATIVEMENT l'enlever manuellement sous Igor!}
+\item cette fois, faire un lâcher par un décalage angulaire d'un unique pendule
+\item on se place alors en condition de battement
+\item mise en évidence de deux périodes 
+\centers{$\omega\e{B}=\f{\omega\e{A}-\omega\e{S}}{2} \qqetqq \omega\e{P}=\f{\omega\e{A}+\omega\e{S}}{2}$}
+\item faire la TF de ce signal : on constate deux pics qui correspondent aux deux modes propres
+\item une oscillation libre du système se décompose sur la base propre
+\end{itemize}
+
+\subsection{Etude énergétique}
+\begin{itemize}
+\item l'énergie totale du système s'écrit 
+\centers{$E_m=E_{m1}+E_{m2}+E\e{coup}$}
+\noindent
+avec $E_{m1,2}=E_{c1,2}+E_{p1,2}=1/2 J \dot{\theta}_{1,2}^2 + 1/2 mg\ell \theta_{1,2}^2$ 
+\mk
+\noindent
+et l'énergie de couplage $E\e{coup}=1/2 C (\theta_1-\theta_2)^2$
+\item constater que l'énergie de couplage est en fait négligeable par rapport aux autres formes
+\item on peut déjà constater les interconversions d'énergie entre potentielle et cinétique pour un même pendule
+\item tracer sur le même graphique $E_m$, $E_{m1}$ et $E_{m2}$
+\item constater que l'énergie totale se conserve (aux pertes près, qui d'ailleurs sont des pertes par frottement secs principalement puisque la décroissance est linéaire) et que l'énergie mécanique est transférée périodiquement entre les deux pendules
+\end{itemize}
+
+\section{Dynamique du solide}
+\subsection{Solide en roulement sur un plan incliné}
+\begin{itemize}
+\item faire rouler un solide sur un plan incliné (faible inclinaison) et le plus long possible
+\item acquisition vidéo et traitement sous Cinéris
+\item évaluer le moment d'inertie du solide
+\item Calculer alors l'énergie cinétique et potentielle et constater qu'elle ne se conserve pas
+\item ajouter l'énergie de rotation et constater alors la conservation (aux frottements près)
+\item attention, au début du mouvement le pointage est très difficile, c'est pourquoi il est bon d'avoir une planche de grande longueur
+\end{itemize}
+
+
+\subsection{Etude élémentaire du gyroscope}
+\subsubsection{Conservation du moment cinétique}
+\begin{itemize}
+\item partir du gyroscope équilibré
+\item montrer qualitativement qu'il conserve son axe de rotation quelque soit le mouvement que l'on impose à son pied
+\end{itemize}
+
+\subsubsection{Mouvement de précession sur gyroscope déséquilibré}
+\begin{itemize}
+\item évaluer le moment d'inertie du disque de rotation du gyroscope (connaissant sa masse et ses dimensions caractéristiques)
+\item partir d'un gyroscope équilibré
+\item le déséquilibrer par translation de 2cm de la "grosse masse" et constater la précession
+\item pour une dizaine de lancers, prendre la période de précession sur une période (en ayant pris soin de relever au tachymètre optique la vitesse de rotation de la masse inertielle au début et en fin de la période) 
+\item on prendra alors la vitesse moyenne de rotation de la masse inertielle
+\item vérifier alors la relation entre couple gyroscopique et vitesse de précession 
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item conclure sur la généralité des applications de la mécanique 
+\item les limites n'apparaissent finalement qu'à très haute énergie
+\end{itemize}
+
+
+\end{document}

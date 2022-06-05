@@ -1,0 +1,160 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M05 : mesure de température}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item différencier mesure de température et repérage
+\item rôle des étalons de mesure absolue
+\item propriétés d'un thermomètre
+\item différents types de thermomètres
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item Ne pas faire un catalogue de capteur sans hiérarchie
+\item bien exploiter la notion de point fixe et son importance en thermométrie
+\item thermocouple : connaître le principe et le domaine de validité
+\item toujours fixer les thermomètres afin qu'ils ne touchent pas les bords et qu'ils soient correctement immergés
+\item montage orienté métrologie : discuter des performances et des incertitudes
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Thermodynamique, Diu, Hermann
+\item[[\,2\!\!]] Thermodynamique, BFR, Dunod
+\item[[\,3\!\!]] Expériences d'électronique, Duffait, Dunod
+\item[[\,4\!\!]] thermodynamique, Perez, Masson (excellent pour domaine de validité et limites des thermomètres)
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} :
+\begin{itemize}
+\item définir "thermomètre" (variation avec la température d'une grandeur facilement mesurable)
+\item nécessité d'équilibre thermique avec le corps mesuré : caractéristique d'un bon thermomètre (équilibre rapide et non perturbant pour le corps mesuré)
+\item la précision et la fidélité sont les qualités recherchées
+\end{itemize}
+
+
+\section{Recherche d'une échelle internationale de température}
+L'objet de la partie est de déterminer comment construire effectivement un thermomètre.
+
+\subsection{Position du problème [2]}
+\begin{itemize}
+\item première expérience simple avec thermomètre à alcool
+\item dans ce thermomètre, la variation de température est reliée à la variation de volume : celle du liquide mais attention également celle de l'enveloppe
+\item dans ce cas, on repère la température de manière uniquement différentielle
+\item ce type de thermomètre ne fait pas une "mesure" mais un "repérage" de température
+\item pour avoir un thermomètre il faut donc : repérer la température de deux points fixes (on prendra eau/glace et eau/vapeur) et considérer une échelle (arbitraire) entre ces points. On suppose alors une relation linéaire entre accroissement de volume et de température -> on voit pour la première fois le principe d'un étalonnage et de la fixation d'une échelle
+\item l'échelle centésimale consiste à placer 100 graduations régulièrement espacées entre le point eau/glace et \, eau/vapeur
+\item on remarque enfin le long temps de réponse de ce genre de thermomètre (car haute capacité thermique)
+\end{itemize}
+
+\subsection{Mesure de la température absolue : le thermomètre à gaz parfait [2] et [4]}
+\begin{itemize}
+\item nous avons vu que l'étalonnage des thermomètres dits "secondaires" se fait par mesure de points fixes
+\item il a donc fallu préalablement déterminer la température de ces points fixes de manière absolue
+\item cela est rendu possible en utilisant les lois de la thermodynamique : ce sont les thermomètres à gaz parfait
+\item pour modéliser cela on utilise le thermomètre à gaz $SF_6$
+\item noter que l'on ne peut pas atteindre de pression très basse, ce qui limite la qualité de l'étude
+\item on trace 2 isothermes d'Amagat ($PV=f(\tf{1}{V})$) pour par exemple $T=5°C$ et $T=50°C$
+\item on se place dans le cadre d'un développement du Viriel d'ordre 1, donc en $\tf{1}{V}$. On doit donc obtenir des quasi droites
+\item leur prolongement à $\tf{1}{V} \to 0$ fournit une grandeur thermométrique comme une autre qui a le bon gout d'être linéaire en $T$ (loi des gaz parfait)
+\item on définit ainsi une échelle absolue
+\item pour chaque température mesurée, traiter des incertitudes
+\item en pratique on utilise un thermomètre normal à hydrogène
+\item l'échelle légale fixe le point triple de l'eau à $273.16K$, on a ainsi la valeur de plusieurs autres points triples, fixant les points triples légaux
+\item à partir de ces points triples, on étalonne des thermomètres d'interpolation qui fixe, chacun dans une gamme de température l'échelle internationale de température
+\item comme dans le cas du thermomètre à alcool, l'étalonnage se fait par mesure de la température de points fixes et par une interpolation polynomiale (souvent linéaire)
+\item dans le domaine qui nous intéresse, on utilise un thermomètre à fil de platine
+\end{itemize}
+
+\begin{remarque}
+\noindent
+La quantité de matière donnée n'est pas correcte. Il faudrait la remesurer avant l'agrégation
+\end{remarque}
+
+
+\section{Etude de deux capteurs de température : thermocouple et thermistance}
+\subsection{Le thermocouple}
+\subsubsection{l'effet Seebeck [3]}
+\begin{itemize}
+\item apparition d'une ddp en circuit ouvert si les deux jonctions entre deux matériaux différents sont à des température différentes
+\item expérience de démonstration de l'effet Seebeck avec la petite boussole qui se place orthogonalement aux courants qui s'établissent dans le circuit (qui est ici en circuit fermé) 
+\end{itemize}
+
+\subsubsection{Etalonnage du thermocouple}
+\begin{itemize}
+\item on utilise le thermocouple sur plaquette plexiglas
+\item pour l'étalonnage, faire la mesure sur des points fixes
+\item plonger une jonction dans eau/glace et l'autre dans azote liquide eau/glace et eau/vapeur
+\item on suppose un modèle linéaire
+\end{itemize}
+
+\subsubsection{Mesure de température à l'aide d'un thermocouple}
+\begin{itemize}
+\item on place une jonction dans eau/glace et une seconde dans de l'eau mélange eau/glace qu'on porte jusqu'à ébullition. 
+\item on prend à la volée la température avec une sonde platine et la tension aux bornes du thermocouples
+\item on pourra tracer le signal d'erreur entre température réelle et celle mesurée au thermocouple à partir de notre étalonnage initial
+\item selon la forme de l'incertitude on pourra parler de fidélité et de justesse de l'appareil
+\item on peut comparer dans le Handbook la valeur de la pente avec celui d'un thermomètre commercial de type K
+\item dans un thermomètre commercial, la soudure froide est dans l'appareil. Il faut donc un second thermomètre pour connaitre la température de la soudure froide
+\end{itemize}
+
+\subsection{La thermistance à semi-conducteurs}
+\subsubsection{Etalonnage de la thermistance}
+\begin{itemize}
+\item le thermomètre de platine est à résistance métallique
+\item on peut choisir plutôt des semi-conducteurs, dans ce cas on aura une réponse exponentielle et donc une meilleure sensibilité par non linéarité
+\item placer la thermistance et un thermomètre de platine dans un bain d'huile dont on fait varier la température
+\item prendre les valeurs de la température et de la ddp
+\item faire un ajustement exponentiel
+\item attention : ne pas dire de bêtise : on ne peut pas remonter au gap de cette manière! le coefficient y est proportionnel mais difficile de savoir comment. Par ailleurs on connait mal notre semi-conducteur. Il n'est donc pas possible de comparer avec des valeurs tabulées
+\item insister sur la grande sensibilité de ce thermomètre
+\end{itemize}
+
+\subsubsection{Mise en évidence du temps de réponse d'une thermistance}
+\begin{itemize}
+\item ENSC 356
+\item expérience qualitative uniquement
+\item on utilise le petit système à thermistance que l'on peut plonger dans la pâte thermique près d'une résistance chauffante
+\item l'idée est de voir le temps de réponse de la thermistance selon la qualité du contact : très rapide dans la pâte thermique, assez rapide sous un courant d'eau, lente dans l'air
+\item utiliser une acquisition sur oscilloscope pour observer les temps de décroissance
+\end{itemize}
+
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+\begin{itemize}
+\item \underline{bilan} : insister sur thermomètre primaire/secondaire, utilisation de divers types selon le domaine de température.
+\item \underline{ouverture} : parler des pyromètres pour la mesure des hautes températures par rayonnement (utiliser le Sextant par exemple)
+\end{itemize}
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. définir "thermométrie primaire", "thermométrie secondaire".}  
+
+\bk
+\noindent
+\textbf{2. thermocouple : principe, température de référence, domaine de validité}  
+
+\end{document}

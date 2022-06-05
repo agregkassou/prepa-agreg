@@ -1,0 +1,130 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M27 : systèmes bouclés}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Automatique II, systèmes asservis linéaires, Villain, Ellipses
+\item[[\,2\!\!]] notice hacheur ENSC 288
+\item[[\,3\!\!]] notice asservissement double lignes ENSC325
+\item[[\,4\!\!]] notice maquette d'optoélectronique
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+\begin{itemize}
+\item donner les grandes définitions
+\item bien distinguer deux types de bouclage : asservissement et oscillateurs
+\end{itemize}
+
+
+\section{Asservissement en vitesse d'une machine à courant continu}
+\subsection{Perturbation en boucle ouverte}
+\begin{itemize}
+\item il existe deux sources évidentes de perturbation sur un moteur : la source et la charge (et évidemment d'autres comme la température...)
+\item mettre en évidence en BO la dépendance à ces deux paramètres sur la vitesse
+\item l'idée n'est pas de faire de jolies courbes ici! on va uniquement regarder la variation de la vitesse avec ces deux facteurs de manière qualitative
+\item conclure : c'est peu satisfaisant!
+\end{itemize}
+
+\subsection{Caractérisation de la boucle ouverte}
+\begin{itemize}
+\item pour procéder à l'asservissement, il convient dans un premier temps de caractériser la fonction de transfert de la machine en BO
+\item on fait ici l'approximation d'un premier ordre (on suppose le système linéaire dans un vaste domaine et la constante de temps mécanique bien supérieure à la constante de temps électrique permet de faire cette hypothèse)
+\item la tension d'alimentation du hacheur est maintenue constante à $E=25V$ par exemple
+\item on commande alors le hacheur avec un signal créneau ($<1Hz$ pour avoir toute la courbe de réponse, offset $5V$, amplitude $\pm 1V$)
+\item constater une réponse de type premier ordre (pente à l'origine non nulle, pas d'oscillation)
+\item on relève alors le gain total de la BO (système moteur + dynamo tachymétrique) ainsi que $\tau\e{BO}$ (temps de montée à $63 \%$)
+\end{itemize}
+
+\subsection{Détermination du correcteur}
+\begin{itemize}
+\item on fait le choix d'un correcteur PI 
+\item on choisit $\tau\e{correcteur}=\tau\e{BO}$ La FTBF est alors simplement un passe bas (on assure alors une erreur statique nulle)
+\item la rapidité peut être améliorée en augmentant le gain du correcteur car 
+\centers{$\tau\e{BF}=\f{\tau\e{correcteur}}{K\e{BO}K\e{correcteur}}$}
+\item cependant, même si ici le modèle ne peut être instable, en pratique il existe des non linéarités pouvant être cause d'instabilité pour des gains trop élevés
+\end{itemize}
+
+\subsection{Apport de la boucle fermée}
+\begin{itemize}
+\item on montre alors qualitativement que les effets d'une variation de charge ou de tension d'alimentation s'annulent (au moins en régime établi) -> on a donc gagné!
+\item pour être plus quantitatif, on se place sans charge et on observe la limite de décrochage lorsque l'on diminue la tension d'alimentation du hacheur $E$
+\item on peut s'assurer d'ailleurs de la cohérence avec ce que prédit le calcul (raisonnement autour du fait que le décrochage a lieu pour un rapport cyclique unitaire, mais il faut alors connaître la valeur du facteur de conversion rotation/tension du moteur et de la génératrice tachymérique)
+\item on peut observer une réponse de plus en plus rapide avec l'augmentation du gain du correcteur (partir d'un gain très faible sinon on ne voit rien!)
+\item on se plaçant avec des variations assez fortes de tension dans les créneaux, on obtient de l'oscillation à gain trop fort (signe que notre modèle premier ordre devient invalide). On peut alors régler notre gain de correction pour avoir le temps de réponse le plus rapide sans dépassement). A noter que le dépassement n'est pas toujours possible à observer (le système est "trop" du premier ordre)
+\item la décroissance de vitesse est passive (liée aux frottement et à la dissipation dans la charge), sa vitesse n'est donc pas reliée à la correction
+\end{itemize}
+
+\section{Asservissement du flux lumineux émis par une LED}
+
+L'objectif de cette partie est de montrer de nouvelles choses sur un nouvel exemple d'asservissement. En particulier, on verra une méthode empirique de réglage des correcteurs lorsque les systèmes sont plus complexes. On en profitera pour mettre en évidence l'existence de régimes oscillants instables dans les systèmes bouclés (ainsi on traitera un peu d'oscillateurs).
+
+\subsection{Présentation du système}
+\begin{itemize}
+\item décrire la maquette un minimum et les opérations de conversion courant/tension nécessaire en optoélectronique (pour autant, inutile de détailler en profondeur l'électronique)
+\item présenter le système et l'intérêt : on veut réguler l'éclairage d'une pièce, ou celle délivrée par une diode laser dont la température peut varier.
+\item s'aider de la notice pour ces explications et les quelques schémas électroniques
+\item montrer l'effet de la perturbation (ici ça sera la distance émetteur/récepteur). Cet effet est bien évident, on perd en amplitude de signal, mais ne pas oublier que c'est pour cela que l'on veut asservir! Alors il faut le montrer.
+\item enfin, on s'assure de la linéarité de la réponse du système en régime établi (gain pur), ce qui n'est pas évident! (vrai uniquement sur une plage ou l'émission de la diode et la réponse de la photodiode est linéaire en fonction de l'intensité du flux lumineux)
+\item \textbf{pour cela on trace en mode XY (avec persistance) la tension de sortie de la photodiode en fonction de la tension d'alimentation $V\e{in}$ de la diode (on donnera un signal (dents de scie ou sinusoïde) sur $V\e{in}$ par GBF} On s'arrange pour rester dans le domaine linéaire. Placer le potentiomètre afin de se mettre dans la partie centrale de la linéarité. Explorer le domaine sur lequel on pourra faire varier nos créneaux GBF en restant linéaire. En pratique on appliquera des créneaux de 3Vpp maxi.
+\item attention, il faut se placer relativement dans le noir pour cette manipulation (ou tout au moins avoir un éclairage constant!)
+\end{itemize}
+
+\subsection{Système oscillant et mise en oeuvre de la méthode de Ziegler Nichols [1]}
+\begin{itemize}
+\item le système est d'ordre élevé (entre autre à cause des fréquences de coupure des nombreux composants actifs et de la diode et photodiode). Toutes ces fréquences sont du même ordre de grandeur, si bien qu'aucune n'est négligeable
+\item on va alors créé un oscillateur
+\item pour cela, on se place en boucle fermée et on introduit notre correcteur (sans la partie intégrale) futur
+\item on place la consigne à la masse (régime d'auto-oscillations)
+\item on modifie le gain du correcteur jusqu'à atteindre des oscillations
+\item attention, en pratique le système n'est pas évident à réaliser. C'est cette partie qui est critique. Il faut s'assurer que l'ensemble LED/photodiode soit ) l'abri de la lumière et prendre une LED de forte puissance. \textbf{Pour cette partie, on collera (en les tenant dans la main) LED et photodiode.} Enfin, si nécessaire, on pourra retoucher (un peu) au réglage du potentiomètre afin que les oscillations apparaissent.
+\item on a alors créé un oscillateur par bouclage (on a atteint la condition de Barkhausen)
+\item on note cette valeur du gain ainsi que la fréquence des oscillations
+\item on applique la méthode de Ziegler-Nichols (valeurs prises dans le Villain d'automatique) pour régler notre correcteur PI
+\end{itemize}
+
+\subsection{Etude du système asservi}
+\begin{itemize}
+\item montrer rapidement les effets de l'asservissement (de manière analogue au cas précédent) : plage d'asservissement, erreur statique nulle, compromis stabilité / précision
+\item plus intéressant on peut montrer l'effet des perturbations et la correction associée de manière très visuelle
+\item 1) se placer dans le noir et montrer que l'intensité de la LED augmente avec l'éloignement du capteur (jusqu'à décrochage)
+\item allumer l'éclairage extérieur, on constate que l'intensité émise par la LED a diminué, là encore si l'éclairage ambiant est supérieur à la consigne, la LED s'éteint complètement et le système décroche
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : ouvrir sur le laser (modélisation sous forme de systèmes bouclés de type oscillateur puisqu'il n'y a pas de signal d'entrée)
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Expliquer les différentes fréquences de coupure dans le système de bouclage diode/photodiode.}. Chaque AO, présente des fréquences de coupure semblables l'ordre du MHz. Aucune n'est négligeable et on obtient alors des ordres élevés -> analyse théorique très délicate -> méthode empirique  
+
+\end{document}

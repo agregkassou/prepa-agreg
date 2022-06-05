@@ -1,0 +1,135 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LC 28 : optimisation d'un processus de synthèse industrielle}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item thermochimie
+\item cinétique chimique 
+\item estérification
+\item techniques de laboratoires en chimie organique
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item problématique très différente du laboratoire
+\item ici, il faut produire en grande quantité, à moindre coût, minimiser les déchets, la toxicité, les risques...
+\end{itemize}
+}
+
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] La chimie expérimentale : chimie organique et minérale, Le Maréchal, Dunod
+\item[[\,2\!\!]] Chimie organique, Grecias, Tec \& Doc
+\item[[\,3\!\!]] Chimie industrielle, Perrin, Dunod
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [3]} : Donner quelques chiffres sur l'industrie chimique : les tonnages produits par exemple, où les ressources utilisées... On comprend alors combien l'optimisation d'un processus est importante. 
+
+
+\section{Stratégie d'optimisation industrielle : réaction d'estérification}
+\subsection{Que cherche-on à optimiser? [3]}
+\begin{itemize}
+\item pas vraiment de réf...
+\item on cherche à avoir un produit pur, rapidement et avec un rendement optimal
+\end{itemize}
+
+\subsection{Avec quelles contraintes? [3]}
+\begin{itemize}
+\item pas vraiment de réf...
+\item moindre coût, faible impact environnemental (limiter les produits, les déchets), minimiser les risques sanitaires, limiter la consommation énergétique, limiter la consommation d'eau, limiter la corrosion des installations...
+\item la référence 3 donne des idées intéressantes sur les méthodes appliquées au génie chimique : une large part est laissée à l'expérimentation test
+\end{itemize}
+
+\subsection{Réaction d'estérification envisagée [1]}
+\begin{itemize}
+\item suivre la réaction d'estérification présentée par le Maréchal 5.1.2 p81 
+\item présenter le mécanisme de réaction
+\item réactifs, catalyseur acide sulfurique
+\item présenter le dispositif expérimental (sans Dean Stark pour le moment)
+\end{itemize}
+
+\section{Démarche d'investigation}
+\subsection{Déplacer l'équilibre : retrait d'eau par Dean Stark [1] et [2]}
+\begin{itemize}
+\item en fait, cette réaction est peu déplacée en faveur des produits : $K=0.22$
+\item le rendement attendu est donc très faible, ce qui n'est pas industriellement acceptable
+\item déplacement d'équilibre par élimination d'eau 
+\item présenter le montage Dean Stark (bien expliqué dans le Grécias)
+\item maintenant, on va chercher à optimiser le processus industriel en partant de ce schéma de départ
+\end{itemize}
+
+\subsection{Influence de la température sur la cinétique de réaction}
+\begin{itemize}
+\item faire la même réaction en parallèle sur deux montage à Dean Stark
+\item suivre l'avancement de la réaction en repérant le volume d'eau formé
+\item constater que la cinétique de la réaction varie avec la température mais pas la constante d'équilibre (réaction quasi athermique, et de toute façon, l'avancement est toujours maximal!)
+\end{itemize}
+
+\subsection{Travailler en excès d'un réactif peu couteux}
+\begin{itemize}
+\item se placer à même température et en excès du réactif le moins couteux (acide acétique)
+\item là encore relever en fonction du temps le volume d'eau
+\item vérifier que la cinétique est améliorée
+\item l'avancement est déjà maximal...
+\end{itemize}
+
+\subsection{Influence des étapes de séparation/purification}
+\begin{itemize}
+\item pour l'une des réactions, poursuivre jusqu'à l'obtention de l'ester "pur"
+\item évaluer alors le rendement de la réaction (non unitaire même si l'avancement est total!) puisqu'on a des pertes lors de nos opérations de séparation/purification
+\item ces traitements sont tout aussi important que la synthèse elle même
+\item tenter une CCM sur les composés obtenus pour vérifier leur pureté : normalement un mélange cyclohexane (apolaire)/acétate d'éthyle fonctionne bien (il semble que le cyclohexane pur pourrait aussi suffire)
+\end{itemize}
+
+\subsection{Utiliser de meilleurs réactifs [2]}
+\begin{itemize}
+\item $-OH$ est un mauvais groupe partant d'où la nécessité d'une activation acide
+\item on peut remplacer l'acide carboxylique par un chlorure d'acyle ou un anhydride bien plus réactif
+\end{itemize}
+
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : conclure sur la chimie verte et les différentes pistes explorées (conditions plus douces, chimie sans solvant, économie d'atomes, recyclage...)
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. Pourquoi le chauffage améliore la cinétique de réaction? Que représente A dans cette loi?} -> loi d'Arrhénius. A est le facteur préexponentiel qui tient compte de l'efficacité des chocs
+
+\bk
+\noindent
+\textbf{2. Quelles réactions sont ralenties par augmentation de la température?} Celle faite en catalyse enzymatique. La température dégrade les enzymes et leur fonctions (l'activation thermique permet d'explorer les conformations de l'enzyme et ses sites deviennent inactifs)  
+ 
+ \bk
+ \noindent
+\textbf{3. Pourquoi travailler en réacteur ouvert dans l'industrie?} Permet de travailler en flux continu. On optimise ainsi le rendement et le processus est simplifié  
+
+\bk 
+ \noindent
+\textbf{4. Pourquoi un solvant est-il parfois nécessaire?} Pour permettre de mettre les produits en contact afin qu'ils réagissent, pour dissiper ou apporter l'énergie, pour extraire sélectivement les produits...   
+
+\bk
+\noindent
+\textbf{5. Donner des exemples de catalyse homogène et hétérogène.} Catalyse homogène par ajout d'acide dans la réaction présentée par exemple. Hydrogénation catalytique des alcènes sur substrat métallique...  
+
+
+\end{document}

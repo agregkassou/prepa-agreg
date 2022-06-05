@@ -1,0 +1,444 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large Leçon de physique 05 : cinématique relativiste}
+
+
+Placez votre main sur un poêle une minute et ça vous semble durer une heure. Asseyez vous auprès d'une jolie fille une heure et ça vous semble durer une minute. C'est ça la relativité.
+Albert Einstein
+
+\encadreminipage{9cm}{
+\underline{Prérequis}
+\begin{itemize}
+\item Cinématique classique et mécanique du point matériel
+\item Relativité galiléenne
+\item Référentiel galiléen
+\item Interférences et interféromètre de Michelson
+\item Aucune notion de relativité restreinte n'est présupposée 
+\end{itemize}
+}
+
+\tableofcontents
+
+\bk
+\noindent
+\hrulefill
+
+
+
+La révision du principe de relativité introduit par Galilée constitue avec la mécanique quantique les deux \textbf{révolutions scientifiques du siècle dernier}. Il est important de prendre conscience que la genèse de ce nouveau paradigme s'est faite \textbf{dans la douleur}. Une théorie si solide que la mécanique newtonienne n'est remise en cause que si l'expérience l'impose. Par ailleurs, une nouvelle théorie s'impose à la condition d'expliquer le réel et l'ensemble de ces nouvelles expériences. \textbf{La relativité est une théorie contre-intuitive, c'est pourquoi il est nécessaire de comprendre pourquoi et comment elle a été établie avant d'appliquer les équations qui lui sont associées}.
+
+\mk
+\noindent
+\textbf{Dans toute la suite, tous les référentiels seront inertiels et les mouvements considérés rectilignes uniformes.}
+
+\noindent
+\hrulefill
+
+
+
+
+\section{La confirmation du principe de relativité}
+\subsection{Principe de relativité au sens de Galilée}
+\subsubsection{Rappel : relativité galiléenne}
+Les lois de la physique sont identiques dans tous les référentiels inertiels. Par conséquent, il n'est pas possible de déterminer par l'observation d'un phénomène physique lequel des référentiels est en mouvement. 
+\textbf{Tous les référentiels inertiels sont équivalents}
+
+Et la loi galiléenne de changement de référentiel inertiel s'écrit : 
+\encadreminipage{9cm}{
+Soit $R'(x',y',z',t')$ référentiel en translation à la vitesse $v \vex$ par rapport au référentiel $R(x,y,z,t)$. 
+\centers{$
+\begin{syst}
+x' & x- vt \\
+y' & y \\
+z' & z \\
+t' & t
+\end{syst}
+$}
+}
+
+\begin{remarque}
+\noindent
+Remarquons en particulier que le temps est un invariant relativiste dans la transformation de Galilée.
+\end{remarque}
+
+\noindent
+\underline{Principia}, Newton : \textbf{La mécanique newtonienne est invariante par changement de référentiel inertiel selon les transformations galiléennes}. Elle entre donc dans le cadre de la relativité galiléenne et vérifie les relations classiques de changement de référentiel inertiel.
+
+\subsection{Equations de Maxwell et embarras}
+Les théories de l'électricité, du magnétisme et de la propagation de la lumière ont convergé sous l'impulsion de Maxwell vers la théorie unifiée de l'électromagnétisme. 
+Entre autres choses, \textbf{ces lois fixent la vitesse de propagation de la lumière dans un milieu vide de matière}. Si ces nouvelles lois sont invariantes par changement de référentiel inertiel (relativité galiléenne), alors la vitesse de la lumière est invariante par changement de référentiel, mais alors la loi de composition des vitesses galiléenne est fausse. \textbf{Il y a donc contradiction}. Plusieurs chemins permettent de sortir de cet état de fait : 
+\begin{itemize}
+\item \textbf{Ces nouvelles lois étaient intrinsèquement fausses}. Dans les premières années de la théorie de Maxwell, la relativité galiléenne faisait autorité tant elle avait pu être appliquée avec succès par Newton. Malgré un certain dogmatisme bien légitime, la puissance descriptive des équations de Maxwell a tôt fait de mettre cette hypothèse de côté. Il fallait trouver le moyen de faire coexister les deux théories.
+\item \textbf{Les nouvelles lois étaient vraies mais uniquement dans un référentiel privilégié} (celui de l'éther introduit 100 ans auparavant par Fresnel). En effet, la vitesse de la lumière était intrinsèque à ces équations. Si donc la transformation galiléenne des vitesses est vraie, ces équations sont vraies uniquement dans un référentiel privilégié, l'éther.  Elles apparaissaient donc comme non invariantes. En d'autres termes, ces lois étaient vraies mais ne respectaient pas l'invariance relativiste. \textbf{Sur le plan fondamental, on remet donc en cause le principe de relativité.} L'hypothèse d'un entraînement de l'éther a été une hypothèse avancée mais vite abandonnée. \textbf{Il fallait donc accepter la validité des équations de Maxwell ainsi que celle de relativité.} Introduire ici l'expérience de Michelson-morlay et commenter les conséquences d'un résultat négatif : soient la Terre est le centre de l'univers (retour au géocentrisme), soit il n'existe pas de référentiel privilégié!
+\item Si donc les équations de Maxwell sont exactes et universelles (c'est-à-dire invariante par changement de référentiel), c'est que \textbf{la loi de composition des vitesses établies par Galilée est inexacte}. 
+\end{itemize}
+
+
+\subsection{Transformations de Lorentz}
+Au même moment, Lorentz et Poincaré découvre qu'il est possible de laisser invariantes les équations de Maxwell par changement de référentiel inertiel en introduisant un nouveau changement de variable en lieu et place de la loi de composition des vitesses. C'est les \textbf{transformations de Lorentz}.
+\encadreminipage{9cm}{
+Soit $R'(x',y',z',ct')$ référentiel en translation à la vitesse $v \vex$ par rapport au référentiel $R(x,y,z,ct)$. 
+\centers{$
+\begin{syst}
+x' & \gamma(x-\beta ct) \\
+y' & y \\
+z' & z \\
+ct' & \gamma(ct-\beta x)
+\end{syst}
+$}
+\leftcenters{avec}{$
+\beta=\f{v}{c} \qqetqq \gamma=\f{1}{\sqrt{1-\beta^2}}$}
+}
+
+
+\begin{remarque}
+\noindent
+Dans le cas des faibles vitesse, on retrouve directement la transformation galiléenne des vitesses (Remarquons que l'obtention de l'égalité au premier ordre $t=t'$ est non triviale. Il faut vérifier à la fois que le référentiel \textbf{et} la particule ont des vitesses non relativistes.).
+\end{remarque}
+
+
+Vérifions alors (ne pas faire pendant la leçon) que l'invariance relativiste est vérifiée pour cette transformation. 
+Par translation du référentiel dans la direction $\vex$, les grandeurs $y$ et $z$ sont conservées et il vient 
+
+\begin{egalites}
+ & x'^2-(ct')^2 & \gamma^2(x-\beta ct)^2-\gamma^2(ct-\beta x)^2 & \\ [3mm]
+ & & \gamma^2 \paa{x^2-2\beta x ct + \beta^2 (ct)^2- (ct)^2 +2 \beta x ct - \beta^2 x^2} & \\ [3mm]
+ & & \gamma^2 \paa{(x^2-(ct)^2)(1-\beta^2)} & \\ [3mm]
+\end{egalites}
+
+\leftencadre{Ainsi}{$x^2-(ct)^2=x'^2-(ct')^2$}
+
+
+\subsection{Généralisation des transformations de Lorentz à la mécanique} 
+
+
+Par la suite, Einstein propose de généraliser les transformations de Lorentz à tout système mécanique. Lorentz avait introduit ce système de transformation de manière formelle et ad hoc afin de laisser invariante les équations de Maxwell. Einstein prend conscience que ces transformations dépassent le cadre de l'électromagnétisme. \textbf{Les lois de la physique sont invariantes par changement de référentiel inertiel. En revanche, les mesures dans l'espace temps (longueur et durée) sont dépendantes du référentiel d'étude et cette dépendance est donnée par les équations de Lorentz.}
+Traitons alors l'expérience de Michelson avec les outils proposés par Einstein.
+
+\subsection{Conséquence de la constance de $c$ : dilatation du temps et contraction des longueurs}
+\textbf{L'objectif de cette partie est d'appréhender les résultats des équations de Lorentz d'un point de vue physique, sans les avoir introduites.}
+L'unique référence fixe dans tout référentiel est par hypothèse la vitesse de la lumière. C'est donc elle qui servira d'étalon de mesure de temps et de longueur.
+
+\mk
+\noindent
+Les conclusions suivantes s'appuient sur trois uniques hypothèses : 
+\begin{itemize}
+\item la vitesse de la lumière est $c$ dans tout référentiel inertiel,
+\item les longueurs orthogonales à la vitesse de déplacement sont inchangées par changement de référentiel (non trivial a priori, ça sera contenu dans les transformations de Lorentz),
+\item le résultat des expériences de Michelson-Morlay est négatif : le temps de parcours de la lumière entre les deux bras du Michelson n'est pas modifié par changement de référentiel inertiel (en pratique c'est un peu plus subtil).
+\end{itemize}
+
+
+\subsubsection{Temps propre - longueur propre} 
+Pour une succession donnée d'événements $(E_1(x_1,y_1,z_1,t_1),...,E_N(x_N,y_N,z_N,t_N))$, le référentiel propre est le référentiel tel que tous ces événements soient à la même position spatiale dans ce référentiel. 
+
+\mk
+\noindent
+Temps propre et longueur propre sont des mesures faites sur un objet dans son référentiel propre.
+
+
+\subsubsection{Dilatation du temps}
+On considère une horloge de type lumière (faisceau lumineux faisant des allers-retour entre deux miroirs) fixe dans le référentiel R lié à un train. Ce référentiel est en translation rectiligne et uniforme dans la direction orthogonale à la direction de propagation du faisceau de l'horloge dans le référentiel R'. 
+
+\begin{remarque}
+\noindent
+L'horloge est montée dans la direction orthogonale à la vitesse du faisceau afin que la cavité ne subisse pas de contraction des longueurs. D'un point de vue pédagogique, on souhaite pour le moment découpler les deux effets. Cependant, pendant la leçon il n'est probablement pas nécessaire d'insister sur ce point, mais faire remarquer qu'il y a ici une potentielle arnaque.
+\end{remarque}
+
+
+
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=5cm]{images/temps_R.eps}}
+\end{center}
+\caption{Mesure du temps par une horloge de type lumière dans le référentiel R.}
+\end{figure}
+Dans le référentiel R lié à l'horloge, le temps d'un aller-retour s'écrit facilement en fonction de la distance séparant les deux miroirs : 
+\encadre{$\tau=\f{2h}{c}$}
+
+
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=4.5cm]{images/temps_R'.eps}}
+\end{center}
+\caption{Mesure du temps par une horloge de type lumière dans R'.}
+\end{figure}
+Dans le référentiel R' en revanche, l'observateur fixe est sensible à la translation du train. La lumière prend toujours la vitesse $c$, mais cette fois son trajet a une forme en dent de scie. Le théorème de Pythagore permet alors de conclure aisément : 
+\centers{$\pa{\f{c\tau'}{2}}^2=\pa{\f{v\tau'}{2}}^2+h^2$}
+\leftencadre{Soit encore}{$\tau'=\f{2h}{c\sqrt{1-\tf{v^2}{c^2}}}$}
+
+Par conséquent, le temps est dilaté entre les deux référentiels d'un facteur $\gamma$: 
+\encadre{$\gamma=\f{1}{\sqrt{1-\tf{v^2}{c^2}}}$}
+
+Ainsi, un observateur extérieur aura l'impression que tous les phénomènes à l'intérieur du train se déroulent plus lentement. Mais réciproquement un observateur dans le train aura l'impression que le temps est également ralenti dans le référentiel extérieur...
+
+
+\subsubsection{Contraction des longueurs}
+Reprenons l'expérience de Michelson-Morlay (ici je ne m'intéresse pas aux détails historiques de la mise en place) pour illustrer la nécessité de la contraction des longueurs.
+
+Dans la suite, $R$ est le référentiel lié au Michelson, $R'$ est alors le référentiel en translation rectiligne uniforme par rapport à ce dernier.  
+
+\begin{remarque}
+\noindent
+L'éventuel déphasage observable entre les deux bras se situent dans les intervalles entre séparatrice et miroirs (le reste du trajet optique est commun aux deux faisceaux).
+\end{remarque}
+
+
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=5cm]{images/longueur_R.eps}}
+\end{center}
+\caption{Mesure d'une longueur par émission/réception d'un faisceau dans R.}
+\end{figure}
+
+
+\begin{figure}[h!]
+\begin{center}
+{\includegraphics[height=5cm]{images/longueur_R'.eps}}
+\end{center}
+\caption{Mesure d'une longueur par émission/réception d'un faisceau dans R'.}
+\end{figure}
+
+Le bras 1 est supposé être de longueur fixe (orthogonal au déplacement). Ainsi, on se retrouve dans la configuration précédente de notre horloge de type lumière, le temps de parcours de la lumière dans ce bras vaut dans le référentiel $R'$ en translation par rapport à R, avec $\ell$ la longueur des bras du Michelson au repos : 
+\centers{$\tau\e{orth}'=\f{2\gamma \ell}{c}$}
+
+Dans le second bras, colinéaire au déplacement, décomposons le trajet total en deux sous trajets. Notons alors $\ell'$ la longueur de ce bras vu du référentiel en translation 
+\begin{itemize}
+\item le temps de trajet aller vaut : $\tau_1'=\f{1}{c}(\ell'+v\tau_1')$
+\item le temps de trajet retour vaut : $\tau_2'=\f{1}{c}(\ell'-v\tau_2')$
+\end{itemize}
+
+
+\leftcenters{Ainsi, le temps total de trajet vaut }{$\tau\e{par}'=\tau_1'+\tau_2'=\f{2\gamma^2 \ell'}{c}$}
+
+Enfin sous l'hypothèse qu'il n'y a aucune variation de temps de trajet lumineux entre les deux bras introduit par un changement de référentiel, il vient : 
+\centers{$\tau\e{orth}'=\tau\e{par}'$}
+
+\leftencadre{Cette condition implique alors :}{$\ell'=\f{\ell}{\gamma}$}
+
+\noindent
+Par changement de référentiel, les longueurs sont donc contractées d'un facteur $\tf{1}{\gamma}$. Là encore cette propriété est réciproque aux deux référentiels.
+
+\section{Notions importantes en relativité restreinte}
+\subsection{Quelques définitions}
+
+\subsubsection{événement}
+Un phénomène est localisé dans l'espace-temps (dans un référentiel $R$) par quatre coordonnées $(x,y,z,t)$. Ce quadrivecteur $(x,y,z,t)$ est appelé événement.
+
+\begin{remarque}
+\noindent
+Le temps est mesuré par une horloge dans $R$.
+\end{remarque}
+
+\subsubsection{Notion de simultanéité}
+\textbf{Dans un référentiel $R$}, deux événements sont simultanés si des horloges synchronisées, placées aux points où ils se produisent, donnent la même indication.
+
+
+\subsubsection{Mesure de longueur - mesure de durée} 
+\begin{itemize}
+\item Un intervalle de longueur est mesurée simultanément dans le référentiel dans lequel on fait la mesure.
+\item Une intervalle de temps est mesuré pour deux événements localisés spatialement au même endroit dans le référentiel propre.
+\end{itemize}
+
+
+\subsection{Invariant relativiste}
+Afin de rendre le quadrivecteur précédent homogène, le temps est multiplié par la constante fondamentale de la théorie : 
+\encadre{$(x,y,z,t)\rightarrow (x,y,z,ct)$}
+
+En cinématique classique, il y a conservation des longueurs (de la norme) par changement de référentiel inertiel (c'est une isométrie). Soit encore 
+\centers{$R(x,y,z) \rightarrow R'(x',y',z')$}
+\centers{$\Delta x^2+\Delta y^2+\Delta z^2=\Delta x'^2+\Delta y'^2+\Delta z'^2$}
+
+\mk
+Par analogie, la quantité invariante par changement de référentiel en relativité restreinte est la pseudo-norme du quadrivecteur, soit encore 
+
+\centers{$R(x,y,z,ct) \rightarrow R'(x',y',z',ct')$}
+\centers{$(c\Delta t)^2-\Delta x^2-\Delta y^2-\Delta z^2=(c \Delta t')^2-\Delta x'^2-\Delta y'^2-\Delta z'^2$}
+
+\mk
+\noindent
+\underline{Causalité} : Pour deux événements situés sur l'axe $x$, l'invariant relativiste s'écrit :
+\centers{$(c\Delta t)^2-\Delta x^2$}
+\noindent
+Si l'intervalle est du genre temps, cet invariant est positif et alors : 
+\centers{$\Delta x < c \Delta t$}
+\encadre{$c\Delta t'=\gamma (c\Delta t - \beta \Delta x)=\gamma \Delta t \pa{1-\beta \f{\Delta x}{\delta t}}$}
+
+\noindent
+\textbf{Par conséquent les intervalles de temps sont de signes conservés et la causalité est respectée.}
+Cette condition impose alors une condition sur la vitesse limite :
+\encadre{$u\e{x}=\f{\Delta x}{\Delta t}<c$}
+
+\noindent
+\textbf{En relativité restreinte, rien ne peut avoir une vitesse supérieure à $c$ sans violer le principe de causalité.}
+
+\begin{remarque}
+\noindent
+Discuter du signe négatif devant la coordonnée de temps en montrant qu'il est nécessaire pour obtenir la dilatation du temps.
+\end{remarque}
+
+\noindent
+\textbf{La grandeur $\Delta s^2=\Delta x^2+\Delta y^2+\Delta z^2-(c\Delta t)^2$ est appelée invariant relativiste.}
+
+
+\section{Conséquences}
+\subsection{Transformation des vitesses}
+La loi générale de transformation des vitesses est obtenue facilement en écrivant l'expression des vitesses dans $R$ et dans $R'$ et en y appliquant les transformations de Lorentz : 
+\leftcenters{Dans $R$}{$
+\begin{syst}
+\Delta x & u\e{x} \Delta t \\
+\Delta y & u\e{y} \Delta t \\
+\Delta z & u\e{z} \Delta t \\
+\end{syst}
+$}
+\leftcenters{Et dans $R'$}{$
+\begin{syst}
+\Delta x' & u\e{x}' \Delta t' \\
+\Delta y' & u\e{y}' \Delta t' \\
+\Delta z' & u\e{z}' \Delta t' \\
+\end{syst}
+$}
+
+\leftencadre{Ainsi,}{$\begin{syst}
+u\e{x}'&\f{u\e{x}-v}{1-\tf{vu\e{x}}{c^2}} \\ [3mm]
+u\e{y}'&\f{u\e{y}}{1-\tf{vu\e{x}}{c^2}} \\[3mm]
+u\e{z}'&\f{u\e{y}}{1-\tf{vu\e{x}}{c^2}} \\
+\end{syst}
+$}
+
+\begin{remarque}
+\begin{itemize}
+\item
+\leftcenters{Preuve pour $u\e{x}'$}{$u\e{x}'=\f{\Delta x'}{\Delta t'}=\f{c \gamma (\Delta x -\beta c \Delta t)}{\gamma(c \Delta t - \beta \Delta x)}=\f{\Delta x - v \Delta t}{\Delta t - (\tf{v}{c^2})u\e{x}}=\f{u\e{x}-v}{1-(\tf{v}{c^2}) u\e{x}}$}
+
+\item L'un des postulats de la relativité restreinte est l'invariance de $c$ dans tout référentiel. Assurons nous que cette nouvelle loi de transformation des vitesse assure cette invariance. Supposons le parcours d'un photon dans la direction x allant donc à $c$ dans le référentiel R. Quelle est alors sa vitesse dans le référentiel R' se translatant à $v$ par rapport à R.
+\centers{$u\e{x}'=\f{c-v}{1-\tf{v}{c}}=c$}
+
+\item On retrouve la limite galiléenne pour $v,u\e{x}\ll c$
+
+\end{itemize}
+
+\end{remarque}
+\subsection{Applications directes : De Newton au GPS}
+\subsubsection{Contraction d'Usain Bolt} : Soit R le référentiel terrestre (lié au public observateur) et R' le référentiel lié à Bolt.
+Son épaisseur propre est mesurée avant le début de la course (puis c'est son épaisseur \textbf{propre} dans le référentiel en translation par rapport au spectateur R') : 
+\centers{$e'=30cm$}
+
+\encadreminipage{14cm}{
+Pour faire une mesure de longueur dans un référentiel donné (ici R), on effectue une mesure simultanée pour ce référentiel, donc
+\centers{$\Delta t=0$}}
+En introduisant cette condition dans les équations de Lorentz, on obtient l'épaisseur de Bolt $e$ pour le public par la première équation de Lorentz.
+
+Bolt court à $40 km.h^{-1}$. Pour un spectateur, Bolt semble moins épais d'un facteur $\tf{1}{\gamma}$, soit :
+\centers{$\Delta e=e-e'=e' \pa{\f{1}{\gamma}-1}=-5 nm$}
+
+On comprend que Newton ne pouvait observer la conséquence de ces corrections.
+La relativité est donc une correction à grande vitesse de la mécanique newtonienne classique. \textbf{Elle ne remet pas en cause sa capacité prédictive, mais restreint son champ d'application}.
+
+\mk
+Faire le cas opposé : quelle est la longueur de la tribune pour Bolt? 
+
+\mk
+
+\noindent
+\subsubsection{Dilatation du temps pour l'horloge interne d'un GPS}
+(faire un schéma)
+
+Le GPS fonctionne sur le principe de la triangulation. Trois satellites de positions connues émettent un signal contenant leur heure d'émission précise grâce à l'horloge embarquée ainsi que sa position à l'instant d'émission. Pour pouvoir repérer la position du GPS et donc de son utilisateur, il faut et il suffit de connaître la distance qui le sépare de quatre satellites. En pratique, l'horloge du boitier GPS ne pouvant être atomique, on utilise le signal de 4 satellites pour corriger cette dérive de l'horloge interne du boitier (horloge à quartz). Mais oublions ces considérations et imaginons des horloges infiniment précises. Dans ce cas, le boitier détermine sa position par triangulation avec les satellites. Pour connaître la distance qui le sépare de chacun des satellites, il utilise $d=\tf{c}{\Delta t}$
+
+Mais pour connaître cet instant, il faut que les horloges sur Terre et embarquée dans le satellite soient synchrones. Or, le satellite n'étant pas fixe par rapport à la Terre, les horloges n'indiqueront plus la même heure au bout d'un certain temps même si elles étaient initialement synchrones et que leur mécanisme est parfait. Nous pouvons évaluer l'erreur commise sur une journée en considérant que le satellite se déplace à $14000 km.h^{-1}$ dans le référentiel terrestre R. Le référentiel noté au satellite sera alors noté R'.
+Une journée terrestre dure $\Delta t=86400 s$. Evaluons alors la durée enregistrée par l'horloge du satellite pendant un jour terrestre. 
+
+\encadreminipage{14cm}{
+Cette fois, on effectue une mesure du temps pour une horloge liée au satellite. L'intervalle de temps est alors mesuré à une position fixe dans le référentiel R, référentiel propre lié à la Terre. Par conséquent, 
+\centers{$\Delta x=0$}
+}
+
+Résolvons alors le système d'équations de la transformation de Lorentz sous cette condition. On cherche alors $\Delta t'$ en fonction de $\Delta t$ connu. Il vient alors
+
+\centers{$\Delta t'=\gamma \Delta t$}
+
+La durée écoulée sur l'horloge du satellite est inférieure à celle écoulée sur Terre, et ce d'un facteur 
+\centers{$t\e{erreur}=\Delta t' -\Delta t=\Delta t \pa{\gamma-1}=7 \mu s$}
+
+C'est peu mais rappelons nous que la distance est évaluée par le temps de vol du signal EM. Pour un signal se propageant à $c$, on obtient une erreur en distance et donc en positionnement de 
+\encadre{$d\e{erreur}=c \, t\e{erreur}=2km$}
+
+C'est probablement l'une des applications les plus éclatantes de la relativité.
+
+\begin{remarque}
+\noindent Notons que d'autres corrections relativistes doivent être appliquées pour avoir une précision optimale en positionnement. En effet, le satellite est soumis à la gravité et il convient donc de se placer dans le cadre de la relativité générale mais cela dépasse le cadre de ce cours.
+\end{remarque}
+
+
+\subsection{Cône de lumière et causalité (pas le temps pendant la leçon)}
+Espace et temps n'étant plus dissociés, des représentations graphiques liant axe temporel et spatial deviennent riches de sens. Pour simplifier on se placera dans l'espace 1 dimension. 
+\begin{itemize}
+\item diagramme $(x,ct)$
+\item tracer le cône de lumière (trajectoire d'un photon dans le vide)
+\item si c est une vitesse limite, la trajectoire doit être de dérivée supérieure à 1 à tout instant
+\item tracer un objet à $(x,ct)$ et montrer son cône de causalité (c'est-à-dire les positions qu'il a pu avoir dans le passé et celles qu'il pourra prendre dans le futur). Le reste est l'ailleurs!
+\item en étendant ce raisonnement, un événement ne peut être causalement relié à un autre (ne peut en avoir connaissance) si son cône de lumière n'inclut pas l'autre événement
+\item (s'il reste du temps) si le quadrivecteur est du genre espace, on montre que la transformation de Lorentz sur l'intervalle de temps conduit à ce que cet intervalle soit de signe variable selon le référentiel... Ce qui viole le principe de causalité! Donc l'information ne peut être supraluminique sans violer la relativité restreinte.
+\end{itemize}
+
+\noindent
+\hrulefill
+
+\mk
+\noindent
+Si la relativité restreinte apporte des corrections aujourd'hui largement vérifiées à la mécanique classique, elle ne la remet pas en cause. Dans de nombreux domaines d'application courantes, elle reste encore tout à fait adaptée (et exacte à la précision de nos appareils). Cependant, la physique actuelle ne saurait s'en passer. La physique de haute énergie est fortement relativiste. Mais plus étonnant, des applications rentrées dans le quotidien tel que le GPS ne pourrait exister sans la relativité. Dans cette leçon, nous nous sommes restreint à la cinématique, c'est-à-dire à l'étude des mouvements sans se préoccuper des causes qui leur ont données naissance. En fait, l'ensemble de la dynamique peut être réinterprétée en terme relativiste. La mécanique newtonienne et toutes les considérations énergétiques pourront être développées dans ce sens.
+
+\noindent
+\hrulefill
+
+
+
+
+\section{Bibliographie}
+\begin{itemize}
+\item Introduction à la relativité, André Rougé, Editions de l'école Polytechnique, Chapitres 1-4 [fond APH] Les premières pages suffisent pour la partie technique de la leçon.
+\item La théorie de la relativité restreinte et générale, Albert Einstein, Editions Dunod, 1ère partie
+\item Le cours de physique de Feynman, Richard feynman, Mécanique I, Editions Dunod, Chapitres 15-17 [fond APH] Contexte historique, expérience de Michelson
+\item BUP n°947, Sur le traitement de la relativité restreinte dans les livres de terminales S, pp 955-962 [fond APH]
+\end{itemize}
+
+\section{Commentaires et questions}
+\subsection{Questions}
+\begin{itemize}
+\item Les horloges des GPS sont également corrigées par la relativité générale. En effet la constante de gravitation est différente en altitude, ce qui doit être pris en compte dans le facteur de correction. C'est une correction du second ordre.
+\item Les GPS ne sont pas géostationnaires. Les géostationnaires ne peuvent être que des satellites équatoriaux. Or ici, il est nécessaire d'avoir un quadrillage de plusieurs satellites pour obtenir notre position
+\item Les calculs de triangulation sont tout sauf simple! C'est un système d'équations non linéaires d'un genre plutôt lourd...
+\item Bolt se contracte de 5nm, peut on espérer le mesurer aujourd'hui? Ca paraît techniquement encore délicat (cible en mouvement). Mais 5nm rentre dans le domaine des distances mesurables par interférométrie par exemple.
+\item Si Bolt court dans l'autre sens, va-t-il se dilater?
+\item Pourquoi une mesure de distance doit-elle se faire simultanément dans le référentiel dans lequel on souhaite faire la mesure ?
+\item Pourquoi la vitesse selon $y$ est modifiée alors que l'on a une translation uniquement selon $x$. une première réponse est de dire que c'est nécessaire pour la conservation d'une vitesse maximale non supraluminique
+\item Qu'est-ce qu'un intervalle de genre temps. Introduction des diagrammes de Minkowsky
+\item Quel était le résultat attendu dans les expériences de Michelson. Ces expériences visaient à prouver l'existence de l'éther
+\item Quelle était la précision de ces expériences. On s'attendait à un décalage de quelques franges, ce qui aurait été largement détectable. L'incroyable travail expérimental de Michelson en métrologie lui a valu le Nobel. c'était l'un des meilleurs expérimentateurs de son temps.
+\item Date des travaux de Galilée ->1600-1620 , équations de Maxwell ->autour de 1870
+\end{itemize}
+
+\subsection{Commentaires}
+\begin{itemize}
+\item La leçon est un sacré bordel. Numérotation aléatoire des parties principalement, je n'ai pas trop compris le reste. Mais ça ne semblait pas clair. Improviser c'est mal! La conclusion ça se prépare!
+\item Les définitions essentielles auraient du être mieux expliquées : référentiel, événement, simultanéité, mesure de longueur et de temps et tutti quanti... et les conséquences clairement dégagés
+\item Le postulat de la relativité doit être clairement énoncé (préciser qu'il est identique à celui de Galilée) : Les lois de la physique sont identiques dans tous les référentiels galiléens.
+\item Le diagramme de Minkowsky est attendu lorsque la causalité est présentée. 
+\item il est fortement conseillé de balancer les transfo de Lorentz et l'invariant relativiste. Les démos sont longues, pénibles et n'apportent rien. Cependant, il fallait les commenter plus richement et expliciter clairement chaque terme. 
+\item La définition du temps et de la longueur est essentielle dans cette leçon. La disparition du mètre étalon, et la nouvelle définition du temps et de la distance ont leur place dans cette leçon. C'est à partir de la vitesse de la lumière constante dans tout référentiel que le mètre est défini à partir de la seconde, elle même définie à partir de la transition atomique du Rb.
+\item Il fallait parler de la causalité, ça semble convenir
+\item Chose importante par rapport à la définition du mètre! La longueur d'un objet ne peut plus être prise comme référence puisqu'il n'existe plus d'objets indéformables. Si c'était le cas, le principe de causalité ne serait plus respecté puisque les conséquences de l'application d'une force se propagerait à une vitesse infinie
+\item Ne pas faire de jugement de valeur Lorentz/Einstein. S'il est vrai que Lorentz a manqué le tournant de la généralisation de ces transformations à l'espace, ses travaux ont permis d'avancer très loin dans la compréhension de l'électromagnétisme. Quand Einstein avait 25 ans, Lorentz était en fin de carrière. On peut supposer qu'il était trop âgé pour assumer la révolution qu'Einstein a eu le courage de soutenir. 
+\item La leçon traite deux fois le même problème (contraction des longueurs et dilatations du temps). Ce n'est pas la manière la plus efficace de faire (néanmoins, j'ai choisi cette structure dans une idée, d'abord montrer que l'on pouvait faire de la relativité sans les transfo de Lorentz, ensuite je vous montre que c'est bien plus facile avec les transfo de Lorentz et je vais plus loin dans l'interprétation. Je pense donc que bien défendu, cette démarche est cohérente). Si donc la leçon n'avait pas fait cette répétition, on pouvait inclure l'effet Doppler relativiste et par exemple la désintégration des muons atmosphériques. Le paradoxe des jumeaux de Langevin peut être traité mais ç'est possiblement dangereux (il faut une représentation claire dans l'espace de Minkowsky). Par ailleurs les calculs précis ne sont pas triviaux et tiennent plutôt de la dynamique relativiste puisqu'il faut tenir compte d'une accélération.
+\item un site internet rassemble une collection d'expériences en lien avec la relativité restreinte (régulièrement mis à jour) : what is thé experimental basis of special relativity (http://math.ucr.edu/home/baez/physics/Relativity
+/SR/experiments.html)
+
+\end{itemize}
+
+
+
+\end{document}

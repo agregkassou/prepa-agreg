@@ -1,0 +1,116 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large M14 : polarisation des ondes électromagnétiques}
+
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item distinguer les différentes polarisations et le caractère total ou partiel
+\item différentes méthodes de production d'une lumière polarisée
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item 
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Optique expérimentale, Sextant, Hermann (central pour la leçon)
+\item[[\,2\!\!]] expériences d'optique, Duffait, Bréal
+\item[[\,3\!\!]] Optique, Houard, De Boeck
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction} : si une approche vectorielle de l'onde lumineuse est souvent suffisante, l'aspect vectoriel du champ est parfois indispensable. Dans cet exposé, nous analyserons en particulier les états de polarisations de différentes sources ainsi que les moyens à notre disposition pour produire une lumière polarisée de la façon souhaitée. Enfin, nous analyserons les techniques d'analyse systématique d'une polarisation.
+
+
+\begin{remarque}
+\noindent
+Le Duffait donne la méthode systématique d'analyse de la polarisation de la lumière avec un schéma clair. Il est utile tout au long de l'exposé.
+\end{remarque}
+
+
+\section{Etat de polarisation des ondes électromagnétiques}
+\subsection{Source de "lumière naturelle" (ou non polarisée)}
+\begin{itemize}
+\item mettre un polariseur sur le faisceau d'une lampe blanche 
+\item observer à l'oeil l'absence d'extinction de la lumière en sortie (la lumière n'est donc pas linéaire pure)
+\item placer une photodiode en sortie et observer à l'oscilloscope -> on constate que lors de la rotation du polariseur, l'intensité ne varie pas du tout -> circulaire, partiellement circulaire ou non polarisée
+\item placer alors une lame $\lambda/4$ avant le polariseur et regarder sur l'oscilloscope : toujours rien! donc la lumière est non polarisée
+\end{itemize}
+
+\subsection{Etat de polarisation en sortie d'une diode laser [1]}
+\begin{itemize}
+\item montrer l'état de polarisation sur la diode laser thorlabs 
+\item linéairement et orthogonal au grand axe de l'ellipse
+\end{itemize}
+
+\section{Méthode de production d'une polarisation rectiligne}
+\subsection{production par dichroïsme}
+\begin{itemize}
+\item montrer sur le dispositif à ondes centimétriques que 1) l'émission est polarisée, 2) que l'on peut former un polaroïd à l'aide d'une grille métallique (l'onde passe si elle n'est pas en mesure d'induire des courants dans la grille) -> c'est une technique usuelle de polarisation des ondes centimétriques (attention, ce n'est pas à proprement parler du dichroïsme)
+\item dans le domaine optique, on utilise souvent le dichroïsme de certains matériaux (ici un film polaroïd)
+\item là encore refaire l'étude de polarisation (procédure habituelle à l'aide d'une lame $\lambda/4$) : montrer qu'elle est polarisée linéairement et on pourra évaluer son taux de polarisation à l'aide d'une photodiode
+\item enfin, on montrera la loi de Malus
+\end{itemize}
+
+\subsection{Production par réflexion et transmission vitreuse [1]}
+\begin{itemize}
+\item mettre en évidence la polarisation par réflexion vitreuse et le cas limite de l'angle de Brewster
+\item s'assurer que la lumière réfléchie est bien parfaitement polarisée, mais l'efficacité de ce polariseur est faible (à constater par photodiode en mesurant les intensités
+\item la lumière transmise n'est que partiellement polarisée, mais on peut améliorer ce taux de polarisation par ajout de nombreuses lames (prendre une pile de lames de microscopes) qui multiplient les interfaces
+\item vérifier quantitativement que le taux de polarisation s'accroit en transmission (on trouve cependant des valeurs assez éloignées de l'attente théorique)
+\end{itemize}
+
+\subsection{Production par diffusion}
+\begin{itemize}
+\item utiliser le petit dispositif "ciel bleu" de l'ENSC
+\item illustrer la polarisation de la lumière rayonnée 
+\item le taux de polarisation est maximum lorsque l'on regarde orthogonalement au faisceau incident
+\item la lumière diffusée par le ciel est donc polarisée!
+\end{itemize}
+
+
+\section{Analyse d'une polarisation quelconque : ellipsométrie [1]}
+\subsection{Présentation du dispositif}
+\begin{itemize}
+\item présenter le principe
+\item la lame $\lambda/4$ associée au laser polarisé permet de fournir une polarisation quelconque selon leur disposition respective
+\item le système polariseur tournant / pyroélectrique constitue le système d'analyse
+\end{itemize}
+
+\subsection{Analyse d'une lumière de polarisation quelconque}
+\begin{itemize}
+\item fixer la direction de la polarisation du laser en le tournant (la prendre par exemple verticale)
+\item cela fait, procéder à l'étalonnage : regarder le déphasage (entre un maximum du signal et le signal de trigger) pour cette polarisation particulière. Ca constitue notre référence
+\item dans la suite, on considérera que les polarisations sont totales (pas de lumière partiellement polarisée)
+\item polarisation linéaire : signal passe par 0 et le déphasage donne l'angle fait par l'axe de polarisation
+\item polarisation circulaire : signal constant
+\item polarisation elliptique : mesure du taux d'ellipticité par le rapport $max/min$, mesure de l'angle du demi grand axe de l'ellipse en repérant le déphasage du maximum
+\end{itemize}
+
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. L'ellipsométrie permet de mesurer des épaisseurs de couche.} C'est compliqué, ne pas trop en parler.  
+
+\bk
+\noindent
+\textbf{2. Comment mesurer précisément l'indice d'un milieu?} : utiliser un prisme et repérer le minimum de déviation (au goniomètre)
+\end{document}

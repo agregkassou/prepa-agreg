@@ -1,0 +1,108 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP34 : Diffraction de Fraunhofer (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item modèle scalaire de la lumière
+\item notion d'interférence
+\item optique géométrique
+\item notion élémentaire de transformée de Fourier
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item Fraunhofer = diffraction à l'infini -> on se place au foyer d'une lentille
+\item établir la structure aboutissant à cette approximation : c'est Huygens-Fresnel sous condition
+\item aspect TF : toute l'info de la pupille diffractante est contenue (sous une autre forme) dans l'image de diffraction (au plan de Fourier)
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Cap Prépa, PC-PC*, Pearson
+\item[[\,2\!\!]] J'intègre, PC-PC*, Dunod
+\item[[\,3\!\!]] Optique, une approche expérimentale et pratique, Houard, De Boeck
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction}
+mise en défaut de l'OPG quand on ferme une fente (faire la \textbf{manipulation}). Il y a étalement des directions de propagation autour de l'OPG, comme les ondes mécaniques au passage d'un obstacle. Une approche ondulatoire du problème est donc pertinente.
+
+\section{Principe d'Huygens Fresnel et diffraction de Fraunhofer}
+\subsection{Historique [1]}
+Faire un bref historique avec les informations introductives du Cap Prépa : De Grimaldi à Kirchoff
+
+\subsection{Principe d'Huygens Fresnel [2] (description plus simple)}
+\begin{itemize}
+\item énoncé du principe en terme de contribution élémentaire (point source émettant une onde sphérique en phase avec l'amplitude en ce point). Faire un schéma clair
+\item expliciter cette amplitude. dans le cas d'un objet diffractant d'épaisseur négligeable, cette amplitude s'écrit : $a(x,y,0^+)=t(x,y) \, a(x,y,O^-)$. On peut donc modéliser par une transmittance. Cela est valable à la condition que l'amplitude de sortie en $(x,y)$ ne dépendent que de l'amplitude d'entrée en $(x,y)$. Montrer un cas où ce n'est pas vérifié avec les mains.
+\item l'amplitude totale est alors obtenue en sommant toutes ces contributions sur l'ensemble de la surface de l'objet diffractant
+\item C'est le principe d'Huygens Fresnel tel que l'on peut l'établir intuitivement. Préciser qu'il existe une démonstration à partir des équations de Maxwell (Kirchoff).
+\end{itemize}
+
+
+\subsection{diffraction de Fraunhofer [1]}
+On suit la démonstration du Cap Prépa. Plutôt que de proposer une méthode à partir de l'approximation paraxiale autorisant les développement, on mène la démonstration de manière très géométrique (utilisation d'une direction d'incidence et d'émission fixe). La différence de marche vaut alors simplement : $\pa{\vect{k}'-\vect{k}}\cdot \vect{OP}$. On réécrit ensuite cette expression en fonction des angles. C'est  cette expression qui nous sera ensuite utile.
+
+\begin{remarque}
+\noindent
+Faire sentir que cette démonstration met la difficulté de l'approximation de Franhofer sous le tapis. En effet, on suppose directement que diffraction à l'infini est synonyme de rayons parallèles. En fait il convient de faire un développement limité dans les conditions paraxiales. Au premier ordre, on obtient le résultat précédent. Ne pas le dire pendant la leçon, mais il faut en être conscient.
+\end{remarque}
+
+
+\section{Exemples de figures de diffraction}
+
+\subsection{diffraction par une fente rectangulaire [2]}
+C'est une transmittance de type pupille (tout ou rien). Mener le calcul intégralement. Préciser la taille angulaire de la tâche centrale (première annulation du sinus cardinal).
+
+\begin{remarque}
+\noindent
+Commenter le cas d'une fente infiniment longue dans une direction 
+\end{remarque}
+
+\subsection{diffraction par une ouverture circulaire [2]}
+Donner la valeur angulaire de la tâche centrale et en déduire la limite de résolution des instruments d'optique (due à la diffraction). On peut aussi expliquer le principe du Blue-ray pour stocker plus d'information sur une même surface.
+
+\begin{remarque}
+\noindent
+Il existe des transmittances plus compliquées : l'amplitude est modulée (pas en tout ou rien) ainsi que la phase. 
+\end{remarque}
+
+\section{Propriétés des figures de diffraction [1]}
+Le Cap prépa fait clairement l'ensemble de ces démonstrations.
+
+\subsection{translation de la pupille}
+
+
+\subsection{dilatation de la pupille}
+Commenter ce rapport inverse : intérêt en optique de posséder des objectifs de rayon suffisant
+
+\subsection{théorème de Babinet}
+Suivre la démonstration. 
+
+\section{Optique de Fourier}
+
+\subsection{Diffraction de Franhofer et transformée de Fourier [1]}
+Le Cap prépa l'explique bien. Montrer que l'on obtient l'équivalent d'une transformée de Fourier. Prendre le cas d'un éclairage normal ($\alpha'=0$) et se placer au foyer d'une lentille. Montrer que l'éclairement est bien proportionnel à la TF de l'objet.
+
+\subsection{Application au filtrage spatial : strioscopie [3]}
+On réalise le montage d'Abbe. Visualisation d'une empreinte digitale. Expliquer par un schéma clair de l'expérience (quelle lentille conjugue quoi) et on montre le résultat expérimental. Le montage est clairement décrit dans le Houard.
+
+
+\bk
+\noindent
+\textbf{Conclusion}
+insister sur la généralité de la diffraction dans tous les domaines ondulatoires de la physique. Ouvrir sur les réseaux (de la diffraction mais avec plusieurs objets identiques qui interfèrent).
+
+
+
+\end{document}

@@ -1,0 +1,191 @@
+\input{modele.sty}
+
+\versionAuteur
+
+\begin{document}
+\partie{\large LP21 : résonance magnétique nucléaire (L2)}
+
+\encadreminipage{12cm}{
+\textbf{Prérequis}
+\begin{itemize}
+\item notions de mécanique quantique (notion de spin et rapport gyromagnétique)
+\item notions de physique statistique (facteur de Boltzmann)
+\item mouvement de précession en mécanique classique (approximation gyroscopique)
+\item notions de transformée de Fourier
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Idées directrices à faire passer}
+\begin{itemize}
+\item statistique de Boltzmann (au final on travaille sur $\Delta N$)
+\item rester en classique (l'approche quantique n'apporte pas beaucoup de physique ici)
+\item temps de relaxation (intérêt de la réponse impulsionnelle)
+\end{itemize}
+}
+
+\encadreminipage{14cm}{
+\textbf{Commentaires du jury}
+\begin{itemize}
+\item justifier le terme de résonance
+\item discuter du facteur de qualité de la réponse
+\item la leçon doit aboutir sur les aspects techniques (il faut parler de spectroscopie RMN ou d'IRMN en médecine...).
+\end{itemize}
+}
+
+\encadreminipage{12cm}{
+\textbf{Bibliographie}
+\begin{itemize}
+\item[[\,1\!\!]] Physique pour les sciences de la vie : tome 3 les ondes, Bouyssy, éditions Dia (central pour la mise en place des équations)
+\item[[\,2\!\!]] Magnétisme : tome 2 matériaux et applications, Trémolet de Lacheisserie, EDP Sciences (central pour les techniques utilisées en RMN)
+\item[[\,3\!\!]] Magnétisme : statique, induction et milieux, Garing, Ellipses
+\end{itemize}
+}
+
+\noindent
+\textbf{Introduction [2]} : reprendre l'introduction du Trémolet : on introduit l'aspect historique et les formidables progrès réalisé en 50 ans dans ce domaine (du principe de la RMN à l'application pratique)
+
+
+\section{Interaction entre un moment magnétique et un champ}
+\subsection{Moments cinétique et magnétique [1]}
+\begin{itemize}
+\item être rapide sur cette partie (c'est un rappel)
+\item démonstration classique : mouvement circulaire d'un électron autour d'un proton -> identifier le rapport gyromagnétique
+\item la MQ dit qu'il existe aussi un moment intrinsèque : le spin
+\item il existe encore un rapport gyromagnétique dans ce cas mais pondéré par le facteur de Landé
+\item le moment cinétique et magnétique intrinsèque est quantifié et dans la suite on se limite au cas d'un spin $\tf{1}{2}$ sans moment orbital. La facteur de Landé vaut alors 2
+\item ne pas parler de composition des moments!
+\end{itemize}
+
+\subsection{Etats des moments magnétiques soumis à un champ statique $B_0$ [1]}
+\subsubsection{Equation de Larmor, précession}
+\begin{itemize}
+\item équation du mouvement
+\item en déduire la conservation de la norme et de la composante selon $z$
+\item rotation dans le plan $(x,y)$ à $\omega\e{L}$ (ne pas chercher à résoudre les équations)
+\item ODG de $\omega\e{L}$ pour un champ de 1T par exemple
+\end{itemize}
+
+\subsubsection{Statistique de Boltzmann [1]}
+\begin{itemize}
+\item \textbf{attention, dans cette partie on adopte un point de vue quantique : énergie quantifiée}
+\item les spins sont supposés indépendant
+\item répartition statistique du système à deux états
+\item ce rapport est faible mais il y a beaucoup d'atomes dans la matière! (donc ne pas dire de bêtises)
+\item l'état de chaque spin étant supposé indépendant on peut très facilement remonter à l'aimantation moyenne
+\item finalement, dans toute la suite, on travaillera sur ces $\Delta N$ spins
+\item pour tous les autres les effets se compensent et nul besoin de s'en préoccuper
+\end{itemize}
+
+\section{Résonance magnétique}
+\subsection{Effet d'un champ tournant [1] et [3]}
+\begin{itemize}
+\item on ajoute un champ tournant à $\omega$
+\item faire le changement de référentiel pour le référentiel tournant à $\omega$ On fera clairement apparaître les pulsations $\omega_0=\gamma B_0$ et $\omega_0=\gamma B_1$ (faire dans cet ordre, ne pas parler de résonance avant)
+\end{itemize}
+
+\subsection{Résolution : précession autour de $B\e{eff}$, résonance [1]}
+\begin{itemize}
+\item voir apparaitre la même équation que précédemment avec un champ $B$ effectif 
+\item expliciter alors la condition de résonance
+\item un champ de faible amplitude peut faire tourner la distribution de spins!
+\item faire des schémas clair de ce que l'on observe dans le référentiel tournant et le référentiel fixe (spirale)
+\item schéma de ce que l'on observe dans le plan $(x,y)$ (important pour le signal FID)
+\end{itemize}
+
+\subsection{Que détecte-on? [3]}
+\begin{itemize}
+\item parler du signal FID (appliquer la loi de Faraday pour montrer que l'intensité du signal est proportionnelle à $B_0^2$)
+\item principe de la détection par induction dans une bobine
+\item ne pas parler d'absorption (difficile à détecter en pratique et inutilisé)
+\end{itemize}
+
+\section{Applications}
+\subsection{Spectroscopie RMN [2] et [3]}
+\subsubsection{Relaxation par couplage spin/réseau et spin/spin}
+\begin{itemize}
+\item expliquer qu'en pratique, les phénomènes s'amortissent
+\item introduire les temps $T_1$, $T_2$ et $T_2^*$
+\item donner les équations modifiées par l'amortissement (Garing)
+\item donner des ODG
+\item donner leur origine microscopique
+\item $T_1$ est dissipatif, pas $T_2$
+\item permet de remonter à des informations sur l'environnement du spin
+\item en pratique $T_1$ est difficile à mesurer
+\item lien entre $T_2^*$ et $T_2$ et facteur de qualité de la résonance
+\end{itemize}
+
+\subsubsection{Spectroscopie RMN [2]}
+\begin{itemize}
+\item parler de déplacement chimique
+\item principe de la RMN pulsée
+\item schéma de principe de la manipulation
+\item expliquer que l'on remonte au spectre par TF
+\item donner des spectres RMN de chimie et identifier le déplacement chimique et le lien facteur de qualité/largeur du pic
+\end{itemize}
+
+\subsection{IRMN}
+\subsubsection{Echo de spin [2]}
+\begin{itemize}
+\item principe de la méthode
+\item \textbf{attention, il faut être clair sur ce point : le pulse $\pi$ permet de faire tourner l'ensemble des spins de $\pi$ par rapport à l'axe $X$ du repère tournant. Si bien que les derniers deviennent les premiers. -> un schéma est nécessaire}
+\item permet de remonter à $T_2$, qui sinon est tué par $T_2^*$ qui est à décroissance rapide
+\end{itemize}
+
+\subsubsection{Application à l'imagerie médicale : sélection de zones [1]}
+\begin{itemize}
+\item principe dans le cas 1D
+\item on se place dans le cas simple où tout l'échantillon résonne à la même pulsation
+\item il suffit alors de changer la fréquence du champ RF pour balayer l'échantillon
+\end{itemize}
+
+
+
+\bk
+\noindent
+\textbf{Conclusion} : Insister sur les nombreuses applications. Etude de la matière en physique fondamentale, analyse en chimie de synthèse, étude non invasive en biologie et médecine (éventuellement en temps réel : IRM fonctionnelle)
+
+
+\mk
+\noindent
+\textbf{Q/R}
+
+\mk
+
+\noindent
+\textbf{1. ODG de $\nu_0$ en RMN.}  
+
+\bk
+\noindent
+\textbf{2. Facteur de qualité pour un spin? Pour une assemblée de spins?}  
+ 
+ \bk
+ \noindent
+\textbf{3. Avec quel type d'atomes peut on faire de la RMN?}  
+
+\bk 
+ \noindent
+\textbf{4. Quel problème pose la solution aqueuse si on veut suivre une réaction au cours du temps en RMN?}  
+
+\bk
+\noindent
+\textbf{5. A quoi servent les coefficients de Clebsch-Gordon?}  
+
+\bk
+\noindent
+\textbf{6. Pour le champ tournant, pourquoi peut-on utiliser une unique bobine?}  
+
+\bk
+\noindent
+\textbf{7. Quelle est la différence entre une aiguille aimantée et un noyau? Une aiguille précesse-t-elle?}  
+
+\bk
+\noindent
+\textbf{8. Pourquoi l'intensité du signal est-elle proportionnelle à $B_0^2$?}  
+
+\bk
+\noindent
+\textbf{9. Pourquoi se limite-t-on au phénomène sur les noyaux?}  
+ 
+
+\end{document}
